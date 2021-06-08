@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/information/test/</loc>
+    
+    <lastmod>2021-06-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/information/example/</loc>
+    
+    <lastmod>2021-06-08</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://cssjpn.github.io/blog</loc>
+    <lastmod>2021-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/tags/Information/</loc>
+    <lastmod>2021-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/tags/Example/</loc>
+    <lastmod>2021-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+</urlset>
