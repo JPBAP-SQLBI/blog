@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cssjpn.github.io/blog/information/test/</loc>
-    
-    <lastmod>2021-06-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://cssjpn.github.io/blog/information/exampl2/</loc>
     
     <lastmod>2021-06-30</lastmod>
@@ -17,6 +10,20 @@
   
   <url>
     <loc>https://cssjpn.github.io/blog/information/example/</loc>
+    
+    <lastmod>2021-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/information/example3/</loc>
+    
+    <lastmod>2021-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cssjpn.github.io/blog/information/test/</loc>
     
     <lastmod>2021-06-30</lastmod>
     
