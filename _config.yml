@@ -26,7 +26,7 @@ root_tag_generator:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://jpbap-sqlbi.github.io/blog/
 github:
-  url: https://github.com/jpbap-sqlb/blog/
+  url: https://github.com/jpbap-sqlbi/blog/
   posts_dir: articles
   default_branch: main
 
