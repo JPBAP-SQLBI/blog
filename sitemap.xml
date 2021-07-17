@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cssjpn.github.io/blog/information/exampl2/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/information/exampl2/</loc>
     
     <lastmod>2021-07-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cssjpn.github.io/blog/information/example/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/information/example/</loc>
     
     <lastmod>2021-07-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cssjpn.github.io/blog/information/example3/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/information/example3/</loc>
     
     <lastmod>2021-07-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cssjpn.github.io/blog/information/test/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/information/test/</loc>
     
     <lastmod>2021-07-17</lastmod>
     
@@ -31,7 +31,7 @@
   
 
   <url>
-    <loc>https://cssjpn.github.io/blog</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog</loc>
     <lastmod>2021-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -39,14 +39,14 @@
 
   
   <url>
-    <loc>https://cssjpn.github.io/blog/tags/Information/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Information/</loc>
     <lastmod>2021-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://cssjpn.github.io/blog/tags/Example/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Example/</loc>
     <lastmod>2021-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
