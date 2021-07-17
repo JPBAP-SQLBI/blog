@@ -1,47 +1,9 @@
-# Blog Example
+# README
 
-[template] Microsoft CSS Japan example blog repository.
+日本マイクロソフト Power BI サポート チームのブログです。
 
-## Getting Started
+## 記事
 
-[Getting Started](./docs/getting-started.md)
+- [y/m/d  Power BI ワークスペースについて ～クラシックワークスペースと新しいワークスペースの違い～](https://jpbapsupport.github.io/blog/Power%20BI/pbi_workspace_classic_and_app/)
 
-## Init / Update blog theme
-
-https://github.com/jpazureid/hexo-theme-jpazure
-
-```shell
-git submodule update -i
-```
-
-## Start / Stop Hexo server (local-preview)
-
-```shell
-docker-compose up
-
-# Ctrl+C
-docker-compose down
-```
-
-## Directory structure
-
-```
-example
-├── .github
-│   └── workflows      # Workflows for GitHub Actions
-│       └── upload-gh-pages.yml
-├── .gitignore
-├── .textlintrc
-├── README.md
-├── _config.yml        # Site configration
-├── articles           # Blog articles
-│   └── information
-│       └── test.md    # Example post
-├── docker-compose.yaml    # Configuration for containers (local-preview)
-├── docs               # Documents
-├── github-issue-template.md
-├── scaffolds
-├── source
-└── themes             # Blog themes
-    └── jpazure (git submodule)
-```
+- 過去記事については、内容確認の上、移管作業中です。
