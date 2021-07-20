@@ -108,7 +108,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: jpazure
-google_analytics: G-JLQ1457DTW
+google_analytics: G-MZCPTY1J9T
 
 feed:
   type: atom
