@@ -5,28 +5,30 @@
 # Title (display)
 title: Japan CSS Support Power BI Blog
 # Sub Title (display)
-subtitle: Japan CSS Support Power BI Blog
+subtitle: 日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。
 # Description
-description: Japan CSS Support Power BI Blog
+description: 日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。
 
 # Keywords
 keywords:
-  - Information
-  - Example
+  - Power BI
+  - Power BI Desktop
+  - Power BI サービス
 
-author: CSS Japan
+author: Japan Power BI Team
 
 # Tag (hexo helper)
 root_tag_generator:
   root_tag_names:
-    - Information
+    - Power BI
   sub_tag_limit: 20
+  sub_tag_sort: 'name'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://cssjpn.github.io/blog/
+url: https://jpbap-sqlbi.github.io/blog/
 github:
-  url: https://github.com/cssjpn/blog-example/
+  url: https://github.com/jpbap-sqlbi/blog/
   posts_dir: articles
   default_branch: main
 
