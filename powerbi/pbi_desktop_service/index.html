@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~ | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 「Power BI Desktop」、「Power BI サービス」、「Power BI Pro」… など色々なキーワードを耳にするけれど、それぞれの機能の違いは？BI レポートを作成するためには何が必要なの？という疑問を持つ方が多くいらっしゃるかと思います。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 「Power BI Desktop」、「Power BI サービス」、「Power BI Pro」… など色々なキーワードを耳にするけれど、それぞれの機能の違いは？BI レポートを作成するためには何が必要なの？という疑問を持つ方が多くいらっしゃるかと思います。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/pbi_desktop_service.png">
+<meta property="article:published_time" content="2021-07-30T06:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-30T09:07:38.977Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI Desktop">
+<meta property="article:tag" content="Power BI サービス">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/pbi_desktop_service.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_desktop_service" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-07-30T06:00:00.000Z" itemprop="datePublished">2021-07-30</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+42337ad2-89a3-5431-80bf-7775c17ab41e%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%A7%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E4%BD%9C%E6%88%90%E3%83%BB%E5%88%86%E6%9E%90%E3%82%92%E8%A1%8C%E3%81%86%E3%81%9F%E3%82%81%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE%E3%81%AF%EF%BC%9F+%7E+Power+BI+Desktop+%E3%81%A8Power+BI+%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E9%81%95%E3%81%84+%7E%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_desktop_service%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_desktop_service.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_desktop_service.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/" data-id="ckrq4hkla00000mmuabeicdlf" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>「Power BI Desktop」、「Power BI サービス」、「Power BI Pro」… など色々なキーワードを耳にするけれど、それぞれの機能の違いは？BI レポートを作成するためには何が必要なの？という疑問を持つ方が多くいらっしゃるかと思います。</p>
+<span id="more"></span>
+
+<p>そこで今回は、Power BI の活用を始めるにあたり、理解しておくべきポイントについて2つに分けてご案内いたします。</p>
+<ol>
+<li><a href="/blog/powerbi/pbi_desktop_service/">Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~</a></li>
+<li><a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a></li>
+</ol>
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="Power-BI-でレポート作成・分析を行うために必要なものは？"><a href="#Power-BI-でレポート作成・分析を行うために必要なものは？" class="headerlink" title="Power BI でレポート作成・分析を行うために必要なものは？"></a>Power BI でレポート作成・分析を行うために必要なものは？</h2><h3 id="Power-BI-Desktop-とPower-BI-サービスの違い"><a href="#Power-BI-Desktop-とPower-BI-サービスの違い" class="headerlink" title="~ Power BI Desktop とPower BI サービスの違い ~"></a>~ Power BI Desktop とPower BI サービスの違い ~</h3><hr>
+<p>Power BI は、様々なデータソースを基に、データをビジュアル化したレポートを作成し分析を行うためのツールです。</p>
+<p>レポート作成・分析を行う方法として、PCにインストールして使うアプリケーション “Power BI Desktop” とWeb ブラウザからサインインして使うクラウド サービス “Power BI サービス” のご用意があります。</p>
+<p>レポート作成においては、Power BI サービスには多くの制限がありPower BI Desktop の方が機能が優れているため、多くのユーザーは「Power BI Desktop でレポートを作成したあと、Power BI サービスでレポートを他のユーザーと共有する」という使い分けをするのが一般的です。</p>
+<p><img src="./pbi_desktop_service.png"></p>
+<p>Power BI Desktop とPower BI サービスの機能比較を一覧にすると以下の通りとなります。</p>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Power BI Desktop</th>
+<th>Power BI サービス</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多くのデータソース</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>変換</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>整形とモデリング</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>メジャー</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>計算列</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>Python</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>テーマ</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>RLS の作成</td>
+<td>〇</td>
+<td></td>
+</tr>
+<tr>
+<td>レポート</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>視覚化</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>セキュリティ</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>フィルター</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>ブックマーク</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>Q&amp;A</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>R ビジュアル</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>いくつかのデータソース</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>ダッシュボード</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>アプリとワークスペース</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>共有</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>データフローの作成</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>ページ分割されたレポート</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>RLS 管理</td>
+<td></td>
+<td>〇</td>
+</tr>
+<tr>
+<td>ゲートウェイ接続</td>
+<td></td>
+<td>〇</td>
+</tr>
+</tbody></table>
+<p>Power BI Desktop とPower BI サービスについて、それぞれもう少し詳細にご案内いたします。</p>
+<hr>
+<h2 id="Power-BI-Desktop-とは？"><a href="#Power-BI-Desktop-とは？" class="headerlink" title="Power BI Desktop とは？"></a>Power BI Desktop とは？</h2><hr>
+<p>Power BI Desktop は、ライセンスの有無に関わらず、誰でも無償でPC にインストールして使用することができるアプリケーションです。</p>
+<p>Windows 10 OS (LTSB/LTSCは除く) はMicrosoft Store からストア アプリとしてインストールすることも可能です。</p>
+<p>Power BI Desktop でPower BI のライセンス（Free、Pro またはPremium Per User ）が必要となるタイミングとしては、Power BI サービス上のデータセットやデータフローからデータを取得するとき、または作成したレポートをPower BI サービス上に発行するときなど、Power BI サービスと接続を行うときのみであり、レポート作成においてライセンスによる機能差はありません。</p>
+<p>上記のようなPower BI サービスとの接続が不要な場合は、サインインする必要はありません。</p>
+<p>つまり、ライセンスがなくても使用できます。</p>
+<blockquote>
+<p><strong>参考情報</strong><br>Power BI Desktop の取得方法や最小要件についてご案内しています。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop">Power BI Desktop の取得</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/download/details.aspx?id=58494">ダウンロード センター Power BI Desktop</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="Power-BI-サービスとは？"><a href="#Power-BI-サービスとは？" class="headerlink" title="Power BI サービスとは？"></a>Power BI サービスとは？</h2><hr>
+<p>Power BI サービス (app.powerbi.com) は、Web ブラウザ上でサインインすることで、Azure 上でPower BI を使用することができる SaaS (サービスとしてのソフトウェア) の一部です。</p>
+<p>レポート、ダッシュボードの作成、アプリ、ワークスペースの使用、コンテンツの共有など、組織内での共同作業において便利な機能のご用意がありますが、所持しているライセンスによって、使用できる機能が異なっていきます。</p>
+<p>Power BI ライセンスについては、以下ブログで引き続きご案内いたします。</p>
+<ul>
+<li><a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a></li>
+</ul>
+<blockquote>
+<p><strong>参考情報</strong><br>上記内容については、以下公開情報を基にまとめています。<br>ぜひ本ブログと併せてご覧ください。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/service-service-vs-desktop">Power BI Desktop と Power BI サービスの比較</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-what-is-desktop">Power BI Desktop とは何ですか?</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/power-bi-service-overview">Power BI サービスとは何ですか? </a></li>
+</ul>
+</blockquote>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+<hr>
+<p><strong>本ブログの関連記事</strong></p>
+<ul>
+<li><a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a></li>
+</ul>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_desktop_service.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../pbi_license/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>
+          </li>
+        
+          <li>
+            <a href="">Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">2</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 10px;">Power BI Desktop</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 20px;">Power BI サービス</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 10px;">ライセンス</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
