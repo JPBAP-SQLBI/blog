@@ -8,4 +8,5 @@
 
 - [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)
 
-- [Power BI ワークスペースについて ~ クラシックワークスペースと新しい(アプリ)ワークスペース ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/pbi_workspace_classic_and_app.md)
+- [Power BI ワークスペースについて ~ クラシックワークスペースと新しい(アプリ)ワークスペース ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
+
