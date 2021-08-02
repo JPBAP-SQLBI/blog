@@ -43,7 +43,7 @@ skip_render:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:cssjpn/blog-example.git
+  repo: git@github.com:JPBAP-SQLBI/blog.git
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }} [skip ci]"
 
@@ -109,7 +109,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jpazure
+theme: hexo-theme-jpazure
 
 feed:
   type: atom
