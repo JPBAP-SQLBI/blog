@@ -152,7 +152,7 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 ---
 
 > **本ブログの関連記事**
-> - [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](./pbi_desktop_service/)
+> - [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](../pbi_desktop_service/)
 
 
 
