@@ -10,3 +10,6 @@
 
 - [Power BI ワークスペースについて ~ クラシックワークスペースと新しい(アプリ)ワークスペース ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
 
+- [Power BI ワークスペースに関するよくあるお問い合わせ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_qna/)
+
+- [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
