@@ -12,6 +12,9 @@ tags:
 
 Power BI のライセンスについては過去記事「[作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。
 
+<!-- more -->
+
+
 <br>
 
 > [!IMPORTANT]
