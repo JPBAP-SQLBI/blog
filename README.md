@@ -14,4 +14,4 @@
 
 - [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
 
-- [Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/)
+- [Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~ 利用目的によるライセンスの組み合わせ ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/)
