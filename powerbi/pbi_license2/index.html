@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~ | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 前回のブログ 作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~では、Power BI の各種ライセンスの特徴について説明しました。 本ブログでは、実際Power BI のライセン">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 前回のブログ 作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~では、Power BI の各種ライセンスの特徴について説明しました。 本ブログでは、実際Power BI のライセン">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2021-08-31T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-31T08:07:26.487Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI サービス">
+<meta property="article:tag" content="ライセンス">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_license2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-08-31T07:00:00.000Z" itemprop="datePublished">2021-08-31</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+b28a509c-5995-554e-8d56-f0bfaeabdaa6%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%81%AE%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%99%E3%82%8B%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8A%E3%80%81%E8%80%83%E6%85%AE%E3%81%99%E3%82%8B%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%AF%EF%BC%9F+%7E%E5%88%A9%E7%94%A8%E7%9B%AE%E7%9A%84%E3%81%AB%E3%82%88%E3%82%8B%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AE%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B%7E%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_license2%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_license2.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_license2.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/" data-id="ckszsfdfb00030nnl48myad7u" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>前回のブログ <a href="./pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>では、Power BI の各種ライセンスの特徴について説明しました。</p>
+<p>本ブログでは、実際Power BI のライセンスを導入する際に、考慮するポイントや、利用目的によってどのようなライセンスの組み合わせをおすすめするか、具体的な事例を交えて、ご案内いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="利用人数・利用目的"><a href="#利用人数・利用目的" class="headerlink" title="利用人数・利用目的"></a>利用人数・利用目的</h2><hr>
+<p>Power BI ライセンスを導入するにあたり、まずは利用人数と利用目的を一度整理しておきましょう。</p>
+<h4 id="■-少人数の場合"><a href="#■-少人数の場合" class="headerlink" title="■ 少人数の場合"></a>■ 少人数の場合</h4><p>例えば、社内のデータを使用して、所属部署のKPIに関するレポートをPower BI Desktopで作成し、部署内のメンバー全員（10名）が毎日のチームミーティングで対象のレポートを確認することが要件とします。</p>
+<p>部署内の2、3 名のメンバーを中心に、共同作業でレポートを作成し・編集する場合、作成者は全員Power BI Pro（以下Pro）ライセンスを所有する必要がありますが、他のメンバーに関しては、レポートの閲覧する場面によってライセンスの所持が必要かどうかを判断します。</p>
+<p>もし部署メンバー全員（10名）が会社アカウントでログインし、レポートを操作して閲覧したい場合、全員Pro ライセンスを所持する必要があります。</p>
+<p>しかし、毎日のチームミーティングで、Proライセンス所持者であるレポート作成者が、画面を共有しながら説明することのみが想定され、他のメンバーはレポートへ直接にアクセスすることがない場合、他のメンバーはライセンスを所持する必要はありません。</p>
+<h4 id="■-大規模の場合"><a href="#■-大規模の場合" class="headerlink" title="■ 大規模の場合"></a>■ 大規模の場合</h4><p>もう一つ例を挙げます。</p>
+<p>所属部署のメンバー全員（10名）はすでにPro ライセンスを持っていて、共同作業を行いながら日々Power BIでレポートを作成し運用していますが、レポートのデータセットサイズがどんどん増えていき、Proライセンスはデータセットごとに1GBという制限がありますため、そろそろPremiumライセンスの導入が必要かもしれないと考えています。</p>
+<p>さらに、元々会社全体では部署ごとで異なるBIツールを使用していたが、コスト削減や管理の一元化という目的で、全てPower BIに集約することが検討されているとします。</p>
+<p>所属部署の需要のみを考慮する場合、全員Proライセンスから、Premium Per Userライセンスに変更すれば要件が満たされますが、会社全体として考慮する際に、全体でレポートを作成するユーザーは何人いるか、またレポートを閲覧するだけのユーザーが何人いるかを予め計算し、もし作成者が数十人で少数で、閲覧者が千人以上いることが想定される場合、Premium Per Capacityの方がコストパフォーマンスが良いという結論となります。</p>
+<p>そのため、ライセンスを導入する際には、ぜひ利用シーンを想像しながら、どのライセンスが必要かを判断しましょう。</p>
+<hr>
+<h2 id="各ライセンスの組み合わせ"><a href="#各ライセンスの組み合わせ" class="headerlink" title="各ライセンスの組み合わせ"></a>各ライセンスの組み合わせ</h2><hr>
+<p>以下にて各ライセンスの組み合わせパターンとその特徴をご紹介します。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>ライセンス組み合わせ</strong></th>
+<th><strong>特徴</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>（１）</td>
+<td>Proのみ</td>
+<td>ユーザー単位の導入パターン。中小規模の導入で、大容量なデータサイズや高いデータセット更新頻度を必要としない方向け。Proライセンスユーザーは全員レポートを作成・編集可能で、ユーザーの間でコンテンツ共有が可能です。</td>
+</tr>
+<tr>
+<td>（２）</td>
+<td>Premium Per Userのみ</td>
+<td>ユーザー単位の導入パターン。Premium per user 同士でのコンテンツ共有が可能です。Pro ライセンスのすべての機能が含まれる上に、ページ分割されたレポート、高度なAI、Premium ユーザーのみが利用できるその他の機能なども追加されています。また、データセットのサイズや自動更新の回数、ストレージ容量などにおいて、Pro ライセンスより高性能です。</td>
+</tr>
+<tr>
+<td>（３）</td>
+<td>Pro + Premium Per Capacity</td>
+<td>大規模な組織の導入向け。レポート作成者の数に応じて、Proライセンス（ユーザー単位）を購入し、さらにPremium Per Capacity の容量を購入すると閲覧者（Freeライセンス）の数は無制限となります。Proユーザーが作成されたPremium 容量のワークスペースにあるコンテンツは、ProユーザーやFreeのユーザーがアクセスできます（Freeユーザーの場合は閲覧のみ）。</td>
+</tr>
+<tr>
+<td>（４）</td>
+<td>Pro + Premium Per User</td>
+<td>ユーザー単位の導入パターン。一部ユーザーはPremium の機能（ページ分割されたレポート、高度なAI、データフローなど）を使いたいが、Premium Per Capacity を使用するほどの規模がない場合。Proライセンスが作成された共有容量にあるワークスペースのコンテンツはPremium Per User のユーザーもアクセスできるのに対して、Premium Per Userが作成したPremium のワークスペースのコンテンツはPremium per userのユーザーしかアクセスできません。</td>
+</tr>
+<tr>
+<td>（５）</td>
+<td>Pro + Premium Per Capacity + Premium Per User</td>
+<td>（３）のPro + Premium Per Capacity のパターンと基本的に同じですが、Premium Per Capacity の容量を補完するために、Premium Per User ライセンスを利用する場合が想定されます。</td>
+</tr>
+</tbody></table>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+<hr>
+<blockquote>
+<p><strong>本ブログの関連記事</strong></p>
+<ul>
+<li><a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a></li>
+</ul>
+</blockquote>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_license2.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_premium_gen2_roadmap/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI Premium Gen2 について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_qna/">Power BI ワークスペースに関するよくあるお問い合わせ</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_service/">Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">6</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 10px;">Power BI Desktop</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
