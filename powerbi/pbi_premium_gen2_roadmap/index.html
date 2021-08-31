@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BI Premium Gen2 について | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 Power BI のライセンスについては過去記事「作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~」でもご紹介させていただきましたが、今回は、新世代のPower BI Premi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BI Premium Gen2 について">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 Power BI のライセンスについては過去記事「作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~」でもご紹介させていただきましたが、今回は、新世代のPower BI Premi">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/pic1.gif">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/pic2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/pic3.png">
+<meta property="article:published_time" content="2021-08-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-31T00:12:07.284Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI サービス">
+<meta property="article:tag" content="ライセンス">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/pic1.gif">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_premium_gen2_roadmap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BI Premium Gen2 について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-08-30T15:00:00.000Z" itemprop="datePublished">2021-08-31</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+7bac0762-cde2-5a29-abd8-0e223e60b81c%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+Premium+Gen2+%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_premium_gen2_roadmap%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_premium_gen2_roadmap.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_premium_gen2_roadmap.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/" data-id="ckszbg4n500030npe388mgx0r" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>Power BI のライセンスについては過去記事「<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。</p>
+<br>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は 弊社公式ブログ「Microsoft Power BI ブログ」の公開情報を元に構成しておりますが、本記事編集時点と実際の機能やリリース時期に相違がある場合がございます。</p><p>元記事は以下よりご確認ください（英語）</p><p><Span style="font-size: 90%"><a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/en-us/blog/updated-timeline-and-milestones-for-premium-gen2-general-availability/">Updated Timeline and milestones for Premium Gen2 General Availability</a></span></p></div>
+<br>
+
+<h2 id="Power-BI-Premium-Gen2-とは？"><a href="#Power-BI-Premium-Gen2-とは？" class="headerlink" title="Power BI Premium Gen2 とは？"></a>Power BI Premium Gen2 とは？</h2><hr>
+<p>Power BI Premium の機能強化を目的に、アーキテクチャを再設計した新世代のPower BI Premium です。<br>現在はプレビューであり、容量ベースのPower BI Premium Per Capacity をご利用のテナントでGen2 への切り替えを行なうことが可能です。</p>
+<p>具体的には、CPU やメモリなどのリソースをより最適化するような設計に代わった一方、リソースは全てMicrosoft 側で自動調整を行なうためその手間を感じさせない設計になっています。<br>以前と同じ容量プランにおいても、Gen2ではCPUやメモリにおいて物理的な制限が大幅に緩和され、データセットの更新、レポートのクエリ実行の速度という面では、パフォーマンスが向上されます。<br>また処理量に応じた仮想コアの自動スケーリングにも対応し、過負荷による速度低下を防ぐことが可能です。</p>
+<p>ユーザー単位のライセンスであるPower BI Premium Per User もPower BI Premium Gen2 のアーキテクチャを採用しています。</p>
+<h3 id="Power-BI-Premium-Gen2-の使用方法"><a href="#Power-BI-Premium-Gen2-の使用方法" class="headerlink" title="Power BI Premium Gen2 の使用方法"></a>Power BI Premium Gen2 の使用方法</h3><p>Power BI サービスの管理ポータルより[容量の設定]から割当している容量をクリックし、<br>容量の設定画面上部からPremium Generation 2 (プレビュー)を有効化することでGen2 への切り替えが可能です。</p>
+<div align="center">
+<img src="pic1.gif" alt="画像1_Gen2 の使用方法" title="画像1_Gen2 の使用方法">
+</div>
+
+<br>
+<br>
+
+<h2 id="Power-BI-Premium-Gen1-従来版-との比較"><a href="#Power-BI-Premium-Gen1-従来版-との比較" class="headerlink" title="Power BI Premium Gen1(従来版) との比較"></a>Power BI Premium Gen1(従来版) との比較</h2><hr>
+<p>従来のPower BI Premium と具体的にどう違うのか、表形式でまとめしました。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Premium Gen1</th>
+<th>Premium Gen2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>リソースの使い方</td>
+<td><b>「ユーザー側で手動調整」</b><br>予約されたリソースは組織専用で排他的に使用されますので、物理的な制限があります。</td>
+<td><b>「Microsoft側で自動調整」</b><br>バックエンドコアに関しては、組織専用ではなく、クラウド内の物理ノードのリージョン クラスターに実装され、Power BI リージョン内の Premium 容量を使用しているすべてのテナントによって共有されます。</td>
+</tr>
+<tr>
+<td>CPU／仮想コア</td>
+<td><b>「物理的な制限」</b>物理的なリソース制限があります。例えば、P1なら仮想コア8個、バックエンドコア4個、メモリ25GB まで。<br><img src="pic2.png" width="150" height="150"></td>
+<td><b>「クラスター内でリソースが共有される理論上の制限」</b>各SKUにおいては理論上の仮想コアで、物理的にはもっと多い仮想コアが使用されます。<br>仮想コア数はCPU時間で定量化されます。P1容量に4つのバックエンドVコアがあり、30秒ごとにCPU使用率を計算します。したがって、バックエンドで最大4*30s=120sのCPU時間が処理に利用できることになります。<br><img src="pic3.png" width="150" height="150"></td>
+</tr>
+<tr>
+<td>メモリー</td>
+<td><b>「合計値の上限」</b>同時に実行する全てのワークロードによって使用されるメモリーの上限が決まっています。<br>例えばP1の場合、同時実行可能なワークロードの合計の上限は25GB までです。</td>
+<td><b>「コンテンツごとの上限」</b>一つの成果物（データセット、データフロー、ページ分割されたレポートなど）に対して利用可能なメモリーの上限はあります。<br>P1は一つの成果物あたりに25GBの上限がありますが、例えば、20GBのデータセットが二つあって、同じP1容量で同時に実行することは可能です。</td>
+</tr>
+<tr>
+<td>ワークロード</td>
+<td><b>「リソース競合が発生しうる」</b>同時に実行するワークロードは組織内のメモリー上限によって制限がありますので、リソースの競合が起きる可能性が高いです。</td>
+<td><b>「リソース競合が回避される」</b>Power BI ワークロード (データセット、データフロー、またはページ分割されたレポート) は複数の特殊なノード グループに分かれますため、異なるワークロード間のリソース競合を回避することが可能です。</td>
+</tr>
+<tr>
+<td>ストレージ</td>
+<td>SKUごとに 100 TB</td>
+<td>SKUごとに 100 TB</td>
+</tr>
+<tr>
+<td>自動スケーリング</td>
+<td>非対応</td>
+<td>対応。24時間に最大1つのコアが追加されます。料金は利用時間の従量課金制。</td>
+</tr>
+<tr>
+<td>データ更新並列処理</td>
+<td>P1はデータ更新並列処理6個まで、P2は12個までなど制限があります。</td>
+<td>データ更新の並列処理数に制限はありません。<br>並行して更新実行されたデータセットは、1つまたは複数のノードにロードされ、ロードされたすべてのデータセットのメモリの合計に物理的な制限がないため、CPU時間を累積してカウントすることができます。</td>
+</tr>
+<tr>
+<td>スケーリング方法</td>
+<td>スケールアップ（P1-＞P2など）</td>
+<td>スケールアウト（並列処理の仮想コアの追加）</td>
+</tr>
+</tbody></table>
+<p>*2021年8月時点の情報です。</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=j17y_BPlhvU">//参考①：Introducing Power BI Premium Gen2 - YouTube</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-concepts">//参考②：Power BI Premium Gen2 (プレビュー) について - Power BI | Microsoft Docs</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is">//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs</a></p>
+<br>
+
+<h2 id="よくある質問"><a href="#よくある質問" class="headerlink" title="よくある質問"></a>よくある質問</h2><hr>
+<h3 id="Q-Premium-Gen2-はいつリリースされる予定ですか？"><a href="#Q-Premium-Gen2-はいつリリースされる予定ですか？" class="headerlink" title="Q.Premium Gen2 はいつリリースされる予定ですか？"></a>Q.Premium Gen2 はいつリリースされる予定ですか？</h3><p>Power BI Premium Gen 2 は、9月27日の週に一般公開される予定です。<br>今後、Gen1 をGen2 に移行するためのスケジュールについてもお知らせする予定です。</p>
+<div class="alert is-important"><p class="alert-title">重要</p><p>今利用されているGen1 が自動的にGen2 に移行されるわけではございませんのでご安心ください。 </p></div>
+</br>
+
+<h3 id="Q-Power-BI-Premium-Gen2-にもメトリックアプリはありますか？"><a href="#Q-Power-BI-Premium-Gen2-にもメトリックアプリはありますか？" class="headerlink" title="Q.Power BI Premium Gen2 にもメトリックアプリはありますか？"></a>Q.Power BI Premium Gen2 にもメトリックアプリはありますか？</h3><p>プレビュー版として、Power BI Premium Gen2 Metrics アプリの提供がございます。<br>Gen2 をご利用の場合はこちらのアプリをご利用ください。<br>詳しくは以下公式ドキュメントをご覧ください。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-metrics-app">Power BI Premium Gen2 Metrics アプリ (プレビュー)</a></p>
+</br>
+
+<h3 id="Q-自動スケーリングへの課金はいつから発生しますか？"><a href="#Q-自動スケーリングへの課金はいつから発生しますか？" class="headerlink" title="Q.自動スケーリングへの課金はいつから発生しますか？"></a>Q.自動スケーリングへの課金はいつから発生しますか？</h3><p>Power BI Premium Gen2 が一般提供されてから30日後に開始される予定です。<br>それまでは、自動スケーリング利用時の課金はありません。</p>
+</br>
+</br>
+
+
+<p>以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。 </p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_premium_gen2_roadmap.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_workspace_qna/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI ワークスペースに関するよくあるお問い合わせ</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_qna/">Power BI ワークスペースに関するよくあるお問い合わせ</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_service/">Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_classic_and_app/">Power BI ワークスペースについて ~クラシックワークスペースと新しい(アプリ)ワークスペース~</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">5</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 10px;">Power BI Desktop</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 16.67px;">Power BI サービス</a> <a href="../../tags/Workspace/" style="font-size: 13.33px;">Workspace</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 13.33px;">ライセンス</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
