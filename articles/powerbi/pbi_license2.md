@@ -9,7 +9,7 @@ tags:
 
 こんにちは、Power BI サポート チームです。
 
-前回のブログ [作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](./pbi_license/)では、Power BI の各種ライセンスの特徴について説明しました。
+前回のブログ [作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](../pbi_license/)では、Power BI の各種ライセンスの特徴について説明しました。
 
 本ブログでは、実際Power BI のライセンスを導入する際に、考慮するポイントや、利用目的によってどのようなライセンスの組み合わせをおすすめするか、具体的な事例を交えて、ご案内いたします。
 
