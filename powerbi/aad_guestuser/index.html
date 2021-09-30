@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～ | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 Power BI ご利用のユーザー様から、「組織外のユーザーはPower BI のレポートを共有できますか？制限する方法はありますか？」などの質問をよく頂いていますが、本ブログでは、組織外のユーザーを招待し、組織内のゲストユーザーとしてコンテンツを共有する方法、及び権限を制御する方法につきまして、ご紹介いたします。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 Power BI ご利用のユーザー様から、「組織外のユーザーはPower BI のレポートを共有できますか？制限する方法はありますか？」などの質問をよく頂いていますが、本ブログでは、組織外のユーザーを招待し、組織内のゲストユーザーとしてコンテンツを共有する方法、及び権限を制御する方法につきまして、ご紹介いたします。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/aad_guestuser.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/guestuser_mail.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/adhoc_invitation.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/pending.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/adhoc_invite_mail.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting3.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting1.png">
+<meta property="article:published_time" content="2021-09-30T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-30T06:14:16.559Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="ゲストユーザー">
+<meta property="article:tag" content="共有">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/aad_guestuser.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/aad_guestuser" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-09-30T07:00:00.000Z" itemprop="datePublished">2021-09-30</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+9e8648f6-6faa-5bae-b0a0-af8c8d207463%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AFPower+BI%E3%82%92%E5%88%A9%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F%EF%BD%9E%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%AE%E5%85%B1%E6%9C%89%EF%BD%9E%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Faad_guestuser%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Faad_guestuser.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Faad_guestuser.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/" data-id="cku6jlfdo00000oqj1y4l90ps" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>Power BI ご利用のユーザー様から、「組織外のユーザーはPower BI のレポートを共有できますか？制限する方法はありますか？」などの質問をよく頂いていますが、<br>本ブログでは、組織外のユーザーを招待し、組織内のゲストユーザーとしてコンテンツを共有する方法、及び権限を制御する方法につきまして、ご紹介いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
+<ol>
+<li><a href="#%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%AF%EF%BC%9F">組織外のユーザーとは？</a></li>
+<li><a href="#%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%97%E3%81%A6%E6%8B%9B%E5%BE%85%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">組織外のユーザーをゲストユーザーとして招待するには</a></li>
+<li><a href="#%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E5%85%B1%E6%9C%89%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">ゲストユーザーとコンテンツを共有するには</a></li>
+<li><a href="#%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%88%B6%E5%BE%A1%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">ゲストユーザーの権限を制御するには</a></li>
+</ol>
+<hr>
+<h2 id="組織外のユーザーとは？"><a href="#組織外のユーザーとは？" class="headerlink" title="組織外のユーザーとは？"></a>組織外のユーザーとは？</h2><hr>
+<p>組織外のユーザー（または外部ユーザー）とは、ご利用のAzure Active Directory（AAD）テナントのドメイン以外のユーザーを指します。<br>具体的には、メールアドレスの@ マーク後の表記が異なるユーザーです。<br>gmail.com、outlook.com、hotmail.com などの個人用メールアカウントのユーザーにつきましても、組織外のユーザーと見なします。</p>
+<p>組織外のユーザーと、Power BI内のレポートを共有するには、組織外のユーザーをゲストユーザーとして招待する必要があります。</p>
+<hr>
+<h2 id="組織外のユーザーをゲストユーザーとして招待するには"><a href="#組織外のユーザーをゲストユーザーとして招待するには" class="headerlink" title="組織外のユーザーをゲストユーザーとして招待するには"></a>組織外のユーザーをゲストユーザーとして招待するには</h2><hr>
+<p>ゲストユーザーとして招待するには、計画的招待とアドホック招待という二つの方法があります。</p>
+<h4 id="■-計画的招待"><a href="#■-計画的招待" class="headerlink" title="■ 計画的招待"></a>■ 計画的招待</h4><p>Azure Active Directory（AAD）からゲストユーザーを招待する方法です。</p>
+<p>まず、<a target="_blank" rel="noopener" href="https://portal.azure.com/">Azureポータル</a> へアクセスし、Azure Active Directoryを選択します。<br>次に、Azure Active Directoryで、[ユーザー]&gt;[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。</p>
+<p><img src="./aad_guestuser.png"></p>
+<p>招待されたユーザーは、下記画像のようなメールが届きますので、メールに記載されているリンクをクリックし、指示に従いアカウントの有効化を行なってください。</p>
+<p><img src="./guestuser_mail.png"></p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>Azure Active Directory （AAD）側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/azure/active-directory/external-identities/delegate-invitations">B2B 外部コラボレーションを有効にしてゲストを招待できるユーザーを管理する</a></p></div>
+<h4 id="■-アドホック招待"><a href="#■-アドホック招待" class="headerlink" title="■ アドホック招待"></a>■ アドホック招待</h4><p>レポートやダッシュボードの共有機能、またはアプリ発行のアクセスページで、AADに存在しない組織外のユーザーを招待する方法です。</p>
+<p>レポートの直接アクセスから追加する方法には、レポートの[アクセス許可の管理]にアクセスし、<br>直接アクセスで、[+ユーザーの追加]を行ない、組織外のユーザーのメールアドレスを入力すると、招待メールが対象のユーザーに届きます。</p>
+<p><img src="./adhoc_invitation.png"></p>
+<p>また、招待されたユーザーは、保留のリストで表示されます。</p>
+<p><img src="./pending.png"></p>
+<p>レポートからの招待の場合は、下記のような招待メールが届きますが、リンクからアカウントを作成したら、直接アクセスの一覧に表示されるようになります。</p>
+<p><img src="./adhoc_invite_mail.png"></p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>管理ポータルで、テナント設定「組織への外部ユーザーの招待」を無効化することによって、アドホック招待を使用できないように設定することができます。</p></div>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-azure-ad-b2b">Azure AD B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="ゲストユーザーとコンテンツを共有するには"><a href="#ゲストユーザーとコンテンツを共有するには" class="headerlink" title="ゲストユーザーとコンテンツを共有するには"></a>ゲストユーザーとコンテンツを共有するには</h2><hr>
+<p>計画的招待で、ゲストユーザーとして招待されたユーザーは、ワークスペースのアクセス許可、レポートやダッシュボード、アプリのアクセス許可でも追加できるようになります。<br>また、アドホック招待を通してアカウントを作成したゲストユーザーも、招待元のレポート・ダッシュボード・アプリを閲覧できる上に、計画的招待のゲストユーザーと同様、他のレポートやダッシュボード、アプリのアクセス許可にも追加されることが可能です。</p>
+<p>ただし、ゲストユーザーがコンテンツを閲覧するには、以下のライセンス条件が必要です。</p>
+<ul>
+<li>ゲストユーザーにPower BI Pro ライセンスまたはPremium Per User ライセンスの付与</li>
+<li>Premium Per Capacity のワークスペースで、ゲストユーザーにPower BI Free ライセンス、ProライセンスまたはPremium Per User ライセンスの付与<br>（Freeライセンスは招待メールからアカウント作成すると、付与されます。）</li>
+<li>ゲストユーザーが本来所属しているテナントで、Power BI Pro ライセンスまたはPremium Per User ライセンスを所持している</li>
+</ul>
+<p>また、対象のゲストユーザーが、コンテンツを編集・作成・管理できるようになるには、Power BI Pro ライセンスまたはPremium Per User ライセンスを所持する上で、管理ポータルのテナント設定で、「Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する」を有効化しておく必要があります。<br>こちらのテナント設定は、既定値では、無効となっています。</p>
+<p><img src="./tenant_setting1.png"></p>
+<p>しがしながら、通常のユーザーと異なり、コンテンツを編集・作成・管理できるようになったとしても、ゲストユーザーには一部利用できない機能があります。<br>詳細につきましては、下記参考情報のドキュメントに記載されている、「考慮事項と制限事項」の内容をご確認ください。</p>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-azure-ad-b2b#considerations-and-limitations">Azure AD B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する（考慮事項と制限事項）</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="ゲストユーザーの権限を制御するには"><a href="#ゲストユーザーの権限を制御するには" class="headerlink" title="ゲストユーザーの権限を制御するには"></a>ゲストユーザーの権限を制御するには</h2><hr>
+<p>管理ポータルのテナント設定で、ゲストユーザーがPower BIサービスのテナントへアクセスできないようにすることや、アドホック招待を無効化にすることができます。</p>
+<h4 id="■-Azure-Active-Directory-のゲスト-ユーザーによる-Power-BI-へのアクセスを許可する"><a href="#■-Azure-Active-Directory-のゲスト-ユーザーによる-Power-BI-へのアクセスを許可する" class="headerlink" title="■ Azure Active Directory のゲスト ユーザーによる Power BI へのアクセスを許可する"></a>■ Azure Active Directory のゲスト ユーザーによる Power BI へのアクセスを許可する</h4><p>既定値は有効化されていますが、この設定を無効にすると、Power BI サービスにアクセスしようとしたときに、ゲストユーザーにエラーが表示されます。</p>
+<p><img src="./tenant_setting2.png"></p>
+<h4 id="■-組織への外部ユーザーの招待"><a href="#■-組織への外部ユーザーの招待" class="headerlink" title="■ 組織への外部ユーザーの招待"></a>■ 組織への外部ユーザーの招待</h4><p>既定値は有効化されていますが、この設定を無効にすると、アドホック招待でレポートやダッシュボード、アプリから組織外のユーザーを招待することができません。<br>ただし、計画的招待、Azure Active Directoryでゲストユーザーを招待することは引き続き可能です。</p>
+<p><img src="./tenant_setting3.png"></p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>計画的招待－Azure Active Directory （AAD）側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/azure/active-directory/external-identities/delegate-invitations">B2B 外部コラボレーションを有効にしてゲストを招待できるユーザーを管理する</a></p></div>
+<h4 id="■-Azure-Active-Directory-のゲスト-ユーザーによる組織内のコンテンツの編集および管理を許可する"><a href="#■-Azure-Active-Directory-のゲスト-ユーザーによる組織内のコンテンツの編集および管理を許可する" class="headerlink" title="■ Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する"></a>■ Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する</h4><p>既定値では無効となっていますが、この設定を有効にすると、適切なライセンスを持つゲストユーザーは、組織内のコンテンツを編集および管理できます。<br>また、左側のワークスペースの一覧タブも利用できるようになります。</p>
+<p><img src="./tenant_setting1.png"></p>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-portal#export-and-sharing-settings">管理ポータルでの Power BI の管理</a></li>
+</ul>
+</blockquote>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+<hr>
+<blockquote>
+<p><strong>本ブログの関連記事</strong></p>
+<ul>
+<li><a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a></li>
+</ul>
+</blockquote>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/aad_guestuser.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_license2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_license2/">Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_qna/">Power BI ワークスペースに関するよくあるお問い合わせ</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_license/">作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">7</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E5%85%B1%E6%9C%89">共有</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 10px;">Power BI Desktop</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 10px;">共有</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
