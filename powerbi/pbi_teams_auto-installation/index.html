@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Microsoft Teams の Power BI アプリの自動インストール機能について | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。  Power BI では、 Microsoft Teams との統合 を通じて、 Microsoft Teams 上で Power BI サービスを利用することができる Power BI アプリが用意されています。今回は、2021年11月にリリース予定とアナウンスされている「Microsoft Teams の Power BI アプリの自動イン">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Microsoft Teams の Power BI アプリの自動インストール機能について">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。  Power BI では、 Microsoft Teams との統合 を通じて、 Microsoft Teams 上で Power BI サービスを利用することができる Power BI アプリが用意されています。今回は、2021年11月にリリース予定とアナウンスされている「Microsoft Teams の Power BI アプリの自動イン">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/pic0.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/pic1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/pic2.png">
+<meta property="article:published_time" content="2021-09-29T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-30T06:42:31.479Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Teams">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/pic0.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_teams_auto-installation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Microsoft Teams の Power BI アプリの自動インストール機能について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-09-29T15:00:00.000Z" itemprop="datePublished">2021-09-30</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+ee58ae4a-9852-59e8-95c9-254323e1d298%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BMicrosoft+Teams+%E3%81%AE+Power+BI+%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E8%87%AA%E5%8B%95%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%A9%9F%E8%83%BD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_teams_auto-installation%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_teams_auto-installation.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_teams_auto-installation.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/" data-id="cku6klqoa00070okif1sv1ejz" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。 </p>
+<p>Power BI では、 Microsoft Teams との統合 を通じて、 Microsoft Teams 上で Power BI サービスを利用することができる Power BI アプリが用意されています。<br>今回は、2021年11月にリリース予定とアナウンスされている「Microsoft Teams の Power BI アプリの自動インストール機能」についてご案内します。</p>
+<p>※Microsoft Meesage Center から「MC288054 Configuration Change: Power BI app for Microsoft Teams automatic installation and availability for government customers」のタイトルで通知されているものと同様になります。</p>
+<span id="more"></span>
+
+</br>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は 弊社公式ブログ「Microsoft Power BI ブログ」の公開情報を元に構成しておりますが、本記事編集時点と実際の機能やリリース時期に相違がある場合がございます。</p><p>元記事は以下よりご確認ください（英語）</p><p><Span style="font-size: 90%"><a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/ja-jp/blog/pre-announcing-automatic-installation-of-the-power-bi-app-for-microsoft-teams/">Pre-Announcing Automatic Installation of the Power BI app for Microsoft Teams</a></span></p></div>
+</br>
+
+
+<hr>
+<h2 id="Microsoft-Teams-の-Power-BI-アプリ-とは"><a href="#Microsoft-Teams-の-Power-BI-アプリ-とは" class="headerlink" title="Microsoft Teams の Power BI アプリ とは"></a>Microsoft Teams の Power BI アプリ とは</h2><p>Microsoft Teams の Power BI アプリは、Teams で Power BI を利用して共同作業できる方法の 1 つです。<br>Power BI アプリをインストールすると、Power BI サービスのように、次のような操作を Microsoft Teams で行うことができます。</p>
+<ul>
+<li>ダッシュボード、レポート、アプリを作成、表示、編集する。</li>
+<li>ワークスペースを作成し、参加する。</li>
+<li>メールまたは Microsoft Teams を使用してコンテンツを共有する。</li>
+</ul>
+<p>また、通常の Power BI サービスにはない、Teams で表示したすべての Power BI タブを表示する機能も備わっています。</p>
+<div align="center">
+<img src="pic0.png" alt="画像1_Power BI アプリ" title="画像1_Power BI アプリ">
+</div>
+
+
+</br>
+
+<p>参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-microsoft-teams-app">Power BI アプリを Microsoft Teams に追加する</a></p>
+<!-- そして、今回自動インストール機能により、より多くのユーザーがこれらの機能を利用できるようになりました。また、Power BIと Teams の管理者にとっても、ユーザーに Power BI エクスペリエンスを Teams にインストールするためだけに、Microsoft Teams アプリのセットアップポリシーを作成・管理する必要性が減るため、助かります。-->
+
+</br>
+
+<h2 id="Microsoft-Teams-用の-Power-BI-アプリの自動インストール機能について"><a href="#Microsoft-Teams-用の-Power-BI-アプリの自動インストール機能について" class="headerlink" title="Microsoft Teams 用の Power BI アプリの自動インストール機能について"></a>Microsoft Teams 用の Power BI アプリの自動インストール機能について</h2><p>今回事前アナウンスされている機能は以下の通りです。</p>
+<ul>
+<li>Power BIは、ユーザーが Power BI サービスにアクセスした際に、自動的に Teams の Power BI アプリのインストールを開始する。</li>
+<li>Power BI 管理者は、Power BI 管理ポータルのテナント設定を通じて、自動インストールしないことを選択できる。</li>
+<li>このテナント設定は、2021年9月30日以降、順次自動インストール機能が追加されている。</li>
+<li>この設定を「有効」にした組織では、2021年11月から自動インストールが開始される。</li>
+</ul>
+</br>
+
+<h2 id="自動インストール機能を無効にしたい場合"><a href="#自動インストール機能を無効にしたい場合" class="headerlink" title="自動インストール機能を無効にしたい場合"></a>自動インストール機能を無効にしたい場合</h2><p>Power BI 管理ポータルのテナント設定から自動インストール機能を無効にすることが可能です。</p>
+<p>2021年9月30日以降順次、「Install Power BI app for Microsoft Teams automatically tenant」の設定が追加されており、Power BI 管理者は、ここから自動インストールの有効・無効を設定することができます。<br>デフォルトでは、自動インストールが有効になっています。</p>
+<div align="center">
+<img src="pic1.png" alt="画像2_テナント設定" title="画像2_テナント設定">
+</div>
+
+</br>
+
+<h2 id="自動インストールの条件・タイミング"><a href="#自動インストールの条件・タイミング" class="headerlink" title="自動インストールの条件・タイミング"></a>自動インストールの条件・タイミング</h2><p>自動インストールは、以下の条件のユーザーに対して行われます。</p>
+<ul>
+<li>Microsoft Teams の管理ポータルで Power BI app for Microsoft Teams が許可に設定されている。</li>
+<li>Power BI テナントの設定「Install Power BI app for Microsoft Teams automatically」が有効になっている。</li>
+<li>ユーザーが Microsoft Teams のライセンスを持っている</li>
+<li>ユーザーが Power BI サービス（例：app.powerbi.com）へサインインし、アクティブ化している</li>
+</ul>
+<p>当機能のリリース当初においては、自動インストールは、新規ユーザーが初めて Web ブラウザーで Power BI サービスにアクセスしたときに適用されます。<br>将来的には、条件を満たした Power BI サービスのすべてのアクティブユーザーに自動インストールの実施が予定されています。</p>
+<p>自動インストールが行われると、Power BI サービスの通知ペインに以下の通知が表示されます。</p>
+<div align="center">
+<img src="pic2.png" alt="画像3_インストール通知" title="画像3_インストール通知">
+</div>
+
+</br>
+</br>
+
+<p>以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_teams_auto-installation.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../aad_guestuser/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～
+        
+      </div>
+    </a>
+  
+  
+    <a href="../pbi_license2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../aad_guestuser/">組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～</a>
+          </li>
+        
+          <li>
+            <a href="">Microsoft Teams の Power BI アプリの自動インストール機能について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_license2/">Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~利用目的によるライセンスの組み合わせ~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_qna/">Power BI ワークスペースに関するよくあるお問い合わせ</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">8</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E5%85%B1%E6%9C%89">共有</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 10px;">Power BI Desktop</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 10px;">共有</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
