@@ -124,7 +124,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 
 
 ご参考情報：
-[Power BI レポートのリンクの共有 - Dynamics 365 Release Plan | Microsoft Docs](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Fpower-platform-release-plan%2F2021wave1%2Fpower-bi%2Fsharing-links-power-bi-reports%23feature-details&data=04%7C01%7CTomoko.Yamazaki%40microsoft.com%7C1380064e4ca24621a7d408d979bc5af6%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637674672227872382%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=5PqXVlEo2gIH9sNM7VZ8dTPtcOtORz7NU%2BKkepw3yzQ%3D&reserved=0)
+[Power BI レポートのリンクの共有 - Dynamics 365 Release Plan | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-platform-release-plan/2021wave1/power-bi/sharing-links-power-bi-reports)
 [Announcing the new sharing experience | Microsoft Power BI Blog | Microsoft Power BI](https://powerbi.microsoft.com/en-us/blog/announcing-the-new-sharing-experience/)
 
 </br>
