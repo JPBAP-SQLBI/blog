@@ -17,3 +17,7 @@
 - [Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~ 利用目的によるライセンスの組み合わせ ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/)
 
 - [組織外のユーザーはPower BIを利用できますか？～ゲストユーザーとの共有～](https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/)
+
+- [Power BIサービスでのコンテンツ共有方法の種類](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/)
+
+- [Microsoft Teams の Power BI アプリの自動インストール機能について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/)
