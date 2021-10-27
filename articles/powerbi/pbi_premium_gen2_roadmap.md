@@ -1,16 +1,21 @@
 
 ---
 title: Power BI Premium Gen2 について
-date: 2021-08-31 00:00:00 
+date: 2021-10-27 15:00:00 
 tags:
   - Power BI
   - Power BI サービス
   - ライセンス
+  - Power BI Premium
 ---
 
 こんにちは、Power BI サポート チームです。
 
 Power BI のライセンスについては過去記事「[作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。
+
+<span style="color: red; ">Update: 2021/10/27
+現在Power BI Premium Gen2のロードマップについて、最新情報が発表されていますので、一部スケジュールの記載を追加しております。詳しくは記事内をご確認ください。
+</span>
 
 <!-- more -->
 
@@ -18,17 +23,28 @@ Power BI のライセンスについては過去記事「[作成したレポー�
 <br>
 
 > [!IMPORTANT]
-> 本記事は 弊社公式ブログ「Microsoft Power BI ブログ」の公開情報を元に構成しておりますが、本記事編集時点と実際の機能やリリース時期に相違がある場合がございます。
->元記事は以下よりご確認ください（英語）
-><Span style="font-size: 90%">[Updated Timeline and milestones for Premium Gen2 General Availability](https://powerbi.microsoft.com/en-us/blog/updated-timeline-and-milestones-for-premium-gen2-general-availability/)</span>
+> 本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、
+> 本記事編集時点と実際の機能に相違がある場合がございます。
+> 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
 
 <br>
 
+---
+## 目次
+---
+1. [Power BI Premium Gen2 とは？](#Power-BI-Premium-Gen2-とは？)
+2. [Power BI Premium Gen2 の使用方法](#Power-BI-Premium-Gen2-の使用方法)
+3. [Power BI Premium Gen1(従来版) との比較](#Power-BI-Premium-Gen1-従来版-との比較)
+4. [よくある質問](#よくある質問)
+
+<br>
+
+---
 ## Power BI Premium Gen2 とは？
 ---
 
 Power BI Premium の機能強化を目的に、アーキテクチャを再設計した新世代のPower BI Premium です。
-現在はプレビューであり、容量ベースのPower BI Premium Per Capacity をご利用のテナントでGen2 への切り替えを行なうことが可能です。
+2021年10月4日に正式にプレビューから一般提供に移行されており、容量ベースのPower BI Premium Per Capacity をご利用のテナントでGen2 への切り替えを行なうことが可能です。
 
 具体的には、CPU やメモリなどのリソースをより最適化するような設計に代わった一方、リソースは全てMicrosoft 側で自動調整を行なうためその手間を感じさせない設計になっています。
 以前と同じ容量プランにおいても、Gen2ではCPUやメモリにおいて物理的な制限が大幅に緩和され、データセットの更新、レポートのクエリ実行の速度という面では、パフォーマンスが向上されます。
@@ -37,19 +53,20 @@ Power BI Premium の機能強化を目的に、アーキテクチャを再設計
 
 ユーザー単位のライセンスであるPower BI Premium Per User もPower BI Premium Gen2 のアーキテクチャを採用しています。
 
+---
 ### Power BI Premium Gen2 の使用方法
-
+---
 
 Power BI サービスの管理ポータルより[容量の設定]から割当している容量をクリックし、
-容量の設定画面上部からPremium Generation 2 (プレビュー)を有効化することでGen2 への切り替えが可能です。
+容量の設定画面上部からPremium Generation 2を有効化することでGen2 への切り替えが可能です。
 
 <div align="center">
 <img src="pic1.gif" alt="画像1_Gen2 の使用方法" title="画像1_Gen2 の使用方法">
 </div>
 
 <br>
-<br>
 
+---
 ##  Power BI Premium Gen1(従来版) との比較
 ---
 
@@ -66,46 +83,67 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 | データ更新並列処理 | P1はデータ更新並列処理6個まで、P2は12個までなど制限があります。                                                                                               | データ更新の並列処理数に制限はありません。<br>並行して更新実行されたデータセットは、1つまたは複数のノードにロードされ、ロードされたすべてのデータセットのメモリの合計に物理的な制限がないため、CPU時間を累積してカウントすることができます。                                       | 
 | スケーリング方法   | スケールアップ（P1-＞P2など）                                                                                                                                 | スケールアウト（並列処理の仮想コアの追加）                                                                                                                                                                                                                                         | 
 
-*2021年8月時点の情報です。
+*2021年10月時点の情報です。
 
 [//参考①：Introducing Power BI Premium Gen2 - YouTube](https://www.youtube.com/watch?v=j17y_BPlhvU)
-[//参考②：Power BI Premium Gen2 (プレビュー) について - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-concepts)
+[//参考②：Power BI Premium Gen2 のアーキテクチャ - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-architecture)
 [//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is)
 
 
 
 <br>
 
+---
 ## よくある質問
 ---
 
 
-### Q.Premium Gen2 はいつリリースされる予定ですか？
+### Q. 今後Premium Gen2 への移行スケジュールについて教えてください。
 
-Power BI Premium Gen 2 は、9月27日の週に一般公開される予定です。
-今後、Gen1 をGen2 に移行するためのスケジュールについてもお知らせする予定です。
+Power BI Premium Gen 2 は、2021年10月4日に一般公開されています。
+今後、Gen1 をGen2 に移行するためのスケジュールについて、Premium容量をご利用のユーザーに把握していただきたい重要な日付は以下の通りです。
+- 2021 年 10 月 4 日 - Power BI Premium Gen2 が一般提供されます。
+- 2021 年 11 月 15 日 - お客様に移行を促す通知の送信が開始されます。
+- 2022 年 1 月 15 日 - Microsoft により、すべての組織を対象に、Premium 容量の最新の Gen2 プラットフォームへの移行が開始されます。
 
-> [!IMPORTANT]
-> 今利用されているGen1 が自動的にGen2 に移行されるわけではございませんのでご安心ください。 
+以下の画像にて、各主要なマイルストーンをまとめましたので、併せてご確認ください。
+
+<div align="center">
+<img src="roadmap.png" alt="画像2_Gen2への移行ロードマップ" title="画像2_Gen2への移行ロードマップ">
+</div>
+
+//参考情報：[Power BI Premium Gen2 への移行を計画する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-transition-gen1-to-gen2)
 
 </br>
 
-### Q.Power BI Premium Gen2 にもメトリックアプリはありますか？
+### Q. Power BI Premium Gen2 にもメトリックアプリはありますか？
 
-プレビュー版として、Power BI Premium Gen2 Metrics アプリの提供がございます。
-Gen2 をご利用の場合はこちらのアプリをご利用ください。
+Power BI Premium Gen2 にも専用のメトリックアプリを提供しております。
+最新のアプリは下記の画像通りです。
+
+<div align="center">
+<img src="gen2metricsapp.png" alt="画像3_Gen2メトリックアプリ" title="画像3_Gen2メトリックアプリ">
+</div>
+<br>
+Gen2 をご利用の場合はこちらのアプリをインストールしてください。
 詳しくは以下公式ドキュメントをご覧ください。
 
-[Power BI Premium Gen2 Metrics アプリ (プレビュー)](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-metrics-app)
-
+- [Gen2 メトリック アプリをインストールする](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-install-gen2-app)
+- [Gen2 メトリック アプリを使用する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-metrics-app)
 
 </br>
 
-### Q.自動スケーリングへの課金はいつから発生しますか？
+### Q. 自動スケーリングへの課金はいつから発生しますか？
 
-Power BI Premium Gen2 が一般提供されてから30日後に開始される予定です。
+自動スケーリングはPower BI Premium Gen2 が一般提供されてから30日後、**2021 年 11 月 4 日** に課金開始されます。
 それまでは、自動スケーリング利用時の課金はありません。
 
+2021 年 11 月 4 日以降、引き続き自動スケーリングを使用する際に、今後課金される料金を把握できるように、[容量のアドオンに関する Premium の価格の詳細](https://powerbi.microsoft.com/ja-jp/pricing/#premium-add-on-card-autoscale)をご確認ください。
+また、自動スケーリングはオプション機能なため、機能を無効にした場合は、課金されません。
+
+Power BI 管理ポータルで自動スケーリングを有効にすることができますので、詳細につきましては、以下の公式ドキュメントをご覧ください。
+
+//参考情報：[Power BI Premium で自動スケーリングを使用する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-auto-scale)
 </br>
 </br>
 
