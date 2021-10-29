@@ -80,7 +80,7 @@ Power BI 管理ポータルのテナント設定から自動インストール�
 デフォルトでは、自動インストールが有効になっています。
 
 <div align="center">
-<img src="pic1.png" alt="画像2_テナント設定" title="画像2_テナント設定">
+<img src="pic3.png" alt="画像2_テナント設定" title="画像2_テナント設定">
 </div>
 
 </br>
