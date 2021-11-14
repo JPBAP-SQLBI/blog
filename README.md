@@ -21,3 +21,7 @@
 - [Power BIサービスでのコンテンツ共有方法の種類](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/)
 
 - [Microsoft Teams の Power BI アプリの自動インストール機能について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/)
+
+- [Power BI サービスのデータセット更新手順について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/)
+
+- [トラブル発生時の事象調査に必要な情報の採取手順について(通信編)](https://jpbap-sqlbi.github.io/blog/powerbi/all_howto_trace/)
