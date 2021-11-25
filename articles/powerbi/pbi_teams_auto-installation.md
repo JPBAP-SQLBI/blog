@@ -1,4 +1,3 @@
-
 ---
 title: Microsoft Teams の Power BI アプリの自動インストール機能について
 date: 2021-09-30 00:00:00 
