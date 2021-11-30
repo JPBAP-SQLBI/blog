@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 Power BI ご利用のユーザー様から、データ接続の際にインポートモードかDirect Query モードを選択できるが、どの場合にどれを使用すれば良いのか？などの質問をよく頂いていますが、本ブログでは、インポートモードとDirect Query モードの概要及び利用シーンにつきまして、ご紹介いたします。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 Power BI ご利用のユーザー様から、データ接続の際にインポートモードかDirect Query モードを選択できるが、どの場合にどれを使用すれば良いのか？などの質問をよく頂いていますが、本ブログでは、インポートモードとDirect Query モードの概要及び利用シーンにつきまして、ご紹介いたします。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/desktop_import_mode.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/desktop_dq_mode.png">
+<meta property="article:published_time" content="2021-11-30T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-30T07:26:36.021Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="データセット">
+<meta property="article:tag" content="データ接続">
+<meta property="article:tag" content="ストレージモード">
+<meta property="article:tag" content="インポート">
+<meta property="article:tag" content="Direct Query">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/desktop_import_mode.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/storage_mode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-11-30T07:00:00.000Z" itemprop="datePublished">2021-11-30</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+ba80dbca-260d-5028-8fdb-a6c5c1e9db90%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89%E3%80%8C%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%80%8D%E3%81%A8%E3%80%8CDirect+Query%E3%80%8D%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fstorage_mode%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fstorage_mode.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fstorage_mode.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/" data-id="ckwls1dq1000k0mlielpk0ynk" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>Power BI ご利用のユーザー様から、データ接続の際にインポートモードかDirect Query モードを選択できるが、どの場合にどれを使用すれば良いのか？などの質問をよく頂いていますが、<br>本ブログでは、インポートモードとDirect Query モードの概要及び利用シーンにつきまして、ご紹介いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
+<ol>
+<li><a href="#%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A8%E3%81%AF%EF%BC%9F">ストレージモードとは？</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">インポートモードのデータセット</a></li>
+<li><a href="#DirectQuery%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">DirectQueryモードのデータセット</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8DirectQuery%E3%81%AE%E6%AF%94%E8%BC%83">インポートとDirectQueryの比較</a></li>
+</ol>
+<hr>
+<h2 id="ストレージモードとは？"><a href="#ストレージモードとは？" class="headerlink" title="ストレージモードとは？"></a>ストレージモードとは？</h2><hr>
+<p>Power BIからデータソースに接続する際に、データを取得してレポートとして可視化する必要がありますが、データの取得方法（= データセットの作成方法）の種類が「ストレージモード」です。<br>ストレージモードの種類は、以下の4 つがございます。</p>
+<ul>
+<li>インポート モード</li>
+<li>Direct Query モード</li>
+<li>ライブ接続 モード</li>
+<li>Push モード</li>
+</ul>
+<p>今回は上記の4 つから、最も使用されているインポート モードと Direct Query モードについてご説明します。<br>各データソースでサポートされているストレージモードにつきましては、下記のドキュメントからご確認いただけます。</p>
+<ul>
+<li>参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/power-bi-data-sources">Power BI データ ソース - Power BI | Microsoft Docs</a></li>
+</ul>
+<div class="alert is-info"><p class="alert-title">Note</p><p><strong>ライブ接続モード</strong>に関しては、Power BI データセット、Analysis Services へ接続する際にのみ使用できます。</p><p>// 参考情報 (1)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-report-lifecycle-datasets">Power BI Desktop から Power BI サービスのデータセットに接続する - Power BI | Microsoft Docs</a></p><p>// 参考情報 (2)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-analysis-services-tabular-data">Power BI Desktop で Analysis Services の表形式データに接続する - Power BI | Microsoft Docs</a></p></div>
+<p>
+
+<div class="alert is-info"><p class="alert-title">Note</p><p><strong>Push モード</strong>のデータセットに関しては、以下のドキュメントをご参照ください。</p><p>// 参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/service-real-time-streaming">Power BI のリアルタイム ストリーミング - Power BI | Microsoft Docs</a></p></div>
+<hr>
+<h2 id="インポートモードのデータセット"><a href="#インポートモードのデータセット" class="headerlink" title="インポートモードのデータセット"></a>インポートモードのデータセット</h2><hr>
+<p>Power BI Desktop では、接続済みのテーブルに対して、「&gt;」部分にマウスオーバーすると、ストレージモードをご確認いただけます。</p>
+<div align="center">
+<img src="desktop_import_mode.png" alt="画像1_インポートモード" title="画像1_インポートモード">
+</div>
+
+<p>インポートモードを使用する場合は、外部のデータソースから必要なデータをPower BI 専用の形に変換され、Power BI Desktop の.pbixファイルに実際のデータが取り込まれます。</p>
+<p>.pbix ファイル内にインポート時のデータを<strong>保持する</strong>形となりますので、Power BI サービスへ発行された後に、定期的データ更新を行なっていただき、データの鮮度を保つ必要があります。Power BI Pro の共有容量を使用する場合は、1 日最大8 回まで更新スケジュールを設定いただけますが、Premium 容量は1日最大48 回（30 分ごとに）データ更新を設定いただけます。</p>
+<p>データ更新の手順につきましては、下記のブログ記事をご参考ください。</p>
+<ul>
+<li>参考情報：<a href="../pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a></li>
+</ul>
+<p>また、Power BI Pro ライセンスのみお持ちで、共有容量へレポートとデータセットを発行する場合、アップロード可能な.pbix ファイルサイズの上限は1GB となります。Premium 容量を使用する場合は、もう少し上限が緩和されますが、詳細につきましては、下記ドキュメントをご確認ください。</p>
+<table>
+<thead>
+<tr>
+<th>容量の種類</th>
+<th>最大データセット サイズ</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>共有、A1、A2、または A3</td>
+<td>1 GB</td>
+</tr>
+<tr>
+<td>A4 または P1</td>
+<td>3 GB</td>
+</tr>
+<tr>
+<td>A5 または P2</td>
+<td>6 GB</td>
+</tr>
+<tr>
+<td>A6 または P3</td>
+<td>10 GB</td>
+</tr>
+</tbody></table>
+<ul>
+<li>参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#datasets-in-import-mode">Power BI でのデータの更新 - Power BI | Microsoft Docs</a></li>
+</ul>
+<p>あまりにも大規模のデータを読み込む場合、データのリアルタイム性を保つ必要がある場合、またはデータソース側でユーザーごとのセキュリティー規則を設定していた場合、Direct Query モードのご利用をご検討ください。</p>
+<hr>
+<h2 id="DirectQueryモードのデータセット"><a href="#DirectQueryモードのデータセット" class="headerlink" title="DirectQueryモードのデータセット"></a>DirectQueryモードのデータセット</h2><hr>
+<p>Power BI Desktop では、接続済みのテーブルに対して、「&gt;」部分にマウスオーバーすると、ストレージモードをご確認いただけます。</p>
+<div align="center">
+<img src="desktop_dq_mode.png" alt="画像2_DirectQueryモード" title="画像2_DirectQueryモード">
+</div>
+
+<p>Direct Query モードを使用する場合、レポートまたはダッシュボードからデータを読み込む操作を行なう際に、Power BI でその操作を変換し、データソースへクエリを発行します。</p>
+<p>そのため、.pbix ファイル内ではデータをインポートせず、データを<strong>保持しない</strong>形となります。Power BI サービスへ発行後でも、データセットのスケジュール更新を設定する必要はございません。ただし、データソースとの接続において、資格情報の入力、または状況によってゲートウェイの設定も必要ありますので、ご留意ください。</p>
+<p>しかしながら、Direct Query モードを使用する場合の影響及び制限事項が多くあります。以下にて一部の例を挙げます。</p>
+<h4 id="1-データソースの負荷"><a href="#1-データソースの負荷" class="headerlink" title="1. データソースの負荷"></a>1. データソースの負荷</h4><p>Power BI から、都度データソースへクエリが発行されますので、レポートの利用頻度や、実際発行されるクエリによって読み込まれるデータ量などによって、データソースへ大きな負荷となってしまう場合が考えられます。</p>
+<p>実際、都度データソースとの通信が必要となるため、インポートモードのデータセットを使用しているレポートと比較して、レスポンスが遅いと感じるケースが多くあります。通常は5 秒未満のレスポンスタイムが妥当であると想定いただければ幸いです。</p>
+<p>データのモデリングで複雑な処理が含まれる場合、クエリがタイムアウトとなることもあります（Power BI サービス内の個々のクエリには、4 分のタイムアウトが適用されます）。</p>
+<h4 id="2-データ変換及びモデリングの制限"><a href="#2-データ変換及びモデリングの制限" class="headerlink" title="2. データ変換及びモデリングの制限"></a>2. データ変換及びモデリングの制限</h4><p>一部のDAX 関数やPower Query エディターを使用するデータ変換の処理は、Direct Query モードではサポートされません。</p>
+<p>例えば、日付データに関して、Direct Query モードでは秒までの精度のみサポートされ、ミリ秒や組み込みの日付階層はサポートされません。</p>
+<p>他に計算テーブルの使用もサポートされません。なお、計算列の DAX を作成するとき、サポートされない関数はオートコンプリートにリストされず、使用するとエラーが発生します。</p>
+<p>Power Query エディターでデータ変換を行う場合、Direct Query モードでサポートされない変換に関しては、エラーが発生します。具体的には、共通テーブル式を使うクエリや、ストアド プロシージャを呼び出すクエリを使うことはできません。</p>
+<h4 id="3-ストレージモードの切替"><a href="#3-ストレージモードの切替" class="headerlink" title="3. ストレージモードの切替"></a>3. ストレージモードの切替</h4><p>Direct Query モードから、インポートモードへの切替は可能ですが、逆の場合、インポートモードからDirect Query モードへの切替はできません。Direct Query モードを使用する場合は、最初から接続のストレージモードをご指定いただき、データの読み込みや変換を行なっていただく必要がございます。</p>
+<p>上記ご案内した内容の他にも、制限事項や影響がありますので、それらにつきましては、下記のドキュメントをご確認ください。</p>
+<ul>
+<li>参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about#implications-of-using-directquery">Power BI で DirectQuery を使用する - Power BI | Microsoft Docs</a></li>
+</ul>
+<hr>
+<h2 id="インポートとDirectQueryの比較"><a href="#インポートとDirectQueryの比較" class="headerlink" title="インポートとDirectQueryの比較"></a>インポートとDirectQueryの比較</h2><hr>
+<p>以下にてインポートモードとDirect Query モードの違いにつきまして、下記の比較表にまとめておきました。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>インポート</strong></th>
+<th><strong>Direct Query</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>データの保持</strong></td>
+<td>〇</td>
+<td>×</td>
+</tr>
+<tr>
+<td><strong>スケジュールされたデータ更新</strong></td>
+<td>〇</td>
+<td>×</td>
+</tr>
+<tr>
+<td><strong>データのリアルタイム性</strong></td>
+<td>△ <br>※別途データ更新の設定が必要</td>
+<td>◎ <br>※都度データソースへクエリが発行される</td>
+</tr>
+<tr>
+<td><strong>非常に大きなデータ</strong></td>
+<td>△ <br>※発行可能な.pbix ファイルのサイズ制限がある</td>
+<td>〇 <br>※ビジュアルを読み込む度に、クエリが発行される</td>
+</tr>
+<tr>
+<td><strong>制限事項の少なさ</strong></td>
+<td>◎ <br>※データセットのサイズ制限はある</td>
+<td>△ <br>※データ変換やモデリングにおいて制限事項が多い</td>
+</tr>
+<tr>
+<td><strong>データソース側の負荷</strong></td>
+<td>〇 <br>※データ更新時のみ</td>
+<td>△ <br>※レポートを閲覧される際に都度クエリが発行される</td>
+</tr>
+</tbody></table>
+<p>
+
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about">Power BI での DirectQuery の使用について - Power BI | Microsoft Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/transform-model/desktop-storage-mode">Power BI Desktop でストレージ モードを管理する - Power BI | Microsoft Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data">Power BI でのデータの更新 - Power BI | Microsoft Docs</a></li>
+</ul>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>本ブログの関連記事</strong></p>
+<ul>
+<li><a href="../pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a></li>
+</ul>
+</blockquote>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/storage_mode.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_desktop_webview2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI Desktop のコンポーネント変更について(Webview2)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_webview2/">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_embed/">Power BI レポートの埋め込み方法の種類について</a>
+          </li>
+        
+          <li>
+            <a href="../all_howto_trace/">トラブル発生時の事象調査に必要な情報の採取手順について(通信編)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">11</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89">ストレージモード</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">データセット</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A">データ接続</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E5%85%B1%E6%9C%89">共有</a><span class="tag-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 12.5px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 10px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 10px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 12.5px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
