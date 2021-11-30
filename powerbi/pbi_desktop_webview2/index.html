@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BI Desktop のコンポーネント変更について(Webview2) | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。  来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また We">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BI Desktop のコンポーネント変更について(Webview2)">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。  来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また We">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic0.png">
+<meta property="article:published_time" content="2021-11-29T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-30T06:11:38.365Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI Desktop">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic1.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_desktop_webview2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BI Desktop のコンポーネント変更について(Webview2)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-11-29T15:00:00.000Z" itemprop="datePublished">2021-11-30</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+557a0025-f80d-5e13-9002-f638c86949e0%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+Desktop+%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%28Webview2%29%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_desktop_webview2%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_desktop_webview2.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_desktop_webview2.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/" data-id="ckwlpd02u00050omn07ui6obg" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。 </p>
+<p>来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。<br>WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また WebView2 によって、従来 Power BI Desktop のアップデートごとに行なわれていたセキュリティパッチも、リアルタイムで最新のセキュリティパッチを自動的に提供できるようになります。</p>
+<p>基本的に WebView2 は Power BI Desktop のインストールに合わせて自動的にインストールが行なわれるため、皆様に特別な操作を求めることはございませんが、オフライン環境などで Power BI Desktop をご利用されている方や一部の対象者は、別途 WebView2 のインストールが必要になる場合がありますので、本記事をご確認いただき、Power BI Desktop のバージョンアップに備えましょう。</p>
+<span id="more"></span>
+
+</br>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は 弊社公式ブログ「Microsoft Power BI ブログ」の公開情報を元に構成しておりますが、本記事編集時点と実際の機能やリリース時期に相違がある場合がございます。</p><p>元記事は以下よりご確認ください（英語）</p><p><Span style="font-size: 90%"><a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-installer-changes-webview2/">Power BI Desktop Installer Changes &amp; WebView2</a></span></p></div>
+</br>
+
+
+<hr>
+<h2 id="Power-BI-Desktop-に必要なスペックについて"><a href="#Power-BI-Desktop-に必要なスペックについて" class="headerlink" title="Power BI Desktop に必要なスペックについて"></a>Power BI Desktop に必要なスペックについて</h2><p>前提として Power BI Desktop では、以下の通り最小要件が定められています。</p>
+<ul>
+<li>Windows 8.1 / Windows Server 2012 R2 以降</li>
+<li>.NET 4.6.2 以降</li>
+<li>Internet Explorer 11 以降</li>
+<li>メモリ (RAM): 2 GB 以上使用可能、4 GB 以上を推奨します。</li>
+<li>ディスプレイ: 1440 x 900 以上または 1600 x 900 (16:9) が必要です。 1024 x 768 または 1280 x 800 などの低い解像度はサポートされていません。</li>
+<li>Windows の表示設定: 表示設定でテキスト、アプリ、その他の項目を 100% より大きいサイズに変更してある場合、Power BI Desktop を使い続けるために対話する必要がある特定のダイアログを表示できないことがあります。 この問題が発生した場合は、Windows で [設定] &gt; [システム] &gt; [表示] に移動して表示設定を確認し、スライダーを使って表示設定を 100% に戻します。</li>
+<li>CPU: 1 ギガヘルツ (GHz) 64 ビット (x64) プロセッサ以上が推奨されます。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements">Power BI Desktop の最小要件について</a></p>
+</br>
+
+<h2 id="WebView2-について"><a href="#WebView2-について" class="headerlink" title="WebView2 について"></a>WebView2 について</h2></br>
+
+<h3 id="WebView2-とは"><a href="#WebView2-とは" class="headerlink" title="WebView2 とは"></a>WebView2 とは</h3><p>WebView2 は、Microsoft Edge をWeb コンテンツを表示するための部品としてアプリケーションで利用できるようにするコンポーネントの一つです。<br>Power BI Desktop では、従来 Web コンテンツの表示においては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。<br>また、Power BI Desktopのアップデートを待たずに、WebView2 を通じて最新のセキュリティパッチが自動的に提供できるようになります。</p>
+</br>
+
+<h3 id="切り替えが必要になるバージョンについて"><a href="#切り替えが必要になるバージョンについて" class="headerlink" title="切り替えが必要になるバージョンについて"></a>切り替えが必要になるバージョンについて</h3><p>2022年1月にリリースされる Power BI Report Server 向けのPower BI Desktop と、2022年2月にリリースされる Power BI Desktop では、WebView2 が必要になる予定です。</p>
+</br>
+
+<h3 id="Webview2-がインストールされているか確認する方法"><a href="#Webview2-がインストールされているか確認する方法" class="headerlink" title="Webview2 がインストールされているか確認する方法"></a>Webview2 がインストールされているか確認する方法</h3><p>お使いの端末に「Microsoft Edge WebView2 Runtime」がインストールされていれば、WebView2はすでにインストールされているため、これ以上の操作は必要ありません。</p>
+<p>ご利用の端末の[アプリと機能]から「Microsoft Edge WebView2 Runtime」が表示されるかどうかご確認ください。</p>
+<div align="center">
+<img src="pic1.png" alt="画像1_Webview2 の確認方法" title="画像1_Webview2 の確認方法">
+</div>
+
+</br>
+
+
+<h3 id="Webview2-のインストールが必要な場合"><a href="#Webview2-のインストールが必要な場合" class="headerlink" title="Webview2 のインストールが必要な場合"></a>Webview2 のインストールが必要な場合</h3><p>WebView2 は、Microsoft 365 アプリケーションのアップデートや 実行ファイルからPower BI をアップデートする場合、自動的にインストールが行われますが、<br>以下のいずれにも当てはまる場合は、別途インストールする必要があります。</p>
+<ol>
+<li>Microsoft 365 アプリケーションが端末にインストールされていない</li>
+<li>Windows 10 以下を使用している (Windows 11 を使用している場合は、WebView2 がデフォルトでインストールされているため、対応する必要はありません。)</li>
+<li>Microsoft Store 版 Power BI Desktop を使用している<br>*端末の管理者権限で使用している場合、Power BI Desktop にインストールするように通知が表示されます。</li>
+</ol>
+<p>上記いずれにも当てはまる場合や、オフライン環境で Power BI Desktop を利用している方、誤って端末から削除してしまった方は、以下のリンクから別途インストールすることが可能です。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/#download-section">WebView2 ランタイムのダウンロード</a></p>
+<div align="center">
+<img src="pic2.png" alt="画像2_Webview2 ランタイムのダウンロード" title="画像2_Webview2 ランタイムのダウンロード">
+</div>
+
+
+</br>
+
+
+<p>また管理者の方は、WebView2ランタイムの組織への導入についての詳細も合わせてご覧ください。<br>弊社公開情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/DeployOffice/webview2-install#webview2-runtime-installation">WebView2 ランタイムのインストール</a></p>
+</br>
+
+
+<h3 id="Power-BI-Desktop-へのWebview2-の有効化"><a href="#Power-BI-Desktop-へのWebview2-の有効化" class="headerlink" title="Power BI Desktop へのWebview2 の有効化"></a>Power BI Desktop へのWebview2 の有効化</h3><p>来年からの切り替えが始まる前に、WebView2 をすぐに使用したい場合は、Power BI Desktop のプレビュー機能で WebView2 を有効にすることができます。<br>このオプションは、WebView2 がインストールされている場合にのみ表示され、現時点（2021年11月）では、Microsoft Store 版ではなく、.exeインストーラーを使用してインストールされた Power BI Desktop でのみ利用可能です。</p>
+<div align="center">
+<img src="pic0.png" alt="画像3_Webview2 の有効化" title="画像3_Webview2 の有効化">
+</div>
+
+<p>これをオンにしてPower BI Desktopを再起動すると、自動的にWebView2の使用が開始されます。<br>特に Power BI Desktop の操作や挙動が変わることはありません。</p>
+</br>
+
+<p>以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_desktop_webview2.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_embed/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI レポートの埋め込み方法の種類について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_embed/">Power BI レポートの埋め込み方法の種類について</a>
+          </li>
+        
+          <li>
+            <a href="../all_howto_trace/">トラブル発生時の事象調査に必要な情報の採取手順について(通信編)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">10</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E5%85%B1%E6%9C%89">共有</a><span class="tag-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 12.5px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 10px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 10px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 10px;">データセット</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
