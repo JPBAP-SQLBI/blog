@@ -115,7 +115,7 @@ Webに公開したレポートはインターネット上で公開されてし�
 |SharePoint Online にレポート Web パーツを埋め込む|閲覧者はProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている（Premium＋Freeライセンス）|レポートの URL を取得し、SharePoint Online の Power BI Web パーツでその URL を使う|SharePoint Online のページ|[SharePoint Online にレポート Web パーツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-report-spo)  |
 |セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む|閲覧者はProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている（Premium＋Freeライセンス）|安全な埋め込みコードまたはiFrameのコードを作成し使う|内部 Web ポータル（ポータルは クラウドベース か、SharePoint 2019 など、ホステッド オンプレミス ）|[セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-secure)|
 |Embeddedによる埋め込み（顧客向け）|・Embeddedライセンス<br>・閲覧者はPower BI ライセンス不要|.NET FrameworkやJavaなどのフレームワークを使用し、APIを用いてアプリケーションを開発する|SaaSサービス以外のWebアプリケーション|[Power BI 埋め込み分析アプリケーションにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-customers?tabs=net-core)|
-|Embeddedによる埋め込み（組織向け）|・Embeddedライセンス<br>・閲覧者はPower BI ライセンス不要|.NET FrameworkやJavaなどのフレームワークを使用し、APIを用いてアプリケーションを開発する|SaaSサービス以外のWebアプリケーション|[組織向けの埋め込み BI 分析情報を向上させるため、Power BI 埋め込み分析アプリケーションにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization?tabs=net-core)|
+|Embeddedによる埋め込み（組織向け）|・Embeddedライセンス<br>・閲覧者はProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている（Premium＋Freeライセンス）|.NET FrameworkやJavaなどのフレームワークを使用し、APIを用いてアプリケーションを開発する|SaaSサービス以外のWebアプリケーション|[組織向けの埋め込み BI 分析情報を向上させるため、Power BI 埋め込み分析アプリケーションにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization?tabs=net-core)|
 
 
 以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
