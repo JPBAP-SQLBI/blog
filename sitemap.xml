@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/</loc>
     
     <lastmod>2021-12-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/</loc>
     
     <lastmod>2021-12-21</lastmod>
     
@@ -80,6 +80,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
+    
+    <lastmod>2021-12-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/</loc>
     
     <lastmod>2021-12-21</lastmod>
     
@@ -221,6 +228,34 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Report-Server/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/onpremisedatagateway/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Apache-log4j/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Premium/</loc>
     <lastmod>2021-12-21</lastmod>
     <changefreq>daily</changefreq>
@@ -250,20 +285,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/refresh/</loc>
-    <lastmod>2021-12-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/</loc>
-    <lastmod>2021-12-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/onpremisedatagateway/</loc>
     <lastmod>2021-12-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。12月9日に公開されたJava ベースのロギングライブラリ「Apache Log4j」の脆弱性とPower BI の関係性についてまとめています。 Power BI サービスにおいては、この脆弱なライブラリへの既知の依存はなく、影響はないと判断しております。また、Power BI Desktop 、オンプレミスデータゲートウェイや Power B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。12月9日に公開されたJava ベースのロギングライブラリ「Apache Log4j」の脆弱性とPower BI の関係性についてまとめています。 Power BI サービスにおいては、この脆弱なライブラリへの既知の依存はなく、影響はないと判断しております。また、Power BI Desktop 、オンプレミスデータゲートウェイや Power B">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2021-12-20T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-21T02:58:44.192Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI Desktop">
+<meta property="article:tag" content="Power BI Report Server">
+<meta property="article:tag" content="オンプレミスデータゲートウェイ">
+<meta property="article:tag" content="onpremisedatagateway">
+<meta property="article:tag" content="Apache log4j">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_log4j_impact" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-12-20T15:00:00.000Z" itemprop="datePublished">2021-12-21</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+d775a11c-7c97-5fa7-95bc-287b02f54aa8%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BApache+Log4j+%E3%81%AE%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%A8Power+BI%2C+Power+BI+Report+Server+%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_log4j_impact%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_log4j_impact.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_log4j_impact.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/" data-id="ckxfiptf4000b0mnvfe4hb228" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。<br>12月9日に公開されたJava ベースのロギングライブラリ「Apache Log4j」の脆弱性とPower BI の関係性についてまとめています。</p>
+<p>Power BI サービスにおいては、この脆弱なライブラリへの既知の依存はなく、影響はないと判断しております。<br>また、Power BI Desktop 、オンプレミスデータゲートウェイや Power BI Report Server においても、関連の影響は確認しておりません。</p>
+<span id="more"></span>
+
+</br>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は12月21日時点の情報を元にまとめておりますが、本記事編集時点とその後の見解に相違がある場合がございます。</p><p>最新の情報は弊社Microsoft Security Response Center のブログも合わせてご確認ください（英語）</p><p><Span style="font-size: 90%"><a target="_blank" rel="noopener" href="https://msrc-blog.microsoft.com/">MSRC-blog</a></span></p></div>
+</br>
+
+
+<hr>
+<h2 id="Apache-Log4j-の脆弱性について"><a href="#Apache-Log4j-の脆弱性について" class="headerlink" title="Apache Log4j の脆弱性について"></a>Apache Log4j の脆弱性について</h2><hr>
+<p>Apache Log4j は、 Apache Software Foundation がオープンソースで提供している Java ベースのロギングライブラリです。<br>この Apache Log4j において、遠隔の第三者が細工したデータを送る事で、任意のコマンドを実行される可能性があります。</p>
+<p>今回の脆弱性のインスタンスとして CVE-2021-44228 と CVE-2021-45046 が割り当てられています。</p>
+<p>参照(情報処理推進機構)：<a target="_blank" rel="noopener" href="https://www.ipa.go.jp/security/ciadr/vul/alert20211213.html">Apache Log4j の脆弱性対策について(CVE-2021-44228)</a></p>
+</br>
+
+
+<hr>
+<h2 id="Power-BI-への影響について"><a href="#Power-BI-への影響について" class="headerlink" title="Power BI への影響について"></a>Power BI への影響について</h2><hr>
+<p>当社 Microsoft 全体として、Log4j の悪用について認識しており、あらゆる問題を修正するためにすべてのサービスで積極的に取り組んでいます。<br>Power BI サービスにおいては、この脆弱なライブラリへの既知の依存はなく、<strong>影響はない</strong>と判断しております。<br>また、Power BI Desktop 、オンプレミスデータゲートウェイや Power BI Report Server においても、関連の影響は確認しておりません。</p>
+<p>その他当問題の状態に関する最新の情報については、MSRC Advisory および Microsoft Security Threat Intelligence のサイトをご参照ください。</p>
+<p>//参考①：<a target="_blank" rel="noopener" href="https://msrc-blog.microsoft.com/2021/12/12/microsofts-response-to-cve-2021-44228-apache-log4j2-jp/">CVE-2021-44228 Apache Log4j 2 に対するマイクロソフトの対応 – Microsoft Security Response Center</a><br>//参考②：<a target="_blank" rel="noopener" href="https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/">Guidance for preventing, detecting, and hunting for CVE-2021-44228 Log4j 2 exploitation - Microsoft Security Blog</a></p>
+<hr>
+<h2 id="よくある質問"><a href="#よくある質問" class="headerlink" title="よくある質問"></a>よくある質問</h2><hr>
+<h3 id="Q-Log4j-の脆弱性は、AppSource-から取得したサードパーティのカスタムビジュアルには影響ないのでしょうか。また、AppSource-のPower-BI-認定ビジュアルは、Log4j-ライブラリを使用していますか。"><a href="#Q-Log4j-の脆弱性は、AppSource-から取得したサードパーティのカスタムビジュアルには影響ないのでしょうか。また、AppSource-のPower-BI-認定ビジュアルは、Log4j-ライブラリを使用していますか。" class="headerlink" title="Q. Log4j の脆弱性は、AppSource から取得したサードパーティのカスタムビジュアルには影響ないのでしょうか。また、AppSource のPower BI 認定ビジュアルは、Log4j ライブラリを使用していますか。"></a>Q. Log4j の脆弱性は、AppSource から取得したサードパーティのカスタムビジュアルには影響ないのでしょうか。</br>また、AppSource のPower BI 認定ビジュアルは、Log4j ライブラリを使用していますか。</h3><p>Log4j の脆弱性は、AppSoure から取得したサードパーティのカスタムビジュアルには影響しません。また Java が含まれる場合、カスタムビジュアルのコードレビューはパスできないため、Power BI 認定ビジュアルは、脆弱なライブラリの影響を受けません。</p>
+<h3 id="Log4j-の脆弱性は、Power-BI-のアクティビティおよび監査ログを取得するために使用される-PowerShell-スクリプトに影響はありますか。"><a href="#Log4j-の脆弱性は、Power-BI-のアクティビティおよび監査ログを取得するために使用される-PowerShell-スクリプトに影響はありますか。" class="headerlink" title="Log4j の脆弱性は、Power BI のアクティビティおよび監査ログを取得するために使用される PowerShell スクリプトに影響はありますか。"></a>Log4j の脆弱性は、Power BI のアクティビティおよび監査ログを取得するために使用される PowerShell スクリプトに影響はありますか。</h3><p>Microsoft Power BI Cmdlets for Windows PowerShell および PowerShell Core は、本脆弱性の影響を受けません。（ただし Power BI が提供する以外のリソースを呼び出すような任意のカスタムコードについては、弊社責任の範囲外となります）</p>
+</br>
+
+
+<p>以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_log4j_impact.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../storage_mode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について</a>
+          </li>
+        
+          <li>
+            <a href="../storage_mode/">Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_webview2/">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_embed/">Power BI レポートの埋め込み方法の種類について</a>
+          </li>
+        
+          <li>
+            <a href="../all_howto_trace/">トラブル発生時の事象調査に必要な情報の採取手順について(通信編)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">12</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89">ストレージモード</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">データセット</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A">データ接続</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E5%85%B1%E6%9C%89">共有</a><span class="tag-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 15px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12.5px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12.5px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 12.5px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
