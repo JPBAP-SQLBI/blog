@@ -35,3 +35,5 @@
 - [Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/)
 
 - [Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
+
+- [Power BI更新エラー「テーブルの列 ' *** ' が見つかりませんでした。」について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/)
