@@ -28,4 +28,6 @@
 
 - [Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて](https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/)
 
+- [Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/)
+
 - [Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
