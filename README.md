@@ -26,6 +26,10 @@
 
 - [トラブル発生時の事象調査に必要な情報の採取手順について(通信編)](https://jpbap-sqlbi.github.io/blog/powerbi/all_howto_trace/)
 
+- [Power BI レポートの埋め込み方法の種類について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/)
+
+- [Power BI Desktop のコンポーネント変更について(Webview2)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/)
+
 - [Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて](https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/)
 
 - [Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/)
