@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BIのマップビジュアル | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BIのマップビジュアル">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual3.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_bubble_chart.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_pie_chart.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_bubble_heatmap.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_filledmap.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_filledmap_example.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_sharpmap_icon.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_sharpmap.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_azuremap_icon.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_azuremap_preview.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_tenant_settings.png">
+<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f7453509-dda9-48d6-b960-ecbebd696e4e.png">
+<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/56bc9253-8365-4187-9d79-72010f1606b7.png">
+<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/aee4e91e-b5ad-41a8-8f40-0011547cdfb6.png">
+<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c519e5e6-ad28-4cd6-a6c8-e4c451dee7ac.png">
+<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e25c79de-b33a-46a9-a059-e23641094d1f.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap_icon.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap_options.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/arcgismap_tenant_settings.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap.png">
+<meta property="article:published_time" content="2021-12-27T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-28T02:43:59.192Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="マップビジュアル">
+<meta property="article:tag" content="地図">
+<meta property="article:tag" content="地理データ">
+<meta property="article:tag" content="Azure Map">
+<meta property="article:tag" content="Bing Map">
+<meta property="article:tag" content="ArcGIS Map">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual1.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_map_visual" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BIのマップビジュアル
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2021-12-27T07:00:00.000Z" itemprop="datePublished">2021-12-27</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+9254b46a-d58e-5d71-9d40-9eb04c14b1cd%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%AE%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_map_visual%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_map_visual.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_map_visual.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/" data-id="ckxpi9seb000d0nma3a9wfeil" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。</p>
+<p>Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
+<ol>
+<li><a href="#%E3%83%9E%E3%83%83%E3%83%97">マップ</a></li>
+<li><a href="#%E5%A1%97%E3%82%8A%E5%88%86%E3%81%91%E5%9C%B0%E5%9B%B3">塗り分け地図</a></li>
+<li><a href="#%E5%9B%B3%E5%BD%A2%E3%81%AE%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB">図形のビジュアル</a></li>
+<li><a href="#Azure%E3%83%9E%E3%83%83%E3%83%97">Azure マップ</a></li>
+<li><a href="#ArcGIS%20Maps%20for%20Power%20BI">ArcGIS Maps for Power BI</a></li>
+</ol>
+<hr>
+<h2 id="マップ"><a href="#マップ" class="headerlink" title="マップ"></a>マップ</h2><hr>
+<div align="center">
+<img src="map_visual1.png" alt="Power BIマップ" title="Power BIマップ">
+</div>
+Power BI マップはBing マップと統合されており、緯度経度の地理的なデータ以外に、国名、都道府県、市区町村、郵便番号などの情報を持つデータでも、可視化できます。
+
+<p>また、Bing マップがジオコーディング（地理座標を付与するプロセス）する際に、以下のURLへアクセスすることがあるため、ネットワーク環境に応じて以下のURLを許可する必要がございます。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dev.virtualearth.net/REST/V1/Locations">https://dev.virtualearth.net/REST/V1/Locations</a></li>
+<li><a target="_blank" rel="noopener" href="https://platform.bing.com/geo/spatial/v1/public/Geodata">https://platform.bing.com/geo/spatial/v1/public/Geodata</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bing.com/api/maps/mapcontrol">https://www.bing.com/api/maps/mapcontrol</a></li>
+</ul>
+<p>地理データをマップで使用する際に、都道府県や市区町村、緯度経度のデータカテゴリを設定しておくことが必要です。設定した後、対象のデータフィールドに地球のマークが付くようになります。</p>
+<div align="center">
+<img src="map_visual2.png" alt="市区町村のデータカテゴリ" title="市区町村のデータカテゴリ">
+</div>
+
+<p>特に緯度経度の場合、データカテゴリを指定すると共に、概要を「集計しない」に設定しないと正しく使用できない場合がありますため、ご留意くださいませ。</p>
+<div align="center">
+<img src="map_visual3.png" alt="緯度経度の集計しない設定" title="緯度経度の集計しない設定">
+</div>
+
+<p>マップビジュアルでは、地図の上に、場所ごとでプロットしたデータの数値の大きさによって、バブル・円グラフ・バブルのグラデーション（ヒートマップ）で表現することが可能です。</p>
+<h4 id="■マップ上のバブルチャート"><a href="#■マップ上のバブルチャート" class="headerlink" title="■マップ上のバブルチャート"></a>■マップ上のバブルチャート</h4><div align="center">
+<img src="map_bubble_chart.png" alt="マップ上のバブルチャート" title="画像4_マップ上のバブルチャート">
+</div>
+
+<h4 id="■マップ上の円グラフ"><a href="#■マップ上の円グラフ" class="headerlink" title="■マップ上の円グラフ"></a>■マップ上の円グラフ</h4><div align="center">
+<img src="map_pie_chart.png" alt="マップ上の円グラフ" title="マップ上の円グラフ">
+</div>
+
+<h4 id="■マップ上のバブルグラデーション（ヒートマップ）"><a href="#■マップ上のバブルグラデーション（ヒートマップ）" class="headerlink" title="■マップ上のバブルグラデーション（ヒートマップ）"></a>■マップ上のバブルグラデーション（ヒートマップ）</h4><div align="center">
+<img src="map_bubble_heatmap.png" alt="マップ上のバブルグラデーション（ヒートマップ）" title="マップ上のバブルグラデーション（ヒートマップ）">
+</div>
+
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-map-tips-and-tricks">マップに関するヒントとテクニック (Bing マップの統合を含む) - Power BI | Microsoft Docs</a></li>
+</ul>
+</blockquote>
+<br>
+<br>
+
+<hr>
+<h2 id="塗り分け地図"><a href="#塗り分け地図" class="headerlink" title="塗り分け地図"></a>塗り分け地図</h2><hr>
+<div align="center">
+<img src="map_filledmap.png" alt="塗り分け地図" title="塗り分け地図">
+</div>
+
+<p>塗り分け地図は、前項で紹介したマップと同様に、Bingマップと統合されていますので、注意事項につきましては、上述の内容をご確認ください。</p>
+<p>ビジュアルはマップと異なり、地図上の地形によって、国・都道府県・市区町村などを塗りつぶして、色の色相や濃淡によってデータを表します。</p>
+<p>メリットとしては、地形によって色が塗りつぶされるため、見栄えがよくわかりやすいところです。デメリットとしては、地形上面積が大きいところに目が惹かれやすく、データによっては誤った印象や直感を与えてしまうところです。</p>
+<p>塗り分け地図を使用する最適な場合は以下を挙げられます。</p>
+<ul>
+<li>量的な情報を地図に表示する。</li>
+<li>空間的なパターンと関係を示す。</li>
+<li>データが標準化されている。</li>
+<li>社会経済的なデータを扱っている。</li>
+<li>特定の地域に関心がある。</li>
+<li>異なる地理的位置への分散状況を全体的に理解する。</li>
+</ul>
+<div align="center">
+<img src="map_filledmap_example.png" alt="塗り分け地図ビジュアル" title="塗り分け地図ビジュアル">
+</div>
+
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-filled-maps-choropleths">Power BI の塗り分け地図 (コロプレス) - Power BI | Microsoft Docs</a></li>
+</ul>
+</blockquote>
+<br>
+<br>
+
+<hr>
+<h2 id="図形のビジュアル"><a href="#図形のビジュアル" class="headerlink" title="図形のビジュアル"></a>図形のビジュアル</h2><hr>
+<div align="center">
+<img src="map_sharpmap_icon.png" alt="図形のビジュアル" title="図形のビジュアル">
+</div>
+
+<p>図形のビジュアルは、正しい地理座標を表示させることが目的ではなく、各地域のデータを比較する目的で作成されたビジュアルです。</p>
+<p>執筆時点では、まだプレビュー機能であり、既定値で使用できる図形は、以下の国・地域のみ対応しており、日本のデータは対応しておりません。</p>
+<ul>
+<li>オーストラリア</li>
+<li>オーストリア</li>
+<li>ブラジル</li>
+<li>カナダ</li>
+<li>フランス</li>
+<li>ドイツ</li>
+<li>アイルランド</li>
+<li>イタリア</li>
+<li>メキシコ</li>
+<li>オランダ</li>
+<li>英国</li>
+<li>米国</li>
+</ul>
+<p>日本のデータを使用したい場合、TopoJSON ファイルをご用意いただく必要がございます。（シェイプファイルやGeoJSON マップの場合は変換が必要です。）</p>
+<p>国土交通省が公開している地域ごとのポリゴン（塗り分け地図用に適している）データはシェイプファイルがありますので、Map Shaper などのオンラインツールを使用してTopoJSON ファイルに変換することができます。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html">国土数値情報ダウンロード</a></li>
+<li><a target="_blank" rel="noopener" href="https://mapshaper.org/">Map Shaper</a></li>
+</ul>
+<div align="center">
+<img src="map_sharpmap.png" alt="図形のビジュアル" title="図形のビジュアル">
+</div>
+
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/visuals/desktop-shape-map">Power BI Desktop で図形マップを使用する (プレビュー) - Power BI | Microsoft Docs</a></li>
+</ul>
+</blockquote>
+<br>
+<br>
+
+<hr>
+<h2 id="Azureマップ"><a href="#Azureマップ" class="headerlink" title="Azureマップ"></a>Azureマップ</h2><hr>
+<div align="center">
+<img src="map_azuremap_icon.png" alt="Azure マップ" title="Azure マップ">
+</div>
+
+<p>Azureマップは現在プレビュー機能であり、Power BI Desktopで使用するには、[ファイル] &gt; [オプションと設定] からオプション パネルを開き、[プレビュー機能] のオプションに移動し、[Azure Maps Visual] を選択する必要がございます。</p>
+<div align="center">
+<img src="map_azuremap_preview.png" alt="Azure マッププレビュー機能" title="Azure マッププレビュー機能">
+</div>
+
+<p>Power BI サービスで使用するには、[管理ポータル]&gt;[テナント設定]にて、<br>[Azure Maps ビジュアルの使用]を有効化しておく必要があります。</p>
+<div align="center">
+<img src="azuremap_tenant_settings.png" alt="Azure マップテナント設定" title="Azure マップテナント設定">
+</div>
+
+<p>こちらのマップビジュアルはAzure マップが使用されており、Azure マッププラットフォームへのアクセスを許可するために、ネットワーク環境に応じて以下のURLを許可する必要がございます。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://atlas.microsoft.com/">https://atlas.microsoft.com</a></li>
+</ul>
+<p>上述で紹介したBing マップを使用したビジュアルと異なり、緯度経度のデータを使用する必要があります。</p>
+<p>また、Azure マップには、多彩なマップレイヤーが用意されており、例えば、バブルレイヤー、3D 棒グラフレイヤー、参照レイヤー（GeoJSON ファイルを使用する）、タイル レイヤー、トラフィックのオーバーレイなどをご利用いただけます。</p>
+<h4 id="■バブルレイヤー"><a href="#■バブルレイヤー" class="headerlink" title="■バブルレイヤー"></a>■バブルレイヤー</h4><p>バブル レイヤーは、場所データをマップ上で拡大縮小された円として表現できる優れた方法です。</p>
+<p>例えば、以下の画像は、ノースカロライナ州で自転車の事故が発生した場所を示しています。円の色は事故が発生した道路の速度制限を表し、円のサイズは事故に巻き込まれた人の数に基づいています。</p>
+<div align="center">
+<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f7453509-dda9-48d6-b960-ecbebd696e4e.png" alt="Azure マップバブルレイヤー" width=600 title="Azure マップバブルレイヤー">
+</div>
+
+<h4 id="■3D-棒グラフレイヤー"><a href="#■3D-棒グラフレイヤー" class="headerlink" title="■3D 棒グラフレイヤー"></a>■3D 棒グラフレイヤー</h4><p>3D 棒グラフを使用すると、ユーザーは、データをさまざまな視点から見るために、マウスの右ボタンを押しながらドラッグするか、ナビゲーション コントロールのいずれかを使用することで、マップを傾けたり回転させたりすることができます。</p>
+<p>以下のマップは、店舗の場所を示しています。棒の高さは各場所から生み出される収益を表し、販売地域ごとに色分けされています。</p>
+<div align="center">
+<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/56bc9253-8365-4187-9d79-72010f1606b7.png" alt="Azure マップ3D 棒グラフレイヤー" width=600 title="Azure マップ3D 棒グラフレイヤー">
+</div>
+
+<h4 id="■参照レイヤー"><a href="#■参照レイヤー" class="headerlink" title="■参照レイヤー"></a>■参照レイヤー</h4><p>参照レイヤーを使用すると、カスタムの場所データを含む GeoJSON ファイルをアップロードして、マップ上にオーバーレイすることができます。GeoJSON ファイルに含まれるプロパティを使用すると、形状のスタイルをカスタマイズできます。</p>
+<p>例えば、以下のマップ画像は、人口で色分けされた国勢調査地域の境界線の GeoJSON ファイルを、不動産価値で色分けされた住所のレイヤーの下に追加したものです。</p>
+<div align="center">
+<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/aee4e91e-b5ad-41a8-8f40-0011547cdfb6.png" alt="Azure マップ参照レイヤー" width=600 title="Azure マップ参照レイヤー">
+</div>
+
+<h4 id="■タイルレイヤー"><a href="#■タイルレイヤー" class="headerlink" title="■タイルレイヤー"></a>■タイルレイヤー</h4><p>タイル レイヤーを使用することで、Azure Maps ベース マップ タイルの上に画像を重ねることができます。</p>
+<p>以下のマップでは、サングラスを販売する店舗の売上データのバブル レイヤーが、Azure Maps から取得した現在の気象レーダーを示すタイル レイヤーの上に表示されています。</p>
+<div align="center">
+<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c519e5e6-ad28-4cd6-a6c8-e4c451dee7ac.png" alt="Azure マップタイルレイヤー" width=600 title="Azure マップタイルレイヤー">
+</div>
+
+<h4 id="■トラフィックのオーバーレイ"><a href="#■トラフィックのオーバーレイ" class="headerlink" title="■トラフィックのオーバーレイ"></a>■トラフィックのオーバーレイ</h4><p>リアルタイムの交通流量データをオーバーレイすることで、交通渋滞と独自データの関連性を知ることができます。</p>
+<p>例えば以下のマップでは、フィールド技術者の現在地がマップ上でバブル レイヤーとしてレンダリングされ示されています。</p>
+<div align="center">
+<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e25c79de-b33a-46a9-a059-e23641094d1f.png" alt="Azure マップトラフィックのオーバーレイ" width=600 title="Azure マップトラフィックのオーバーレイ">
+</div>
+
+
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/ja-jp/blog/azure-maps-power-bi-visual-now-in-preview/">Power BI 用 Azure Maps ビジュアルのプレビューを開始 | Azure のブログと更新プログラム | Microsoft Azure</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-get-started?context=/power-bi/create-reports/context/context">Get started with Azure Maps Power BI visual - Microsoft Azure Maps | Microsoft Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-understanding-layers">Azure Maps Power BI ビジュアルのレイヤーの概要 | Microsoft Docs</a></li>
+</ul>
+</blockquote>
+<br>
+<br>
+
+<hr>
+<h2 id="ArcGIS-Maps-for-Power-BI"><a href="#ArcGIS-Maps-for-Power-BI" class="headerlink" title="ArcGIS Maps for Power BI"></a>ArcGIS Maps for Power BI</h2><hr>
+<div align="center">
+<img src="map_arcgismap_icon.png" alt="ArcGIS Maps for Power BI" title="ArcGIS Maps for Power BI">
+</div>
+
+<p>ArcGIS for Power BI は Esri (<a target="_blank" rel="noopener" href="https://www.esri.com/">https://www.esri.com</a>) によって提供されます。 ArcGIS for Power BI のご利用の際には、Esri の<a target="_blank" rel="noopener" href="https://go.microsoft.com/fwlink/?LinkID=826322">使用条件</a>および<a target="_blank" rel="noopener" href="https://go.microsoft.com/fwlink/?LinkID=826323">プライバシー ポリシー</a>が適用されます。 ArcGIS for Power BI 視覚化の使用を希望される Power BI ユーザーは、同意ダイアログを受け入れる必要があります。</p>
+<div align="center">
+<img src="map_arcgismap_options.png" alt="Azure マップオプション" title="ArcGIS Maps for Power BIオプション">
+</div>
+
+<p>また、Power BI サービスで使用するには、[管理ポータル]&gt;[テナント設定]にて<br>[ArcGIS Maps for Power BI を使用する]を有効化しておく必要があります。</p>
+<div align="center">
+<img src="arcgismap_tenant_settings.png" alt="ArcGIS Maps for Power BI テナント設定" title="ArcGIS Maps for Power BI テナント設定">
+</div>
+
+<p>こちらのマップビジュアルを使用する際に、住所のジオコーディング、対象ポイントの検索、参照レイヤーの追加など、さまざまな処理を実行するために、多くのホスト サーバーと外部 URL を利用しています。ネットワーク環境に応じて以下サイトに記載されているURLを許可する必要がございます。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://doc.arcgis.com/ja/power-bi/get-started/secure-networks.htm">ネットワークのセキュリティ保護—ArcGIS for Power BI | ドキュメント</a></li>
+</ul>
+<p>ArcGIS Maps for Power BIでは、幅広いビジュアル表現や、地図のレイヤーをご利用いただけますが、詳細につきましては、以下のドキュメントをご参照ください。</p>
+<div align="center">
+<img src="map_arcgismap.png" alt="ArcGIS Maps for Power BIビジュアル" title="ArcGIS Maps for Power BIビジュアル">
+</div>
+
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualizations-arcgis">他のユーザーから共有された ArcGIS マップとの対話 - Power BI | Microsoft Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://doc.arcgis.com/ja/power-bi/get-started/about-maps-for-power-bi.htm">ArcGIS for Power BI—ArcGIS for Power BI | ドキュメント</a></li>
+</ul>
+</blockquote>
+<br>
+<br>
+
+<hr>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_map_visual.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_log4j_impact/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Power BIのマップビジュアル</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_log4j_impact/">Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について</a>
+          </li>
+        
+          <li>
+            <a href="../storage_mode/">Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_webview2/">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_embed/">Power BI レポートの埋め込み方法の種類について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">13</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">4</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89">ストレージモード</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">データセット</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A">データ接続</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB">マップビジュアル</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a><span class="tag-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 15px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12.5px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12.5px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 12.5px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
