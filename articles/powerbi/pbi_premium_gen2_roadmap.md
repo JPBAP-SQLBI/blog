@@ -1,6 +1,6 @@
 ---
 title: Power BI Premium Gen2 について
-date: 2021-10-27 15:00:00 
+date: 2021-12-28 00:00:00 
 tags:
   - Power BI
   - Power BI サービス
@@ -8,13 +8,16 @@ tags:
   - Power BI Premium
 ---
 
+<span style="color: red; ">
+Update: 2021/12/28</br>
+2021年11月中旬頃より、新たにGen2 においてもワークロード設定が追加されました。</br>
+詳細は「Power BI Premium Gen2 のワークロード設定」の項目をご覧ください。
+</span>
+
 こんにちは、Power BI サポート チームです。
 
 Power BI のライセンスについては過去記事「[作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。
 
-<span style="color: red; ">Update: 2021/10/27
-現在Power BI Premium Gen2のロードマップについて、最新情報が発表されていますので、一部スケジュールの記載を追加しております。詳しくは記事内をご確認ください。
-</span>
 
 <!-- more -->
 
@@ -29,12 +32,24 @@ Power BI のライセンスについては過去記事「[作成したレポー�
 <br>
 
 ---
+## 更新履歴
+---
+
+Update: 2021/12/28
+2021年11月中旬頃より、新たにGen2 においてもワークロード設定が追加されました。詳細は「Power BI Premium Gen2 のワークロード設定」の項目をご覧ください。
+</br>
+Update: 2021/10/27
+現在Power BI Premium Gen2のロードマップについて、最新情報が発表されていますので、一部スケジュールの記載を追加しております。詳しくは記事内をご確認ください。
+
+
+---
 ## 目次
 ---
 1. [Power BI Premium Gen2 とは？](#Power-BI-Premium-Gen2-とは？)
 2. [Power BI Premium Gen2 の使用方法](#Power-BI-Premium-Gen2-の使用方法)
 3. [Power BI Premium Gen1(従来版) との比較](#Power-BI-Premium-Gen1-従来版-との比較)
-4. [よくある質問](#よくある質問)
+4. [Power BI Premium Gen2 のワークロード設定](#Power-BI-Premium-Gen2-のワークロード設定)
+5. [よくある質問](#よくある質問)
 
 <br>
 
@@ -60,7 +75,7 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 容量の設定画面上部からPremium Generation 2を有効化することでGen2 への切り替えが可能です。
 
 <div align="center">
-<img src="pic1.gif" alt="画像1_Gen2 の使用方法" title="画像1_Gen2 の使用方法">
+<img src="pic1.gif" alt="画像_Gen2 の使用方法" title="画像_Gen2 の使用方法">
 </div>
 
 <br>
@@ -89,6 +104,37 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 [//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is)
 
 
+<br>
+
+---
+##  Power BI Premium Gen2 のワークロード設定
+---
+
+Power BI Premium Gen2 においても、Gen1 同様に各機能ごとのワークロードの設定が可能となりました（2021年12月現在）
+Gen1 と比較すると最大メモリに関する設定値がなくなっています。これは、前述の通り、ワークロード間のリソース競合が起こらない設計に変更されたため、各ワークロードの最大メモリ値の設定が不要になったためです。
+
+<div align="center">
+<img src="pic5.png" alt="画像_Gen2 のワークロード設定" title="画像_Gen2 のワークロード設定">
+</div>
+
+各項目の詳細については、下記をご確認ください。
+
+
+| 項目 | 既定値 | 許容値 | 内容 |
+| - | - | - | - |
+| クエリのメモリ制限(%) | 0 | 0~100 | ワークロード内でMDX または DAX クエリの実行に使用できる空きメモリの最大の割合。 |
+| クエリのタイムアウト(秒) | 3600 | 0~ | クエリがタイムアウトするまでの最大時間。 値 0 は、クエリがタイムアウトしないことを指定します。 |
+| 最大中間行数 | 1000000 | 100,000~2,147,483,646 | DirectQuery によって返される中間行の最大数。使用されるデータソースによっては、さらに上限値に制約がある場合があります。 |
+| 最大結果行数 | 2147483647 | 100,000~2,147,483,647 | クエリで返される行の最大数。 |
+| オフライン データセットの最大サイズ(GB) | 0 | 0~SKUごとの最大値 | メモリ内のオフライン データセット(pbix ファイルのサイズ)の最大サイズ。0 はSKU によって定義される最大値です。 |
+| ページの自動更新 | オン | オン/オフ | Premium ワークスペースで固定間隔に基づくページの自動更新を含むレポートを作成する機能のオン/オフを切り替えます。 |
+| 更新間隔の最小値 | 5分 | 1秒~ | ページの自動更新がオンの場合に、ページ更新間隔に許容される最小間隔。 |
+| 検出メジャーの変更 | オン | オン/オフ | Premium ワークスペースで変更の検出に基づくページの自動更新を含むレポートを作成する機能のオン/オフを切り替えます。 |
+| 最小実行間隔 | 30秒 | 1秒~ | 変更の検出メジャーがオンになっている場合、データ変更のポーリングに使用できる最小実行間隔です。 |
+| XMLA エンドポイント | 読み取り専用 | オフ/読み取り専用/読み取り、書き込み | XMLA エンドポイント を使用して、Microsoft とサードパーティのクライアント アプリケーションおよびツールからの接続をサポートする機能。 |
+| AI - Power BI Desktop からの使用を許可します | オン | オン/オフ | Premium 容量リソースを使用してTextAnalytics や Vision 機能をPower BI Desktop で利用することを許可する設定。 |
+
+
 
 <br>
 
@@ -108,7 +154,7 @@ Power BI Premium Gen 2 は、2021年10月4日に一般公開されています�
 以下の画像にて、各主要なマイルストーンをまとめましたので、併せてご確認ください。
 
 <div align="center">
-<img src="roadmap.png" alt="画像2_Gen2への移行ロードマップ" title="画像2_Gen2への移行ロードマップ">
+<img src="roadmap.png" alt="画像_Gen2への移行ロードマップ" title="画像_Gen2への移行ロードマップ">
 </div>
 
 //参考情報：[Power BI Premium Gen2 への移行を計画する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-transition-gen1-to-gen2)
@@ -121,7 +167,7 @@ Power BI Premium Gen2 にも専用のメトリックアプリを提供してお�
 最新のアプリは下記の画像通りです。
 
 <div align="center">
-<img src="gen2metricsapp.png" alt="画像3_Gen2メトリックアプリ" title="画像3_Gen2メトリックアプリ">
+<img src="gen2metricsapp.png" alt="画像_Gen2メトリックアプリ" title="画像_Gen2メトリックアプリ">
 </div>
 <br>
 Gen2 をご利用の場合はこちらのアプリをインストールしてください。
@@ -144,6 +190,12 @@ Power BI 管理ポータルで自動スケーリングを有効にすること�
 
 //参考情報：[Power BI Premium で自動スケーリングを使用する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-auto-scale)
 </br>
+
+### Q. Premium Gen1 に戻すことは可能ですか？
+
+Power BI Premium Gen2 一般提供後は、Gen1 に戻すボタンは非表示となり、基本機能から除外されたため、戻すことはできません。
+
+
 </br>
 
 
