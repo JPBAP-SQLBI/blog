@@ -27,3 +27,5 @@
 - [トラブル発生時の事象調査に必要な情報の採取手順について(通信編)](https://jpbap-sqlbi.github.io/blog/powerbi/all_howto_trace/)
 
 - [Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて](https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/)
+
+- [Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
