@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BI Pro のワークスペース容量について | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。Power BIサービスでは、ユーザー個別に用意されるマイ ワークスペースや、他者と共同作業を行うために使用するアプリ ワークスペースにコンテンツが格納されますが、このワークスペースのストレージ上限が気になったことはありませんか？ストレージ上限は、ご利用のライセンスやワークスペースに割り当てられている容量によって異なりますので、本ブログにて詳細を">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BI Pro のワークスペース容量について">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。Power BIサービスでは、ユーザー個別に用意されるマイ ワークスペースや、他者と共同作業を行うために使用するアプリ ワークスペースにコンテンツが格納されますが、このワークスペースのストレージ上限が気になったことはありませんか？ストレージ上限は、ご利用のライセンスやワークスペースに割り当てられている容量によって異なりますので、本ブログにて詳細を">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/2.png">
+<meta property="article:published_time" content="2022-01-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-31T02:54:20.503Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="Power BI サービス">
+<meta property="article:tag" content="データセット">
+<meta property="article:tag" content="ストレージ">
+<meta property="article:tag" content="Pro">
+<meta property="article:tag" content="容量">
+<meta property="article:tag" content="storage">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/1.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_storage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BI Pro のワークスペース容量について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2022-01-30T15:00:00.000Z" itemprop="datePublished">2022-01-31</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+0d6efd5f-d9e8-5ee7-8c0d-98c9a15e59f1%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+Pro+%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_storage%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_storage.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_storage.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/" data-id="ckz23m2ed000k0mmiej9d2zyj" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。<br>Power BIサービスでは、ユーザー個別に用意されるマイ ワークスペースや、他者と共同作業を行うために使用するアプリ ワークスペースにコンテンツが格納されますが、このワークスペースのストレージ上限が気になったことはありませんか？<br>ストレージ上限は、ご利用のライセンスやワークスペースに割り当てられている容量によって異なりますので、本ブログにて詳細をご案内いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><p>以下はPro容量を前提にご説明しています。<br>テナント内でPremiumまたはPPUをご契約いただいている場合は、いずれもテナント全体で最大100TBの容量が提供され、ユーザーごとやワークスペースごとに制限はございません。</p>
+<h4 id="ワークスペースごとに１０GBの容量が割り当てられる"><a href="#ワークスペースごとに１０GBの容量が割り当てられる" class="headerlink" title="ワークスペースごとに１０GBの容量が割り当てられる"></a>ワークスペースごとに１０GBの容量が割り当てられる</h4><p>まず、ワークスペースごとの考え方としては、マイ ワークスペースもアプリのワークスペースも、ワークスペースごとに10GBの容量が割り当てられます。<br>これは、テナント内のPower BIユーザー数や、それぞれのワークスペースにアクセス可能なユーザー数に左右されません。<br>なお、アプリ ワークスペースについては、テナント全体でどれだけの容量が使用できるかという観点では、10GB×有償ライセンス（ProまたはPPU）のライセンス数を掛けた値を超えることができません。<br>例えば、有償ライセンスのユーザーが4名いた場合、“10GB×４ユーザー“ となるので、テナント全体で使用できるアプリ ワークスペースの総合計容量は40 GBとなります。</p>
+<h4 id="ユーザーは、マイワークスペースで10GB、アプリ-ワークスペースの総合計で10GBの容量が使用できる"><a href="#ユーザーは、マイワークスペースで10GB、アプリ-ワークスペースの総合計で10GBの容量が使用できる" class="headerlink" title="ユーザーは、マイワークスペースで10GB、アプリ ワークスペースの総合計で10GBの容量が使用できる"></a>ユーザーは、マイワークスペースで10GB、アプリ ワークスペースの総合計で10GBの容量が使用できる</h4><p>ユーザーがPower BIサービス上で使用できるストレージ容量につきましては、以下の通りマイワークスペースとアプリ ワークスペース（マイワークスペース以外の、他者と共同作業を行うために使用するワークスペースを指します）に分けて考えます。</p>
+<h6 id="マイ-ワークスペース"><a href="#マイ-ワークスペース" class="headerlink" title="// マイ ワークスペース"></a>// マイ ワークスペース</h6><p>・割り当てられたライセンスの種類にかかわらず、１ユーザーにつき最大10GBの容量が割り当てられます。  </p>
+<h6 id="アプリ-ワークスペース"><a href="#アプリ-ワークスペース" class="headerlink" title="// アプリ ワークスペース"></a>// アプリ ワークスペース</h6><p>・マイワークスペースとは別に、アプリ ワークスペースの総容量としてテナント全体で最大10GBの容量が使用できます。（Freeライセンスユーザーは使用できません。）<br>これはユーザーがアクセス可能なワークスペース数に左右されません。<br>例えば、アクセスできるワークスペースが３個でも100個の場合も、1ユーザーに許可されるアプリワークスペースにおける使用可能な容量は、すべてのワークスペース総合計で最大10GBとなります。</p>
+<div align="center">
+<img src="1.png">
+</div> 
+
+<p>上記内容をもとに、例として以下シナリオの場合の容量について ご説明いたします。<br>例  ：<br>・テナント内でPower BI Pro のライセンスを持っているユーザーが4名<br>・マイワークスペースの他にアプリ ワークスペース A, B, C, D が存在する  </p>
+<p>上記前提を基にした場合、各ワークスペースで使用できる容量の計算は下記の通りになります ：<br>・各ユーザーに、マイワークスペース10GBが割り当てられます。<br>・アプリのワークスペースA, B, C, Dの最大容量はそれぞれ、10GBとなります。<br>・テナントで使用可能なアプリ ワークスペースの最大容量(つまり、ワークスペース A, B, C, Dの総合計容量)は、ユーザー数4×10GB=40GBとなります。<br>・アプリのワークスペースA, B, C, Dで最大容量の40GBを使用した場合、新規にアプリのワークスペースEをご用意いただいても、容量超過となりご利用出来ません。<br>・アプリのワークスペースA, B, C, Dで最大容量の40GBを使用していない場合は、40GB未満の範囲でワークスペースE, F…をご用意・ご使用いただくことが可能です。 </p>
+<div align="center">
+<img src="2.png">
+</div>   
+
+
+<h6 id="ご参考情報1"><a href="#ご参考情報1" class="headerlink" title="ご参考情報1"></a>ご参考情報1</h6><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi#manage-items-you-own">Power BI ワークスペースでデータ ストレージを管理する</a></p>
+<h6 id="ご参考情報2"><a href="#ご参考情報2" class="headerlink" title="ご参考情報2"></a>ご参考情報2</h6><p>冒頭の ”前提” でもご説明したように、テナント内でPremiumまたはPPUをご契約いただいている場合は、いずれもテナント全体で最大100TBの容量が提供されます。この容量とは別に、既定で割り当てられているProの最大容量は変わらずご使用いただけます。<br>PremiumとPPU両方導入している場合、Premiumの容量100TB + PPUの容量100TB +既定のProの容量をご使用いただけるということになります。</p>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Pro/" rel="tag">Pro</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/storage/" rel="tag">storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">ストレージ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E5%AE%B9%E9%87%8F/" rel="tag">容量</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_storage.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../pbi_desktop_webview2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Power BI Desktop のコンポーネント変更について(Webview2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="../pbi_premium_gen2_roadmap/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI Premium Gen2 について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../pbi_desktop_webview2/">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
+            <a href="">Power BI Pro のワークスペース容量について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_reflesh_error/">Power BI更新エラー「テーブルの列 ‘***’ が見つかりませんでした。」について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_map_visual/">Power BIのマップビジュアル</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Pro/" rel="tag">Pro</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Reflesh/" rel="tag">Reflesh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Webview2/" rel="tag">Webview2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/storage/" rel="tag">storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" rel="tag">スケジュール更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%AE%B9%E9%87%8F/" rel="tag">容量</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">更新エラー</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">15</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">6</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Pro">Pro</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Reflesh">Reflesh</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Webview2">Webview2</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/storage">storage</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0">スケジュール更新</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 14px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 18px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12px;">Power BI　　</a> <a href="../../tags/Pro/" style="font-size: 10px;">Pro</a> <a href="../../tags/Reflesh/" style="font-size: 10px;">Reflesh</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Webview2/" style="font-size: 10px;">Webview2</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/storage/" style="font-size: 10px;">storage</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">スケジュール更新</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 10px;">ストレージ</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 16px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 14px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E5%AE%B9%E9%87%8F/" style="font-size: 10px;">容量</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a> <a href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" style="font-size: 10px;">更新エラー</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
