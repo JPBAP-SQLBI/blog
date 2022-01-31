@@ -17,21 +17,26 @@
   
   <title>Power BI Desktop のコンポーネント変更について(Webview2) | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームです。  来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また We">
+  <meta name="description" content="Update: 2021&#x2F;01&#x2F;31 WebView2に関するよくある質問を追加しました。詳細につきましては、FAQをご確認ください。    こんにちは、Power BI サポート チームです。  2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebVi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Power BI Desktop のコンポーネント変更について(Webview2)">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームです。  来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また We">
+<meta property="og:description" content="Update: 2021&#x2F;01&#x2F;31 WebView2に関するよくある質問を追加しました。詳細につきましては、FAQをご確認ください。    こんにちは、Power BI サポート チームです。  2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。WebVi">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic1.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic0.png">
-<meta property="article:published_time" content="2021-11-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-28T02:54:42.392Z">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/error.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/error_resolution.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/error_resolution2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/eventviewer.png">
+<meta property="article:published_time" content="2022-01-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-31T02:41:54.796Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI Desktop">
+<meta property="article:tag" content="Webview2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/pic1.png">
   
@@ -112,19 +117,25 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2021-11-29T15:00:00.000Z" itemprop="datePublished">2021-11-30</time>
+  <time datetime="2022-01-30T15:00:00.000Z" itemprop="datePublished">2022-01-31</time>
 </a>
         
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+557a0025-f80d-5e13-9002-f638c86949e0%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+Desktop+%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%28Webview2%29%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_desktop_webview2%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_desktop_webview2.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_desktop_webview2.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/" data-id="ckxpinks100050nqvhtg2c46i" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/" data-id="ckz23632k00050mqh5bp9b5on" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Power BI サポート チームです。 </p>
-<p>来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。<br>WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また WebView2 によって、従来 Power BI Desktop のアップデートごとに行なわれていたセキュリティパッチも、リアルタイムで最新のセキュリティパッチを自動的に提供できるようになります。</p>
+        <span style="color: red; ">
+Update: 2021/01/31</br>
+WebView2に関するよくある質問を追加しました。詳細につきましては、FAQをご確認ください。
+<br>
+</span>
+
+<p>こんにちは、Power BI サポート チームです。 </p>
+<p>2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。<br>WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また WebView2 によって、従来 Power BI Desktop のアップデートごとに行なわれていたセキュリティパッチも、リアルタイムで最新のセキュリティパッチを自動的に提供できるようになります。</p>
 <p>基本的に WebView2 は Power BI Desktop のインストールに合わせて自動的にインストールが行なわれるため、皆様に特別な操作を求めることはございませんが、オフライン環境などで Power BI Desktop をご利用されている方や一部の対象者は、別途 WebView2 のインストールが必要になる場合がありますので、本記事をご確認いただき、Power BI Desktop のバージョンアップに備えましょう。</p>
 <span id="more"></span>
 
@@ -134,7 +145,7 @@
 </br>
 
 
-<hr>
+
 <h2 id="Power-BI-Desktop-に必要なスペックについて"><a href="#Power-BI-Desktop-に必要なスペックについて" class="headerlink" title="Power BI Desktop に必要なスペックについて"></a>Power BI Desktop に必要なスペックについて</h2><p>前提として Power BI Desktop では、以下の通り最小要件が定められています。</p>
 <ul>
 <li>Windows 8.1 / Windows Server 2012 R2 以降</li>
@@ -148,15 +159,17 @@
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements">Power BI Desktop の最小要件について</a></p>
 </br>
 
-<h2 id="WebView2-について"><a href="#WebView2-について" class="headerlink" title="WebView2 について"></a>WebView2 について</h2></br>
+<hr>
+<h2 id="WebView2-について"><a href="#WebView2-について" class="headerlink" title="WebView2 について"></a>WebView2 について</h2><hr>
+</br>
 
-<h3 id="WebView2-とは"><a href="#WebView2-とは" class="headerlink" title="WebView2 とは"></a>WebView2 とは</h3><p>WebView2 は、Microsoft Edge をWeb コンテンツを表示するための部品としてアプリケーションで利用できるようにするコンポーネントの一つです。<br>Power BI Desktop では、従来 Web コンテンツの表示においては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。<br>また、Power BI Desktopのアップデートを待たずに、WebView2 を通じて最新のセキュリティパッチが自動的に提供できるようになります。</p>
+<h3 id="WebView2-とは"><a href="#WebView2-とは" class="headerlink" title="WebView2 とは"></a>WebView2 とは</h3><p>WebView2 は、Microsoft Edge をWeb コンテンツを表示するための部品としてアプリケーションで利用できるようにするコンポーネントの一つです。<br>Power BI Desktop では、従来 Web コンテンツの表示や、UI・ビジュアルのレンダリングにおいては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。<br>また、Power BI Desktopのアップデートを待たずに、WebView2 を通じて最新のセキュリティパッチが自動的に提供できるようになります。</p>
 </br>
 
 <h3 id="切り替えが必要になるバージョンについて"><a href="#切り替えが必要になるバージョンについて" class="headerlink" title="切り替えが必要になるバージョンについて"></a>切り替えが必要になるバージョンについて</h3><p>2022年1月にリリースされる Power BI Report Server 向けのPower BI Desktop と、2022年2月にリリースされる Power BI Desktop では、WebView2 が必要になる予定です。</p>
 </br>
 
-<h3 id="Webview2-がインストールされているか確認する方法"><a href="#Webview2-がインストールされているか確認する方法" class="headerlink" title="Webview2 がインストールされているか確認する方法"></a>Webview2 がインストールされているか確認する方法</h3><p>お使いの端末に「Microsoft Edge WebView2 Runtime」がインストールされていれば、WebView2はすでにインストールされているため、これ以上の操作は必要ありません。</p>
+<h3 id="Webview2-がインストールされているか確認する方法"><a href="#Webview2-がインストールされているか確認する方法" class="headerlink" title="Webview2 がインストールされているか確認する方法"></a>Webview2 がインストールされているか確認する方法</h3><p>お使いの端末に「Microsoft Edge WebView2 Runtime」がインストールされていれば、WebView2 はすでにインストールされているため、これ以上の操作は必要ありません。</p>
 <p>ご利用の端末の[アプリと機能]から「Microsoft Edge WebView2 Runtime」が表示されるかどうかご確認ください。</p>
 <div align="center">
 <img src="pic1.png" alt="画像1_Webview2 の確認方法" title="画像1_Webview2 の確認方法">
@@ -185,12 +198,60 @@
 </br>
 
 
-<h3 id="Power-BI-Desktop-へのWebview2-の有効化"><a href="#Power-BI-Desktop-へのWebview2-の有効化" class="headerlink" title="Power BI Desktop へのWebview2 の有効化"></a>Power BI Desktop へのWebview2 の有効化</h3><p>来年からの切り替えが始まる前に、WebView2 をすぐに使用したい場合は、Power BI Desktop のプレビュー機能で WebView2 を有効にすることができます。<br>このオプションは、WebView2 がインストールされている場合にのみ表示され、現時点（2021年11月）では、Microsoft Store 版ではなく、.exeインストーラーを使用してインストールされた Power BI Desktop でのみ利用可能です。</p>
+<h3 id="Power-BI-Desktop-へのWebview2-の有効化"><a href="#Power-BI-Desktop-へのWebview2-の有効化" class="headerlink" title="Power BI Desktop へのWebview2 の有効化"></a>Power BI Desktop へのWebview2 の有効化</h3><p>来年からの切り替えが始まる前に、WebView2 をすぐに使用したい場合は、Power BI Desktop のプレビュー機能で WebView2 を有効にすることができます。<br>このオプションは、WebView2 がインストールされている場合にのみ表示されます。</p>
 <div align="center">
 <img src="pic0.png" alt="画像3_Webview2 の有効化" title="画像3_Webview2 の有効化">
 </div>
 
-<p>これをオンにしてPower BI Desktopを再起動すると、自動的にWebView2の使用が開始されます。<br>特に Power BI Desktop の操作や挙動が変わることはありません。</p>
+<p>これをオンにしてPower BI Desktop を再起動すると、自動的にWebView2 の使用が開始されます。<br>特に Power BI Desktop の操作や挙動が変わることはありません。</p>
+<hr>
+<h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><hr>
+<h4 id="Q1-Webview2をアンインストールした場合、どのような影響がありますか。"><a href="#Q1-Webview2をアンインストールした場合、どのような影響がありますか。" class="headerlink" title="Q1. Webview2をアンインストールした場合、どのような影響がありますか。"></a>Q1. Webview2をアンインストールした場合、どのような影響がありますか。</h4><p>Power BI のUI やビジュアルをレンダリングするために使用されているため、Webview2 をアンインストールした場合、現行バージョンPower BI Desktopが実行できなくなります。<br>また、過去バージョン（2021年11月より前）のPower BI Desktopに関しては、WebView2 が使用されないので、影響はございません。</p>
+<h4 id="Q2-Power-BI-Desktopを起動時に、WebView2-Process-Failedエラーが起きました。どのように解決できますか。"><a href="#Q2-Power-BI-Desktopを起動時に、WebView2-Process-Failedエラーが起きました。どのように解決できますか。" class="headerlink" title="Q2. Power BI Desktopを起動時に、WebView2 Process Failedエラーが起きました。どのように解決できますか。"></a>Q2. Power BI Desktopを起動時に、WebView2 Process Failedエラーが起きました。どのように解決できますか。</h4><div align="center">
+<img src="error.png" alt="画像4_PowerBIDesktop起動時のWebview2 エラーダイアログ " title="画像4_PowerBIDesktop起動時のWebview2 エラーダイアログ">
+</div>
+
+<p>Power BI Desktop起動時に上記の画像4のようなエラーメッセージが表示された場合、現時点での回避策として、以下のいずれの方法で事象が解消されます。</p>
+<ol>
+<li>Power BI Desktop の[オプション]&gt;[プレビュー機能]で WebView2 を無効にします。</li>
+</ol>
+<div align="center">
+<img src="error_resolution.png" alt="画像5_Webview2 無効化 " title="画像5_Webview2 無効化">
+</div>
+
+<ol start="2">
+<li>以下の環境変数を設定して、WebView2のプレビュー機能を無効化します。</li>
+</ol>
+<ul>
+<li>変数 : “PBI_enableWebView2Preview”</li>
+<li>値: “0”</li>
+</ul>
+<div align="center">
+<img src="error_resolution2.png" alt="画像6_環境変数によるWebview2 無効化" title="画像6_環境変数による無効化">
+</div>
+
+<p>また、本エラーが起きたら、一旦上記の回避策を実施いただき、以下の情報を添えて、ご状況をご記載の上、<a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/ja-jp/support/">Power BIサポート</a>へご連絡ください。</p>
+<ol>
+<li><strong>WebView2エラーレポート</strong><br>使用されているPower BI Desktopバージョンによって保存パスが異なります。以下のパスに保存されているレポートを添えてください。</li>
+</ol>
+<p>Microsoft Store版：<br>c:\Users\[username]\Microsoft\Power BI Desktop Store App\WebView2\EBWebView\Crashpad\reports<br>または<br>c:\Users\[username]\Microsoft\Power BI Desktop Store App\WebView2Elevated\EBWebView\Crashpad\reports</p>
+<p>exeインストール版：<br>c:\Users\][username]\AppData\Local\Microsoft\Power BI Desktop\WebView2\EBWebView\Crashpad\reports<br>または<br>c:\Users\[username]\AppData\Local\Microsoft\Power BI Desktop\WebView2Elevated\EBWebView\Crashpad\reports</p>
+<ol start="2">
+<li><p><strong>ご利用のマシンのデバイスID／デバイス名</strong><br>Windowsの [設定] &gt; [システム] &gt; [バージョン情報]からご確認いただけます</p>
+</li>
+<li><p><strong>イベントビューアーのログ</strong><br>[イベントビューアー]のアプリケーションを起動し、[アプリケーションとサービスログ]&gt; [Microsoft] &gt; [Windows] &gt; [CodeIntegrity] &gt; [Operational]<br>右クリックして、 [すべてのイベントを名前をつけて保存する]を選択して保存して、ご提供ください。</p>
+</li>
+</ol>
+<div align="center">
+<img src="eventviewer.png" alt="画像6_イベントビューアーのログ" title="画像6_イベントビューアーのログ">
+</div>
+
+<blockquote>
+<p><strong>参考情報：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-error-launching-desktop#resolve-issues-related-to-webview2/">Resolve issues related to WebView2</a>  </li>
+</ul>
+</blockquote>
 </br>
 
 <p>以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。</p>
@@ -207,7 +268,7 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Webview2/" rel="tag">Webview2</a></li></ul>
 
         
         <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_desktop_webview2.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
@@ -218,19 +279,10 @@
     
 <nav id="article-nav">
   
-    <a href="../storage_mode/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて
-        
-      </div>
-    </a>
   
-  
-    <a href="../pbi_embed/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../pbi_reflesh_error/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">Power BI レポートの埋め込み方法の種類について</div>
+      <div class="article-nav-title">Power BI更新エラー「テーブルの列 ‘***’ が見つかりませんでした。」について</div>
     </a>
   
 </nav>
@@ -249,6 +301,10 @@
       <ul>
         
           <li>
+            <a href="">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+          <li>
             <a href="../pbi_reflesh_error/">Power BI更新エラー「テーブルの列 ‘***’ が見つかりませんでした。」について</a>
           </li>
         
@@ -264,10 +320,6 @@
             <a href="../pbi_log4j_impact/">Apache Log4j の脆弱性とPower BI, Power BI Report Server への影響について</a>
           </li>
         
-          <li>
-            <a href="../storage_mode/">Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -277,8 +329,8 @@
   <div class="widget-wrap">
     <h3 class="widget-title">タグ</h3>
     <div class="widget">
-      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Reflesh/" rel="tag">Reflesh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" rel="tag">スケジュール更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">更新エラー</a></li></ul>  -->
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">14</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">5</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Reflesh">Reflesh</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0">スケジュール更新</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89">ストレージモード</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">データセット</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A">データ接続</a><span class="tag-list-count">1</span></li></ul></li></ul>
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Reflesh/" rel="tag">Reflesh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Webview2/" rel="tag">Webview2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" rel="tag">スケジュール更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">更新エラー</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">14</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">5</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Reflesh">Reflesh</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Webview2">Webview2</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0">スケジュール更新</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89">ストレージモード</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">データセット</a><span class="tag-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -288,7 +340,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
     </div>
   </div>
 
@@ -298,7 +350,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">タグクラウド</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 15px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/Reflesh/" style="font-size: 10px;">Reflesh</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12.5px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12.5px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">スケジュール更新</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 15px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a> <a href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" style="font-size: 10px;">更新エラー</a>
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 15px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 17.5px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12.5px;">Power BI　　</a> <a href="../../tags/Reflesh/" style="font-size: 10px;">Reflesh</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Webview2/" style="font-size: 10px;">Webview2</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12.5px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12.5px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12.5px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">スケジュール更新</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 15px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 15px;">ライセンス</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12.5px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a> <a href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" style="font-size: 10px;">更新エラー</a>
     </div>
   </div>
 
@@ -310,7 +362,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2021 Japan Power BI Team<br>
+      &copy; 2022 Japan Power BI Team<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
