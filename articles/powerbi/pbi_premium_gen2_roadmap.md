@@ -1,6 +1,6 @@
 ---
 title: Power BI Premium Gen2 について
-date: 2021-12-28 00:00:00 
+date: 2022-01-31 00:00:00 
 tags:
   - Power BI
   - Power BI サービス
@@ -9,9 +9,11 @@ tags:
 ---
 
 <span style="color: red; ">
-Update: 2021/12/28</br>
-2021年11月中旬頃より、新たにGen2 においてもワークロード設定が追加されました。</br>
-詳細は「Power BI Premium Gen2 のワークロード設定」の項目をご覧ください。
+Update: 2022/1/31</br>
+Power BI Premium Capacity Gen1 環境からGen2 への自動アップデートは2022年3月に変更となりました。
+また、Gen2 において各SKU ごとのモデル更新並列処理数が明示されました。
+詳しくは [Power BI Premium Gen2 の性能について]のセクションをご覧ください。
+
 </span>
 
 こんにちは、Power BI サポート チームです。
@@ -35,6 +37,11 @@ Power BI のライセンスについては過去記事「[作成したレポー�
 ## 更新履歴
 ---
 
+Update: 2022/1/31
+Power BI Premium Capacity Gen1 環境からGen2 への自動アップデートは2022年3月に変更となりました。
+また、Gen2 において各SKU ごとのモデル更新並列処理数が明示されました。
+詳しくは [Power BI Premium Gen2 の性能について]のセクションをご覧ください。
+</br>
 Update: 2021/12/28
 2021年11月中旬頃より、新たにGen2 においてもワークロード設定が追加されました。詳細は「Power BI Premium Gen2 のワークロード設定」の項目をご覧ください。
 </br>
@@ -48,8 +55,9 @@ Update: 2021/10/27
 1. [Power BI Premium Gen2 とは？](#Power-BI-Premium-Gen2-とは？)
 2. [Power BI Premium Gen2 の使用方法](#Power-BI-Premium-Gen2-の使用方法)
 3. [Power BI Premium Gen1(従来版) との比較](#Power-BI-Premium-Gen1-従来版-との比較)
-4. [Power BI Premium Gen2 のワークロード設定](#Power-BI-Premium-Gen2-のワークロード設定)
-5. [よくある質問](#よくある質問)
+4. [Power BI Premium Gen2 の性能について](#Power-BI-Premium-Gen2-の性能について)
+5. [Power BI Premium Gen2 のワークロード設定](#Power-BI-Premium-Gen2-のワークロード設定)
+6. [よくある質問](#よくある質問)
 
 <br>
 
@@ -94,7 +102,7 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 | ワークロード       | <b>「リソース競合が発生しうる」</b>同時に実行するワークロードは組織内のメモリー上限によって制限がありますので、リソースの競合が起きる可能性が高いです。                                          | <b>「リソース競合が回避される」</b>Power BI ワークロード (データセット、データフロー、またはページ分割されたレポート) は複数の特殊なノード グループに分かれますため、異なるワークロード間のリソース競合を回避することが可能です。                                                                                     | 
 | ストレージ         | SKUごとに 100 TB                                                                                                                                              | SKUごとに 100 TB                                                                                                                                                                                                                                                                   | 
 | 自動スケーリング   | 非対応                                                                                                                                                        | 対応。CPU使用率が上限に達した場合にコアが追加される。料金は利用時間の従量課金制（24時間ごと）。                                                                                                                                                                                                            | 
-| データ更新並列処理 | P1はデータ更新並列処理6個まで、P2は12個までなど制限があります。                                                                                               | データ更新の並列処理数に制限はありません。<br>並行して更新実行されたデータセットは、1つまたは複数のノードにロードされ、ロードされたすべてのデータセットのメモリの合計に物理的な制限がないため、CPU時間を累積してカウントすることができます。                                       | 
+| データ更新並列処理 | P1はデータ更新並列処理6個まで、P2は12個までなど制限があります。                                                                                               | Gen1 同様に並列処理の制限数が設定されています。                                       | 
 | スケーリング方法   | スケールアップ（P1-＞P2など）                                                                                                                                 | スケールアウト（並列処理の仮想コアの追加）                                                                                                                                                                                                                                         | 
 
 *2021年10月時点の情報です。
@@ -102,6 +110,29 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 [//参考①：Introducing Power BI Premium Gen2 - YouTube](https://www.youtube.com/watch?v=j17y_BPlhvU)
 [//参考②：Power BI Premium Gen2 のアーキテクチャ - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-architecture)
 [//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is)
+
+
+<br>
+
+---
+##  Power BI Premium Gen2 の性能について
+---
+
+Power BI Premium Gen2 の各SKU ごとの性能については、以下の通りとなっています。
+
+| 容量SKU | 仮想コアのサイズ | バックエンドの仮想コア | CPU時間 / 分 | 成果物あたりのメモリ[GB]*1,2 | クエリあたりの最大メモリ[GB]*1,2 | DirectQuery\Live接続での1秒あたりの最大実行クエリ数 *1,2 | モデル並列更新処理数 *2 |
+| - | - | - | - | - | - | - | - |
+| A1\EM1  | 1 | 0.5 | 30 | 3 | 1 | 3.75 | 1 |
+| A2\EM2  | 2 | 1 | 60 | 6 | 2 | 7.5 | 2 |
+| A3\EM3  | 4 | 2 | 120 | 10 | 2 | 15 | 3 |
+| A4\P1  | 8 | 4 | 240 | 25 | 6 | 30 | 6 |
+| A5\P2  | 16 | 8 | 480 | 50 | 6 | 60 | 12 |
+| A6\P3  | 32 | 16 | 960 | 100 | 10 | 120 | 24 |
+
+*1 Power BI Premium Utilization and Metrics アプリは、現在これらの指標を公開していません。
+*2 モデル並列更新処理数と各メモリの制限は、データセットに対して適用されます。
+
+[//参考：Power BI Premium Gen2 とは - Power BI | Microsoft Docs - Premium Gen2 の制限事項](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-what-is#limitations-in-premium-gen2)
 
 
 <br>
@@ -148,13 +179,14 @@ Gen1 と比較すると最大メモリに関する設定値がなくなってい
 Power BI Premium Gen 2 は、2021年10月4日に一般公開されています。
 今後、Gen1 をGen2 に移行するためのスケジュールについて、Premium容量をご利用のユーザーに把握していただきたい重要な日付は以下の通りです。
 - 2021 年 10 月 4 日 - Power BI Premium Gen2 が一般提供されます。
-- 2021 年 11 月 15 日 - お客様に移行を促す通知の送信が開始されます。
-- 2022 年 1 月 15 日 - Microsoft により、すべての組織を対象に、Premium 容量の最新の Gen2 プラットフォームへの移行が開始されます。
+- 2021 年 11 月 15 日以降 - お客様に移行を促す通知の送信が開始されます。
+- 2022 年 3 月中 - Microsoft により、すべての組織を対象に、Premium 容量の最新の Gen2 プラットフォームへの移行が開始されます。
+
 
 以下の画像にて、各主要なマイルストーンをまとめましたので、併せてご確認ください。
 
 <div align="center">
-<img src="roadmap.png" alt="画像_Gen2への移行ロードマップ" title="画像_Gen2への移行ロードマップ">
+<img src="roadmap2.png" alt="画像_Gen2への移行ロードマップ" title="画像_Gen2への移行ロードマップ">
 </div>
 
 //参考情報：[Power BI Premium Gen2 への移行を計画する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-transition-gen1-to-gen2)
@@ -184,7 +216,7 @@ Gen2 をご利用の場合はこちらのアプリをインストールしてく
 それまでは、自動スケーリング利用時の課金はありません。
 
 2021 年 11 月 4 日以降、引き続き自動スケーリングを使用する際に、今後課金される料金を把握できるように、[容量のアドオンに関する Premium の価格の詳細](https://powerbi.microsoft.com/ja-jp/pricing/#premium-add-on-card-autoscale)をご確認ください。
-また、自動スケーリングはオプション機能なため、機能を無効にした場合は、課金されません。
+また自動スケーリングはオプション機能であり、機能を有効にし、自動スケーリングが使用されない限り課金されません。
 
 Power BI 管理ポータルで自動スケーリングを有効にすることができますので、詳細につきましては、以下の公式ドキュメントをご覧ください。
 
