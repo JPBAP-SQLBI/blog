@@ -58,7 +58,7 @@ WebView2 への切り替えは、Power BI Desktop の開発とリリースのプ
 
 ### WebView2 とは
 
-WebView2 は、Microsoft Edge をWeb コンテンツを表示するための部品としてアプリケーションで利用できるようにするコンポーネントの一つです。
+WebView2 は、Web コンテンツを表示するための部品としてアプリケーションで利用できるようにするMicrosoft Edgeコンポーネントの一つです。
 Power BI Desktop では、従来 Web コンテンツの表示や、UI・ビジュアルのレンダリングにおいては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。
 また、Power BI Desktopのアップデートを待たずに、WebView2 を通じて最新のセキュリティパッチが自動的に提供できるようになります。
 
