@@ -37,3 +37,7 @@
 - [Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
 
 - [Power BI更新エラー「テーブルの列 ' *** ' が見つかりませんでした。」について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/)
+
+- [Power BI Pro のワークスペース容量について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/)
+
+- [Power BI ってどんなことができますか？～ビジネスユーザー向けの使い方紹介～](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage)
