@@ -106,6 +106,10 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 > - [組織向けにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization)
 ---
 
+---
+## 機能比較表
+---
+
 上記で紹介させていただきまました、各ライセンスの機能や特徴を以下の表にまとめました。
 
 |   | **Free** | **Pro** | **Premium Per User** | **Premium	Per Capacity** | **Embedded** |
@@ -134,6 +138,10 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 
 > [!NOTE]
 > Premium Per Capacity とEmbedded につきましては、Premium Generation 2 及びEmbedded Generation 2 の仕様を基づき記載しております。
+
+---
+## ライセンス組み合わせのコンテンツ閲覧可否
+---
 
 最後に、非常にたくさんのお問い合わせをいただく、**「各ライセンスの組み合わせにおけるコンテンツの閲覧可否」**について表にまとめておきました。
 
