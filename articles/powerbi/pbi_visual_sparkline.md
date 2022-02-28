@@ -141,7 +141,7 @@ tags:
 
 </br>
 
-[このPower BIレポートのダウンロードはこちら]()
+[このPower BIレポートのダウンロードはこちら](https://github.com/JPBAP-SQLBI/blog/tree/main/articles/powerbi/pbi_visual_sparkline/sample_pbix)
 
 </br>
 
