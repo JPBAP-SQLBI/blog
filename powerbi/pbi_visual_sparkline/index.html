@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>Power BIのレポート機能「スパークライン」 | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。  テーブルやマトリックスによる表形式のレポートを、もっと充実させたいと思ったことはないでしょうか。本ブログではそんなときに役立つ機能、スパークライン（2022年1月リリース）をご紹介します。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Power BIのレポート機能「スパークライン」">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。  テーブルやマトリックスによる表形式のレポートを、もっと充実させたいと思ったことはないでしょうか。本ブログではそんなときに役立つ機能、スパークライン（2022年1月リリース）をご紹介します。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic001.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic002.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic003.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic004.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic005.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic006.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic007.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic008.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic009.PNG">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic010.PNG">
+<meta property="article:published_time" content="2022-02-27T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-28T05:06:38.953Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="ビジュアル">
+<meta property="article:tag" content="テーブル">
+<meta property="article:tag" content="マトリックス">
+<meta property="article:tag" content="プレビュー">
+<meta property="article:tag" content="スパークライン">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/pic001.PNG">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_visual_sparkline" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Power BIのレポート機能「スパークライン」
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2022-02-27T15:00:00.000Z" itemprop="datePublished">2022-02-28</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+3045adc2-72cf-5b88-90e7-d16a7e5ec8f0%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%AE%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E6%A9%9F%E8%83%BD%E3%80%8C%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3%E3%80%8D%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_visual_sparkline%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_visual_sparkline.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_visual_sparkline.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/" data-id="cl068o2ew000o0opce0i3bwb2" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。 </p>
+<p>テーブルやマトリックスによる表形式のレポートを、もっと充実させたいと思ったことはないでしょうか。本ブログではそんなときに役立つ機能、スパークライン（2022年1月リリース）をご紹介します。 </p>
+<span id="more"></span>
+
+<div align="center">
+<img src="pic001.PNG" alt="画像1_スパークライン" title="画像1_スパークライン">
+</div>
+
+<p>スパークラインはテーブルやマトリックスのセル内に表示される「小さなグラフ」であり、表の数値だけでは把握ができない傾向をすばやく確認したり比較したりするのに便利です。季節的な増減や景気サイクルなどトレンドを示したり、最大値や最小値を強調したりする場合に使います。（2022.02現在プレビュー段階） </p>
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p>
+<p>また、本機能は開発段階 (プレビュー) でございますため、今後予告なしに機能が削除されたり、</p><p>動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。</p></div>
+<hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
+<ol>
+<li><a href="#%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95">設定方法</a></li>
+<li><a href="#%E8%80%83%E6%85%AE%E4%BA%8B%E9%A0%85%E3%81%A8%E5%88%B6%E9%99%90%E4%BA%8B%E9%A0%85">考慮事項と制限事項</a></li>
+<li><a href="#%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B">活用事例</a></li>
+</ol>
+<hr>
+<h2 id="設定方法"><a href="#設定方法" class="headerlink" title="設定方法"></a>設定方法</h2><hr>
+<h3 id="スパークラインのプレビューを有効にしておく"><a href="#スパークラインのプレビューを有効にしておく" class="headerlink" title="スパークラインのプレビューを有効にしておく"></a>スパークラインのプレビューを有効にしておく</h3><p>スパークラインは既定で有効になっていますが、もし有効になっていない場合は次の方法で機能を有効にします。 </p>
+<p>[ファイル][オプションと設定][オプション][プレビュー機能] に移動し、[スパークライン] を選択。 </p>
+<div align="center">
+<img src="pic002.PNG" alt="画像2_プレビューを有効にする" title="画像2_プレビューを有効にする">
+</div>
+
+
+<h3 id="スパークラインを追加する"><a href="#スパークラインを追加する" class="headerlink" title="スパークラインを追加する"></a>スパークラインを追加する</h3><p>スパークラインはテーブルとマトリックスの両方の視覚エフェクトに追加できます。 </p>
+<ol>
+<li>テーブルまたはマトリックスを作成します。 </li>
+<li>数値フィールドの横にあるドロップダウン矢印を選び、[スパークラインの追加] を選びます。</li>
+</ol>
+<div align="center">
+<img src="pic003.PNG" alt="画像3_スパークラインの追加1" title="画像3_スパークラインの追加1">
+</div>
+
+<ol start="3">
+<li>ダイアログ ボックスで、スパークラインの詳細を構成します。 [Y 軸] には、開始した数値フィールドがあらかじめ設定されています。 必要に応じて、フィールドと [概要] の種類の両方を変更できます。 また、スパークラインの [X 軸] として使うフィールド (日付フィールドなど) を選ぶ必要があります。 </li>
+</ol>
+<div align="center">
+<img src="pic004.PNG" alt="画像4_スパークラインの追加2" title="画像4_スパークラインの追加2">
+</div>
+
+<ol start="4">
+<li>［作成］ を選択します。スパークラインは自動的に新しい列としてテーブルやマトリックスに追加されます。 </li>
+</ol>
+<div align="center">
+<img src="pic005.PNG" alt="画像5_スパークラインの追加3" title="画像5_スパークラインの追加3">
+</div>
+
+
+
+<h3 id="スパークラインを編集する"><a href="#スパークラインを編集する" class="headerlink" title="スパークラインを編集する"></a>スパークラインを編集する</h3><ol>
+<li><p>スパークラインの隣にあるドロップダウン矢印を選び、[スパークラインの編集] を選びます。 </p>
+</li>
+<li><p>[書式] ペイン内の [スパークライン] カードで、スパークラインの線とマーカーの書式が変更できます。グラフ種類（折れ線、棒）を選んだり、線の色や幅を変更したり、特定の値（最高、最低、最後など）にマーカーを付けて傾向を浮き彫りにすることが可能です。 </p>
+</li>
+</ol>
+<div align="center">
+<img src="pic006.PNG" alt="画像6_スパークラインの編集1" title="画像6_スパークラインの編集1">
+</div>
+
+<p>例1) 折れ線グラフで最高値に赤丸を付けた場合がこちら</p>
+<div align="center">
+<img src="pic007.PNG" alt="画像7_スパークライン折れ線グラフ" title="画像7_スパークライン折れ線グラフ">
+</div>
+
+<p>例2) 棒グラフにした場合がこちら </p>
+<div align="center">
+<img src="pic008.PNG" alt="画像8_スパークライン棒グラフ" title="画像8_スパークライン棒グラフ">
+</div>
+
+
+<hr>
+<h2 id="考慮事項と制限事項"><a href="#考慮事項と制限事項" class="headerlink" title="考慮事項と制限事項"></a>考慮事項と制限事項</h2><hr>
+<ul>
+<li><p>Power BI は、1 つの視覚エフェクトにつき最大 5 本のスパークラインをサポートしており、スパークラインごとに最大 52 ポイントが表示されます。 </p>
+</li>
+<li><p>また、パフォーマンス上の理由から、スパークラインが有効な場合、マトリックスの最大列数も 20 個に制限されます。 </p>
+</li>
+<li><p>スパークラインは、Azure Analysis Services ではサポートされていますが、オンプレミスの SQL Server Analysis Services では現在サポートされていません。 </p>
+</li>
+</ul>
+<hr>
+<h2 id="活用事例"><a href="#活用事例" class="headerlink" title="活用事例"></a>活用事例</h2><hr>
+<p>テーブルやマトリックスの数値だけではわからなかったことが、スパークラインによって情報が豊かになり、データ分析で深掘りするべきポイントを浮き彫りにすることができます。 </p>
+<p>例えば、マトリックス（画像9）から得られる大まかな情報の２つが以下だとして、 </p>
+<ul>
+<li>製品別で「Paseo」は年間収益TOP </li>
+<li>国別で「France」は年間収益TOP </li>
+</ul>
+<div align="center">
+<img src="pic009.PNG" alt="画像9_マトリックスのみ" title="画像9_マトリックスのみ">
+</div>
+
+
+<p>スパークラインを追加（画像10）することで、深掘り分析をしたほうがいいポイントや施策が効きそうなポイントがわかるため、次のアクションに繋げやすくなります。 </p>
+<ul>
+<li>製品別で「Paseo」は年間収益TOP <ul>
+<li>USA だけ最高値となる月が他国と離れている ＝ キャンペーンなどの施策タイミングの深掘りへ </li>
+</ul>
+</li>
+<li>国別で France は年間収益TOP <ul>
+<li>France と Germany は最高値のタイミングが同じ製品が多い = 成功事例をGermany に横展開して収益を伸ばせるかも？ </li>
+</ul>
+</li>
+</ul>
+<div align="center">
+<img src="pic010.PNG" alt="画像10_マトリックス+スパークライン" title="画像10_マトリックス+スパークライン">
+</div>
+
+</br>
+
+<p><a href="">このPower BIレポートのダウンロードはこちら</a></p>
+</br>
+
+
+<p>上記は一部の例にすぎません。 </p>
+<p>もちろん気付きを得たあとはもっと深掘りの分析が必要ですが、今まで議論や施策に発展しなかった数値だけの表データが、スパークラインを追加するだけでビジネスを前に進めるための気づきが得られ、議論や施策の一歩を踏み出す材料になります。ぜひご活用をご検討ください。 </p>
+<p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。 </p>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/create-reports/power-bi-sparklines-tables">Power BI レポートでテーブルまたはマトリックスにスパークラインを作成する (プレビュー)</a></li>
+</ul>
+</blockquote>
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3/" rel="tag">スパークライン</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB/" rel="tag">テーブル</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">ビジュアル</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" rel="tag">プレビュー</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9/" rel="tag">マトリックス</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_visual_sparkline.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../pbi_enduser_usage/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Power BI ってどんなことができますか？～ビジネスユーザー向けの使い方紹介～
+        
+      </div>
+    </a>
+  
+  
+    <a href="../pbi_workspace_classic_and_app/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI ワークスペースについて ~クラシックワークスペースと新しい(アプリ)ワークスペース~</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../pbi_enduser_usage/">Power BI ってどんなことができますか？～ビジネスユーザー向けの使い方紹介～</a>
+          </li>
+        
+          <li>
+            <a href="">Power BIのレポート機能「スパークライン」</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_classic_and_app/">Power BI ワークスペースについて ~クラシックワークスペースと新しい(アプリ)ワークスペース~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_premium_gen2_roadmap/">Power BI Premium Gen2 について</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_desktop_webview2/">Power BI Desktop のコンポーネント変更について(Webview2)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Pro/" rel="tag">Pro</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Reflesh/" rel="tag">Reflesh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Webview2/" rel="tag">Webview2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/storage/" rel="tag">storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" rel="tag">スケジュール更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3/" rel="tag">スパークライン</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB/" rel="tag">テーブル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ビジネスユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">ビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" rel="tag">プレビュー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9/" rel="tag">マトリックス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" rel="tag">ワークスペース</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%AE%B9%E9%87%8F/" rel="tag">容量</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">更新エラー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%96%B2%E8%A6%A7%E8%80%85/" rel="tag">閲覧者</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">17</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">6</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Pro">Pro</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Reflesh">Reflesh</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Webview2">Webview2</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">2</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/storage">storage</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">インポート</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">オンプレミスデータゲートウェイ</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC">ゲストユーザー</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0">スケジュール更新</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 14px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 18px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 12px;">Power BI　　</a> <a href="../../tags/Pro/" style="font-size: 10px;">Pro</a> <a href="../../tags/Reflesh/" style="font-size: 10px;">Reflesh</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/Webview2/" style="font-size: 10px;">Webview2</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 12px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 12px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/storage/" style="font-size: 10px;">storage</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 12px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">スケジュール更新</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 10px;">ストレージ</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3/" style="font-size: 10px;">スパークライン</a> <a href="../../tags/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB/" style="font-size: 10px;">テーブル</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 16px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ビジネスユーザー</a> <a href="../../tags/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">ビジュアル</a> <a href="../../tags/%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" style="font-size: 10px;">プレビュー</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9/" style="font-size: 10px;">マトリックス</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 14px;">ライセンス</a> <a href="../../tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" style="font-size: 10px;">ワークスペース</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 12px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">埋め込み</a> <a href="../../tags/%E5%AE%B9%E9%87%8F/" style="font-size: 10px;">容量</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a> <a href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" style="font-size: 10px;">更新エラー</a> <a href="../../tags/%E9%96%B2%E8%A6%A7%E8%80%85/" style="font-size: 10px;">閲覧者</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
