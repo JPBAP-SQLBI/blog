@@ -41,3 +41,5 @@
 - [Power BI Pro のワークスペース容量について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/)
 
 - [Power BI ってどんなことができますか？～ビジネスユーザー向けの使い方紹介～](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage)
+
+- [Power BIのレポート機能「スパークライン」](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_sparkline/)
