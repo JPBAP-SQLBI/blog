@@ -1,5 +1,5 @@
 ---
-title: Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて
+title: 「インポート」と「Direct Query」データセットの違い
 date: 2021-11-30 16:00:00
 tags:
   - Power BI

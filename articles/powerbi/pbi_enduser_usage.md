@@ -1,5 +1,5 @@
 ---
-title: Power BI ってどんなことができますか？～ビジネスユーザー向けの使い方紹介～
+title: Power BI ビジネスユーザー向けの使い方紹介
 date: 2022-02-28 16:00:00
 tags:
   - Power BI

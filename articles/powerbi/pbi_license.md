@@ -1,5 +1,5 @@
 ---
-title: 作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~
+title: Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）
 date: 2021-07-30 16:00:00
 tags:
   - Power BI
@@ -160,8 +160,8 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 ---
 
 > **本ブログの関連記事**
-> - [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](../pbi_desktop_service/)
-> - [Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~ 利用目的によるライセンスの組み合わせ ~](../pbi_license2/)
+> - [Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？](../pbi_desktop_service/)
+> - [Power BI ライセンスの導入：利用目的による組み合わせ](../pbi_license2/)
 
 
 

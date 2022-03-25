@@ -1,5 +1,5 @@
 ---
-title: Power BIサービスでのコンテンツ共有方法の種類
+title: Power BI サービスでのコンテンツ共有方法の種類
 date: 2021-09-30 00:00:00 
 tags:
   - Power BI
@@ -35,7 +35,7 @@ Power BI Desktopで作成した .pbix ファイルをPower BIサービスへ発�
 また、インターネット上のすべてのユーザーに公開するWebに公開機能は対象外となります。 
 
 ご参考情報：
-[Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~ | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io) ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)
+[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io) ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)
 [Power BI から Web への公開 - Power BI | Microsoft Docs ](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-publish-to-web)
 
 
@@ -155,7 +155,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 ワークスペースの種類につきましては、以下をご参考にしてください。
 
 ご参考情報：
-[Power BI ワークスペースについて ～クラシックワークスペースと新しい(アプリ)ワークスペース～ | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
+[クラシックワークスペースと新しいワークスペースの違い：Power BIのワークスペースについて | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
 [新しいワークスペースへのアクセス権をユーザーに付与する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-give-access-new-workspaces)
 
 </br>
