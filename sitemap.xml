@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
     
     <lastmod>2022-03-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/</loc>
     
     <lastmod>2022-03-30</lastmod>
     
@@ -94,6 +94,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embedded_license/</loc>
     
     <lastmod>2022-03-30</lastmod>
     
@@ -271,6 +278,55 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/Web%E3%83%91%E3%83%BC%E3%83%84/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Embed/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Embedded/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E9%96%8B%E7%99%BA%E8%80%85%E5%90%91%E3%81%91/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E9%A1%A7%E5%AE%A2%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E7%B5%84%E7%B9%94%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/App-Owns-Data/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/User-Owns-Data/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
