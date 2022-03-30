@@ -9,7 +9,7 @@ tags:
 
 こんにちは、Power BI サポート チームです。
 
-前回のブログ Power BI でレポート作成・分析を行うために必要なものは？ ~ Power BI DesktopとPower BI サービスの違い ~ では、Power BI DesktopとPower BI サービスの違いについて説明しました。
+前回のブログ「Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ 」では、Power BI DesktopとPower BI サービスの違いについて説明しました。
 
 本ブログでは、Power BI のライセンスについて詳細にご案内いたします。
 
