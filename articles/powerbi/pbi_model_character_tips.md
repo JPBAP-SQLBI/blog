@@ -193,7 +193,7 @@ Web サーバー側などアクセス先でURL を書き換えていただいた
 
 </br>
 
-[このPower BIレポートのサンプルダウンロードはこちら](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_visual_sparkline/sample_pbix/sparkline_sample.pbix)
+[このPower BIレポートのサンプルダウンロードはこちら](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_model_character_tips/sample_pbix/CaseSensitivitySample.pbix)
 
 </br>
 
