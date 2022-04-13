@@ -54,9 +54,9 @@ Power BI のモデルでは、大文字と小文字を区別しないロケー�
 
 | Power Query エディタ上の表示 | Power BI レポート上の表示 |
 | - | - |
-| 先に大文字が含まれる文字列が保存される場合</br> <div align="center"><img src="2.png"></div> | <div align="center"><img src="2-1.png"> |
+| 先に小文字が含まれる文字列が保存される場合</br> <div align="center"><img src="2.png"></div> | <div align="center"><img src="2-1.png"> |
 | 同じ文字列が存在しない場合</br> <div align="center"><img src="2-2.png"></div> | <div align="center"><img src="2-3.png"> |
-| 先に小文字が含まれる文字列が保存される場合</br> <div align="center"><img src="2-4.png"></div> | <div align="center"><img src="2-5.png"> |
+| 先に大文字が含まれる文字列が保存される場合</br> <div align="center"><img src="2-4.png"></div> | <div align="center"><img src="2-5.png"> |
 
 
 </br>
