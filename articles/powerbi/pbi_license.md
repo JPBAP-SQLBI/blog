@@ -9,7 +9,7 @@ tags:
 
 こんにちは、Power BI サポート チームです。
 
-前回のブログ「Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ 」では、Power BI DesktopとPower BI サービスの違いについて説明しました。
+前回のブログ「[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)」では、Power BI DesktopとPower BI サービスの違いについて説明しました。
 
 本ブログでは、Power BI のライセンスについて詳細にご案内いたします。
 
@@ -67,13 +67,13 @@ Premium Per User 容量が割り当てられたワークスペースには、ダ
 ## Power BI Premium Per Capacity とは？
 ---
 
-Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro かPremium Per User に追加可能な容量ベースのプランとなります。（¥543,030 から / 月）
+Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro か Premium Per User に追加可能な容量ベースのプランとなります。（¥543,030 から / 月）
 
 Free、Pro、Premium Per User はユーザーに紐づくライセンスですが、Premium Per Capacity はテナントの容量に紐づくライセンスとご理解いただければと思います。
 
-Free とPro では、Azure 上の共有リソースが割り当てられますが、Premium Per Capacity をご契約いただくことで組織専用の拡張リソースを確保し、大容量のリソースを柔軟に運用いただくことが可能となります。
+Free と Pro では、Azure 上の共有リソースが割り当てられますが、Premium Per Capacity をご契約いただくことで組織専用の拡張リソースを確保し、大容量のリソースを柔軟に運用いただくことが可能となります。
 
-また、上述で、コンテンツ共有にはお互いにPro ライセンスが必要であることをお伝えしていましたが、Premium Per Capacity 容量に保存されたコンテンツは、Free ライセンスのユーザーも閲覧することが可能となります。
+また、上述で、コンテンツ共有にはお互いに Pro ライセンスが必要であることをお伝えしていましたが、Premium Per Capacity 容量に保存されたコンテンツは、Free ライセンスのユーザーも閲覧することが可能となります。
 
 Premium Per Capacity 容量が割り当てられたワークスペースには、ダイヤモンドアイコンが表示されます。
 ![](./PPC.png)
