@@ -13,7 +13,7 @@ tags:
 <span style="color: red;">
 Update: 2022/4/21</br>
 2022年4月27日からクラシックワークスペースから新しいワークスペース(アプリワークスペース)への自動移行が開始されます。</br>
-詳しくは<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/">【2022年4月27日から開始】Power BI クラシックワークスペース(v1) の自動アップデートについて</a>をご覧ください。
+詳しくは<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/">【2022年4月27日より】クラシックワークスペースの自動アップグレード</a>をご覧ください。
 </span>
 
 </br>
