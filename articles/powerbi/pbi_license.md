@@ -1,5 +1,5 @@
 ---
-title: 作成したレポートを組織内で共有するために必要なライセンスは？~ Power BI ライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~
+title: Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）
 date: 2021-07-30 16:00:00
 tags:
   - Power BI
@@ -9,7 +9,7 @@ tags:
 
 こんにちは、Power BI サポート チームです。
 
-前回のブログ Power BI でレポート作成・分析を行うために必要なものは？ ~ Power BI DesktopとPower BI サービスの違い ~ では、Power BI DesktopとPower BI サービスの違いについて説明しました。
+前回のブログ「[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)」では、Power BI DesktopとPower BI サービスの違いについて説明しました。
 
 本ブログでは、Power BI のライセンスについて詳細にご案内いたします。
 
@@ -67,13 +67,13 @@ Premium Per User 容量が割り当てられたワークスペースには、ダ
 ## Power BI Premium Per Capacity とは？
 ---
 
-Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro かPremium Per User に追加可能な容量ベースのプランとなります。（¥543,030 から / 月）
+Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro か Premium Per User に追加可能な容量ベースのプランとなります。（¥543,030 から / 月）
 
 Free、Pro、Premium Per User はユーザーに紐づくライセンスですが、Premium Per Capacity はテナントの容量に紐づくライセンスとご理解いただければと思います。
 
-Free とPro では、Azure 上の共有リソースが割り当てられますが、Premium Per Capacity をご契約いただくことで組織専用の拡張リソースを確保し、大容量のリソースを柔軟に運用いただくことが可能となります。
+Free と Pro では、Azure 上の共有リソースが割り当てられますが、Premium Per Capacity をご契約いただくことで組織専用の拡張リソースを確保し、大容量のリソースを柔軟に運用いただくことが可能となります。
 
-また、上述で、コンテンツ共有にはお互いにPro ライセンスが必要であることをお伝えしていましたが、Premium Per Capacity 容量に保存されたコンテンツは、Free ライセンスのユーザーも閲覧することが可能となります。
+また、上述で、コンテンツ共有にはお互いに Pro ライセンスが必要であることをお伝えしていましたが、Premium Per Capacity 容量に保存されたコンテンツは、Free ライセンスのユーザーも閲覧することが可能となります。
 
 Premium Per Capacity 容量が割り当てられたワークスペースには、ダイヤモンドアイコンが表示されます。
 ![](./PPC.png)
@@ -106,6 +106,10 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 > - [組織向けにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization)
 ---
 
+---
+## 機能比較表
+---
+
 上記で紹介させていただきまました、各ライセンスの機能や特徴を以下の表にまとめました。
 
 |   | **Free** | **Pro** | **Premium Per User** | **Premium	Per Capacity** | **Embedded** |
@@ -135,6 +139,10 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 > [!NOTE]
 > Premium Per Capacity とEmbedded につきましては、Premium Generation 2 及びEmbedded Generation 2 の仕様を基づき記載しております。
 
+---
+## ライセンス組み合わせのコンテンツ閲覧可否
+---
+
 最後に、非常にたくさんのお問い合わせをいただく、**「各ライセンスの組み合わせにおけるコンテンツの閲覧可否」**について表にまとめておきました。
 
 | ユーザーライセンス / ワークスペースの種類  | Power BI Pro | Premium Per User | Premium Per Capacity | Embedded |
@@ -152,8 +160,8 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 ---
 
 > **本ブログの関連記事**
-> - [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](../pbi_desktop_service/)
-> - [Power BI のライセンスを導入するにあたり、考慮するポイントは？ ~ 利用目的によるライセンスの組み合わせ ~](../pbi_license2/)
+> - [Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？](../pbi_desktop_service/)
+> - [Power BI ライセンスの導入：利用目的による組み合わせ](../pbi_license2/)
 
 
 

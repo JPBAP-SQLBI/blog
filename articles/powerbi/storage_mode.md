@@ -1,5 +1,5 @@
 ---
-title: Power BIデータセットのストレージモード「インポート」と「Direct Query」の違いについて
+title: 「インポート」と「Direct Query」データセットの違い
 date: 2021-11-30 16:00:00
 tags:
   - Power BI
@@ -28,7 +28,7 @@ Power BI ご利用のユーザー様から、データ接続の際にインポ�
 1. [ストレージモードとは？](#ストレージモードとは？)
 2. [インポートモードのデータセット](#インポートモードのデータセット)
 3. [DirectQueryモードのデータセット](#DirectQueryモードのデータセット)
-3. [インポートとDirectQueryの比較](#インポートとDirectQueryの比較)
+4. [インポートとDirectQueryの比較](#インポートとDirectQueryの比較)
 
 ---
 ## ストレージモードとは？

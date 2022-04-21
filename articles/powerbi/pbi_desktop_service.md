@@ -1,5 +1,5 @@
 ---
-title: Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~
+title: Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？
 date: 2021-07-30 15:00:00
 tags:
   - Power BI
@@ -15,8 +15,8 @@ tags:
 
 そこで今回は、Power BI の活用を始めるにあたり、理解しておくべきポイントについて2つに分けてご案内いたします。
 
-1. [Power BIでレポート作成・分析を行うために必要なものは？ ~ Power BI Desktop とPower BI サービスの違い ~](./pbi_desktop_service/)
-2. [作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](../pbi_license/)
+1. [Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？](./pbi_desktop_service/)
+2. [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
 
 > [!IMPORTANT]
 > 本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、
@@ -97,7 +97,7 @@ Power BI サービス (app.powerbi.com) は、Web ブラウザ上でサインイ
 
 Power BI ライセンスについては、以下ブログで引き続きご案内いたします。
 
-- [作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](../pbi_license/)
+- [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
 
 > **参考情報**
 > 上記内容については、以下公開情報を基にまとめています。
@@ -111,7 +111,7 @@ Power BI ライセンスについては、以下ブログで引き続きご案�
 ---
 
 **本ブログの関連記事**
-- [作成したレポートを組織内で共有するために必要なライセンスは？~ Power BIライセンス（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）の違い ~](../pbi_license/)
+- [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
 
 
 

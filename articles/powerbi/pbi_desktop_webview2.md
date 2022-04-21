@@ -1,16 +1,22 @@
 
 ---
 title: Power BI Desktop のコンポーネント変更について(Webview2)
-date: 2021-11-30 00:00:00 
+date: 2022-01-31 00:00:00 
 tags:
   - Power BI
   - Power BI Desktop
+  - Webview2
 ---
 
+<span style="color: red; ">
+Update: 2021/01/31</br>
+WebView2に関するよくある質問を追加しました。詳細につきましては、FAQをご確認ください。
+<br>
+</span>
 
 こんにちは、Power BI サポート チームです。 
 
-来年2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。
+2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。
 WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また WebView2 によって、従来 Power BI Desktop のアップデートごとに行なわれていたセキュリティパッチも、リアルタイムで最新のセキュリティパッチを自動的に提供できるようになります。
 
 基本的に WebView2 は Power BI Desktop のインストールに合わせて自動的にインストールが行なわれるため、皆様に特別な操作を求めることはございませんが、オフライン環境などで Power BI Desktop をご利用されている方や一部の対象者は、別途 WebView2 のインストールが必要になる場合がありますので、本記事をご確認いただき、Power BI Desktop のバージョンアップに備えましょう。
@@ -24,11 +30,8 @@ WebView2 への切り替えは、Power BI Desktop の開発とリリースのプ
 >元記事は以下よりご確認ください（英語）
 ><Span style="font-size: 90%">[Power BI Desktop Installer Changes & WebView2](https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-installer-changes-webview2/)</span>
 
-
 </br>
 
-
----
 
 
 ## Power BI Desktop に必要なスペックについて
@@ -47,14 +50,16 @@ WebView2 への切り替えは、Power BI Desktop の開発とリリースのプ
 
 </br>
 
+---
 ## WebView2 について
+---
 
 </br>
 
 ### WebView2 とは
 
-WebView2 は、Microsoft Edge をWeb コンテンツを表示するための部品としてアプリケーションで利用できるようにするコンポーネントの一つです。
-Power BI Desktop では、従来 Web コンテンツの表示においては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。
+WebView2 は、Web コンテンツを表示するための部品としてアプリケーションで利用できるようにするMicrosoft Edgeコンポーネントの一つです。
+Power BI Desktop では、従来 Web コンテンツの表示や、UI・ビジュアルのレンダリングにおいては Chromium ベースの「CefSharp」が使用されてきましたが、今後 WebView2 への切り替えによって、より開発とリリースのプロセスを最適化していくことを目指しています。
 また、Power BI Desktopのアップデートを待たずに、WebView2 を通じて最新のセキュリティパッチが自動的に提供できるようになります。
 
 </br>
@@ -67,7 +72,7 @@ Power BI Desktop では、従来 Web コンテンツの表示においては Chr
 
 ### Webview2 がインストールされているか確認する方法
 
-お使いの端末に「Microsoft Edge WebView2 Runtime」がインストールされていれば、WebView2はすでにインストールされているため、これ以上の操作は必要ありません。
+お使いの端末に「Microsoft Edge WebView2 Runtime」がインストールされていれば、WebView2 はすでにインストールされているため、これ以上の操作は必要ありません。
 
 ご利用の端末の[アプリと機能]から「Microsoft Edge WebView2 Runtime」が表示されるかどうかご確認ください。
 
@@ -109,14 +114,74 @@ WebView2 は、Microsoft 365 アプリケーションのアップデートや �
 ### Power BI Desktop へのWebview2 の有効化
 
 来年からの切り替えが始まる前に、WebView2 をすぐに使用したい場合は、Power BI Desktop のプレビュー機能で WebView2 を有効にすることができます。
-このオプションは、WebView2 がインストールされている場合にのみ表示され、現時点（2021年11月）では、Microsoft Store 版ではなく、.exeインストーラーを使用してインストールされた Power BI Desktop でのみ利用可能です。
+このオプションは、WebView2 がインストールされている場合にのみ表示されます。
 
 <div align="center">
 <img src="pic0.png" alt="画像3_Webview2 の有効化" title="画像3_Webview2 の有効化">
 </div>
 
-これをオンにしてPower BI Desktopを再起動すると、自動的にWebView2の使用が開始されます。
+これをオンにしてPower BI Desktop を再起動すると、自動的にWebView2 の使用が開始されます。
 特に Power BI Desktop の操作や挙動が変わることはありません。
+
+---
+### FAQ
+---
+
+#### Q1. Webview2をアンインストールした場合、どのような影響がありますか。
+
+Power BI のUI やビジュアルをレンダリングするために使用されているため、Webview2 をアンインストールした場合、現行バージョンPower BI Desktopが実行できなくなります。
+また、過去バージョン（2021年11月より前）のPower BI Desktopに関しては、WebView2 が使用されないので、影響はございません。
+
+#### Q2. Power BI Desktopを起動時に、WebView2 Process Failedエラーが起きました。どのように解決できますか。
+<div align="center">
+<img src="error.png" alt="画像4_PowerBIDesktop起動時のWebview2 エラーダイアログ " title="画像4_PowerBIDesktop起動時のWebview2 エラーダイアログ">
+</div>
+
+Power BI Desktop起動時に上記の画像4のようなエラーメッセージが表示された場合、現時点での回避策として、以下のいずれの方法で事象が解消されます。
+
+1. Power BI Desktop の[オプション]>[プレビュー機能]で WebView2 を無効にします。
+
+<div align="center">
+<img src="error_resolution.png" alt="画像5_Webview2 無効化 " title="画像5_Webview2 無効化">
+</div>
+
+2. 以下の環境変数を設定して、WebView2のプレビュー機能を無効化します。
+ - 変数 : "PBI_enableWebView2Preview"
+ - 値: "0"
+
+<div align="center">
+<img src="error_resolution2.png" alt="画像6_環境変数によるWebview2 無効化" title="画像6_環境変数による無効化">
+</div>
+
+また、本エラーが起きたら、一旦上記の回避策を実施いただき、以下の情報を添えて、ご状況をご記載の上、[Power BIサポート](https://powerbi.microsoft.com/ja-jp/support/)へご連絡ください。
+
+1. **WebView2エラーレポート**
+使用されているPower BI Desktopバージョンによって保存パスが異なります。以下のパスに保存されているレポートを添えてください。
+
+Microsoft Store版：
+c:\Users\\[username]\Microsoft\Power BI Desktop Store App\WebView2\EBWebView\Crashpad\reports
+または
+c:\Users\\[username]\Microsoft\Power BI Desktop Store App\WebView2Elevated\EBWebView\Crashpad\reports
+
+exeインストール版：
+c:\Users\\][username]\AppData\Local\Microsoft\Power BI Desktop\WebView2\EBWebView\Crashpad\reports
+または
+c:\Users\\[username]\AppData\Local\Microsoft\Power BI Desktop\WebView2Elevated\EBWebView\Crashpad\reports
+
+2. **ご利用のマシンのデバイスID／デバイス名**
+ Windowsの [設定] > [システム] > [バージョン情報]からご確認いただけます
+
+3. **イベントビューアーのログ**
+[イベントビューアー]のアプリケーションを起動し、[アプリケーションとサービスログ]> [Microsoft] > [Windows] > [CodeIntegrity] > [Operational]
+右クリックして、 [すべてのイベントを名前をつけて保存する]を選択して保存して、ご提供ください。
+
+<div align="center">
+<img src="eventviewer.png" alt="画像6_イベントビューアーのログ" title="画像6_イベントビューアーのログ">
+</div>
+
+> **参考情報：**
+> - [Resolve issues related to WebView2](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-error-launching-desktop#resolve-issues-related-to-webview2/)  
+
 
 </br>
 
