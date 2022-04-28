@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiservice_network/</loc>
-    
-    <lastmod>2022-04-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/</loc>
     
     <lastmod>2022-04-28</lastmod>
@@ -79,7 +72,21 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiservice_network/</loc>
+    
+    <lastmod>2022-04-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_model_character_tips/</loc>
+    
+    <lastmod>2022-04-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/</loc>
     
     <lastmod>2022-04-28</lastmod>
     
@@ -114,6 +121,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
+    
+    <lastmod>2022-04-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embedded_license/</loc>
     
     <lastmod>2022-04-28</lastmod>
@@ -122,13 +136,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage/</loc>
-    
-    <lastmod>2022-04-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
     
     <lastmod>2022-04-28</lastmod>
     
@@ -410,6 +417,34 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/</loc>
+    <lastmod>2022-04-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/On-Premises-Data-Gateway/</loc>
+    <lastmod>2022-04-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%AB/</loc>
+    <lastmod>2022-04-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Security-Roles/</loc>
+    <lastmod>2022-04-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>daily</changefreq>
@@ -418,13 +453,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Report-Server/</loc>
-    <lastmod>2022-04-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

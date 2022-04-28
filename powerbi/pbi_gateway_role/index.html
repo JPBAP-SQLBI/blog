@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZCPTY1J9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZCPTY1J9T');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Power BI サポート チームです。  Power BI では、オンプレミス環境にあるデータソースへ接続するために、オンプレミスデータゲートウェイの機能が用意されていますが、そのオンプレミスデータゲートウェイに新たなセキュリティーロールが追加されていますので、以下にてご紹介いたします。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="オンプレミスデータゲートウェイのセキュリティーロール">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/index.html">
+<meta property="og:site_name" content="Japan CSS Support Power BI Blog">
+<meta property="og:description" content="こんにちは、Power BI サポート チームです。  Power BI では、オンプレミス環境にあるデータソースへ接続するために、オンプレミスデータゲートウェイの機能が用意されていますが、そのオンプレミスデータゲートウェイに新たなセキュリティーロールが追加されていますので、以下にてご紹介いたします。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/pbi_service_gateway.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/pbi_service_gateway2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/power_platform_gateway.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/pbi_service_datasource.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/power_platform_tenant_admin.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/power_platform_datasource.png">
+<meta property="article:published_time" content="2022-04-27T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-28T05:28:22.831Z">
+<meta property="article:author" content="Japan Power BI Team">
+<meta property="article:tag" content="Power BI">
+<meta property="article:tag" content="オンプレミスデータゲートウェイ">
+<meta property="article:tag" content="On-Premises Data Gateway">
+<meta property="article:tag" content="セキュリティーロール">
+<meta property="article:tag" content="Security Roles">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/pbi_service_gateway.png">
+  
+    <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
+  
+
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <div id="ms-logo"></div>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../atom.xml" title="RSSフィード"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpbap-sqlbi.github.io/blog"></form>
+      </div>
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">Japan CSS Support Power BI Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../index.html" id="subtitle">日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-powerbi/pbi_gateway_role" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      オンプレミスデータゲートウェイのセキュリティーロール
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="" class="article-date-single">
+  <time datetime="2022-04-27T15:00:00.000Z" itemprop="datePublished">2022-04-28</time>
+</a>
+        
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+baf51f28-e5a1-50f9-8c01-5ccd81e13937%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%AB%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_gateway_role%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_gateway_role.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_gateway_role.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/" data-id="cl2ikf9zx000d0ns60u493af1" class="article-share-link">共有</a>
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Power BI サポート チームです。 </p>
+<p>Power BI では、オンプレミス環境にあるデータソースへ接続するために、オンプレミスデータゲートウェイの機能が用意されていますが、そのオンプレミスデータゲートウェイに新たなセキュリティーロールが追加されていますので、以下にてご紹介いたします。</p>
+<span id="more"></span>
+
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事は 弊社公式ブログ「Microsoft Power BI ブログ」の公開情報を元に構成しておりますが、本記事編集時点と実際の機能やリリース時期に相違がある場合がございます。</p><p>元記事は以下よりご確認ください（英語）。</p><p><Span style="font-size: 100%"><a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/en-us/blog/additional-gateway-security-roles-for-power-bi/">Additional gateway security roles for Power BI</a></span></p><p></br></p><p>本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、</p><p>動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。</p></div>
+</br>
+
+<hr>
+<h2 id="オンプレミスデータゲートウェイとは"><a href="#オンプレミスデータゲートウェイとは" class="headerlink" title="オンプレミスデータゲートウェイとは"></a>オンプレミスデータゲートウェイとは</h2><hr>
+<p>オンプレミス データ ゲートウェイは橋渡しとしての役割を果たし、クラウド内に存在しないオンプレミス データといくつかの Microsoft クラウド サービスとの間で迅速かつ安全なデータ転送を行います。<br>オンプレミスデータゲートウェイをご利用いただけるサービスは、Power BI、Power Apps、Power Automate、Azure Analysis Services、および Azure Logic Apps が含まれています。</p>
+<p>具体的に、オンプレミスデータゲートウェイからデータソースへの接続において、どのような処理を行われているかにつきましては、以下のドキュメントをご参照ください。</p>
+<blockquote>
+<p><strong>参考情報：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-onprem-indepth">オンプレミス データ ゲートウェイのアーキテクチャ</a></li>
+</ul>
+</blockquote>
+<p>また、Power BI サービス上に、オンプレミスデータゲートウェイを管理するには、[設定] &gt; [ゲートウェイ] から実施いただけます。</p>
+<p>ゲートウェイを使用した接続手順は以下のブログ記事をご参考ください。</p>
+<blockquote>
+<p><strong>参考情報：</strong></p>
+<ul>
+<li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a></li>
+</ul>
+</blockquote>
+<div align="center">
+<img src="pbi_service_gateway.png" alt="オンプレミスデータゲートウェイの管理" title="オンプレミスデータゲートウェイの管理">
+</div>
+
+
+</br>
+
+<hr>
+<h2 id="オンプレミスデータゲートウェイのセキュリティーロール"><a href="#オンプレミスデータゲートウェイのセキュリティーロール" class="headerlink" title="オンプレミスデータゲートウェイのセキュリティーロール"></a>オンプレミスデータゲートウェイのセキュリティーロール</h2><hr>
+<p>より細かな管理を行えるように、 Power BI でも Power Platform で設定できる新規のセキュリティーロールが適用されるようになりました。</p>
+<p>既存機能として <a target="_blank" rel="noopener" href="https://app.powerbi.com/groups/me/gateways/">Power BI サービス</a> で利用できるロールと、 <a target="_blank" rel="noopener" href="https://admin.powerplatform.microsoft.com/">Power Platform 管理センター</a>でのみ設定できるセキュリティーロールについて、ご説明いたします。<br>また、ゲートウェイ全体に対して適用するロール（<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%AD%E3%83%BC%E3%83%AB">ゲートウェイロール</a>）と、それぞれのデータソースに対して設定するロール（<a href="#%E6%8E%A5%E7%B6%9A%EF%BC%88%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%EF%BC%89%E3%83%AD%E3%83%BC%E3%83%AB">接続ロール</a>）の2種類がございます。</p>
+<hr>
+<h3 id="ゲートウェイロール"><a href="#ゲートウェイロール" class="headerlink" title="ゲートウェイロール"></a>ゲートウェイロール</h3><hr>
+<p>オンプレミス データゲートウェイにある 3 つのセキュリティ ロールは次の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>ゲートウェイロール</th>
+<th>Power BI </br>サービスで管理</th>
+<th>今回の</br>新ロール</th>
+<th>説明</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>管理者</td>
+<td><div align="center">〇</div></td>
+<td><div align="center">×</div></td>
+<td>✓ オンプレミス データ ゲートウェイの管理および更新 </br> ✓ ゲートウェイに新たな接続 (データ ソース) の作成 </br> ✓ 管理者、接続作成者、およびゲートウェイでロールを共有する接続作成者を持つユーザーの管理 (追加/削除) </br> ✓ ゲートウェイで作成されたすべての接続へのアクセスの管理</td>
+<td>ゲートウェイの最上位権限で、</br>ゲートウェイに関するすべてを管理できますため、接続（データソース）ロールの権限を上回っています。</td>
+</tr>
+<tr>
+<td>接続作成機能</td>
+<td><div align="center">×</div></td>
+<td><div align="center">〇</div></td>
+<td>✓ ゲートウェイ上に接続/データ ソースの作成 </br> ✓ ゲートウェイにゲートウェイがオンラインかオフラインかをテストすること </br> × ゲートウェイを管理や更新したり、ゲートウェイ上の他のユーザーを追加または削除したりすることはできません</td>
+<td>接続（データソース）を追加できる権限で、</br>データセットを新規作成して、</br>ゲートウェイを使用したデータ接続を設定するユーザーに対して付与することをおすすめします。</td>
+</tr>
+<tr>
+<td>再共有による接続作成機能</td>
+<td><div align="center">× </div></td>
+<td><div align="center">〇</div></td>
+<td>✓ ゲートウェイ上に接続/データ ソースの作成 </br> ✓ ゲートウェイの状態をテストすること </br> ✓ 接続作成者として他のユーザーとゲートウェイを共有すること </br> × ゲートウェイからユーザーを削除することはできません</td>
+<td>上記の「接続作成機能」に加え、</br>さらに新規のユーザーと共有できる権限です。</td>
+</tr>
+</tbody></table>
+<p><strong>■<a target="_blank" rel="noopener" href="https://app.powerbi.com/groups/me/gateways/">Power BI サービス</a>で設定する場合（管理者のみ）</strong></p>
+<p>[設定] &gt; [ゲートウェイ] &gt; ゲートウェイを選択する &gt; [管理者]</p>
+<div align="center">
+<img src="pbi_service_gateway2.png" alt="Power BI サービス上のゲートウェイ管理" title="Power BI サービス上のゲートウェイ管理">
+</div>
+
+<p><strong>■<a target="_blank" rel="noopener" href="https://admin.powerplatform.microsoft.com/">Power Platform 管理センター</a>で設定する場合</strong></p>
+<p>[データ（プレビュー] &gt; [オンプレミス データ ゲートウェイ] &gt; [ゲートウェイ]のオプション &gt; [ユーザー管理] </p>
+<div align="center">
+<img src="power_platform_gateway.png" alt="Power Platform管理センターでのゲートウェイ管理" title="Power Platform管理センターでのゲートウェイ管理">
+</div>
+
+
+</br>
+
+<hr>
+<h3 id="接続（データソース）ロール"><a href="#接続（データソース）ロール" class="headerlink" title="接続（データソース）ロール"></a>接続（データソース）ロール</h3><hr>
+<p>オンプレミス データ ゲートウェイで接続 (データ ソース) を作成すると、接続 (データ ソース) の所有者になります。</p>
+<table>
+<thead>
+<tr>
+<th>接続ロール</th>
+<th>Power BI </br>サービスで管理</th>
+<th>今回の</br>新ロール</th>
+<th>説明</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>所有者</td>
+<td><div align="center">× </div></td>
+<td><div align="center">〇</div></td>
+<td>✓ 資格情報の表示と更新を許可されています。 </br> ✓ 接続（データソース）を削除することもできます。  </br> ✓所有者、ユーザー、または共有アクセス許可のあるユーザーとの接続に他のユーザーを割り当てることができます。</td>
+<td>データソースごとの資格情報の</br>更新を許可する場合にこちらのロールをご利用ください。</td>
+</tr>
+<tr>
+<td>ユーザー</td>
+<td><div align="center">〇</div></td>
+<td><div align="center">×</div></td>
+<td>✓ Power BI レポートおよび Power BI データフロー、または Power Apps で接続 (データ ソース) を使用できます。 </br> × 資格情報を表示または更新することはできません。</td>
+<td>データセットの更新作業で</br>特定のデータソースを使用する必要がある場合におすすめです。</td>
+</tr>
+<tr>
+<td>再共有できるユーザー</td>
+<td><div align="center">× </div></td>
+<td><div align="center">〇</div></td>
+<td>✓ Power BI レポートおよび Power BI データフロー、または Power Apps で接続 (データ ソース) を使用できます</br> ✓ ユーザーのアクセス許可を使用してデータ ソースを他のユーザーと共有できます。</td>
+<td>上記の「ユーザー」に加え、</br>さらにデータソースを新規のユーザーと共有できる権限です。</td>
+</tr>
+</tbody></table>
+<p><strong>■<a target="_blank" rel="noopener" href="https://app.powerbi.com/groups/me/gateways/">Power BI サービス</a>で設定する場合（ユーザーのみ）</strong></p>
+<p>[設定] &gt; [ゲートウェイ] &gt; ゲートウェイを展開し、データソースを選択する &gt; [ユーザー]</p>
+<div align="center">
+<img src="pbi_service_datasource.png" alt="Power BI サービス上のデータソース管理" title="Power BI サービス上のデータソース管理">
+</div>
+
+<p><strong>■<a target="_blank" rel="noopener" href="https://admin.powerplatform.microsoft.com/">Power Platform 管理センター</a>で設定する場合</strong></p>
+<p>「データソース」タブを表示させるには、まず画面右上にある「テナント管理」ボタンをオフにする必要がございます。</p>
+<div align="center">
+<img src="power_platform_tenant_admin.png" alt="Power Platformテナント管理ボタン" title="Power Platformテナント管理ボタン">
+</div>
+
+<p>[データ（プレビュー] &gt; [データソース] &gt; [データソース]のオプション &gt; [ユーザー管理] </p>
+<div align="center">
+<img src="power_platform_datasource.png" alt="Power Platform管理センターでのデータソース管理" title="Power Platform管理センターでのデータソース管理">
+</div>
+
+
+</br>
+
+<blockquote>
+<p><strong>参考情報：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/data-integration/gateway/manage-security-roles">オンプレミス データ ゲートウェイのセキュリティ ロールを管理する</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-platform/admin/onpremises-data-gateway-management?msclkid=9458b01bc42a11ecac3c3ed358d0c10a">オンプレミス データ ゲートウェイの管理 (プレビュー)</a></li>
+</ul>
+</blockquote>
+</br>
+以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
+
+      
+      
+        <div class="article-disclaimer">
+        
+          <p>※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+        
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/On-Premises-Data-Gateway/" rel="tag">On-Premises Data Gateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Security-Roles/" rel="tag">Security Roles</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%AB/" rel="tag">セキュリティーロール</a></li></ul>
+
+        
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_gateway_role.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../pbi_pbiservice_network/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Power BI の通信設定</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">オンプレミスデータゲートウェイのセキュリティーロール</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_pbiservice_network/">Power BI の通信設定</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_v1upgrade/">【2022年4月27日より】クラシックワークスペースの自動アップグレード</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_workspace_classic_and_app/">Power BI ワークスペースについて ~クラシックワークスペースと新しい(アプリ)ワークスペース~</a>
+          </li>
+        
+          <li>
+            <a href="../pbi_embedded_license/">Power BI Embedded とは？ライセンスと埋め込み方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <!-- <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Apache-log4j/" rel="tag">Apache log4j</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/App-Owns-Data/" rel="tag">App Owns Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ArcGIS-Map/" rel="tag">ArcGIS Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-IP-Ranges/" rel="tag">Azure IP Ranges</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Azure-Map/" rel="tag">Azure Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/B2B/" rel="tag">B2B</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Bing-Map/" rel="tag">Bing Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Direct-Query/" rel="tag">Direct Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Embed/" rel="tag">Embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Embedded/" rel="tag">Embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Fiddler/" rel="tag">Fiddler</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/IP-%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9/" rel="tag">IP アドレス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/On-Premises-Data-Gateway/" rel="tag">On-Premises Data Gateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Outofmemory/" rel="tag">Outofmemory</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/PSR/" rel="tag">PSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Desktop/" rel="tag">Power BI Desktop</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Premium/" rel="tag">Power BI Premium</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-Report-Server/" rel="tag">Power BI Report Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" rel="tag">Power BI サービス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-Query/" rel="tag">Power Query</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Pro/" rel="tag">Pro</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Reflesh/" rel="tag">Reflesh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Security-Roles/" rel="tag">Security Roles</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/SharePoint-Online/" rel="tag">SharePoint Online</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Teams/" rel="tag">Teams</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Troubleshooting/" rel="tag">Troubleshooting</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/User-Owns-Data/" rel="tag">User Owns Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Webview2/" rel="tag">Webview2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" rel="tag">Webに公開</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" rel="tag">Webパーツ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Workspace/" rel="tag">Workspace</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/dataset/" rel="tag">dataset</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embed/" rel="tag">embed</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/embedded/" rel="tag">embedded</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/onpremisedatagateway/" rel="tag">onpremisedatagateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/refresh/" rel="tag">refresh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/storage/" rel="tag">storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" rel="tag">インポート</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%A8%E3%83%B3%E3%83%89%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/" rel="tag">エンドポイント</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" rel="tag">オンプレミスデータゲートウェイ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" rel="tag">クラシックワークスペース</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ゲストユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" rel="tag">スケジュール更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">ストレージモード</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3/" rel="tag">スパークライン</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%AB/" rel="tag">セキュリティーロール</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB/" rel="tag">テーブル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" rel="tag">データセット</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" rel="tag">データ接続</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">ビジネスユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">ビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" rel="tag">プレビュー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88/" rel="tag">ホワイトリスト</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" rel="tag">マップビジュアル</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9/" rel="tag">マトリックス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A1%E3%83%A2%E3%83%AA%E4%B8%8D%E8%B6%B3/" rel="tag">メモリ不足</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A1%E3%83%A2%E3%83%AA%E4%B8%8D%E8%B6%B3%E3%81%AE%E3%81%9F%E3%82%81%E5%AE%8C%E4%BA%86%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/" rel="tag">メモリ不足のため完了できません</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A2%E3%83%80%E3%83%B3%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" rel="tag">モダンワークスペース</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" rel="tag">ライセンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" rel="tag">ワークスペース</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%85%B1%E6%9C%89/" rel="tag">共有</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E5%9B%B3/" rel="tag">地図</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" rel="tag">地理データ</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E5%AE%B9%E9%87%8F/" rel="tag">容量</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%96%B0%E3%81%97%E3%81%84%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" rel="tag">新しいワークスペース</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">更新エラー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E6%9C%80%E5%B0%8F%E8%A6%81%E4%BB%B6/" rel="tag">最小要件</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E7%B5%84%E7%B9%94%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">組織向け埋め込み</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E7%B5%84%E7%B9%94%E5%A4%96%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" rel="tag">組織外ユーザー</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E8%A8%B1%E5%8F%AF%E3%83%AA%E3%82%B9%E3%83%88/" rel="tag">許可リスト</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%80%9A%E4%BF%A1%E8%A8%AD%E5%AE%9A/" rel="tag">通信設定　　</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%96%8B%E7%99%BA%E8%80%85%E5%90%91%E3%81%91/" rel="tag">開発者向け</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%96%B2%E8%A6%A7%E8%80%85/" rel="tag">閲覧者</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/%E9%A1%A7%E5%AE%A2%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" rel="tag">顧客向け埋め込み</a></li></ul>  -->
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Power-BI/">Power BI</a><span class="tag-list-count">20</span><ul><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Apache-log4j">Apache log4j</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/ArcGIS-Map">ArcGIS Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Azure-Map">Azure Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/B2B">B2B</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Bing-Map">Bing Map</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Direct-Query">Direct Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/On-Premises-Data-Gateway">On-Premises Data Gateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Desktop">Power BI Desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Premium">Power BI Premium</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-Report-Server">Power BI Report Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">Power BI サービス</a><span class="tag-list-count">6</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Power-Query">Power Query</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Pro">Pro</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Reflesh">Reflesh</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Security-Roles">Security Roles</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Teams">Teams</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Webview2">Webview2</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/Workspace">Workspace</a><span class="tag-list-count">3</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/onpremisedatagateway">onpremisedatagateway</a><span class="tag-list-count">1</span></li><li class="tag-list-item tag-list-item-child-tag"><a class="tag-list-link tag-list-link-child" href="../../tags/Power-BI/storage">storage</a><span class="tag-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/03/">2022 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/02/">2022 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/10/">2021 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">2021 / 07</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/Apache-log4j/" style="font-size: 10px;">Apache log4j</a> <a href="../../tags/App-Owns-Data/" style="font-size: 10px;">App Owns Data</a> <a href="../../tags/ArcGIS-Map/" style="font-size: 10px;">ArcGIS Map</a> <a href="../../tags/Azure-IP-Ranges/" style="font-size: 10px;">Azure IP Ranges</a> <a href="../../tags/Azure-Map/" style="font-size: 10px;">Azure Map</a> <a href="../../tags/B2B/" style="font-size: 10px;">B2B</a> <a href="../../tags/Bing-Map/" style="font-size: 10px;">Bing Map</a> <a href="../../tags/Direct-Query/" style="font-size: 10px;">Direct Query</a> <a href="../../tags/Embed/" style="font-size: 10px;">Embed</a> <a href="../../tags/Embedded/" style="font-size: 10px;">Embedded</a> <a href="../../tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="../../tags/IP-%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9/" style="font-size: 10px;">IP アドレス</a> <a href="../../tags/On-Premises-Data-Gateway/" style="font-size: 10px;">On-Premises Data Gateway</a> <a href="../../tags/Outofmemory/" style="font-size: 10px;">Outofmemory</a> <a href="../../tags/PSR/" style="font-size: 10px;">PSR</a> <a href="../../tags/Power-BI/" style="font-size: 20px;">Power BI</a> <a href="../../tags/Power-BI-Desktop/" style="font-size: 15px;">Power BI Desktop</a> <a href="../../tags/Power-BI-Premium/" style="font-size: 10px;">Power BI Premium</a> <a href="../../tags/Power-BI-Report-Server/" style="font-size: 10px;">Power BI Report Server</a> <a href="../../tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/" style="font-size: 18.33px;">Power BI サービス</a> <a href="../../tags/Power-BI/" style="font-size: 15px;">Power BI　　</a> <a href="../../tags/Power-Query/" style="font-size: 10px;">Power Query</a> <a href="../../tags/Pro/" style="font-size: 10px;">Pro</a> <a href="../../tags/Reflesh/" style="font-size: 10px;">Reflesh</a> <a href="../../tags/Security-Roles/" style="font-size: 10px;">Security Roles</a> <a href="../../tags/SharePoint-Online/" style="font-size: 10px;">SharePoint Online</a> <a href="../../tags/Teams/" style="font-size: 10px;">Teams</a> <a href="../../tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a> <a href="../../tags/User-Owns-Data/" style="font-size: 10px;">User Owns Data</a> <a href="../../tags/Webview2/" style="font-size: 10px;">Webview2</a> <a href="../../tags/Web%E3%81%AB%E5%85%AC%E9%96%8B/" style="font-size: 10px;">Webに公開</a> <a href="../../tags/Web%E3%83%91%E3%83%BC%E3%83%84/" style="font-size: 10px;">Webパーツ</a> <a href="../../tags/Workspace/" style="font-size: 13.33px;">Workspace</a> <a href="../../tags/dataset/" style="font-size: 10px;">dataset</a> <a href="../../tags/embed/" style="font-size: 10px;">embed</a> <a href="../../tags/embedded/" style="font-size: 10px;">embedded</a> <a href="../../tags/onpremisedatagateway/" style="font-size: 11.67px;">onpremisedatagateway</a> <a href="../../tags/refresh/" style="font-size: 10px;">refresh</a> <a href="../../tags/storage/" style="font-size: 10px;">storage</a> <a href="../../tags/%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/" style="font-size: 10px;">インポート</a> <a href="../../tags/%E3%82%A8%E3%83%B3%E3%83%89%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/" style="font-size: 10px;">エンドポイント</a> <a href="../../tags/%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4/" style="font-size: 15px;">オンプレミスデータゲートウェイ</a> <a href="../../tags/%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" style="font-size: 11.67px;">クラシックワークスペース</a> <a href="../../tags/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ゲストユーザー</a> <a href="../../tags/%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">スケジュール更新</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 10px;">ストレージ</a> <a href="../../tags/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%83%A2%E3%83%BC%E3%83%89/" style="font-size: 10px;">ストレージモード</a> <a href="../../tags/%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%B3/" style="font-size: 10px;">スパークライン</a> <a href="../../tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%AB/" style="font-size: 10px;">セキュリティーロール</a> <a href="../../tags/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB/" style="font-size: 10px;">テーブル</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88/" style="font-size: 16.67px;">データセット</a> <a href="../../tags/%E3%83%87%E3%83%BC%E3%82%BF%E6%8E%A5%E7%B6%9A/" style="font-size: 10px;">データ接続</a> <a href="../../tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 10px;">パフォーマンス</a> <a href="../../tags/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">ビジネスユーザー</a> <a href="../../tags/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">ビジュアル</a> <a href="../../tags/%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/" style="font-size: 10px;">プレビュー</a> <a href="../../tags/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88/" style="font-size: 10px;">ホワイトリスト</a> <a href="../../tags/%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB/" style="font-size: 10px;">マップビジュアル</a> <a href="../../tags/%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9/" style="font-size: 10px;">マトリックス</a> <a href="../../tags/%E3%83%A1%E3%83%A2%E3%83%AA%E4%B8%8D%E8%B6%B3/" style="font-size: 10px;">メモリ不足</a> <a href="../../tags/%E3%83%A1%E3%83%A2%E3%83%AA%E4%B8%8D%E8%B6%B3%E3%81%AE%E3%81%9F%E3%82%81%E5%AE%8C%E4%BA%86%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/" style="font-size: 10px;">メモリ不足のため完了できません</a> <a href="../../tags/%E3%83%A2%E3%83%80%E3%83%B3%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" style="font-size: 11.67px;">モダンワークスペース</a> <a href="../../tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/" style="font-size: 13.33px;">ライセンス</a> <a href="../../tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" style="font-size: 13.33px;">ワークスペース</a> <a href="../../tags/%E5%85%B1%E6%9C%89/" style="font-size: 11.67px;">共有</a> <a href="../../tags/%E5%9C%B0%E5%9B%B3/" style="font-size: 10px;">地図</a> <a href="../../tags/%E5%9C%B0%E7%90%86%E3%83%87%E3%83%BC%E3%82%BF/" style="font-size: 10px;">地理データ</a> <a href="../../tags/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 11.67px;">埋め込み</a> <a href="../../tags/%E5%AE%B9%E9%87%8F/" style="font-size: 10px;">容量</a> <a href="../../tags/%E6%96%B0%E3%81%97%E3%81%84%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/" style="font-size: 11.67px;">新しいワークスペース</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新</a> <a href="../../tags/%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">更新　</a> <a href="../../tags/%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC/" style="font-size: 10px;">更新エラー</a> <a href="../../tags/%E6%9C%80%E5%B0%8F%E8%A6%81%E4%BB%B6/" style="font-size: 10px;">最小要件</a> <a href="../../tags/%E7%B5%84%E7%B9%94%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">組織向け埋め込み</a> <a href="../../tags/%E7%B5%84%E7%B9%94%E5%A4%96%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC/" style="font-size: 10px;">組織外ユーザー</a> <a href="../../tags/%E8%A8%B1%E5%8F%AF%E3%83%AA%E3%82%B9%E3%83%88/" style="font-size: 10px;">許可リスト</a> <a href="../../tags/%E9%80%9A%E4%BF%A1%E8%A8%AD%E5%AE%9A/" style="font-size: 10px;">通信設定　　</a> <a href="../../tags/%E9%96%8B%E7%99%BA%E8%80%85%E5%90%91%E3%81%91/" style="font-size: 10px;">開発者向け</a> <a href="../../tags/%E9%96%B2%E8%A6%A7%E8%80%85/" style="font-size: 10px;">閲覧者</a> <a href="../../tags/%E9%A1%A7%E5%AE%A2%E5%90%91%E3%81%91%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF/" style="font-size: 10px;">顧客向け埋め込み</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a href="https://privacy.microsoft.com/ja-jp/privacystatement" target="_blank" rel=”noopener”>Privacy & Cookies</a> |  
+      <a href="https://www.microsoft.com/ja-jp/legal/intellectualproperty/copyright" target="_blank" rel=”noopener”>Terms of use</a> |
+      <a href="https://www.microsoft.com/ja-jp/legal/intellectualproperty/trademarks" target="_blank" rel=”noopener”>Trademarks</a> |
+      &copy; 2022 Japan Power BI Team<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
