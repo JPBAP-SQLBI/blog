@@ -15,7 +15,7 @@ Gen2 における各SKU ごとのモデル更新並列処理数が明示され�
 詳しくは [Power BI Premium Gen2 の性能について]のセクションをご覧ください。
 </span>
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームの山本です。
 
 Power BI のライセンスについては過去記事「[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。
 

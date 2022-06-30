@@ -14,7 +14,7 @@ tags:
 
 
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの山本です。 
 
 Power BI では、 Microsoft Teams との統合 を通じて、 Microsoft Teams 上で Power BI サービスを利用することができる Power BI アプリが用意されています。
 今回は、2021年11月にリリース予定とアナウンスされている「Microsoft Teams の Power BI アプリの自動インストール機能」についてご案内します。

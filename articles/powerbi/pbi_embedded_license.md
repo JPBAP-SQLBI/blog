@@ -15,7 +15,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。   
+こんにちは、Power BI サポート チームのチャンです。   
 
 Power BI で作成したレポートを埋め込み方法について、以前に以下のBlog 記事でご紹介させていただきましたが、その中にある「 Power BI Embedded 」による埋め込みに関して、顧客向け埋め込み (Apps Own Data) や組織向け埋め込み (Users Own Data) など複数の種類がありますが、そもそも「 Power BI Embedded とは」という質問もたくさん受けておりますので、本ブログにて「 Power BI Embedded 」について詳しくご紹介いたします。
 

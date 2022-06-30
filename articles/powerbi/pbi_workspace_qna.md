@@ -11,7 +11,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの山本です。 
 
 前回「[Power BI ワークスペースについて ～クラシックワークスペースと新しい(アプリ)ワークスペース～](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)」にてPower BI におけるワークスペースをご紹介しましたが、 
 
