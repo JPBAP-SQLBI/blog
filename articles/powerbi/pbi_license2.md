@@ -7,7 +7,7 @@ tags:
   - Power BI サービス
 ---
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームのチャンです。
 
 前回のブログ [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)では、Power BI の各種ライセンスの特徴について説明しました。
 

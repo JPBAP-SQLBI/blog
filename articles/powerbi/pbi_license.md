@@ -7,7 +7,7 @@ tags:
   - Power BI サービス
 ---
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームのチャンです。
 
 前回のブログ「[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)」では、Power BI DesktopとPower BI サービスの違いについて説明しました。
 
