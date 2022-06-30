@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -58,6 +58,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiservice_network/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -87,6 +87,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbirs/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -129,6 +136,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_export/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -184,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -481,6 +495,27 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/%E9%96%B2%E8%A6%A7%E8%80%85/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Admin/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Consumer/</loc>
     <lastmod>2022-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
