@@ -29,7 +29,7 @@ Power BI で地理データを可視化する際に、利用できるマップ�
 2. [塗り分け地図](#塗り分け地図)
 3. [図形のビジュアル](#図形のビジュアル)
 4. [Azure マップ](#Azureマップ)
-5. [ArcGIS Maps for Power BI](<#ArcGIS Maps for Power BI>)
+5. [ArcGIS Maps for Power BI](#ArcGIS-Maps-for-Power-BI)
 
 ---
 ## マップ
