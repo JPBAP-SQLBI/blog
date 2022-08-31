@@ -1,6 +1,6 @@
 ---
-title: Power BI データフローとデータセットの比較、及びデータマートの紹介
-date: 2022-05-31 00:00:00 
+title: Power BI データフローとデータセット及びデータマートの紹介と比較
+date: 2022-08-31 00:00:00 
 tags:
   - Power BI
   - Power BI サービス
@@ -16,7 +16,14 @@ tags:
 
 こんにちは、Power BI サポート チームのチャンです。  
 Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。
-本ブログにて、データフローとデータセットの詳細について、ご案内いたします。最後に、執筆時点ではプレビュー機能のデータマートについて簡単にご紹介いたします。
+本ブログにて、データフローとデータセットの詳細、及び執筆時点ではプレビュー機能のデータマートについてもご紹介いたします。
+
+<span style="color: red; ">
+Update: 2022/8/31</br>
+データマート機能のご紹介部分に関して、より深く紹介するために内容を修正し、比較表にも追加しました。
+詳しくは [データマートについて]と[データマート、データフロー、データセットの比較]セクションをご覧ください。
+</span>
+</p>
 
 <!-- more -->
 
@@ -30,8 +37,8 @@ Power BIでデータを加工したり、データ準備を行う時、よくデ
 ---
 1. [データフローとは？](#データフローとは？)
 2. [データセットとは？](#データセットとは？)
-3. [データフローとデータセットの比較](#データフローとデータセットの比較)
-4. [データマートについて](#データマートについて)
+3. [データマートについて](#データマートについて)
+4. [データマート、データフロー、データセットの比較](#[データマート、データフロー、データセットの比較)
 
 ---
 ## データフローとは？
@@ -58,11 +65,11 @@ Power Query Editorで行なうデータ加工をオンラインで実行する�
 - データ加工のフローを他のユーザーと簡単に共有できること。
 - クラウド上でデータ加工を実施することは、端末のスペックに依存しないこと（ただし、サーバーのスペックに依存する）。
 - データソースへの接続はデータフローのみで、複数のユーザーがデータソースへのアクセスを最小限に抑えること
+- 一部データフロー（Power Query Online）のみ利用可能な機能がある。例えば[ダイアグラムビュー](https://docs.microsoft.com/ja-jp/power-query/diagram-view)や[スキーマビュー](https://docs.microsoft.com/ja-jp/power-query/schema-view)など。
 
 > [!NOTE]
 > // 参考情報 (1)：[Common Data Model](https://docs.microsoft.com/ja-JP/common-data-model/)
 > // 参考情報 (2)：[Power BI and Dataflows (Power BI とデータフロー)](https://go.microsoft.com/fwlink/?linkid=2034388&clcid=0x409)
-
 
 ---
 ## データセットとは？
@@ -82,21 +89,53 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 
 
 ---
-## データフローとデータセットの比較
+## データマートについて
 ---
 
-|                          | データフロー                                                            | データセット                        | 
-| ------------------------ | ----------------------------------------------------------------------- | ----------------------------------- | 
-| 一言で言うと             | ETLツール                                                               | データモデル                        | 
-| 説明                     | データソースから抽出、変換、ロード                                        | DAXの使用とリレーションシップの設定 | 
-| 利用者                   | データモデリングの実施者                                                | レポート作成者                      | 
-| 使用言語                 | [PowerQuery M言語](https://docs.microsoft.com/ja-jp/powerquery-m/)   | [DAX](https://docs.microsoft.com/ja-jp/dax/)    | 
-| レポートからの接続       | ×（データセットを作成する必要がある）                                   | 〇                                  | 
-| 必要なユーザーライセンス | Pro / Premium Per User                                                  | Free / Pro / Premium Per User       | 
-| Direct Query             | 〇（Premium容量が必要）※1                                              | 〇                                  | 
-| インポート               | 〇                                                                      | 〇                                  | 
-| データ更新のタイムアウト | Pro：2時間/テーブル、3時間/データフロー<br>Premium：24時間/データフロー　※2 | Pro：2時間<br>Premium：5時間　※3        | 
-| 増分更新                 | 〇（Premium機能、Pro利用不可）※4                                   | 〇 ※5                                 | 
+2022年5月24日にパブリックプレビュー機能としてリリースされた「データマート」についてもご紹介します。
+
+<div align="center">
+<img src="datamart.png">
+</div>
+
+データマートとは、データフローとデータセットを一つに融合して、Power BI内でAzure SQL Databaseの環境を使用した機能でございます。
+ユーザー側で様々なデータソースを集約してPower BIサービス上に「データマート」内でデータウェアハウスを作成し、他のユーザーと共有することができます。
+
+データマートを使用するメリットは以下の点が挙げられます。
+- Power BI Desktopからデータセットを作成する必要がなく、ETLのフローからデータのモデリングまですべてクラウド上で完結できます。
+- インポートしたデータに対して、レポートを作成せずともクイックに分析を行う（クエリを作成する）ことができます。その分析方法は、グラフィックUI上でノーコードでの実施、または、SQLによるクエリの実行も可能となります。さらにSQLで実施した結果をExcelへエクスポートすることもできます。
+- 外部のツール（Azure Data Studio やSQL Server Management Studio）から接続することが可能で、より高度な管理や統計を行える上、Windows以外のOS環境からの接続も簡単になります。
+- 共有の操作はデータフローやデータセットより簡易的になり、組織内のユーザーやグループとセキュリティが有効な共有ができます。
+
+現在は、Premium容量とPremium Per Userのみ使用できる機能でございます。
+詳細につきましては、以下のブログ記事（英語）とドキュメントよりご確認ください。
+
+> [!NOTE]
+> // 参考情報 (1)：[データマートの概要](https://docs.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview)
+> // 参考情報 (2)：[Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/ja-jp/blog/announcing-public-preview-of-datamart-in-power-bi/)
+> // 参考情報 (3)：[データマートの分析](https://docs.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-analyze)
+
+> [!IMPORTANT] 
+> 本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、
+> 動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。
+
+---
+## データマート、データフロー、データセットの比較
+---
+
+|                          | データマート                                        | データフロー                                                                 | データセット                        | 
+| ------------------------ | --------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------- | 
+| 一言で言うと             | セルフデータウェアハウス                            | ETLツール                                                                    | データモデル                        | 
+| 説明                     | ETLツールとデータモデリング機能を一つに集約したもの | データソースから抽出、変換、ロード                                           | DAXの使用とリレーションシップの設定 | 
+| 利用者                   | すべてのビジネスユーザー、分析者                                              | データモデリングの実施者                                                     | レポート作成者                      | 
+| 使用言語                 | 操作箇所によって[M言語](https://docs.microsoft.com/ja-jp/powerquery-m/)、[DAX]((https://docs.microsoft.com/ja-jp/dax/))、SQLも利用可能           |[PowerQuery M言語](https://docs.microsoft.com/ja-jp/powerquery-m/)                                                             | [DAX](https://docs.microsoft.com/ja-jp/dax/)                                 | 
+| 編集操作場所             | Power BIサービス（クラウド）                        | Power BIサービス（クラウド）                                                 | Power BI Desktop（ローカル）        | 
+| レポートからの接続       | 〇（データセットが自動的に作成される）              | ×（Power BI Desktopでデータセットを作成する必要がある）                      | 〇                                  | 
+| 必要なライセンス | Premium Per User / Premium Per Capacity             | Pro / Premium Per User /      Premium Per Capacity / Embedded                                                 | Free / Pro / Premium Per User / Premium Per Capacity / Embedded     | 
+| Direct Query             | ×                                                   | 〇（Premium容量が必要）※1                                                   | 〇                                  | 
+| インポート               | 〇                                                  | 〇                                                                           | 〇                                  | 
+| データ更新のタイムアウト | 24時間                                              | Pro：2時間/テーブル、3時間/データフロー<br>Premium：24時間/データフロー　※2 | Pro：2時間<br>Premium：5時間　※3   | 
+| 増分更新                 | 〇                                                  | 〇（Premium機能、Pro利用不可）※4                                            | 〇 ※5                              | 
 |                          | 
 
 
@@ -107,28 +146,6 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 ※5：[データセットの増分更新とリアルタイム データ](https://docs.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-overview)
 
 <p>
-
----
-## データマートについて
----
-
-2022年5月24日にパブリックプレビュー機能としてリリースされた「データマート」についてもご紹介しておきましょう。
-
-データマートとは、データフローとデータセットを一つに融合して、Power BI内でAzure SQL Databaseの環境を使用した機能でございます。
-ユーザー側で様々なデータソースを集約してPower BIサービス上に「データマート」内でデータウェアハウスを作成し、他のユーザーと共有することができます。
-データマートを使用することで、Power BI Desktopからデータセットを作成する必要がなく、ETLのフローからデータのモデリングまですべてクラウド上で完結できます。
-また、その過程はグラフィックUI上でノーコードの状態で実施することもできる上、SQLによるクエリの実行も可能となります。
-
-現在は、Premium容量とPremium Per Userのみ使用できる機能でございます。
-詳細につきましては、以下のブログ記事（英語）とドキュメントよりご確認ください。
-
-> [!NOTE]
-> // 参考情報 (1)：[Introduction to datamarts](https://docs.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview)
-> // 参考情報 (2)：[Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/ja-jp/blog/announcing-public-preview-of-datamart-in-power-bi/)
-
-> [!IMPORTANT] 
-> 本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、
-> 動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。
 
 
 ---
