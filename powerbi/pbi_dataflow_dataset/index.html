@@ -15,20 +15,21 @@
 <!-- End Google Analytics -->
 
   
-  <title>Power BI データフローとデータセットの比較、及びデータマートの紹介 | Japan CSS Support Power BI Blog</title>
+  <title>Power BI データフローとデータセット及びデータマートの紹介と比較 | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームのチャンです。Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。本ブログにて、データフローとデータセットの詳細について、ご案内いたします。最後に、執筆時点ではプレビュー機能のデータマートにつ">
+  <meta name="description" content="こんにちは、Power BI サポート チームのチャンです。Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。本ブログにて、データフローとデータセットの詳細、及び執筆時点ではプレビュー機能のデータマートについてもご紹介いたします。  U">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Power BI データフローとデータセットの比較、及びデータマートの紹介">
+<meta property="og:title" content="Power BI データフローとデータセット及びデータマートの紹介と比較">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームのチャンです。Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。本ブログにて、データフローとデータセットの詳細について、ご案内いたします。最後に、執筆時点ではプレビュー機能のデータマートにつ">
+<meta property="og:description" content="こんにちは、Power BI サポート チームのチャンです。Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。本ブログにて、データフローとデータセットの詳細、及び執筆時点ではプレビュー機能のデータマートについてもご紹介いたします。  U">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/dataflow.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/dataflow_powerquery_ui.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/dataset.png">
-<meta property="article:published_time" content="2022-05-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T04:45:10.622Z">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/datamart.png">
+<meta property="article:published_time" content="2022-08-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-31T04:50:38.221Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -111,7 +112,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Power BI データフローとデータセットの比較、及びデータマートの紹介
+      Power BI データフローとデータセット及びデータマートの紹介と比較
     </h1>
   
 
@@ -119,18 +120,25 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2022-05-30T15:00:00.000Z" itemprop="datePublished">2022-05-31</time>
+  <time datetime="2022-08-30T15:00:00.000Z" itemprop="datePublished">2022-08-31</time>
 </a>
         
         
-        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+37d164ad-d232-5f7a-8a2b-db64e50db27f%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE%E6%AF%94%E8%BC%83%E3%80%81%E5%8F%8A%E3%81%B3%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AE%E7%B4%B9%E4%BB%8B%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_dataflow_dataset%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_dataflow_dataset.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_dataflow_dataset.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+37d164ad-d232-5f7a-8a2b-db64e50db27f%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E5%8F%8A%E3%81%B3%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AE%E7%B4%B9%E4%BB%8B%E3%81%A8%E6%AF%94%E8%BC%83%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_dataflow_dataset%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_dataflow_dataset.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_dataflow_dataset.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/" data-id="cl7h4x6yz00050oo60nrt9n30" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/" data-id="cl7h5487u00050lpaa40sb3r8" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Power BI サポート チームのチャンです。<br>Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。<br>本ブログにて、データフローとデータセットの詳細について、ご案内いたします。最後に、執筆時点ではプレビュー機能のデータマートについて簡単にご紹介いたします。</p>
+        <p>こんにちは、Power BI サポート チームのチャンです。<br>Power BIでデータを加工したり、データ準備を行う時、よくデータフローやデータセットなどの言葉を耳にしますが、実際それぞれどのような違いがあって、どの場面で使うか疑問点をお持ちの方も多くいらっしゃると思います。<br>本ブログにて、データフローとデータセットの詳細、及び執筆時点ではプレビュー機能のデータマートについてもご紹介いたします。</p>
+<span style="color: red; ">
+Update: 2022/8/31</br>
+データマート機能のご紹介部分に関して、より深く紹介するために内容を修正し、比較表にも追加しました。
+詳しくは [データマートについて]と[データマート、データフロー、データセットの比較]セクションをご覧ください。
+</span>
+</p>
+
 <span id="more"></span>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
@@ -139,8 +147,8 @@
 <ol>
 <li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8%E3%81%AF%EF%BC%9F">データフローとは？</a></li>
 <li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%A8%E3%81%AF%EF%BC%9F">データセットとは？</a></li>
-<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE%E6%AF%94%E8%BC%83">データフローとデータセットの比較</a></li>
 <li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データマートについて</a></li>
+<li><a href="#%5B%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88%E3%80%81%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%80%81%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE%E6%AF%94%E8%BC%83">データマート、データフロー、データセットの比較</a></li>
 </ol>
 <hr>
 <h2 id="データフローとは？"><a href="#データフローとは？" class="headerlink" title="データフローとは？"></a>データフローとは？</h2><hr>
@@ -161,6 +169,7 @@
 <li>データ加工のフローを他のユーザーと簡単に共有できること。</li>
 <li>クラウド上でデータ加工を実施することは、端末のスペックに依存しないこと（ただし、サーバーのスペックに依存する）。</li>
 <li>データソースへの接続はデータフローのみで、複数のユーザーがデータソースへのアクセスを最小限に抑えること</li>
+<li>一部データフロー（Power Query Online）のみ利用可能な機能がある。例えば<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-query/diagram-view">ダイアグラムビュー</a>や<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-query/schema-view">スキーマビュー</a>など。</li>
 </ul>
 <div class="alert is-info"><p class="alert-title">Note</p><p>// 参考情報 (1)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-JP/common-data-model/">Common Data Model</a></p><p>// 参考情報 (2)：<a target="_blank" rel="noopener" href="https://go.microsoft.com/fwlink/?linkid=2034388&clcid=0x409">Power BI and Dataflows (Power BI とデータフロー)</a></p></div>
 <hr>
@@ -175,47 +184,79 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 
 <div class="alert is-info"><p class="alert-title">Note</p><p>// 参考情報：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/service-datasets-understand#power-bi-desktop-developed-models">Power BI サービスのデータセット</a></p></div>
 <hr>
-<h2 id="データフローとデータセットの比較"><a href="#データフローとデータセットの比較" class="headerlink" title="データフローとデータセットの比較"></a>データフローとデータセットの比較</h2><hr>
+<h2 id="データマートについて"><a href="#データマートについて" class="headerlink" title="データマートについて"></a>データマートについて</h2><hr>
+<p>2022年5月24日にパブリックプレビュー機能としてリリースされた「データマート」についてもご紹介します。</p>
+<div align="center">
+<img src="datamart.png">
+</div>
+
+<p>データマートとは、データフローとデータセットを一つに融合して、Power BI内でAzure SQL Databaseの環境を使用した機能でございます。<br>ユーザー側で様々なデータソースを集約してPower BIサービス上に「データマート」内でデータウェアハウスを作成し、他のユーザーと共有することができます。</p>
+<p>データマートを使用するメリットは以下の点が挙げられます。</p>
+<ul>
+<li>Power BI Desktopからデータセットを作成する必要がなく、ETLのフローからデータのモデリングまですべてクラウド上で完結できます。</li>
+<li>インポートしたデータに対して、レポートを作成せずともクイックに分析を行う（クエリを作成する）ことができます。その分析方法は、グラフィックUI上でノーコードでの実施、または、SQLによるクエリの実行も可能となります。さらにSQLで実施した結果をExcelへエクスポートすることもできます。</li>
+<li>外部のツール（Azure Data Studio やSQL Server Management Studio）から接続することが可能で、より高度な管理や統計を行える上、Windows以外のOS環境からの接続も簡単になります。</li>
+<li>共有の操作はデータフローやデータセットより簡易的になり、組織内のユーザーやグループとセキュリティが有効な共有ができます。</li>
+</ul>
+<p>現在は、Premium容量とPremium Per Userのみ使用できる機能でございます。<br>詳細につきましては、以下のブログ記事（英語）とドキュメントよりご確認ください。</p>
+<div class="alert is-info"><p class="alert-title">Note</p><p>// 参考情報 (1)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview">データマートの概要</a></p><p>// 参考情報 (2)：<a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/ja-jp/blog/announcing-public-preview-of-datamart-in-power-bi/">Announcing public preview of datamart in Power BI</a></p><p>// 参考情報 (3)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-analyze">データマートの分析</a></p></div>
+<div class="alert is-important"><p class="alert-title">重要</p><p>本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、</p><p>動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。</p></div>
+<hr>
+<h2 id="データマート、データフロー、データセットの比較"><a href="#データマート、データフロー、データセットの比較" class="headerlink" title="データマート、データフロー、データセットの比較"></a>データマート、データフロー、データセットの比較</h2><hr>
 <table>
 <thead>
 <tr>
 <th></th>
+<th>データマート</th>
 <th>データフロー</th>
 <th>データセット</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>一言で言うと</td>
+<td>セルフデータウェアハウス</td>
 <td>ETLツール</td>
 <td>データモデル</td>
 </tr>
 <tr>
 <td>説明</td>
+<td>ETLツールとデータモデリング機能を一つに集約したもの</td>
 <td>データソースから抽出、変換、ロード</td>
 <td>DAXの使用とリレーションシップの設定</td>
 </tr>
 <tr>
 <td>利用者</td>
+<td>すべてのビジネスユーザー、分析者</td>
 <td>データモデリングの実施者</td>
 <td>レポート作成者</td>
 </tr>
 <tr>
 <td>使用言語</td>
+<td>操作箇所によって<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/powerquery-m/">M言語</a>、<a href="(https://docs.microsoft.com/ja-jp/dax/)">DAX</a>、SQLも利用可能</td>
 <td><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/powerquery-m/">PowerQuery M言語</a></td>
 <td><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/dax/">DAX</a></td>
 </tr>
 <tr>
+<td>編集操作場所</td>
+<td>Power BIサービス（クラウド）</td>
+<td>Power BIサービス（クラウド）</td>
+<td>Power BI Desktop（ローカル）</td>
+</tr>
+<tr>
 <td>レポートからの接続</td>
-<td>×（データセットを作成する必要がある）</td>
+<td>〇（データセットが自動的に作成される）</td>
+<td>×（Power BI Desktopでデータセットを作成する必要がある）</td>
 <td>〇</td>
 </tr>
 <tr>
-<td>必要なユーザーライセンス</td>
-<td>Pro / Premium Per User</td>
-<td>Free / Pro / Premium Per User</td>
+<td>必要なライセンス</td>
+<td>Premium Per User / Premium Per Capacity</td>
+<td>Pro / Premium Per User /      Premium Per Capacity / Embedded</td>
+<td>Free / Pro / Premium Per User / Premium Per Capacity / Embedded</td>
 </tr>
 <tr>
 <td>Direct Query</td>
+<td>×</td>
 <td>〇（Premium容量が必要）※1</td>
 <td>〇</td>
 </tr>
@@ -223,18 +264,22 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 <td>インポート</td>
 <td>〇</td>
 <td>〇</td>
+<td>〇</td>
 </tr>
 <tr>
 <td>データ更新のタイムアウト</td>
+<td>24時間</td>
 <td>Pro：2時間/テーブル、3時間/データフロー<br>Premium：24時間/データフロー　※2</td>
 <td>Pro：2時間<br>Premium：5時間　※3</td>
 </tr>
 <tr>
 <td>増分更新</td>
+<td>〇</td>
 <td>〇（Premium機能、Pro利用不可）※4</td>
 <td>〇 ※5</td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -243,13 +288,7 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 <p>※1：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-directquery">データフローで DirectQuery を使用する</a><br>※2：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-features-limitations">データフローに関する考慮事項と制限事項</a><br>※3：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#data-refresh">Power BI でのデータの更新</a><br>※4：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-query/dataflows/incremental-refresh">データフローでの増分更新の使用</a><br>※5：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-overview">データセットの増分更新とリアルタイム データ</a></p>
 <p>
 
-<hr>
-<h2 id="データマートについて"><a href="#データマートについて" class="headerlink" title="データマートについて"></a>データマートについて</h2><hr>
-<p>2022年5月24日にパブリックプレビュー機能としてリリースされた「データマート」についてもご紹介しておきましょう。</p>
-<p>データマートとは、データフローとデータセットを一つに融合して、Power BI内でAzure SQL Databaseの環境を使用した機能でございます。<br>ユーザー側で様々なデータソースを集約してPower BIサービス上に「データマート」内でデータウェアハウスを作成し、他のユーザーと共有することができます。<br>データマートを使用することで、Power BI Desktopからデータセットを作成する必要がなく、ETLのフローからデータのモデリングまですべてクラウド上で完結できます。<br>また、その過程はグラフィックUI上でノーコードの状態で実施することもできる上、SQLによるクエリの実行も可能となります。</p>
-<p>現在は、Premium容量とPremium Per Userのみ使用できる機能でございます。<br>詳細につきましては、以下のブログ記事（英語）とドキュメントよりご確認ください。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>// 参考情報 (1)：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview">Introduction to datamarts</a></p><p>// 参考情報 (2)：<a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/ja-jp/blog/announcing-public-preview-of-datamart-in-power-bi/">Announcing public preview of datamart in Power BI</a></p></div>
-<div class="alert is-important"><p class="alert-title">重要</p><p>本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、</p><p>動作変更が発生する可能性がありますことをあらかじめご了承くださいますようお願い申し上げます。</p></div>
+
 <hr>
 <p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
 <hr>
@@ -286,19 +325,10 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
     
 <nav id="article-nav">
   
-    <a href="../pbi_visual_radarchart/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          Power BI 「レーダーチャート」 ビジュアル
-        
-      </div>
-    </a>
   
-  
-    <a href="../pbi_gateway_role/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../pbi_license_faq/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">オンプレミスデータゲートウェイのセキュリティーロール</div>
+      <div class="article-nav-title">Power BI ライセンスに関するよくある質問(FAQ)</div>
     </a>
   
 </nav>
@@ -317,6 +347,10 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
       <ul>
         
           <li>
+            <a href="">Power BI データフローとデータセット及びデータマートの紹介と比較</a>
+          </li>
+        
+          <li>
             <a href="../pbi_license_faq/">Power BI ライセンスに関するよくある質問(FAQ)</a>
           </li>
         
@@ -330,10 +364,6 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
         
           <li>
             <a href="../pbi_activity_log_usage_metrics/">Power BI のユーザーアクティビティ追跡方法の比較</a>
-          </li>
-        
-          <li>
-            <a href="../pbi_field_parameter/">動的にビジュアル変換ができる「フィールドパラメーター」</a>
           </li>
         
       </ul>

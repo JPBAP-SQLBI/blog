@@ -65,6 +65,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
+    
+    <lastmod>2022-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
     
     <lastmod>2022-08-31</lastmod>
@@ -73,13 +80,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/</loc>
-    
-    <lastmod>2022-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
     
     <lastmod>2022-08-31</lastmod>
     
@@ -191,6 +191,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
+    
+    <lastmod>2022-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2022-08-31</lastmod>
@@ -205,20 +212,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
-    
-    <lastmod>2022-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
-    
-    <lastmod>2022-08-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
     
     <lastmod>2022-08-31</lastmod>
@@ -227,6 +220,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/</loc>
+    
+    <lastmod>2022-08-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
     
     <lastmod>2022-08-31</lastmod>
     
