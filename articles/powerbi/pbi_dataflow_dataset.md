@@ -95,7 +95,7 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 2022年5月24日にパブリックプレビュー機能としてリリースされた「データマート」についてもご紹介します。
 
 <div align="center">
-<img src="datamart.png">
+<img src="datamart2.png">
 </div>
 
 データマートとは、データフローとデータセットを一つに融合して、Power BI内でAzure SQL Databaseの環境を使用した機能でございます。
