@@ -8,7 +8,7 @@ tags:
   - Creator
 ---
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの丸山です。 
 
 複数の属性があるデータの性質をちょっと見てみたいというときがよくあるかと思います。
 そんな時に役立つグラフの１つであるレーダーチャート（スパイダーチャート）ですが、Power BI でももちろん活用していただけます。今回は、そのレーダーチャートを Power BI で設定する方法をご紹介します。
@@ -150,7 +150,7 @@ tags:
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。 
 
 > **参考情報**
-> - [Power BI カスタム ビジュアルを取得する主なソース - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/developer/visuals/power-bi-custom-visuals)
+> - [Power BI カスタム ビジュアルを取得する主なソース - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/developer/visuals/power-bi-custom-visuals)
 
 
 

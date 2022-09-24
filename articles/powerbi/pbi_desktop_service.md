@@ -84,7 +84,7 @@ Power BI Desktop でPower BI のライセンス（Free、Pro またはPremium Pe
 
 > **参考情報**
 > Power BI Desktop の取得方法や最小要件についてご案内しています。
-> - [Power BI Desktop の取得](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop)
+> - [Power BI Desktop の取得](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop)
 > - [ダウンロード センター Power BI Desktop](https://www.microsoft.com/ja-jp/download/details.aspx?id=58494)
 
 ---
@@ -102,9 +102,9 @@ Power BI ライセンスについては、以下ブログで引き続きご案�
 > **参考情報**
 > 上記内容については、以下公開情報を基にまとめています。
 > ぜひ本ブログと併せてご覧ください。
-> - [Power BI Desktop と Power BI サービスの比較](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/service-service-vs-desktop)
-> - [Power BI Desktop とは何ですか?](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-what-is-desktop)
-> - [Power BI サービスとは何ですか? ](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/power-bi-service-overview)
+> - [Power BI Desktop と Power BI サービスの比較](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/service-service-vs-desktop)
+> - [Power BI Desktop とは何ですか?](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-what-is-desktop)
+> - [Power BI サービスとは何ですか? ](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/power-bi-service-overview)
 
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 

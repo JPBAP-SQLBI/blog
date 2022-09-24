@@ -7,7 +7,7 @@ tags:
   - 閲覧者
 ---
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームのチャンです。
 
 これまで、Power BI というツールを導入検討されている方、Power BI レポートを作成される方、管理者や開発者向けにライセンスや様々な機能を紹介してきました。
 そもそも、レポートやデータだけを閲覧する方は、Power BI ってどんなことができますか？という質問を持つことも多いと思います。
@@ -118,9 +118,9 @@ Power BI のグラフやテーブルはインタラクティブに動作する�
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
 > **参考情報**
-> - [クイックスタート: "ビジネス ユーザー" 向けの Power BI の機能について学習する​](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-reading-view)
-> - [Power BI のレポート内でビジュアルがどのように相互作用するか​](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-interactions)
-> - [コンテンツを詳細に表示する: フォーカス モードと全画面表示モード​](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-focus)
-> - [Power BI レポートでのグラフの並べ替え方法の変更​](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-change-sort)
-> - [Power BI サービスでレポートまたはダッシュボードをサブスクライブする​](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-subscribe)
-> - [Power BI サービスのデータ アラート](https://docs.microsoft.com/ja-jp/power-bi/create-reports/service-set-data-alerts)
+> - [クイックスタート: "ビジネス ユーザー" 向けの Power BI の機能について学習する​](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-reading-view)
+> - [Power BI のレポート内でビジュアルがどのように相互作用するか​](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-interactions)
+> - [コンテンツを詳細に表示する: フォーカス モードと全画面表示モード​](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-focus)
+> - [Power BI レポートでのグラフの並べ替え方法の変更​](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-change-sort)
+> - [Power BI サービスでレポートまたはダッシュボードをサブスクライブする​](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-subscribe)
+> - [Power BI サービスのデータ アラート](https://learn.microsoft.com/ja-jp/power-bi/create-reports/service-set-data-alerts)

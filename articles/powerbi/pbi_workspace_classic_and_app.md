@@ -13,12 +13,12 @@ tags:
 <span style="color: red;">
 Update: 2022/4/21</br>
 2022年4月27日からクラシックワークスペースから新しいワークスペース(アプリワークスペース)への自動移行が開始されます。</br>
-詳しくは<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/">【2022年4月27日から開始】Power BI クラシックワークスペース(v1) の自動アップデートについて</a>をご覧ください。
+詳しくは<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/">【2022年4月27日より】クラシックワークスペースの自動アップグレード</a>をご覧ください。
 </span>
 
 </br>
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームの山本です。
 
 Power BI において、レポートやダッシュボードを部署やチームメンバーに共有する際に不可欠なワークスペース。
 多くの Power BI ユーザーの方に利用されている機能です。
@@ -117,9 +117,9 @@ Power BI におけるワークスペースは、文字通り一つのオフィ�
 | 一言で表すと…                                 | M365 グループに紐付いたワークスペース                                                                         | 業務に合わせてメンバーやロールを柔軟にカスタマイズできるワークスペース                                                                                                               | 
 | 参加者                                         | M365 グループに連動                                                                                           | 個人～グループレベルで追加削除が可能（M365 グループとは非連動）<br>グループレベルでは従来のM365 グループに加えて、セキュリティグループ、配布リストにアクセス許可を付与することも可能 | 
 | ゲストユーザの設定                             | M365 グループに追加することで招待可能                                                                         | ワークスペース単位で招待可能                                                                                                                                                         | 
-| ワークスペースの作成制限                       | M365 グループを作成できるユーザの管理で制限可能<br><span style="font-size: 80%; color: black;">参考：[Microsoft 365 グループを作成できるユーザーを管理する](https://docs.microsoft.com/ja-jp/microsoft-365/solutions/manage-creation-of-groups)</span> | Power BI 管理ポータルから組織全体・特定ユーザ・無効化の設定が可能                                                                                                                    | 
-| 参加者のロール                                 | 管理者・メンバーの設定が可能<br>さらにメンバーへコンテンツの編集または表示のみのどちらかを選択可能            | 管理者・メンバー・共同作成者・ビューアーの4種類の設定が可能<br><span style="font-size: 80%; color: black;">参考：[新しい(アプリ)ワークスペースのロール](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces)</span>                                                                                    | 
-| ワークスペース外へのデータセット共有           | 不可                                                                                                          | 別のワークスペースにデータセットを共有可能<br><span style="font-size: 80%; color: black;">参考：[共有データセットのビルド アクセス許可](https://docs.microsoft.com/ja-jp/power-bi/connect-data/service-datasets-build-permissions)</span>                                                                                            | 
+| ワークスペースの作成制限                       | M365 グループを作成できるユーザの管理で制限可能<br><span style="font-size: 80%; color: black;">参考：[Microsoft 365 グループを作成できるユーザーを管理する](https://learn.microsoft.com/ja-jp/microsoft-365/solutions/manage-creation-of-groups)</span> | Power BI 管理ポータルから組織全体・特定ユーザ・無効化の設定が可能                                                                                                                    | 
+| 参加者のロール                                 | 管理者・メンバーの設定が可能<br>さらにメンバーへコンテンツの編集または表示のみのどちらかを選択可能            | 管理者・メンバー・共同作成者・ビューアーの4種類の設定が可能<br><span style="font-size: 80%; color: black;">参考：[新しい(アプリ)ワークスペースのロール](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces)</span>                                                                                    | 
+| ワークスペース外へのデータセット共有           | 不可                                                                                                          | 別のワークスペースにデータセットを共有可能<br><span style="font-size: 80%; color: black;">参考：[共有データセットのビルド アクセス許可](https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-datasets-build-permissions)</span>                                                                                            | 
 | ワークスペースアクティビティ通知の連絡先リスト | なし                                                                                                          | 通知ユーザーの指定が可能                                                                                                                                                             | 
 | 組織アプリ                                     | インストール・発行：○                                                                                        | インストール・発行：○                                                                                                                                                               | 
 | テンプレートアプリ                             | インストール：○<br>発行：×                                                                                   | インストール：○<br>発行：○                                                                                                                                                         | 
@@ -140,11 +140,11 @@ Power BI におけるワークスペースは、文字通り一つのオフィ�
 
 | 開発アイテム                                                         | 詳細                                                                                                                                                                  | 状況            | 
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | 
-| クラシックワークスペースのアップグレード機能                         | 既存のクラシックワークスペースを新しい(アプリ)ワークスペースにアップグレードにすることができるようになりました<br><span style="font-size: 80%; color: black;">参考：[クラシック ワークスペースをアップグレードする](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)</span> | 利用可能        | 
-| Power BI 管理者によるクラシックワークスペースの作成のブロック機能    | 新しいクラシックワークスペースが作成されることを防ぐ機能を管理者が設定することができるようになりました<br><span style="font-size: 80%; color: black;">参考：[クラシック ワークスペースの作成をブロックする](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-create-workspaces)</span>         | 利用可能        | 
+| クラシックワークスペースのアップグレード機能                         | 既存のクラシックワークスペースを新しい(アプリ)ワークスペースにアップグレードにすることができるようになりました<br><span style="font-size: 80%; color: black;">参考：[クラシック ワークスペースをアップグレードする](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)</span> | 利用可能        | 
+| Power BI 管理者によるクラシックワークスペースの作成のブロック機能    | 新しいクラシックワークスペースが作成されることを防ぐ機能を管理者が設定することができるようになりました<br><span style="font-size: 80%; color: black;">参考：[クラシック ワークスペースの作成をブロックする](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-create-workspaces)</span>         | 利用可能        | 
 | 全テナントのクラシックワークスペースの作成のブロックの有効化切り替え | Power BIのすべてのテナントで"クラシックワークスペースの作成のブロック"が有効化となりました。2021年7月現在では管理ポータルよりブロックを再度無効に戻すことが可能です   | 2021年1月~      | 
 | コンテンツパックの新規作成・編集機能の提供終了                       | 2021年2月 コンテンツパックの新規作成・編集機能が終了しました                                                                                                                            | 2021年2月~      | 
-| Power BI 管理者によるクラシックワークスペースのアップグレード        | 管理ポータルのワークスペースリストより、ワークスペースのアップグレードが一括で実施することができるようになりました<br><span style="font-size: 80%; color: black;">参考：[Power BI 管理ポータル](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-portal)</span>                     | 2021年6月~      | 
+| Power BI 管理者によるクラシックワークスペースのアップグレード        | 管理ポータルのワークスペースリストより、ワークスペースのアップグレードが一括で実施することができるようになりました<br><span style="font-size: 80%; color: black;">参考：[Power BI 管理ポータル](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-portal)</span>                     | 2021年6月~      | 
 | Power BI管理者用による全てのクラシックワークスペースのアップグレード | Power BI管理ポータルで管理者がすべてのクラシックワークスペースをアップグレードできるようになりました                                                                | 2021年7月~ | 
 | クラシックワークスペースの作成機能の提供終了                         | クラシックワークスペース作成機能が終了する予定です。また今後テナント設定の"クラシックワークスペースの作成のブロック"の設定もPower BI 管理ポータルから削除される予定です   | 2022年2月~  | 
 | コンテンツパック機能の削除                                           | Power BIサービスから既存のコンテンツパック機能が削除される予定です                                                                                              | 2022年内予定  | 

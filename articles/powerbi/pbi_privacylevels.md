@@ -10,7 +10,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。   
+こんにちは、Power BI サポート チームの山崎です。   
 
 Power BI Desktop や Power BI サービスにおいて、プライバシー レベルの構成が必要になることがありますが、「プライバシー レベルって何？なんのために設定するの？」と疑問を持ちながら、なんとなく設定されている方もいるのではないでしょうか。  
 今回は、プライバシー レベルはどのようなシナリオにおいて使用される設定か詳しくご案内いたします。
@@ -196,8 +196,8 @@ from [dbo].[TB1] as [$Table]
 </br>
 
 #### 参考情報
-- [Power BI Desktop のプライバシー レベル](https://docs.microsoft.com/ja-jp/power-bi/enterprise/desktop-privacy-levels)
-- [クエリ診断](https://docs.microsoft.com/ja-jp/power-query/querydiagnostics)
+- [Power BI Desktop のプライバシー レベル](https://learn.microsoft.com/ja-jp/power-bi/enterprise/desktop-privacy-levels)
+- [クエリ診断](https://learn.microsoft.com/ja-jp/power-query/querydiagnostics)
 
 </br>
 

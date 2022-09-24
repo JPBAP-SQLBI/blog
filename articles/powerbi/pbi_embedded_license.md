@@ -15,7 +15,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。   
+こんにちは、Power BI サポート チームのチャンです。   
 
 Power BI で作成したレポートを埋め込み方法について、以前に以下のBlog 記事でご紹介させていただきましたが、その中にある「 Power BI Embedded 」による埋め込みに関して、顧客向け埋め込み (Apps Own Data) や組織向け埋め込み (Users Own Data) など複数の種類がありますが、そもそも「 Power BI Embedded とは」という質問もたくさん受けておりますので、本ブログにて「 Power BI Embedded 」について詳しくご紹介いたします。
 
@@ -55,7 +55,7 @@ Power BI Premium Per Capacity は月額または年単位の請求に対して�
 Azure ポータルで、Power BI Embedded のリソースを作成する方法の詳細につきましては、以下のドキュメントをご参照ください。
 
 > **参考情報：**
-> - [Azure Portal での Power BI Embedded 容量の作成 - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-create-capacity?tabs=portal%2Cui)
+> - [Azure Portal での Power BI Embedded 容量の作成 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-create-capacity?tabs=portal%2Cui)
 
 
 ### ■実装方法
@@ -97,7 +97,7 @@ Power BI Embedded の実装方法では、以下の2種類がございます。
 詳細な実装方法につきましては、以下のドキュメントにて、ステップバイステップのチュートリアルが記載されていますので、よろしければ、ご参考ください。
 
 > **参考情報：**
-> - [チュートリアル:"顧客向けの埋め込み" サンプル アプリケーションを使用して Power BI コンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-customers?tabs=net-core)
+> - [チュートリアル:"顧客向けの埋め込み" サンプル アプリケーションを使用して Power BI コンテンツを埋め込む](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-customers?tabs=net-core)
 
 
 ---
@@ -117,7 +117,7 @@ Power BI Embedded の実装方法では、以下の2種類がございます。
 詳細な実装方法につきましては、以下のドキュメントにて、ステップバイステップのチュートリアルが記載されていますので、よろしければ、ご参考ください。
 
 > **参考情報：**
-> - [チュートリアル:"組織向けの埋め込み" サンプル アプリケーションを使用して Power BI コンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization?tabs=net-core)
+> - [チュートリアル:"組織向けの埋め込み" サンプル アプリケーションを使用して Power BI コンテンツを埋め込む](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization?tabs=net-core)
 
 
 ---
@@ -132,10 +132,10 @@ Power BI Embedded の実装方法では、以下の2種類がございます。
 | **SKU**  | A  | EM  | P  | 
 | **請求** | 1 時間ごと  | 月単位  | 月単位 | 
 | **コミットメント**  | なし | 年単位  | 月単位または年単位  | 
-| **使用方法**  | Azure リソースは以下が可能です:<br> - [スケールアップまたはダウン](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-scale-capacity) <br> - [一時停止と再開](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-pause-start) | アプリ、Microsoft アプリケーションへの埋め込み | アプリ、Power BI サービスへの埋め込み | 
+| **使用方法**  | Azure リソースは以下が可能です:<br> - [スケールアップまたはダウン](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-scale-capacity) <br> - [一時停止と再開](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/azure-pbie-pause-start) | アプリ、Microsoft アプリケーションへの埋め込み | アプリ、Power BI サービスへの埋め込み | 
 
 > **参考情報：**
-> - [Power BI Embedded の分析の容量と SKU](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-capacity?tabs=gen2)
+> - [Power BI Embedded の分析の容量と SKU](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-capacity?tabs=gen2)
 
 -----
 

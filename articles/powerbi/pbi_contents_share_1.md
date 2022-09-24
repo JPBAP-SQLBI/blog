@@ -7,7 +7,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの山崎です。 
 Power BIのご利用を検討されているお客様からよくいただくご質問として、「レポートの共有方法が複数あり、どう共有するのがよいのかわからない」という課題があります。 
 
 そこで、本ブログでは、Power BIにおけるレポートやダッシュボードのコンテンツの共有方法の詳細をご案内いたします。 
@@ -36,7 +36,7 @@ Power BI Desktopで作成した .pbix ファイルをPower BIサービスへ発�
 
 ご参考情報：
 [Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？ | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io) ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/)
-[Power BI から Web への公開 - Power BI | Microsoft Docs ](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-publish-to-web)
+[Power BI から Web への公開 - Power BI | Microsoft Docs ](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-publish-to-web)
 
 
 </br>
@@ -82,7 +82,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 
 
 ご参考情報：
-[同僚や他のユーザーと Power BI レポートやダッシュボードを共有する - Power BI | Microsoft Docs ](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-share-dashboards)
+[同僚や他のユーザーと Power BI レポートやダッシュボードを共有する - Power BI | Microsoft Docs ](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-share-dashboards)
 
 </br>
 
@@ -123,7 +123,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 
 
 ご参考情報：
-[Power BI レポートのリンクの共有 - Dynamics 365 Release Plan | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-platform-release-plan/2021wave1/power-bi/sharing-links-power-bi-reports)
+[Power BI レポートのリンクの共有 - Dynamics 365 Release Plan | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-platform-release-plan/2021wave1/power-bi/sharing-links-power-bi-reports)
 [Announcing the new sharing experience | Microsoft Power BI Blog | Microsoft Power BI](https://powerbi.microsoft.com/en-us/blog/announcing-the-new-sharing-experience/)
 
 </br>
@@ -147,7 +147,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 ロールの詳細につきましては、以下をご参考にしてください。
 
 ご参考情報：
-[Power BI の新しいワークスペースのロール - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-roles-new-workspaces#workspace-roles)
+[Power BI の新しいワークスペースのロール - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-roles-new-workspaces#workspace-roles)
 
 </br>
 
@@ -156,7 +156,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 
 ご参考情報：
 [クラシックワークスペースと新しいワークスペースの違い：Power BIのワークスペースについて | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
-[新しいワークスペースへのアクセス権をユーザーに付与する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-give-access-new-workspaces)
+[新しいワークスペースへのアクセス権をユーザーに付与する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-give-access-new-workspaces)
 
 </br>
 
@@ -167,7 +167,7 @@ Power BIサービスでは、現在以下４つの方法でコンテンツを他
 アプリの詳細につきましては、以下をご参考にしてください。
 
 ご参考情報：
-[Power BI でアプリを発行する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-create-distribute-apps)
+[Power BI でアプリを発行する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-create-distribute-apps)
 
 
 アプリ発行時に、以下オプション設定が可能となります。

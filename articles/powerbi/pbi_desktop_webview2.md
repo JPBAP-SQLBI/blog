@@ -14,7 +14,7 @@ WebView2に関するよくある質問を追加しました。詳細につきま
 <br>
 </span>
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの山本です。 
 
 2022年1月以降 Power BI Desktop をご利用いただくにあたり、新しいコンポーネント「WebView2」への切り替えが発表され、インストールが必須となることが発表されました。
 WebView2 への切り替えは、Power BI Desktop の開発とリリースのプロセスを従来よりも最適化することを目的としています。また WebView2 によって、従来 Power BI Desktop のアップデートごとに行なわれていたセキュリティパッチも、リアルタイムで最新のセキュリティパッチを自動的に提供できるようになります。
@@ -46,7 +46,7 @@ WebView2 への切り替えは、Power BI Desktop の開発とリリースのプ
 - Windows の表示設定: 表示設定でテキスト、アプリ、その他の項目を 100% より大きいサイズに変更してある場合、Power BI Desktop を使い続けるために対話する必要がある特定のダイアログを表示できないことがあります。 この問題が発生した場合は、Windows で [設定] > [システム] > [表示] に移動して表示設定を確認し、スライダーを使って表示設定を 100% に戻します。
 - CPU: 1 ギガヘルツ (GHz) 64 ビット (x64) プロセッサ以上が推奨されます。
 
-[Power BI Desktop の最小要件について](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)
+[Power BI Desktop の最小要件について](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)
 
 </br>
 
@@ -106,7 +106,7 @@ WebView2 は、Microsoft 365 アプリケーションのアップデートや �
 
 
 また管理者の方は、WebView2ランタイムの組織への導入についての詳細も合わせてご覧ください。
-弊社公開情報：[WebView2 ランタイムのインストール](https://docs.microsoft.com/ja-jp/DeployOffice/webview2-install#webview2-runtime-installation)
+弊社公開情報：[WebView2 ランタイムのインストール](https://learn.microsoft.com/ja-jp/DeployOffice/webview2-install#webview2-runtime-installation)
 
 </br>
 
@@ -180,7 +180,7 @@ c:\Users\\[username]\AppData\Local\Microsoft\Power BI Desktop\WebView2Elevated\E
 </div>
 
 > **参考情報：**
-> - [Resolve issues related to WebView2](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-error-launching-desktop#resolve-issues-related-to-webview2/)  
+> - [WebView2 に関連するイシューを解決する](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-error-launching-desktop#resolve-issues-related-to-webview2)  
 
 
 </br>

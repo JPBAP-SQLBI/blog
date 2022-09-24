@@ -11,7 +11,7 @@ tags:
   - ArcGIS Map
 ---
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームのチャンです。
 
 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。
 
@@ -29,7 +29,7 @@ Power BI で地理データを可視化する際に、利用できるマップ�
 2. [塗り分け地図](#塗り分け地図)
 3. [図形のビジュアル](#図形のビジュアル)
 4. [Azure マップ](#Azureマップ)
-5. [ArcGIS Maps for Power BI](<#ArcGIS Maps for Power BI>)
+5. [ArcGIS Maps for Power BI](#ArcGIS-Maps-for-Power-BI)
 
 ---
 ## マップ
@@ -74,7 +74,7 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 </div>
 
 > **参考情報**
-> - [マップに関するヒントとテクニック (Bing マップの統合を含む) - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-map-tips-and-tricks)
+> - [マップに関するヒントとテクニック (Bing マップの統合を含む) - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-map-tips-and-tricks)
 
 <br>
 <br>
@@ -106,7 +106,7 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 </div>
 
 > **参考情報**
-> - [Power BI の塗り分け地図 (コロプレス) - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-filled-maps-choropleths)
+> - [Power BI の塗り分け地図 (コロプレス) - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-filled-maps-choropleths)
 
 <br>
 <br>
@@ -148,7 +148,7 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 </div>
 
 > **参考情報**
-> - [Power BI Desktop で図形マップを使用する (プレビュー) - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/visuals/desktop-shape-map)
+> - [Power BI Desktop で図形マップを使用する (プレビュー) - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/visuals/desktop-shape-map)
 
 <br>
 <br>
@@ -227,8 +227,8 @@ Power BI サービスで使用するには、[管理ポータル]>[テナント�
 
 > **参考情報**
 > - [Power BI 用 Azure Maps ビジュアルのプレビューを開始 | Azure のブログと更新プログラム | Microsoft Azure](https://azure.microsoft.com/ja-jp/blog/azure-maps-power-bi-visual-now-in-preview/)
-> - [Get started with Azure Maps Power BI visual - Microsoft Azure Maps | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-get-started?context=%2Fpower-bi%2Fcreate-reports%2Fcontext%2Fcontext)
-> - [Azure Maps Power BI ビジュアルのレイヤーの概要 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-understanding-layers)
+> - [Get started with Azure Maps Power BI visual - Microsoft Azure Maps | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-get-started?context=%2Fpower-bi%2Fcreate-reports%2Fcontext%2Fcontext)
+> - [Azure Maps Power BI ビジュアルのレイヤーの概要 | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-understanding-layers)
 
 <br>
 <br>
@@ -263,7 +263,7 @@ ArcGIS Maps for Power BIでは、幅広いビジュアル表現や、地図の�
 </div>
 
 > **参考情報**
-> - [他のユーザーから共有された ArcGIS マップとの対話 - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualizations-arcgis)
+> - [他のユーザーから共有された ArcGIS マップとの対話 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualizations-arcgis)
 > - [ArcGIS for Power BI—ArcGIS for Power BI | ドキュメント](https://doc.arcgis.com/ja/power-bi/get-started/about-maps-for-power-bi.htm)
 
 <br>

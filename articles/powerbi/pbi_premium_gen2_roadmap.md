@@ -15,7 +15,7 @@ Gen2 における各SKU ごとのモデル更新並列処理数が明示され�
 詳しくは [Power BI Premium Gen2 の性能について]のセクションをご覧ください。
 </span>
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームの山本です。
 
 Power BI のライセンスについては過去記事「[Power BI Desktop とPower BI サービスの違い：Power BIでレポート作成・分析を行うために必要なものは？](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)」でもご紹介させていただきましたが、今回は、新世代のPower BI Premium であるPower BI Premium Gen2 についてご紹介させていただきます。
 
@@ -111,8 +111,8 @@ Power BI サービスの管理ポータルより[容量の設定]から割当し
 *2021年10月時点の情報です。
 
 [//参考①：Introducing Power BI Premium Gen2 - YouTube](https://www.youtube.com/watch?v=j17y_BPlhvU)
-[//参考②：Power BI Premium Gen2 のアーキテクチャ - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-architecture)
-[//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is)
+[//参考②：Power BI Premium Gen2 のアーキテクチャ - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-architecture)
+[//参考③：Microsoft Power BI Premium とは何ですか? - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-what-is)
 
 
 <br>
@@ -135,7 +135,7 @@ Power BI Premium Gen2 の各SKU ごとの性能については、以下の通り
 *1 Power BI Premium Utilization and Metrics アプリは、現在これらの指標を公開していません。
 *2 モデル並列更新処理数と各メモリの制限は、データセットに対して適用されます。
 
-[//参考：Power BI Premium Gen2 とは - Power BI | Microsoft Docs - Premium Gen2 の制限事項](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-what-is#limitations-in-premium-gen2)
+[//参考：Power BI Premium Gen2 とは - Power BI | Microsoft Docs - Premium Gen2 の制限事項](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-what-is#limitations-in-premium-gen2)
 
 
 <br>
@@ -192,7 +192,7 @@ Power BI Premium Gen 2 は、2021年10月4日に一般公開されています�
 <img src="roadmap2.png" alt="画像_Gen2への移行ロードマップ" title="画像_Gen2への移行ロードマップ">
 </div>
 
-//参考情報：[Power BI Premium Gen2 への移行を計画する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-transition-gen1-to-gen2)
+//参考情報：[Power BI Premium Gen2 への移行を計画する](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-transition-gen1-to-gen2)
 
 </br>
 
@@ -208,8 +208,8 @@ Power BI Premium Gen2 にも専用のメトリックアプリを提供してお�
 Gen2 をご利用の場合はこちらのアプリをインストールしてください。
 詳しくは以下公式ドキュメントをご覧ください。
 
-- [Gen2 メトリック アプリをインストールする](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-install-gen2-app)
-- [Gen2 メトリック アプリを使用する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-metrics-app)
+- [Gen2 メトリック アプリをインストールする](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-install-gen2-app)
+- [Gen2 メトリック アプリを使用する](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-gen2-metrics-app)
 
 </br>
 
@@ -223,7 +223,7 @@ Gen2 をご利用の場合はこちらのアプリをインストールしてく
 
 Power BI 管理ポータルで自動スケーリングを有効にすることができますので、詳細につきましては、以下の公式ドキュメントをご覧ください。
 
-//参考情報：[Power BI Premium で自動スケーリングを使用する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-auto-scale)
+//参考情報：[Power BI Premium で自動スケーリングを使用する](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-auto-scale)
 </br>
 
 ### Q. Premium Gen1 に戻すことは可能ですか？

@@ -12,7 +12,7 @@ tags:
 ---
 
 
-こんにちは、Power BI サポート チームです。 
+こんにちは、Power BI サポート チームの山崎です。 
   
 Power BI Desktopで作成したレポートを Power BI サービスへ発行した後、データ ソースとの接続設定を行っておりますでしょうか？  
 「Power BI サービス上に発行したレポートのデータが古いまま」、「毎回 Power BI Desktop でレポートのデータ更新をしてから、Power BI サービスへ都度上書き発行していて面倒」などでお困りの場合、Power BI サービスでは、データ取得先となるデータ ソースと直接接続を行うことで、レポートのデータを最新に保つことが可能です。
@@ -78,8 +78,8 @@ Power BI のレポートは、Power BI サービスに発行すると、レポ�
 上記につきましては、以下公開情報でも詳細にご説明しておりますので、ご参考になりましたら幸いでございます。　　
 
 
-参考情報：[Power BI でのデータの更新](https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data)  
-参考情報：[スケジュールされた更新の構成](https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-scheduled-refresh)　
+参考情報：[Power BI でのデータの更新](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data)  
+参考情報：[スケジュールされた更新の構成](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-scheduled-refresh)　
 
 
 ## ２．オンプレミス上（お使いの PC の C ドライブや共有サーバーなど）に存在するまたは接続時にゲートウェイが必須なデータ ソースである場合　
@@ -97,7 +97,7 @@ Power BI のレポートは、Power BI サービスに発行すると、レポ�
 <img src="2_1.png">
 </div>
 
-参考情報：[オンプレミス データ ゲートウェイをインストールする](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway)　
+参考情報：[オンプレミス データ ゲートウェイをインストールする](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway)　
 
 （２）Power BI サービス上で、“ゲートウェイ管理” 画面にて対象のデータ ソースとの接続を確立します。  
  項番（１）にてサインインしたアカウントで Power BI サービスにサインインすると、「ゲートウェイの管理」画面に構築したゲートウェイ名（ゲートウェイ クラスター）が表示されます。
@@ -118,7 +118,7 @@ Power BI のレポートは、Power BI サービスに発行すると、レポ�
 <img src="2_4.png">
 </div>
 
-参考情報：[オンプレミス データ ゲートウェイの管理](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-manage)　
+参考情報：[オンプレミス データ ゲートウェイの管理](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-manage)　
 
 （３）対象のデータセットの設定画面の“ゲートウェイ接続” にて（２）で設定したデータ ソースを紐づけます。
 
@@ -128,7 +128,7 @@ Power BI のレポートは、Power BI サービスに発行すると、レポ�
 
 ※オンプレミス データ ゲートウェイが必須なデータ ソースであるかどうかは以下公開情報からご確認いただけます。  
 
-参考情報：[Power BI データ ソース](https://docs.microsoft.com/ja-jp/power-bi/connect-data/power-bi-data-sources)　
+参考情報：[Power BI データ ソース](https://learn.microsoft.com/ja-jp/power-bi/connect-data/power-bi-data-sources)　
 
 
 ## ３．上記１と２が混在している場合　

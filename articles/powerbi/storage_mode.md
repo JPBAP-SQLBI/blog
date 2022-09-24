@@ -10,7 +10,7 @@ tags:
   - Direct Query
 ---
 
-こんにちは、Power BI サポート チームです。
+こんにちは、Power BI サポート チームのチャンです。
 
 Power BI ご利用のユーザー様から、データ接続の際にインポートモードかDirect Query モードを選択できるが、どの場合にどれを使用すれば良いのか？などの質問をよく頂いていますが、
 本ブログでは、インポートモードとDirect Query モードの概要及び利用シーンにつきまして、ご紹介いたします。
@@ -45,18 +45,18 @@ Power BIからデータソースに接続する際に、データを取得して
 今回は上記の4 つから、最も使用されているインポート モードと Direct Query モードについてご説明します。
 各データソースでサポートされているストレージモードにつきましては、下記のドキュメントからご確認いただけます。
 
-- 参考情報：[Power BI データ ソース - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/power-bi-data-sources)
+- 参考情報：[Power BI データ ソース - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/power-bi-data-sources)
 
 > [!NOTE]
 > **ライブ接続モード**に関しては、Power BI データセット、Analysis Services へ接続する際にのみ使用できます。
-> // 参考情報 (1)：[Power BI Desktop から Power BI サービスのデータセットに接続する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-report-lifecycle-datasets)
-> // 参考情報 (2)：[Power BI Desktop で Analysis Services の表形式データに接続する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-analysis-services-tabular-data)
+> // 参考情報 (1)：[Power BI Desktop から Power BI サービスのデータセットに接続する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-report-lifecycle-datasets)
+> // 参考情報 (2)：[Power BI Desktop で Analysis Services の表形式データに接続する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-analysis-services-tabular-data)
 
 <p>
 
 > [!NOTE]
 > **Push モード**のデータセットに関しては、以下のドキュメントをご参照ください。
-> // 参考情報：[Power BI のリアルタイム ストリーミング - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/service-real-time-streaming)
+> // 参考情報：[Power BI のリアルタイム ストリーミング - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-real-time-streaming)
 
 
 ---
@@ -86,7 +86,7 @@ Power BI Desktop では、接続済みのテーブルに対して、「>」部�
 | A5 または P2 | 6 GB | 
 | A6 または P3 | 10 GB | 
 
-- 参考情報：[Power BI でのデータの更新 - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#datasets-in-import-mode)
+- 参考情報：[Power BI でのデータの更新 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#datasets-in-import-mode)
 
 
 あまりにも大規模のデータを読み込む場合、データのリアルタイム性を保つ必要がある場合、またはデータソース側でユーザーごとのセキュリティー規則を設定していた場合、Direct Query モードのご利用をご検討ください。
@@ -131,7 +131,7 @@ Direct Query モードから、インポートモードへの切替は可能で�
 
 上記ご案内した内容の他にも、制限事項や影響がありますので、それらにつきましては、下記のドキュメントをご確認ください。
 
-- 参考情報：[Power BI で DirectQuery を使用する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about#implications-of-using-directquery)
+- 参考情報：[Power BI で DirectQuery を使用する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about#implications-of-using-directquery)
 
 ---
 ## インポートとDirectQueryの比較
@@ -153,9 +153,9 @@ Direct Query モードから、インポートモードへの切替は可能で�
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
 > **参考情報**
-> - [Power BI での DirectQuery の使用について - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about)
-> - [Power BI Desktop でストレージ モードを管理する - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/transform-model/desktop-storage-mode)
-> - [Power BI でのデータの更新 - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data)
+> - [Power BI での DirectQuery の使用について - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-directquery-about)
+> - [Power BI Desktop でストレージ モードを管理する - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/transform-model/desktop-storage-mode)
+> - [Power BI でのデータの更新 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data)
 
 
 ---
