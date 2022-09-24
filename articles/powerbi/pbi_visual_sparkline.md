@@ -141,7 +141,7 @@ tags:
 
 </br>
 
-[このPower BIレポートのダウンロードはこちら](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_visual_sparkline/sample_pbix/sparkline_sample.pbix)
+[このPower BIレポートのダウンロードはこちら(右クリックで[名前をつけてリンクを保存])](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_visual_sparkline/sample_pbix/sparkline_sample.pbix)
 
 </br>
 
@@ -153,7 +153,7 @@ tags:
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。 
 
 > **参考情報**
-> - [Power BI レポートでテーブルまたはマトリックスにスパークラインを作成する (プレビュー)](https://docs.microsoft.com/ja-jp/power-bi/create-reports/power-bi-sparklines-tables)
+> - [Power BI レポートでテーブルまたはマトリックスにスパークラインを作成する (プレビュー)](https://learn.microsoft.com/ja-jp/power-bi/create-reports/power-bi-sparklines-tables)
  
 
 

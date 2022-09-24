@@ -73,7 +73,7 @@ Power BIサービスでは、ユーザー個別に用意されるマイ ワー�
 
 
 ###### ご参考情報1  
-[Power BI ワークスペースでデータ ストレージを管理する](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi#manage-items-you-own)
+[Power BI ワークスペースでデータ ストレージを管理する](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi#manage-items-you-own)
 
 ###### ご参考情報2  
 冒頭の ”前提” でもご説明したように、テナント内でPremiumまたはPPUをご契約いただいている場合は、いずれもテナント全体で最大100TBの容量が提供されます。この容量とは別に、既定で割り当てられているProの最大容量は変わらずご使用いただけます。  

@@ -124,7 +124,7 @@ Power BI では、 従来のクラシックワークスペースから新しい�
 </br>
 
 
-その他アプリワークスペースへのアップグレードに関する詳細については、公開ドキュメント「[Power BI でクラシック ワークスペースを新しいワークスペースにアップグレードする](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)」もご覧ください。
+その他アプリワークスペースへのアップグレードに関する詳細については、公開ドキュメント「[Power BI でクラシック ワークスペースを新しいワークスペースにアップグレードする](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)」もご覧ください。
 
 
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。

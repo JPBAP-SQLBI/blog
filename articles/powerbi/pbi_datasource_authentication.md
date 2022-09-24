@@ -64,7 +64,7 @@ Power BI Desktopでは、以前に接続を行った際に使用した接続情�
 Microsoft アカウント（Azure ADのアカウント）にて認証を行う場合に、古いバージョンのPower BI Desktopを使用していると正常に接続が行えない既知の問題があります。  
 本問題にかかわらず、Power BI Desktopでは最新版のみをサポートしておりますので、何かしらの問題が発生した際に最新版にアップデートして切り分けを実施することは有効です。  
 
-参考情報：[Power BI の新機能](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop)  
+参考情報：[Power BI の新機能](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop)  
 
 
 

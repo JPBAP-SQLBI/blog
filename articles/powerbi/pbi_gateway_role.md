@@ -48,7 +48,7 @@ Power BI では、オンプレミス環境にあるデータソースへ接続�
 具体的に、オンプレミスデータゲートウェイからデータソースへの接続において、どのような処理を行われているかにつきましては、以下のドキュメントをご参照ください。
 
 > **参考情報：**
-> - [オンプレミス データ ゲートウェイのアーキテクチャ](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-onprem-indepth)
+> - [オンプレミス データ ゲートウェイのアーキテクチャ](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-onprem-indepth)
 
 また、Power BI サービスで、オンプレミスデータゲートウェイを管理するには、[設定] > [ゲートウェイの管理] から実施いただけます。
 
@@ -136,8 +136,8 @@ Power BI では、オンプレミス環境にあるデータソースへ接続�
 </br>
 
 > **参考情報：**
-> - [オンプレミス データ ゲートウェイのセキュリティ ロールを管理する](https://docs.microsoft.com/ja-jp/data-integration/gateway/manage-security-roles)
-> - [オンプレミス データ ゲートウェイの管理 (プレビュー)](https://docs.microsoft.com/ja-jp/power-platform/admin/onpremises-data-gateway-management?msclkid=9458b01bc42a11ecac3c3ed358d0c10a)
+> - [オンプレミス データ ゲートウェイのセキュリティ ロールを管理する](https://learn.microsoft.com/ja-jp/data-integration/gateway/manage-security-roles)
+> - [オンプレミス データ ゲートウェイの管理 (プレビュー)](https://learn.microsoft.com/ja-jp/power-platform/admin/onpremises-data-gateway-management?msclkid=9458b01bc42a11ecac3c3ed358d0c10a)
 
 </br>
 以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。

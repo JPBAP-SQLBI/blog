@@ -68,7 +68,7 @@ Teams で作ったチームは Microsoft 365 グループ、つまりクラシ�
 アップグレードすることによって、M365 グループ側に変更が伴うような影響はありません。ワークスペースをアップグレードした後も M365 グループは、引き続き残ります。
 
 アップグレードに関する詳細については、以下も合わせてご参照ください。
-<span style="font-size: 80%; color: black;">参考：[Power BI でクラシック ワークスペースを新しい(アプリ)ワークスペースにアップグレードする](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)</span>
+<span style="font-size: 80%; color: black;">参考：[Power BI でクラシック ワークスペースを新しい(アプリ)ワークスペースにアップグレードする](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces)</span>
 
 ### Q. クラシックワークスペースと新しい(アプリ)ワークスペースの見分け方は？
 
@@ -89,7 +89,7 @@ Teams で作ったチームは Microsoft 365 グループ、つまりクラシ�
 新しい(アプリ)ワークスペースではコンテンツパックは対応しておらず、2021年2月以降、新規作成と編集機能が削除され、今後コンテンツパックが削除される予定です
 コンテンツパックをインストールしたワークスペース、もしくはコンテンツパック発行元のワークスペースをアップグレードすると、コンテンツパックのコピーが配置されるようになります。
 事前に必要なコンテンツパックは、お早めにワークスペースのアップグレードをご検討ください。
-<span style="font-size: 80%; color: black;">参考: [アップグレード中のコンテンツパック](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces#content-packs-during-upgrade)</span>
+<span style="font-size: 80%; color: black;">参考: [アップグレード中のコンテンツパック](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-upgrade-workspaces#content-packs-during-upgrade)</span>
 
 </br>
 

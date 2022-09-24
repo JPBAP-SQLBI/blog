@@ -150,7 +150,7 @@ tags:
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。 
 
 > **参考情報**
-> - [Power BI カスタム ビジュアルを取得する主なソース - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/developer/visuals/power-bi-custom-visuals)
+> - [Power BI カスタム ビジュアルを取得する主なソース - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/developer/visuals/power-bi-custom-visuals)
 
 
 

@@ -182,13 +182,13 @@ Web サーバー側などアクセス先でURL を書き換えていただいた
 > [!TIP]
 > ページ分割されたレポートでは Power BI レポートとはアーキテクチャが異なり、データソースから取得したデータは大文字小文字が区別されて表示されます。また、クリック時のアクションとしてURLが格納されている列を指定してURLへ遷移することが可能です。
 > ページ分割されたレポートをご利用いただくには Power BI Premium または Premium Per User 環境が必要となります。
-> 詳しくはこちら：[Power BI Premium のページ分割されたレポートとは](https://docs.microsoft.com/ja-jp/power-bi/paginated-reports/paginated-reports-report-builder-power-bi)
+> 詳しくはこちら：[Power BI Premium のページ分割されたレポートとは](https://learn.microsoft.com/ja-jp/power-bi/paginated-reports/paginated-reports-report-builder-power-bi)
 
 
 </br>
 
 #### 参考情報
-- [Power BI でサポートされる言語と国または地域 - Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-for-the-model-in-power-bi-desktop)
+- [Power BI でサポートされる言語と国または地域 - Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-for-the-model-in-power-bi-desktop)
 - [Power BI And Case Sensitivity](https://blog.crossjoin.co.uk/2019/10/06/power-bi-and-case-sensitivity/)
 
 </br>

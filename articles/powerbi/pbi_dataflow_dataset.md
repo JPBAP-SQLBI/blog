@@ -65,10 +65,10 @@ Power Query Editorで行なうデータ加工をオンラインで実行する�
 - データ加工のフローを他のユーザーと簡単に共有できること。
 - クラウド上でデータ加工を実施することは、端末のスペックに依存しないこと（ただし、サーバーのスペックに依存する）。
 - データソースへの接続はデータフローのみで、複数のユーザーがデータソースへのアクセスを最小限に抑えること
-- 一部データフロー（Power Query Online）のみ利用可能な機能がある。例えば[ダイアグラムビュー](https://docs.microsoft.com/ja-jp/power-query/diagram-view)や[スキーマビュー](https://docs.microsoft.com/ja-jp/power-query/schema-view)など。
+- 一部データフロー（Power Query Online）のみ利用可能な機能がある。例えば[ダイアグラムビュー](https://learn.microsoft.com/ja-jp/power-query/diagram-view)や[スキーマビュー](https://learn.microsoft.com/ja-jp/power-query/schema-view)など。
 
 > [!NOTE]
-> // 参考情報 (1)：[Common Data Model](https://docs.microsoft.com/ja-JP/common-data-model/)
+> // 参考情報 (1)：[Common Data Model](https://learn.microsoft.com/ja-JP/common-data-model/)
 > // 参考情報 (2)：[Power BI and Dataflows (Power BI とデータフロー)](https://go.microsoft.com/fwlink/?linkid=2034388&clcid=0x409)
 
 ---
@@ -85,7 +85,7 @@ Analysis Servicesはデータ分析用のデータエンジンの技術で、Pow
 Excel、Reporting Services、その他のデータ視覚化ツールなどでも使用されている技術です。
 
 > [!NOTE]
-> // 参考情報：[Power BI サービスのデータセット](https://docs.microsoft.com/ja-jp/power-bi/connect-data/service-datasets-understand#power-bi-desktop-developed-models)
+> // 参考情報：[Power BI サービスのデータセット](https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-datasets-understand#power-bi-desktop-developed-models)
 
 
 ---
@@ -111,9 +111,9 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 詳細につきましては、以下のブログ記事（英語）とドキュメントよりご確認ください。
 
 > [!NOTE]
-> // 参考情報 (1)：[データマートの概要](https://docs.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview)
+> // 参考情報 (1)：[データマートの概要](https://learn.microsoft.com/en-us/power-bi/transform-model/datamarts/datamarts-overview)
 > // 参考情報 (2)：[Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/ja-jp/blog/announcing-public-preview-of-datamart-in-power-bi/)
-> // 参考情報 (3)：[データマートの分析](https://docs.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-analyze)
+> // 参考情報 (3)：[データマートの分析](https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-analyze)
 
 > [!IMPORTANT] 
 > 本機能は開発段階 (プレビュー)でございますため、今後予告なしに機能が削除されたり、
@@ -128,7 +128,7 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 | 一言で言うと             | セルフデータウェアハウス                            | ETLツール                                                                    | データモデル                        | 
 | 説明                     | ETLツールとデータモデリング機能を一つに集約したもの | データソースから抽出、変換、ロード                                           | DAXの使用とリレーションシップの設定 | 
 | 利用者                   | すべてのビジネスユーザー、分析者                                              | データモデリングの実施者                                                     | レポート作成者                      | 
-| 使用言語                 | 操作箇所によって[M言語](https://docs.microsoft.com/ja-jp/powerquery-m/)、[DAX]((https://docs.microsoft.com/ja-jp/dax/))、SQLも利用可能           |[PowerQuery M言語](https://docs.microsoft.com/ja-jp/powerquery-m/)                                                             | [DAX](https://docs.microsoft.com/ja-jp/dax/)                                 | 
+| 使用言語                 | 操作箇所によって[M言語](https://learn.microsoft.com/ja-jp/powerquery-m/)、[DAX]((https://learn.microsoft.com/ja-jp/dax/))、SQLも利用可能           |[PowerQuery M言語](https://learn.microsoft.com/ja-jp/powerquery-m/)                                                             | [DAX](https://learn.microsoft.com/ja-jp/dax/)                                 | 
 | 編集操作場所             | Power BIサービス（クラウド）                        | Power BIサービス（クラウド）                                                 | Power BI Desktop（ローカル）        | 
 | レポートからの接続       | 〇（データセットが自動的に作成される）              | ×（Power BI Desktopでデータセットを作成する必要がある）                      | 〇                                  | 
 | 必要なライセンス | Premium Per User / Premium Per Capacity             | Pro / Premium Per User /      Premium Per Capacity / Embedded                                                 | Free / Pro / Premium Per User / Premium Per Capacity / Embedded     | 
@@ -139,11 +139,11 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 |                          | 
 
 
-※1：[データフローで DirectQuery を使用する](https://docs.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-directquery)
-※2：[データフローに関する考慮事項と制限事項](https://docs.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-features-limitations)
-※3：[Power BI でのデータの更新](https://docs.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#data-refresh)
-※4：[データフローでの増分更新の使用](https://docs.microsoft.com/ja-jp/power-query/dataflows/incremental-refresh)
-※5：[データセットの増分更新とリアルタイム データ](https://docs.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-overview)
+※1：[データフローで DirectQuery を使用する](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-directquery)
+※2：[データフローに関する考慮事項と制限事項](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-features-limitations)
+※3：[Power BI でのデータの更新](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#data-refresh)
+※4：[データフローでの増分更新の使用](https://learn.microsoft.com/ja-jp/power-query/dataflows/incremental-refresh)
+※5：[データセットの増分更新とリアルタイム データ](https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-overview)
 
 <p>
 

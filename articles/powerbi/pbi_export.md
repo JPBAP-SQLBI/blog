@@ -54,7 +54,7 @@ Power BI サービスでは、レポートを PBIX ファイルだけでなく�
 黄色枠で囲っている項目は、ページ分割されたレポートが対象となる項目です。
 
 ご参考情報:
-[エクスポートと共有の管理者設定](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-portal-export-sharing)
+[エクスポートと共有の管理者設定](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-portal-export-sharing)
 
 <div align="center">
 <img src="1.png">
@@ -90,7 +90,7 @@ Power BI サービスでは、レポートを PBIX ファイルだけでなく�
 基データのエクスポートは、ワークスペースに対して共同作成者以上のロールが割り当てられているユーザーにて操作可能です。
 
 ご参考情報:：
-[視覚エフェクトの作成に使用されたデータをエクスポートする](https://docs.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-export-data?tabs=dashboard)
+[視覚エフェクトの作成に使用されたデータをエクスポートする](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-export-data?tabs=dashboard)
 
 
 <div align="center">
@@ -110,7 +110,7 @@ Power BI Desktop で作成した後に発行またはアップロードされた
 レポートが存在するワークスペースの共同作成者にて操作可能です。
 
 ご参考情報：
-[Power BI サービスから Power BI Desktop にレポートをダウンロードする](https://docs.microsoft.com/ja-jp/power-bi/create-reports/service-export-to-pbix)
+[Power BI サービスから Power BI Desktop にレポートをダウンロードする](https://learn.microsoft.com/ja-jp/power-bi/create-reports/service-export-to-pbix)
 
 
 ▼ レポートからエクスポート
@@ -133,8 +133,8 @@ Power BI Desktop で作成した後に発行またはアップロードされた
 閲覧権限を持っているユーザーにて操作可能です。
 
 ご参考情報：
-[レポートを PowerPoint にエクスポートする](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/end-user-powerpoint)
-[PowerPoint にライブ Power BI レポート ページを追加する](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=share)
+[レポートを PowerPoint にエクスポートする](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/end-user-powerpoint)
+[PowerPoint にライブ Power BI レポート ページを追加する](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=share)
 
 <div align="center">
 <img src="5.png">
@@ -147,7 +147,7 @@ Power BI Desktop で作成した後に発行またはアップロードされた
 閲覧権限を持っているユーザーにて操作可能です。
 
 ご参考情報：
-[Power BI から PDF にレポートをエクスポートする](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-pdf?tabs=powerbi-service)
+[Power BI から PDF にレポートをエクスポートする](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-pdf?tabs=powerbi-service)
 <div align="center">
 <img src="6.png">
 </div>
@@ -160,7 +160,7 @@ Power BI Desktop で作成した後に発行またはアップロードされた
 閲覧権限を持っているユーザーにて操作可能です。
 
 ご参考情報：
-[Power BI Premium のページ分割されたレポートとは - ページ分割されたレポートを表示する](https://docs.microsoft.com/ja-jp/power-bi/paginated-reports/paginated-reports-report-builder-power-bi#view-your-paginated-report)
+[Power BI Premium のページ分割されたレポートとは - ページ分割されたレポートを表示する](https://learn.microsoft.com/ja-jp/power-bi/paginated-reports/paginated-reports-report-builder-power-bi#view-your-paginated-report)
 <div align="center">
 <img src="7.png">
 </div>
@@ -173,9 +173,9 @@ PNG のエクスポートは API を使用します。
 閲覧権限を持っているユーザーにて操作可能です。
 
 ご参考情報：
-[Power BI レポートをファイルにエクスポートする](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/export-to)
-[Reports - Export To File](https://docs.microsoft.com/en-us/rest/api/power-bi/reports/export-to-file)
-[Reports - Export To File In Group](https://docs.microsoft.com/en-us/rest/api/power-bi/reports/export-to-file-in-group)
+[Power BI レポートをファイルにエクスポートする](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/export-to)
+[Reports - Export To File](https://learn.microsoft.com/en-us/rest/api/power-bi/reports/export-to-file)
+[Reports - Export To File In Group](https://learn.microsoft.com/en-us/rest/api/power-bi/reports/export-to-file-in-group)
 
 #### 印刷
 レポートを1ページずつ印刷できます。　　
@@ -184,14 +184,14 @@ PNG のエクスポートは API を使用します。
 閲覧権限を持っているユーザーにて操作可能です。
 
 ご参考情報：
-[Power BI サービスから印刷する](https://docs.microsoft.com/ja-jp/power-bi/consumer/end-user-print)
+[Power BI サービスから印刷する](https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-print)
 
 #### その他ご参考：Excelで分析
 ［エクスポート］に表示される“Excelで分析” は、Power BI データセットを Excel に取り込み、ピボットテーブル、グラフ、スライサー、およびその他の Excel 機能を使用してデータセットを表示および操作できる機能です。
 今回のテナント設定とは異なる設定で制御される機能となりますが、以下に参考となる公開情報をご案内いたします。
 
 ご参考情報：
-[Power BI で [Excel で分析] を使用して開始する](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-analyze-in-excel)
+[Power BI で [Excel で分析] を使用して開始する](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-analyze-in-excel)
 
 
 ----

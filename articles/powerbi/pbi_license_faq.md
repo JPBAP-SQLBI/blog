@@ -123,7 +123,7 @@ Power BI Premium や Embedded の「埋め込み機能」を使用し作成し�
 </br>
 
 > **参考情報**
-> - [Power BI Embedded の分析とは](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-analytics-power-bi)
+> - [Power BI Embedded の分析とは](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-analytics-power-bi)
 
 ---
 ## Azure AD B2B コラボレーション機能を使用し、ライセンスは顧客に用意してもらうが、自社で保有するコンテンツを共有し、対価を得る行為は問題あるか

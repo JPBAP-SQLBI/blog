@@ -38,7 +38,7 @@ Power BI サービスではインターネットへの接続が必要です。
 これらの通信が許可されていないと、Power BI サービスを正常に使用できないことがあります。  
 
 ご参考情報
-[ホワイトリスト登録用の Power BI の URL](https://docs.microsoft.com/ja-jp/power-bi/power-bi-whitelist-urls)　  
+[ホワイトリスト登録用の Power BI の URL](https://learn.microsoft.com/ja-jp/power-bi/power-bi-whitelist-urls)　  
 
 
 ##### ②　Azure IP Ranges  
@@ -54,7 +54,7 @@ Power BI サービスの通信に使用される IP アドレスにつきまし�
 ※　対象のご環境のリージョンは以下公開情報で案内している方法でご確認いただけます。  
 
 ご参考情報  
-[Power BI テナントの場所を確認する方法](https://docs.microsoft.com/ja-jp/power-bi/service-admin-where-is-my-tenant-located#how-to-determine-where-your-power-bi-tenant-is-located)　  
+[Power BI テナントの場所を確認する方法](https://learn.microsoft.com/ja-jp/power-bi/service-admin-where-is-my-tenant-located#how-to-determine-where-your-power-bi-tenant-is-located)　  
 
 
 ###### <span style="color: orange; ">考慮事項1</span>
@@ -96,10 +96,10 @@ Power BI サービスは、データ更新時など必要に応じて Azure 内�
 
 ご参考情報  
 ・オンプレミス データ ゲートウェイで使用される送信ポートの許可または HTTPS 通信の強制設定が必要となります。  
-[オンプレミス データ ゲートウェイのコミュニケーション設定を調整](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-communication)  
+[オンプレミス データ ゲートウェイのコミュニケーション設定を調整](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-communication)  
 
 ・プロキシ経由でインターネットにアクセスしている場合は、オンプレミス データ ゲートウェイの構成ファイルの変更が必要となります。  
-[オンプレミス データ ゲートウェイのプロキシ設定の構成](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-proxy)   
+[オンプレミス データ ゲートウェイのプロキシ設定の構成](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-proxy)   
 
 <br>
 

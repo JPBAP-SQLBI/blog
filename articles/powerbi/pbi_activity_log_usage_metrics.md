@@ -52,7 +52,7 @@ Power BI内のユーザーアクティビティを追跡する方法は、主に
 本機能を利用いただくための前提条件は以下となります。
 - Power BI Pro または Premium Per User (PPU) のライセンスが必要です。
 - レポート用の強化された利用状況の指標にアクセスするには、そのレポートに対する編集アクセス権を持っている必要があります。
-- Power BI 管理者が、コンテンツ作成者に向けて[利用状況の指標を有効にしている](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-portal-audit-usage)必要があります。
+- Power BI 管理者が、コンテンツ作成者に向けて[利用状況の指標を有効にしている](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-portal-audit-usage)必要があります。
 
 #### ■利用手順
 有効化する手順について、以下ご案内いたします。
@@ -80,7 +80,7 @@ Power BI内のユーザーアクティビティを追跡する方法は、主に
 
 
 > **参考情報：**
-> - [新しいモダン ワークスペースで使用状況メトリックを監視する (プレビュー) - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-modern-usage-metrics)
+> - [新しいモダン ワークスペースで使用状況メトリックを監視する (プレビュー) - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-modern-usage-metrics)
 
 
 ---
@@ -132,8 +132,7 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 
 
 > **参考情報：**
-> - [Get-PowerBIActivityEvent コマンドレット - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#get-powerbiactivityevent-cmdlet)
-
+> - [Get-PowerBIActivityEvent コマンドレット - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#get-powerbiactivityevent-cmdlet)
 
 ---
 ## 監査ログ
@@ -164,7 +163,7 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 </div>
 
 > **参考情報：**
-> - [監査ログの使用 - Power BI | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#use-the-audit-log)
+> - [監査ログの使用 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#use-the-audit-log)
 
 
 ---
@@ -186,7 +185,7 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 ※　Office 365 E5 または Microsoft 365 E5 ライセンスの場合、監査ログ90日間（最長1年間）を保持することができます。E5 ライセンスに加えて、10 年間の監査ログ保持のアドオン ライセンスもございます。
 
 > 参考情報：
-> - [監査ログの保持ポリシーを管理する](https://docs.microsoft.com/ja-jp/microsoft-365/compliance/audit-log-retention-policies?view=o365-worldwide)
+> - [監査ログの保持ポリシーを管理する](https://learn.microsoft.com/ja-jp/microsoft-365/compliance/audit-log-retention-policies?view=o365-worldwide)
 
 -----
 

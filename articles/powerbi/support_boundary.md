@@ -54,7 +54,7 @@ Power BI では、お客様のライセンスやご契約内容によって提�
 サポート契約の種類別にサポート範囲についてご案内いたします。  
 なお、以下公開情報では、比較表をもちいて詳細にご案内しておりますので、あわせてご参考にしていただければと思います。  
 
-ご参考：[Power BI のサポート オプション](https://docs.microsoft.com/ja-jp/power-bi/admin/service-support-options)
+ご参考：[Power BI のサポート オプション](https://learn.microsoft.com/ja-jp/power-bi/admin/service-support-options)
 
 <br>
 
@@ -94,7 +94,7 @@ Tel ： 0120-41-6755 (平日 9：00 - 17：30)
 ### <font color="LightCoral"> 1. 外部ツール ・ オープン ソース ツールの仕様、機能、トラブルシューティングなどのお問合せ</font>
 各ツールの開発元へお問合せください。  
 
-ご参考：[おすすめのオープン ソース ツール](https://docs.microsoft.com/ja-jp/power-bi/transform-model/desktop-external-tools#featured-open-source-tools)  
+ご参考：[おすすめのオープン ソース ツール](https://learn.microsoft.com/ja-jp/power-bi/transform-model/desktop-external-tools#featured-open-source-tools)  
 
 <br>
 
@@ -193,9 +193,9 @@ Power BI に関連する資料の作成や、ユーザー様が作成した資�
 Power BI Desktop は最新バージョン、オンプレミス データ ゲートウェイ アプリは過去 6 か月のバージョン、Web ブラウザは最新バージョンをサポートしています。  
 様々な問題は、最新版で修正されている問題である可能性がありますので、お問合せ前に最新版にアップデートすることで解消しないかお試しください。
 
-ご参考：[Power BI の新機能](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop)  
-ご参考：[オンプレミス データ ゲートウェイの更新](https://docs.microsoft.com/ja-jp/data-integration/gateway/service-gateway-update)  
-ご参考：[Power BI のサポートされているブラウザー](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/power-bi-browsers)
+ご参考：[Power BI の新機能](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop)  
+ご参考：[オンプレミス データ ゲートウェイの更新](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-update)  
+ご参考：[Power BI のサポートされているブラウザー](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/power-bi-browsers)
 
 <br> 
 

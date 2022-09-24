@@ -196,8 +196,8 @@ from [dbo].[TB1] as [$Table]
 </br>
 
 #### 参考情報
-- [Power BI Desktop のプライバシー レベル](https://docs.microsoft.com/ja-jp/power-bi/enterprise/desktop-privacy-levels)
-- [クエリ診断](https://docs.microsoft.com/ja-jp/power-query/querydiagnostics)
+- [Power BI Desktop のプライバシー レベル](https://learn.microsoft.com/ja-jp/power-bi/enterprise/desktop-privacy-levels)
+- [クエリ診断](https://learn.microsoft.com/ja-jp/power-query/querydiagnostics)
 
 </br>
 

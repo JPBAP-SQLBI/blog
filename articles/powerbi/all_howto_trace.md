@@ -2,6 +2,7 @@
 title: トラブル発生時の事象調査に必要な情報の採取手順について(通信編)
 date: 2021-10-31 00:00:00 
 tags:
+  - Power BI
   - Troubleshooting
   - Fiddler
   - PSR

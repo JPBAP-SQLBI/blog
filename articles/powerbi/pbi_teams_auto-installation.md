@@ -54,7 +54,7 @@ Power BI アプリをインストールすると、Power BI サービスのよ�
 
 </br>
 
-参考情報：[Power BI アプリを Microsoft Teams に追加する](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-microsoft-teams-app)
+参考情報：[Power BI アプリを Microsoft Teams に追加する](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-microsoft-teams-app)
 
 <!-- そして、今回自動インストール機能により、より多くのユーザーがこれらの機能を利用できるようになりました。また、Power BIと Teams の管理者にとっても、ユーザーに Power BI エクスペリエンスを Teams にインストールするためだけに、Microsoft Teams アプリのセットアップポリシーを作成・管理する必要性が減るため、助かります。-->
 

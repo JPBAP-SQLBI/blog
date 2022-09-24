@@ -71,8 +71,8 @@ Power BI Premium をご利用いただいている場合、ライセンスは Po
 </br>
 
 > **参考情報：**
-> - [Power BI Report Server とは](https://docs.microsoft.com/ja-jp/power-bi/report-server/get-started)
-> - [Power BI レポート サーバーをインストールするためのハードウェアとソフトウェアの要件](https://docs.microsoft.com/ja-jp/power-bi/report-server/system-requirements)
+> - [Power BI Report Server とは](https://learn.microsoft.com/ja-jp/power-bi/report-server/get-started)
+> - [Power BI レポート サーバーをインストールするためのハードウェアとソフトウェアの要件](https://learn.microsoft.com/ja-jp/power-bi/report-server/system-requirements)
 
 </br>
 
@@ -101,7 +101,7 @@ Power BI サービスと比較したときに、次のような違いや対応�
 </br>
 
 > **参考情報：**
-> - [Power BI Report Server と Power BI サービスの比較](https://docs.microsoft.com/ja-jp/power-bi/report-server/compare-report-server-service)
+> - [Power BI Report Server と Power BI サービスの比較](https://learn.microsoft.com/ja-jp/power-bi/report-server/compare-report-server-service)
 
 </br>
 
@@ -133,13 +133,13 @@ Power BI サービス同様に Power BI レポートの開発・作成には「P
 </br>
 
 > **参考情報：**
-> - [Power BI Report Server とは](https://docs.microsoft.com/ja-jp/power-bi/report-server/get-started)
-> - [Power BI レポート サーバーをインストールするためのハードウェアとソフトウェアの要件](https://docs.microsoft.com/ja-jp/power-bi/report-server/system-requirements)
+> - [Power BI Report Server とは](https://learn.microsoft.com/ja-jp/power-bi/report-server/get-started)
+> - [Power BI レポート サーバーをインストールするためのハードウェアとソフトウェアの要件](https://learn.microsoft.com/ja-jp/power-bi/report-server/system-requirements)
 
 
 #### Power BI Report Builder / Microsoft Report Builder / SQL Server Data Tools for Visual Studio
 
-Power BI Report Server では、ページ分割されたレポート (rdl) を表現することもでき、ページ分割されたレポートの開発には「[Power BI Report Builder](https://docs.microsoft.com/ja-jp/power-bi/paginated-reports/report-builder-power-bi)」または「[Microsoft Report Builder](https://docs.microsoft.com/ja-jp/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver16)」、「[SQL Server Data Tools for Visual Studio](https://docs.microsoft.com/ja-jp/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver16)」を利用します。
+Power BI Report Server では、ページ分割されたレポート (rdl) を表現することもでき、ページ分割されたレポートの開発には「[Power BI Report Builder](https://learn.microsoft.com/ja-jp/power-bi/paginated-reports/report-builder-power-bi)」または「[Microsoft Report Builder](https://learn.microsoft.com/ja-jp/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver16)」、「[SQL Server Data Tools for Visual Studio](https://learn.microsoft.com/ja-jp/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver16)」を利用します。
 過去に SQL Server Reporting Services でレポート運用を行なってきた組織では、そのままレポート資産を移行して利用することができる強みがあります。
 
 </br>
@@ -202,7 +202,7 @@ Professional サポートのサービス詳細やサポート範囲、お問い�
 
 例外として Azure サポートプランにご加入されており、Azure の仮想マシン上に Power BI Report Server を配置されている場合には、Azure サポート要求の画面からお問い合わせをいただくことで、Professional サポートの対応範囲に限り無償でのサポートを受けることが可能です。
 
-[Azure サポート要求を作成する](https://docs.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)
+[Azure サポート要求を作成する](https://learn.microsoft.com/ja-jp/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
 また英語対応となりますが、コミュニティでの投稿については無料でどなたでも投稿することができますので、まずはこちらで検索や相談を行っていただくこともおすすめいたします。
 

@@ -147,4 +147,4 @@ Power BI ではPower Query の「列のピボット解除」によって横持�
 ---
 
 > **参考情報**
-> - [列のピボットを解除する - Power Query | Microsoft Docs](https://docs.microsoft.com/ja-jp/power-query/unpivot-column)
+> - [列のピボットを解除する - Power Query | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-query/unpivot-column)

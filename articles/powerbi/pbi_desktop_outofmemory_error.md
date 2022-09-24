@@ -26,7 +26,7 @@ Microsoft の公式ドキュメントでは、2022年3月時点では以下を�
 ・CPU: 1 ギガヘルツ (GHz) 64 ビット (x64) プロセッサ以上が推奨
 
 参考情報
-[Power BI Desktop の取得 - Power BI | Microsoft Docs　－　最小要件](https://docs.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)
+[Power BI Desktop の取得 - Power BI | Microsoft Docs　－　最小要件](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 Power BI サポートチームには、上記要件を満たしているにもかかわらず、PC のパフォーマンスに起因し正常に Power BI レポートを開けなかったり、データ更新が行えない事象についてお問い合わせをいただくことがあります。

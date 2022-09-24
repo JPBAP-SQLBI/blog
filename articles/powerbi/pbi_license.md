@@ -61,7 +61,7 @@ Premium Per User 容量が割り当てられたワークスペースには、ダ
 ![](./ppu.png)
 
 > **参考情報**
-> - [Power BI Premium Per User について](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-per-user-faq)
+> - [Power BI Premium Per User について](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-per-user-faq)
 
 ---
 ## Power BI Premium Per Capacity とは？
@@ -82,8 +82,8 @@ Power BI Premium Per Capacity の詳細については以下公開情報をご�
 
 > **参考情報**
 > - [Power BI 各ライセンスの比較](https://powerbi.microsoft.com/ja-jp/pricing/#powerbi-comparison-table)
-> - [Power BI Premium とは​](https://docs.microsoft.com/ja-jp/power-bi/service-premium-what-is)
-> - [Power BI Premium のよく寄せられる質問](https://docs.microsoft.com/ja-jp/power-bi/service-premium-faq)
+> - [Power BI Premium とは​](https://learn.microsoft.com/ja-jp/power-bi/service-premium-what-is)
+> - [Power BI Premium のよく寄せられる質問](https://learn.microsoft.com/ja-jp/power-bi/service-premium-faq)
 
 ---
 ## Power BI Embeddedとは？
@@ -100,10 +100,10 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 
 > **参考情報**
 > - [Power BI Embedded の価格](https://azure.microsoft.com/ja-jp/pricing/details/power-bi-embedded/)
-> - [Power BI Embedded とは](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-analytics-power-bi)
-> - [Power BI Embedded のよく寄せられる質問](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-faq)
-> - [顧客向けにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-customers)
-> - [組織向けにコンテンツを埋め込む](https://docs.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization)
+> - [Power BI Embedded とは](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-analytics-power-bi)
+> - [Power BI Embedded のよく寄せられる質問](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-faq)
+> - [顧客向けにコンテンツを埋め込む](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-customers)
+> - [組織向けにコンテンツを埋め込む](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization)
 ---
 
 ---
@@ -133,8 +133,8 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 
 ※1：マイワークスペース内のみ
 ※2：別途ユーザーライセンスが必要
-※3：[Premiumデータフロー機能](https://docs.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-premium-features) は利用できない
-※4：Power BI Desktopから発行する際の[アップロード時のサイズ上限が10GBまで](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-large-models)。
+※3：[Premiumデータフロー機能](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-premium-features) は利用できない
+※4：Power BI Desktopから発行する際の[アップロード時のサイズ上限が10GBまで](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-large-models)。
 
 > [!NOTE]
 > Premium Per Capacity とEmbedded につきましては、Premium Generation 2 及びEmbedded Generation 2 の仕様を基づき記載しております。
@@ -152,8 +152,8 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 | Premium Per User | 〇 | 〇 | 〇 | 〇 |
 
 > **参考情報**
-> - [同僚や他のユーザーと Power BI ダッシュボードやレポートを共有する](https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-share-dashboards)
-> - [Power BI Premium Per User について](https://docs.microsoft.com/ja-jp/power-bi/admin/service-premium-per-user-faq)
+> - [同僚や他のユーザーと Power BI ダッシュボードやレポートを共有する](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-share-dashboards)
+> - [Power BI Premium Per User について](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-per-user-faq)
 
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
