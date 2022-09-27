@@ -1,6 +1,6 @@
 ---
 title: Power BI でフォルダー・SharePointフォルダーコネクタを使用した増分更新
-date: 2022-09-30 15:00:00 
+date: 2022-09-27 18:00:00 
 tags:
   - Power BI
   - Power Query
