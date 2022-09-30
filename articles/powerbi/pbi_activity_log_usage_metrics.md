@@ -134,7 +134,6 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 > **参考情報：**
 > - [Get-PowerBIActivityEvent コマンドレット - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#get-powerbiactivityevent-cmdlet)
 
-
 ---
 ## 監査ログ
 ---
