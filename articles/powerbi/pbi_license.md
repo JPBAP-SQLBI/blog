@@ -120,7 +120,7 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 | **レポート・データセット発行** | 〇 ※1 | 〇 | 〇 | × ※2 | × ※2 |
 | **コンテンツ共有と共同作業** | × | 〇 | 〇 | × ※2 | × ※2 |
 | **無償ユーザーのコンテンツ閲覧** | × | × | × | 〇 | × |
-| **ストレージ上限** | 10GB/ユーザー | 10GB/ユーザー | 100TB/テナント | 100TB/容量 | 100TB/容量 |
+| **ストレージ上限** ※5 <br>① マイワークスペース<br>② 共有ワークスペース<br>③ Premiumワークスペース | ① 10GB/ ユーザー <br> ② なし <br>  ③ なし| ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ なし | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/テナント | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 |
 | **データセットサイズ制限** | 1GB | 1GB | 100GB ※4 | 25GB～100GB ※4 | 3GB～100GB ※4 |
 | **自動更新** | 8回/日 | 8回/日 | 48回/日 | 48回/日 | 48回/日 |
 | **データフロー** | × | 〇 ※3 | 〇 | 〇 | 〇 ※3 |
@@ -135,6 +135,7 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 ※2：別途ユーザーライセンスが必要
 ※3：[Premiumデータフロー機能](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-premium-features) は利用できない
 ※4：Power BI Desktopから発行する際の[アップロード時のサイズ上限が10GBまで](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-large-models)。
+※5：共有ワークスペースの総容量はライセンス数による上限がございます。詳細はこちらのブログ記事「[Power BI Pro のワークスペース容量について](../pbi_storage)」をご参照ください。
 
 > [!NOTE]
 > Premium Per Capacity とEmbedded につきましては、Premium Generation 2 及びEmbedded Generation 2 の仕様を基づき記載しております。
