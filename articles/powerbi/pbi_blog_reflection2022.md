@@ -31,7 +31,9 @@ tags:
 
 ### 検索キーワード “Power BI” : 日本
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Power BI","geo":"JP","time":"2017-11-27 2022-11-27"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=JP&q=Power%20BI","guestPath":"https://trends.google.co.jp:443/trends/embed/"}); </script>
+<div align="center">
+<img src="1.png">
+</div>
 
 </br>
 
