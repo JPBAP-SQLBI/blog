@@ -136,7 +136,11 @@ Power BI MVPの方が主体となって定期的に開催されている勉強�
 
 - [テクテク日記 (hatenablog.com)](https://powerbi.connpass.com/)
 弊社社員のブログですが、導入のお話から、中上級のユーザー向けにPower BIに関する役立つ技術情報を様々な範囲に渡って発信しております。 
-  
+
+- [CHRIS WEBB'S BI BLOG](https://blog.crossjoin.co.uk/)
+長年 BI 製品に携わってきた弊社社員のブログです。英語コンテンツですが、Power BI 内部のアーキテクチャである Analysis Services や DAX, Power Query などについて、より深い情報や洞察を発信しています。
+
+
 - [Guy in a Cube - Youtube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w) 
 弊社ベテラン社員の Adam と Patrickがいつも Power BI の幅広い機能や技術のことをわかりやすく解説している YouTube チャネルです。今までご紹介するコンテンツの中と違って、英語教材となりますが、日本語字幕による翻訳も可能ですし、とても有益な情報がたくさん含まれているので、Power BIを勉強する上で、欠かせない大事な教材です。
 
