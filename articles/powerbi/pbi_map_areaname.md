@@ -18,11 +18,12 @@ tags:
 Power BI のマップビジュアルは、地名ごとに集計された数値をマップ上に自動でバブル表示できるとても便利なビジュアルですが、データソースの地名の持ち方によっては地名が正常に認識されず、マップ上に結果が表示されないことがあります。
 今回はこの問題が起きたときの原因と対応策についてご紹介します。
 
+
+<!-- more -->
+
 <div align="center">
 <img src="image1.png">
 </div>
-
-<!-- more -->
 
 > [!IMPORTANT]  
 > 本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、
@@ -70,18 +71,15 @@ Power BI のマップビジュアルは Bing Maps（ https://www.bing.com/maps/ 
 <img src="image3.png">
 </div>
 
-
 ２．該当の列で右クリック > 値の置換 > 任意の地名を入力 > OK
 <div align="center">
 <img src="image4.png">
 </div>
 
-
 ３．データが置換されたことを確認
 <div align="center">
 <img src="image5.png">
 </div>
-
 
 ４．Power Query エディターを閉じて適用する
 <div align="center">
@@ -99,18 +97,17 @@ Power BI のマップビジュアルは Bing Maps（ https://www.bing.com/maps/ 
 > // 参考情報：[値の置換 (Power Query) - Microsoft サポート](https://support.microsoft.com/ja-jp/office/%E5%80%A4%E3%81%AE%E7%BD%AE%E6%8F%9B-power-query-28256517-f1e9-4dc3-832f-45786e9cf721)
 
 
+
 また補足ではございますが、よりマップビジュアルの精度を上げたいという場合は、
 地名ではなく緯度経度の情報もご利用をご検討いただけますと幸いでございます。
 
-<div align="center">
-<img src="image8.png">
-</div>
+
 
 > [!NOTE]
 > // 参考情報：[Power BI マップの視覚エフェクトに関するヒントとテクニック](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-map-tips-and-tricks#in-power-bi-tips-to-get-better-results-when-using-map-visualizations)
 > <div align="center">
-  <img src="image9.png">
-  </div>
+> <img src="image8.png">
+> </div>
 
 
 
