@@ -98,6 +98,7 @@ Power BI のマップビジュアルは Bing Maps（ https://www.bing.com/maps/ 
 
 
 
+
 また補足ではございますが、よりマップビジュアルの精度を上げたいという場合は、
 地名ではなく緯度経度の情報もご利用をご検討いただけますと幸いでございます。
 
@@ -105,13 +106,14 @@ Power BI のマップビジュアルは Bing Maps（ https://www.bing.com/maps/ 
 
 > [!NOTE]
 > // 参考情報：[Power BI マップの視覚エフェクトに関するヒントとテクニック](https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-map-tips-and-tricks#in-power-bi-tips-to-get-better-results-when-using-map-visualizations)
-> <div align="center">
-> <img src="image8.png">
-> </div>
+ <div align="center">
+ <img src="image8.png">
+ </div>
 
 
 
----
+
+
 
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
