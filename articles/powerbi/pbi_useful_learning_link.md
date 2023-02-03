@@ -134,7 +134,7 @@ Power BI を利用いただいている際に、問題が発生した場合の�
 Power BI MVPの方が主体となって定期的に開催されている勉強会となります。 
 勉強会の中では、PBIJP DAX Boot campなども開催されております。 
 
-- [テクテク日記 (hatenablog.com)](https://powerbi.connpass.com/)
+- [テクテク日記 (hatenablog.com)](https://marshal115.hatenablog.com/)
 弊社社員のブログですが、導入のお話から、中上級のユーザー向けにPower BIに関する役立つ技術情報を様々な範囲に渡って発信しております。 
 
 - [CHRIS WEBB'S BI BLOG](https://blog.crossjoin.co.uk/)
