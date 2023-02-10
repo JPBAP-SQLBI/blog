@@ -211,6 +211,6 @@ Power BI では、様々なタイプのデータセットを作成すること�
 > [参考情報]
 > [Power BI のリアルタイム ストリーミング](https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-real-time-streaming)
 
-以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
 
