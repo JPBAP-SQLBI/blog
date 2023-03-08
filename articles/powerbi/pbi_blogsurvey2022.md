@@ -18,7 +18,9 @@ tags:
 以下 [Read more] をクリックし、表示されるアンケートフォームからご回答ください。
 
 *こちらの[リンク](https://forms.microsoft.com/r/LfhqfuwNeg)からもアクセス可能です。
-
+*本記事はページのトップに表示されるよう更新日が未来の日付になっておりますのであらかじめご了承ください。
 <!-- more -->
+
+
 
 <iframe width="680px" height="600px" src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR8vbNkPEq5NBksLHn6yNV_lUOEhONDBTT1VJWElINUNLUDRCVkRTV0w1NC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
