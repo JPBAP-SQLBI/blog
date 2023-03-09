@@ -147,18 +147,10 @@ tags:
 
 </br>
 
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。 
+
 > **参考情報**
 > - [Power BI カスタム ビジュアルを取得する主なソース - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/developer/visuals/power-bi-custom-visuals)
 
-</br>
 
-以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
----
-
-**アンケートご協力のお願い**
-Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
-ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
-
-※　所要時間は1分程度となります。
-[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/) 
