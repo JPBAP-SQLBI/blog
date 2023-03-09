@@ -1,6 +1,6 @@
 ---
 title: 【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート
-date: 2099-12-31 00:00:00 
+date: 2022-11-30 00:00:00 
 tags:
   - Power BI
 ---
