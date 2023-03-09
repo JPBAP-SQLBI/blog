@@ -173,9 +173,18 @@ Web サイト解析として、滞在時間の傾向把握として使用され�
 [レポートのダウンロード(右クリックで[名前を付けてリンクを保存])](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_visual_heatmap/sample_pbix/heatmap_sample.pbix)
 
 
+> **参考情報**
+> - [How To Create A Power BI Heat Map | Enterprise DNA](https://blog.enterprisedna.co/power-bi-heat-map-a-custom-visualization-tutorial/)
+
+</br>
+
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
 ---
 
-> **参考情報**
-> - [How To Create A Power BI Heat Map | Enterprise DNA](https://blog.enterprisedna.co/power-bi-heat-map-a-custom-visualization-tutorial/)
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
