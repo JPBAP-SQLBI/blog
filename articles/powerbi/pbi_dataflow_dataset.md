@@ -147,16 +147,21 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 
 <p>
 
-
----
-
-以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
-
-
----
-
 > **本ブログの関連記事**
 > - [Power BI サービスのデータセット更新手順について](../pbi_refresh_settings/)
 > - [「インポート」と「Direct Query」データセットの違い](../storage_mode/)
 > - [「テーブルの列 ‘***’ が見つかりませんでした。」Power BI更新エラーについて](../pbi_refresh_error/)
 > - [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
+
+</br>
+
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
+
+---
+
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)

@@ -111,14 +111,20 @@ Power BI のマップビジュアルは Bing Maps（ https://www.bing.com/maps/ 
  </div>
 
 
-
-
-
-
-以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
-
-
----
+</br>
 
 > **本ブログの関連記事**
 > - [Power BIのマップビジュアル](../pbi_map_visual/)
+
+</br>
+
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
+
+---
+
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
