@@ -62,22 +62,12 @@ Power BI ライセンスを導入するにあたり、まずは利用人数と�
 | 　（４）　 | 　Pro + Premium Per User　 | ユーザー単位の導入パターン。一部ユーザーはPremium の機能（ページ分割されたレポート、高度なAI、データフローなど）を使いたいが、Premium Per Capacity を使用するほどの規模がない場合。Proライセンスが作成された共有容量にあるワークスペースのコンテンツはPremium Per User のユーザーもアクセスできるのに対して、Premium Per Userが作成したPremium のワークスペースのコンテンツはPremium per userのユーザーしかアクセスできません。 |
 | 　（５）　 | 　Pro + Premium Per Capacity + Premium Per User　 | （３）のPro + Premium Per Capacity のパターンと基本的に同じですが、Premium Per Capacity の容量を補完するために、Premium Per User ライセンスを利用する場合が想定されます。 |
 
-</br>
-
-> **本ブログの関連記事**
-> - [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
-
-</br>
-
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
 ---
 
-**アンケートご協力のお願い**
-Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
-ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+> **本ブログの関連記事**
+> - [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
 
-※　所要時間は1分程度となります。
-[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
 
 

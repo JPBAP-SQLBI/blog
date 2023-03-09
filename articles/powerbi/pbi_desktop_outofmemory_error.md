@@ -104,15 +104,4 @@ Power BI Desktop アプリは、実行している OS にあわせたアプリ�
 参考情報  
 [32 ビットと 64 ビットの Windows: よく寄せられる質問](https://support.microsoft.com/ja-jp/windows/32-%E3%83%93%E3%83%83%E3%83%88%E3%81%A8-64-%E3%83%93%E3%83%83%E3%83%88%E3%81%AE-windows-%E3%82%88%E3%81%8F%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E8%B3%AA%E5%95%8F-c6ca9541-8dce-4d48-0415-94a3faa2e13d?msclkid=5acd6ea5afc611ec8553bd3e73533aeb)   
 
-</br>
-
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
-
----
-
-**アンケートご協力のお願い**
-Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
-ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
-
-※　所要時間は1分程度となります。
-[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
