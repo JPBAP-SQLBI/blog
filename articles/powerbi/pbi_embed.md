@@ -118,6 +118,15 @@ Webに公開したレポートはインターネット上で公開されてし�
 |Embeddedによる埋め込み（組織向け）|・Embeddedライセンス<br>・閲覧者はProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている（Premium＋Freeライセンス）|.NET FrameworkやJavaなどのフレームワークを使用し、APIを用いてアプリケーションを開発する|SaaSサービス以外のWebアプリケーション|[組織向けの埋め込み BI 分析情報を向上させるため、Power BI 埋め込み分析アプリケーションにコンテンツを埋め込む](https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embed-sample-for-your-organization?tabs=net-core)|
 
 
-以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
+
+---
+
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
 
 
