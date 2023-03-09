@@ -119,3 +119,4 @@ Japan CSS Support Power BI Blog では、作成する記事やブログの品質
 
 ※　所要時間は1分程度となります。
 [【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
+

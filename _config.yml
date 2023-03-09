@@ -125,6 +125,29 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 
+cookieconsent:
+  enable: true
+  options: {
+             "palette": {
+               "popup": {
+                "background": "#efefef",
+                "text": "#404040"
+              },
+              "button": {
+                "background": "#8ec760",
+                "text": "#ffffff"
+              }
+             },
+             "theme": "classic",
+             "position": "top",
+             "static": true,
+             "content": {
+               "message": "当サイトでは、Googleアナリティクスを使用しており、データの収集のためにCookieを使用しています。\nこのデータは匿名で収集されており、個人を特定するものではありません。\nこの機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細はGoogleアナリティクスサービス利用規約のページやGoogleポリシーと規約ページをご覧ください。",
+               "dismiss": "通知を消去",
+               "link": "Cookie recipes",
+               "href": "https://policies.google.com/technologies/ads?hl=ja"
+             }
+           }
 
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-jpazure
