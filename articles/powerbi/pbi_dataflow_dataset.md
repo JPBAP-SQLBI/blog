@@ -130,12 +130,12 @@ Excel、Reporting Services、その他のデータ視覚化ツールなどでも
 | 利用者                   | すべてのビジネスユーザー、分析者                                              | データモデリングの実施者                                                     | レポート作成者                      | 
 | 使用言語                 | 操作箇所によって[M言語](https://learn.microsoft.com/ja-jp/powerquery-m/)、[DAX]((https://learn.microsoft.com/ja-jp/dax/))、SQLも利用可能           |[PowerQuery M言語](https://learn.microsoft.com/ja-jp/powerquery-m/)                                                             | [DAX](https://learn.microsoft.com/ja-jp/dax/)                                 | 
 | 編集操作場所             | Power BIサービス（クラウド）                        | Power BIサービス（クラウド）                                                 | Power BI Desktop（ローカル）        | 
-| レポートからの接続       | 〇（データセットが自動的に作成される）              | ×（Power BI Desktopでデータセットを作成する必要がある）                      | 〇                                  | 
+| レポートからの接続       | 〇 <br>（データセットが自動的に作成される）              | × <br>（Power BI Desktopでデータセットを作成する必要がある）                      | 〇                                  | 
 | 必要なライセンス | Premium Per User / Premium Per Capacity             | Pro / Premium Per User /      Premium Per Capacity / Embedded                                                 | Free / Pro / Premium Per User / Premium Per Capacity / Embedded     | 
-| Direct Query             | ×                                                   | 〇（Premium容量が必要）※1                                                   | 〇                                  | 
+| Direct Query             | ×                                                   | × <br>（一方、データフローとデータセットの間の接続は DirectQuery を利用可能）※1                                                   | 〇                                  | 
 | インポート               | 〇                                                  | 〇                                                                           | 〇                                  | 
 | データ更新のタイムアウト | 24時間                                              | Pro：2時間/テーブル、3時間/データフロー<br>Premium：24時間/データフロー　※2 | Pro：2時間<br>Premium：5時間　※3   | 
-| 増分更新                 | 〇                                                  | 〇（Premium機能、Pro利用不可）※4                                            | 〇 ※5                              | 
+| 増分更新                 | 〇                                                  | 〇 <br>（Premium機能、Pro利用不可）※4                                            | 〇 ※5                              | 
 |                          | 
 
 
