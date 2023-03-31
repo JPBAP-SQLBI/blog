@@ -72,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_theme_introduction/</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/</loc>
     
     <lastmod>2023-03-31</lastmod>
@@ -87,6 +80,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_theme_introduction/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_sensitivity-label/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_sensitivity-label/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -212,6 +212,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/</loc>
     
     <lastmod>2023-03-31</lastmod>
@@ -234,13 +241,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_areaname/</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -275,6 +275,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_field_parameter/</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/</loc>
     
     <lastmod>2023-03-31</lastmod>
@@ -283,13 +290,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_feature_roadmap/</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_field_parameter/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -387,13 +387,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blog_reflection2022/</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
     
     <lastmod>2023-03-31</lastmod>
@@ -402,6 +395,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_conditional-access/</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blog_reflection2022/</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -480,27 +480,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/Troubleshooting/</loc>
-    <lastmod>2023-03-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/Fiddler/</loc>
-    <lastmod>2023-03-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/tags/PSR/</loc>
-    <lastmod>2023-03-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/Power-BI/</loc>
     <lastmod>2023-03-31</lastmod>
     <changefreq>daily</changefreq>
@@ -551,6 +530,27 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/%E4%BD%BF%E7%94%A8%E7%8A%B6%E6%B3%81%E3%83%A1%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF/</loc>
+    <lastmod>2023-03-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Troubleshooting/</loc>
+    <lastmod>2023-03-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/Fiddler/</loc>
+    <lastmod>2023-03-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/PSR/</loc>
     <lastmod>2023-03-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
