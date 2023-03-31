@@ -91,7 +91,7 @@ ExpressRoute をご利用いただくにあたり、以下の2点を認識いた
 
 > **参考情報** 
 > - [Power BI Service へのアクセス制御② Azure Private Link](../pbi_privatelink)
-> - [Power BI へのセキュリティで保護されたアクセスのためのプライベート エンドポイン - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-security-private-links)
+> - [Power BI へのセキュリティで保護されたアクセスのためのプライベート エンドポイント - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-security-private-links)
 
 </br>
 
