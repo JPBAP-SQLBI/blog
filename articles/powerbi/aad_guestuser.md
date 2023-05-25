@@ -91,8 +91,7 @@ Azure Active Directory（AAD）からゲストユーザーを招待する方法�
 ただし、ゲストユーザーがコンテンツを閲覧するには、以下のライセンス条件が必要です。
 
 - ゲストユーザーにPower BI Pro ライセンスまたはPremium Per User ライセンスの付与
-- Premium Per Capacity のワークスペースで、ゲストユーザーにPower BI Free ライセンス、ProライセンスまたはPremium Per User ライセンスの付与
-（Freeライセンスは招待メールからアカウント作成すると、付与されます。）
+- Premium Per Capacity のワークスペースで、ゲストユーザーにはライセンスなしで閲覧可能
 - ゲストユーザーが本来所属しているテナントで、Power BI Pro ライセンスまたはPremium Per User ライセンスを所持している
 
 
