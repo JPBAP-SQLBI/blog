@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -79,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
+    
+    <lastmod>2023-05-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_theme_introduction/</loc>
     
     <lastmod>2023-05-31</lastmod>
@@ -93,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_ui_change/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -108,13 +115,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_timezone/</loc>
-    
-    <lastmod>2023-05-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_ui_change/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privatelink/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privatelink/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/</loc>
-    
-    <lastmod>2023-05-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/</loc>
     
     <lastmod>2023-05-31</lastmod>
@@ -255,6 +248,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_knownissue/</loc>
+    
+    <lastmod>2023-05-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -324,6 +324,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage/</loc>
+    
+    <lastmod>2023-05-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
     
     <lastmod>2023-05-31</lastmod>
@@ -338,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_endorsement/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -346,6 +353,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_disable_trial_version/</loc>
+    
+    <lastmod>2023-05-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -367,13 +381,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
-    
-    <lastmod>2023-05-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -408,6 +415,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blog_reflection2022/</loc>
+    
+    <lastmod>2023-05-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
     
     <lastmod>2023-05-31</lastmod>
@@ -416,13 +430,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_conditional-access/</loc>
-    
-    <lastmod>2023-05-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blog_reflection2022/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
