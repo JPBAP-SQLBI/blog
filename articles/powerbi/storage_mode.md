@@ -77,16 +77,9 @@ Power BI Desktop では、接続済みのテーブルに対して、「>」部�
 
 - 参考情報：[Power BI サービスのデータセット更新手順について](../pbi_refresh_settings/)
 
-また、Power BI Pro ライセンスのみお持ちで、共有容量へレポートとデータセットを発行する場合、アップロード可能な.pbix ファイルサイズの上限は1GB となります。Premium 容量を使用する場合は、もう少し上限が緩和されますが、詳細につきましては、下記ドキュメントをご確認ください。
+また、Power BI Pro ライセンスのみお持ちで、共有容量へレポートとデータセットを発行する場合、アップロード可能な.pbix ファイルサイズの上限は1GB となります。Premium 容量を使用する場合は、アップロードの上限が10GBまで緩和されます。詳細につきましては、下記ドキュメントをご確認ください。
 
-| 容量の種類 | 最大データセット サイズ | 
-| ---- | ---- | 
-| 共有、A1、A2、または A3  | 1 GB | 
-| A4 または P1 | 3 GB | 
-| A5 または P2 | 6 GB | 
-| A6 または P3 | 10 GB | 
-
-- 参考情報：[Power BI でのデータの更新 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#datasets-in-import-mode)
+- 参考情報：[Power BI Premium での大規模なデータセット | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-large-models)
 
 
 あまりにも大規模のデータを読み込む場合、データのリアルタイム性を保つ必要がある場合、またはデータソース側でユーザーごとのセキュリティー規則を設定していた場合、Direct Query モードのご利用をご検討ください。
