@@ -51,6 +51,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
@@ -69,7 +70,8 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        <a class="main-nav-link" href="https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary/">Power BI サポートについて</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">Microsoft サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -294,8 +296,6 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
 
 <script src="../../js/script.js"></script>
 
@@ -303,5 +303,28 @@
 
 
   </div>
+    
+  
+  <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+  <div id="cookie-banner"></div>
+  
+
 </body>
+
+
+<script>
+    function onConsentChanged(categoryPreferences) {
+        console.log("onConsentChanged", categoryPreferences);        
+    }
+
+    window.WcpConsent && WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
+        if (!err) {
+            siteConsent = _siteConsent;  //siteConsent is used to get the current consent          
+        } else {
+            console.log("Error initializing WcpConsent: "+ err);
+        }
+    }, onConsentChanged, WcpConsent.themes.light);
+</script>
+
+
 </html>

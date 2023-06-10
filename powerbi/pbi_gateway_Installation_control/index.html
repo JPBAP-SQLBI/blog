@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/image8.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/image9.png">
 <meta property="article:published_time" content="2023-01-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-06-08T06:15:06.117Z">
+<meta property="article:modified_time" content="2023-06-10T10:37:32.113Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Admin">
@@ -48,6 +48,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
@@ -66,7 +67,8 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        <a class="main-nav-link" href="https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary/">Power BI サポートについて</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">Microsoft サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -106,15 +108,16 @@
 
       </header>
       <div class="article-share">
-        Last Update: 
+        Published: 
         <a href="" class="article-date-single">
   <time datetime="2023-01-30T15:00:00.000Z" itemprop="datePublished">2023-01-31</time>
 </a>
         
         
+        
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+29815e5a-5b39-5fd3-83df-03430f267fb7%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+Platform%E7%AE%A1%E7%90%86%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%8B%E3%82%89%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9+%E3%83%87%E3%83%BC%E3%82%BF+%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%B6%E5%BE%A1%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_gateway_Installation_control%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_gateway_Installation_control.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_gateway_Installation_control.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/" data-id="climqv9vp001e0mkz4h2o9ebf" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/" data-id="clipv4ic5001e0mmo0rp2afaf" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -390,8 +393,6 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
 
 <script src="../../js/script.js"></script>
 
@@ -399,5 +400,28 @@
 
 
   </div>
+    
+  
+  <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+  <div id="cookie-banner"></div>
+  
+
 </body>
+
+
+<script>
+    function onConsentChanged(categoryPreferences) {
+        console.log("onConsentChanged", categoryPreferences);        
+    }
+
+    window.WcpConsent && WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
+        if (!err) {
+            siteConsent = _siteConsent;  //siteConsent is used to get the current consent          
+        } else {
+            console.log("Error initializing WcpConsent: "+ err);
+        }
+    }, onConsentChanged, WcpConsent.themes.light);
+</script>
+
+
 </html>
