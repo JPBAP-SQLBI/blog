@@ -127,7 +127,7 @@ pagination_dir: page
 
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-jpazure
-google_analytics:
+google_analytics: G-MZCPTY1J9T
 
 feed:
   type: atom
