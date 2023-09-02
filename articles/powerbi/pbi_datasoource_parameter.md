@@ -185,3 +185,12 @@ in
 -  [外部情報：How to Parameterize Data Sources in Power BI | phData](https://www.phdata.io/blog/how-to-parameterize-data-sources-power-bi/)
 -  [外部情報：Parameterize your data source! – Data – Marc](https://data-marc.com/2018/11/15/parameterize-your-data-source/)
 -  [ビデオ：Making data source parameters easy in Power BI Desktop - Guy in a Cube](https://www.youtube.com/watch?v=OnaDJkGOmIE)
+
+---
+
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
