@@ -6,12 +6,12 @@
   
   <title>Power BI Service でサービス プリンシパルを利用する | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームの亀田です。 Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: &amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#99;&amp;#111;&amp;#110;&amp;#x74;&amp;#111;&amp;#x73;&amp;#111;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;) のほか">
+  <meta name="description" content="こんにちは、Power BI サポート チームの亀田です。 Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: &amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#99;&amp;#x6f;&amp;#110;&amp;#116;&amp;#111;&amp;#x73;&amp;#x6f;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;) のほかに">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Power BI Service でサービス プリンシパルを利用する">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームの亀田です。 Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: &amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#101;&amp;#x40;&amp;#99;&amp;#111;&amp;#110;&amp;#x74;&amp;#111;&amp;#x73;&amp;#111;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;) のほか">
+<meta property="og:description" content="こんにちは、Power BI サポート チームの亀田です。 Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: &amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#99;&amp;#x6f;&amp;#110;&amp;#116;&amp;#111;&amp;#x73;&amp;#x6f;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;) のほかに">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/ServicePrincipal01.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/ServicePrincipal02.png">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/ServicePrincipal28.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/ServicePrincipal29.png">
 <meta property="article:published_time" content="2023-07-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-03T15:15:46.764Z">
+<meta property="article:modified_time" content="2023-09-14T08:26:45.110Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="サービス プリンシパル">
@@ -138,13 +138,13 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+52bd8796-9370-5adc-911f-076d3486448e%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+Service+%E3%81%A7%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9+%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B7%E3%83%91%E3%83%AB%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2FServicePrincipal%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2FServicePrincipal.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2FServicePrincipal.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/" data-id="clm3lhqp200i50mugfar3a01m" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/" data-id="clmiwq2j200i40lp056bmh7nj" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームの亀田です。</p>
-<p>Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: <a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#99;&#111;&#110;&#x74;&#111;&#x73;&#111;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#99;&#111;&#110;&#x74;&#111;&#x73;&#111;&#46;&#x63;&#x6f;&#x6d;</a>) のほかに、サービス プリンシパルを利用することでもリソースにアクセスすることが可能です。Power BI では、レポートを他サービス/アプリケーションに埋め込む (Power BI Embedded) 場合や、REST API を実行する場合に利用されます。</p>
+<p>Azure Active Directoryでは、皆さまが普段利用されているユーザー アカウント (例: <a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#99;&#x6f;&#110;&#116;&#111;&#x73;&#x6f;&#46;&#x63;&#111;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#99;&#x6f;&#110;&#116;&#111;&#x73;&#x6f;&#46;&#x63;&#111;&#x6d;</a>) のほかに、サービス プリンシパルを利用することでもリソースにアクセスすることが可能です。Power BI では、レポートを他サービス/アプリケーションに埋め込む (Power BI Embedded) 場合や、REST API を実行する場合に利用されます。</p>
 <p>本記事では、サービス プリンシパルについて説明し、例として PowerShell から REST API <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/rest/api/power-bi/admin/get-activity-events">Get Activity Events</a> を実行する方法や、Power Automate からこの REST API を実行する方法についてご案内いたします。</p>
 <span id="more"></span>
 
@@ -179,7 +179,7 @@
 <p>サービス プリンシパルは、アプリケーションが使用される各テナントで作成され、グローバルに一意なアプリ オブジェクトが参照されます。 サービス プリンシパル オブジェクトには、特定のテナント内でアプリが実際に実行できること、アプリにアクセスできるユーザー、アプリからアクセスできるリソースを定義します。</p>
 <p>参考# <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#service-principal-object">サービス プリンシパル オブジェクト</a></p>
 </blockquote>
-<p>普段皆さまが利用しているユーザー アカウント (例: <a href="mailto:&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#64;&#99;&#x6f;&#110;&#x74;&#x6f;&#115;&#111;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#64;&#99;&#x6f;&#110;&#x74;&#x6f;&#115;&#111;&#x2e;&#x63;&#x6f;&#109;</a>) は、人間が利用することを想定したアカウントとなります。そのため、スケジュールで実行することが想定されるようなスクリプトの場合には、ユーザー アカウントを利用することは推奨されず、サービス プリンシパルを利用することが推奨されます。</p>
+<p>普段皆さまが利用しているユーザー アカウント (例: <a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#x40;&#99;&#x6f;&#110;&#x74;&#x6f;&#115;&#x6f;&#46;&#99;&#x6f;&#109;">&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#x40;&#99;&#x6f;&#110;&#x74;&#x6f;&#115;&#x6f;&#46;&#99;&#x6f;&#109;</a>) は、人間が利用することを想定したアカウントとなります。そのため、スケジュールで実行することが想定されるようなスクリプトの場合には、ユーザー アカウントを利用することは推奨されず、サービス プリンシパルを利用することが推奨されます。</p>
 <p>例えば、以下のような要件では、ユーザー アカウントではなくサービス プリンシパルを利用することで業務負荷を低減することが可能な場合があります。サービス プリンシパルでは、証明書またはシークレットを利用した認証を行いますが、例えば、シークレット キーの有効期限は最長2年となっているため、パスワードの有効期限ポリシーよりも有効期限が長い場合には、更新作業の頻度を抑えることが可能です。</p>
 <ul>
 <li>業務での利用のため、スクリプトによってREST APIを実行し、アクティビティ ログを取得している。</li>
