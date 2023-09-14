@@ -176,7 +176,6 @@ Power BI サービスで使用するには、[管理ポータル]>[テナント�
 こちらのマップビジュアルはAzure マップが使用されており、Azure マッププラットフォームへのアクセスを許可するために、ネットワーク環境に応じて以下のURLを許可する必要がございます。
 - https://atlas.microsoft.com
 
-上述で紹介したBing マップを使用したビジュアルと異なり、緯度経度のデータを使用する必要があります。
 
 また、Azure マップには、多彩なマップレイヤーが用意されており、例えば、バブルレイヤー、3D 棒グラフレイヤー、参照レイヤー（GeoJSON ファイルを使用する）、タイル レイヤー、トラフィックのオーバーレイなどをご利用いただけます。
 
@@ -226,8 +225,8 @@ Power BI サービスで使用するには、[管理ポータル]>[テナント�
 
 
 > **参考情報**
-> - [Power BI 用 Azure Maps ビジュアルのプレビューを開始 | Azure のブログと更新プログラム | Microsoft Azure](https://azure.microsoft.com/ja-jp/blog/azure-maps-power-bi-visual-now-in-preview/)
-> - [Get started with Azure Maps Power BI visual - Microsoft Azure Maps | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-get-started?context=%2Fpower-bi%2Fcreate-reports%2Fcontext%2Fcontext)
+> - [Azure Maps の Power BI 視覚エフェクトの概要 | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-get-started)
+> - [Azure Maps Power BI ビジュアルのジオコーディング | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-geocode)
 > - [Azure Maps Power BI ビジュアルのレイヤーの概要 | Microsoft Docs](https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-understanding-layers)
 
 <br>
