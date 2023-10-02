@@ -50,11 +50,11 @@ Microsoft Store を利用できる場合や、その後自動更新をしたい�
 
 ### <font color="HotPink">比較表 </font>   
 
-|  | Microsoft Store からストアアプリとしてインストール  | ダウンロードセンターからインストーラをダウンロードしてインストール  |
+|  | ダウンロードセンターからインストーラをダウンロードしてインストール  | Microsoft Store からストアアプリとしてインストール  |
 | :-: | - | - |
 | 最小要件  | ・Windows 8.1 または Windows Server 2012 R2 以降 <br>・.NET 4.6.2 以降 <br>・メモリ (RAM): 2 GB 以上使用可能、4 GB 以上を推奨) <br>・WebView2 <br>その他以下公開情報を参照 <br>[最小要件](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)  | ・Windows 8.1 または Windows Server 2012 R2 以降 <br>・.NET 4.6.2 以降 <br>・メモリ (RAM): 2 GB 以上使用可能、4 GB 以上を推奨) <br>・WebView2 <br>その他以下公開情報を参照 <br>[最小要件](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements)  |
 | 金額  | 無償 | 無償  |
-| インストールに必要な権限  | 標準ユーザーの権限にてインストール可能  | 管理者特権が必要  |
+| インストールに必要な権限  | 管理者特権が必要  | 標準ユーザーの権限にてインストール可能  |
 | インストールパス（既定）  | C:\Program Files\Microsoft Power BI Desktop\(既定)  | C:\Program Files\WindowsApps  |
 | 更新方法  | ダウンロードセンターから都度インストーラを入手  | 自動更新が可能  |
 | 更新頻度  | 月1回程度（マイナーアップデートが発生することもあり） <br>ご参考：[Power BIのアップデート情報について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_feature_roadmap/)  | 月1回程度（マイナーアップデートが発生することもあり） <br>ご参考：[Power BIのアップデート情報について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_feature_roadmap/)  |
