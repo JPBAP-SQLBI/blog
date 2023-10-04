@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/7.jpg">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/8.jpg">
 <meta property="article:published_time" content="2023-09-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T11:22:29.638Z">
+<meta property="article:modified_time" content="2023-10-04T05:44:07.699Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI Desktop">
@@ -116,13 +116,13 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+fb1821f6-1823-5745-ad79-986df7054fa9%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5Bpbix+%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A0%BC%E7%B4%8D%E5%A0%B4%E6%89%80%E3%81%8C%E5%A4%89%E6%9B%B4%E3%81%95%E3%82%8C%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E5%AF%BE%E5%87%A6%E7%AD%96%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_changing_datasource_file_place%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_changing_datasource_file_place.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_changing_datasource_file_place.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/" data-id="cln8sxef4000c0mnwcn178pzk" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/" data-id="clnbbpz1j000c0moe7ipn6w46" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チーム 丸山です。</p>
-<p>Excel ファイルや CSV ファイルをデータソースにして Power BI レポートを作成したあと、「ファイルの格納場所が変更になる」という場合がございます。<br>その場合、基本的にはレポートを新規作成して新しい格納場所にあるファイルに接続をしますが、既存レポートが作りこんだ内容である場合、「そのレポートの作りを残したままデータソースの接続先だけを変更したい」というお問い合わせがよくあります。今回はその代表的な対処策をご紹介します。</p>
+<p>Excel ファイルや CSV ファイルをデータソースにして Power BI レポートを作成したあと、「ファイルの格納場所が変更になる」という場合がございます。<br>その場合、基本的にはレポートを新規作成して新しい格納場所にあるファイルに接続をしますが、既存レポートが作りこんだ内容である場合、「そのレポートの作りを残したままデータソースの接続先だけを変更したい」というお問い合わせがよくあります。今回はその代表的な対処策を１つご紹介します。</p>
 <span id="more"></span>
 <div align="center">
 <img src="1.jpg">
@@ -143,9 +143,9 @@
 <h2 id="データソースのファイルの格納場所が変更される場合の対処策"><a href="#データソースのファイルの格納場所が変更される場合の対処策" class="headerlink" title="データソースのファイルの格納場所が変更される場合の対処策"></a>データソースのファイルの格納場所が変更される場合の対処策</h2><hr>
 <p>Power BI Desktop で pbixファイルを開いて、Power Query エディターで、データソースの接続部分を新しい接続先に差し替えます。具体的な手順は以下です。</p>
 <ol>
-<li><p>念のため、対象の pbix ファイルをコピーして、そのコピーを開きます。</p>
+<li><p>バックアップとして、対象の pbix ファイルをコピーしておきます。</p>
 </li>
-<li><p>「データの変換」から Power Query エディターを開きます。</p>
+<li><p>対象の pbix ファイルを開き、「データの変換」から Power Query エディターを開きます。</p>
 <div align="center">
 <img src="2.jpg">
 </div></li>
@@ -204,6 +204,7 @@ Power BI サービスにレポートを発行している場合は、再度、�
 
 </br>
 
+<p>上記でご紹介した内容はあくまで１つの方法論でございます。<br>結論としては、Power Query 内のデータソースへの接続部分のクエリで、データソースの変更後の格納場所や名前を問題なく指定することができれば解決となります。 </p>
 <p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
 </br>
 
