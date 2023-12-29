@@ -1,7 +1,7 @@
 
 ---
 title: Power BI のユーザーアクティビティ追跡方法の比較
-date: 2022-07-29 15:00:00 
+date: 2023-12-29 14:00:00 
 tags:
   - Power BI　　
   - Audit Log
@@ -11,6 +11,8 @@ tags:
   - アクティビティログ
   - 利用状況メトリック
   - 使用状況メトリック
+  - Admin Monitoring
+  - 管理者監視ワークスペース
 ---
 
 
@@ -26,6 +28,16 @@ Power BI のユーザーアクティビティの確認方法について、例�
 > 本記事編集時点と実際の機能に相違がある場合がございます。  
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
 
+---
+## 更新履歴
+---
+<span style="color: red;">
+Update: 2023/12/29
+</span>
+
+Admin Monitoring ワークスペースの機能紹介を追加いたしました。
+- [Admin Monitoring for Tenant Admins | Microsoft Power BI ブログ](https://powerbi.microsoft.com/ja-jp/blog/announcing-the-new-admin-monitoring-workspace-for-tenant-admins-public-preview/)
+
 
 ---
 ## Power BIアクティビティログ 
@@ -36,7 +48,7 @@ Power BI内のユーザーアクティビティを追跡する方法は、主に
 1. [利用状況メトリック](#利用状況メトリック)
 2. [ActivityEvents](#ActivityEvents)
 3. [監査ログ](#監査ログ)
-
+4. [管理者監視ワークスペース（Admin Monitoring）](#管理者監視ワークスペース（admin-monitoring）)
 
 以下にてそれぞれご紹介いたします。
 
@@ -87,11 +99,11 @@ Power BI内のユーザーアクティビティを追跡する方法は、主に
 ## ActivityEvents
 ---
 
-PowerShellを使ってユーザーアクティビティのログを出力できる機能ですが、Power BIサービス上の操作画面はございません。
+PowerShell を使ってユーザーアクティビティのログを出力できる機能ですが、Power BI サービス上の操作画面はございません。
 
 
 #### ■前提条件
-- Power BI 管理者、またはグローバル管理者のアカウントでサインインしていること
+- Power BI (Fabric) 管理者、またはグローバル管理者のアカウントでサインインしていること
 - PowerShellでモジュールのインストール
 
 ```CMD
@@ -132,7 +144,7 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 
 
 > **参考情報：**
-> - [Get-PowerBIActivityEvent コマンドレット - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#get-powerbiactivityevent-cmdlet)
+> - [アクティビティ ログの使用 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-auditing#use-the-activity-log)
 
 ---
 ## 監査ログ
@@ -163,7 +175,49 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 </div>
 
 > **参考情報：**
-> - [監査ログの使用 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-auditing#use-the-audit-log)
+> - [監査ログの使用 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-auditing#use-the-audit-log)
+
+
+---
+## 管理者監視ワークスペース（Admin Monitoring）
+---
+
+2023年5月から新規に公開された管理者監視ワークスペース（Admin Monitoring）という機能では、「Feature Usage and Adoption」 と 「Purview Hub」 の二つのレポートが用意されています。
+
+「Feature Usage and Adoption」の方は、監査ログに基づいて構築された分析ビューが用意されており、誰が何をしているかを理解するのに役立ち、特定の傾向、パターン、アクティビティを特定することで Power BI をより適切に管理できます。
+
+<div align="center">
+<img src="https://powerbiblogscdn.azureedge.net/wp-content/uploads/2023/05/Picture1.png">
+</div>
+
+<br>
+「Purview Hub」の方は、機密データと項目の承認に関する分析情報を提供するレポートが含まれており、データ カタログ、情報保護、データ損失防止、監査など、Microsoft Purview ガバナンスおよびコンプライアンス ポータルのより高度な機能へのリンクとしても機能します。
+
+<div align="center">
+<img src="https://learn.microsoft.com/ja-jp/fabric/governance/media/use-microsoft-purview-hub/microsoft-purview-hub-full-report-admin.png">
+</div>
+
+#### ■前提条件
+- Power BI (Fabric) 管理者、またはグローバル管理者のアカウントでサインインしている必要があります。
+- ワークスペース内のレポートを閲覧するには、 Power BI Pro または Premium Per User (PPU) のライセンスが必要です。
+
+#### ■利用手順
+
+1. 管理者アカウントにて、[Power BIサービス](https://app.powerbi.com/)へサインインし、[ワークスペース] > [Admin monitoring] の順で選択します。
+<div align="center">
+<img src="admin_monitoring1.png">
+</div>
+
+2. ワークスペース内に、自動的に「Feature Usage and Adoption」と「Purview Hub」という二つのレポート及びセマンティックモデル（データセット）が生成されています。
+<div align="center">
+<img src="admin_monitoring2.png">
+</div>
+
+> **参考情報：**
+> - [管理者監視ワークスペースとは? - Microsoft Fabric | Microsoft Docs](https://learn.microsoft.com/ja-jp/fabric/admin/monitoring-workspace)
+> - [機能の使用状況と導入レポート - Microsoft Fabric | Microsoft Docs](https://learn.microsoft.com/ja-jp/fabric/admin/feature-usage-adoption)
+> - [Admin Monitoring for Tenant Admins | Microsoft Power BI ブログ](https://powerbi.microsoft.com/ja-jp/blog/announcing-the-new-admin-monitoring-workspace-for-tenant-admins-public-preview/)
+> - [Microsoft Fabric の Microsoft Purview ハブ (プレビュー)- Microsoft Fabric | Microsoft Docs](https://learn.microsoft.com/ja-jp/fabric/governance/use-microsoft-purview-hub?tabs=admin-view)
 
 
 ---
@@ -172,17 +226,18 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 
 以下にて各追跡方法について表にまとめました。
 
-|                          | 監査ログ                                                                                                                        | PowerShell ActivityEvents                                                     | 利用状況メトリックレポート                                                     | 
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| 目的                     | Power BIおよびその他サービスのユーザーアクティビティの追跡                                                                      | Power BIユーザー アクティビティの追跡                                         | Power BIのレポートの利用状況確認                                               | 
-| 取得項目範囲             | Power BI 監査イベントに加えて、SharePoint Online、Exchange Online、Dynamics 365、及びその他のサービスからのイベントが含まれます | Power BI 監査イベントのみ                                                     | Power BI のワークスペース上のレポートの閲覧状況のみ                                      | 
-| 必要な権限               | ・ View-Only Audit Logs (表示専用監査ログ)<br>・グローバル管理者<br>・監査人                                                    | ・グローバル管理者<br>・Power Platform 管理者<br>・Power BI 管理者            | ワークスペースの管理者・メンバー・共同作成者                                   | 
-| 必要なPower BIライセンス | ー                                                                                                                              | ー                                                                            | Power BI Pro または Premium Per User (PPU) のライセンス                        | 
-| 保管期間                 | 90日間※                      | 30日間（一度に1日分のみ取得可能）                                             | 30日間                                                                         | 
-| タイムラグ               | 監査を有効にしてから監査データを表示できるようになるまで、最大で 48 時間の遅延が発生する場合があります。                        | Power BI イベントを取得するまでに、最大 30 分の遅延が発生することがあります。 | 新しい利用状況データをインポートするには、最大で 24 時間かかることがあります。 | 
-|                          | 
+|       | **監査ログ**  | **PowerShell ActivityEvents**  | **利用状況メトリックレポート**  |  **Admin Monitoring** | 
+| -------- | -------- | -------- | -------- | -------- | 
+| **目的** | Power BI およびその他サービスのユーザーアクティビティの追跡   | Power BI ユーザー アクティビティの追跡 | Power BIのレポートの利用状況確認（ワークスペース単位） |  Fabric（ Power BI 含め）の各機能の利用状況確認（テナント単位） | 
+| **取得項目範囲**    | Power BI 監査イベントに加えて、SharePoint Online、Exchange Online、Dynamics 365、及びその他のサービスからのイベントが含まれます | Power BI 監査イベントのみ  | Power BI のワークスペース上のレポートの閲覧状況のみ | Fabric（ Power BI 含め）テナント内の機能の利用状況のみ   | 
+| **必要な権限**   | ・ View-Only Audit Logs (表示専用監査ログ)<br>・グローバル管理者<br>・監査人    | ・グローバル管理者<br>・Power Platform 管理者<br>・Power BI (Fabric) 管理者  | ワークスペースの管理者・メンバー・共同作成者      |・グローバル管理者<br>・Power BI (Fabric) 管理者  | 
+| **必要なPower BIライセンス** |  -  | -   - | Power BI Pro または Premium Per User (PPU) のライセンス | Power BI Pro または Premium Per User (PPU) のライセンス | 
+| **保管期間**   | 90日間 / 180日間※ | 30日間（一度に1日分のみ取得可能）| 30日間 | 30日間  | 
+| **タイムラグ** | 監査を有効にしてから監査データを表示できるようになるまで、最大で 48 時間の遅延が発生する場合があります。                        | Power BI イベントを取得するまでに、最大 30 分の遅延が発生することがあります。 | 新しい利用状況データをインポートするには、最大で 24 時間かかることがあります。 | 1 日 1 回、自動的に更新され、管理者ワークスペースに初めてアクセスしてから約 10 分後に更新が行われます。 | 
+ 
 
-※　Office 365 E5 または Microsoft 365 E5 ライセンスの場合、監査ログ90日間（最長1年間）を保持することができます。E5 ライセンスに加えて、10 年間の監査ログ保持のアドオン ライセンスもございます。
+※　監査 (Standard) の既定の保持期間が 90 日から 180 日に変更されました。 2023 年 10 月 17 日より前に生成された監査 (Standard) ログは、90 日間保持されます。 2023 年 10 月 17 日以降に生成された監査 (Standard) ログは、新しい既定の保持期間の 180 日に従います。
+また、Office 365 E5 または Microsoft 365 E5 ライセンスの場合、監査ログ180日間（最長1年間）を保持することができます。E5 ライセンスに加えて、10 年間の監査ログ保持のアドオン ライセンスもございます。
 
 > 参考情報：
 > - [監査ログの保持ポリシーを管理する](https://learn.microsoft.com/ja-jp/microsoft-365/compliance/audit-log-retention-policies?view=o365-worldwide)
