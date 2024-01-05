@@ -48,7 +48,7 @@ Power BI内のユーザーアクティビティを追跡する方法は、主に
 1. [利用状況メトリック](#利用状況メトリック)
 2. [ActivityEvents](#ActivityEvents)
 3. [監査ログ](#監査ログ)
-4. [管理者監視ワークスペース（Admin Monitoring）](#管理者監視ワークスペース（admin-monitoring）)
+4. [管理者監視ワークスペース（Admin Monitoring）](#管理者監視ワークスペース（Admin-Monitoring）)
 
 以下にてそれぞれご紹介いたします。
 
