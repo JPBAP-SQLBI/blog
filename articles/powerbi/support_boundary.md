@@ -98,8 +98,8 @@ Tel ： 0120-41-6755 (平日 9：00 - 17：30)
 
 ### <font color="LightCoral"> 2. カスタム ビジュアルに関するお問合せ</font>
 
-#### <font color="DarkSalmon">2-1. サード パーティ製カスタム ビジュアルの仕様、機能、トラブルシューティングなどのお問合せ</font>
-各カスタム ビジュアルの開発元へお問合せください。  
+#### <font color="DarkSalmon">2-1. カスタム ビジュアルの仕様、機能、トラブルシューティングなどのお問合せ</font>
+サードパーティー製のカスタム ビジュアルにつきましては、各ビジュアルの開発元へお問合せください。  
 Appstore（Business Apps – Microsoft AppSource） > 該当アプリ > Details + support tab > Support, Helpより開発元に問い合わせることが可能な場合があります。
 
 <div align="center">
@@ -117,11 +117,13 @@ Appstore（Business Apps – Microsoft AppSource） > 該当アプリ > Details 
 
 <div align="center">
 <img src="3.png">
-</div>
- 
+</div>  
+
+<br>
 (2) Power BI サポートチームへの問い合わせ  
 新しいサポート要求をする際に、“カスタム ビジュアルに関する問題” としてお問い合わせください。  
 その際に、以下情報を併せてお寄せいただけますとスムーズに調査が開始できますので、可能な限りご協力くださいますようお願いいたします。  
+
 
 ・カスタム ビジュアル名  
 ・ご利用のPower BI Desktopおよび該当カスタム ビジュアルのバージョン情報  
