@@ -99,7 +99,7 @@ Tel ： 0120-41-6755 (平日 9：00 - 17：30)
 ### <font color="LightCoral"> 2. カスタム ビジュアルに関するお問合せ</font>
 
 #### <font color="DarkSalmon">2-1. カスタム ビジュアルの仕様、機能、トラブルシューティングなどのお問合せ</font>
-サードパーティー製のカスタム ビジュアルにつきましては、各ビジュアルの開発元へお問合せください。  
+サードパーティー製のカスタム ビジュアルにつきましては、ビジュアルの開発元へお問合せください。  
 Appstore（Business Apps – Microsoft AppSource） > 該当アプリ > Details + support tab > Support, Helpより開発元に問い合わせることが可能な場合があります。
 
 <div align="center">
