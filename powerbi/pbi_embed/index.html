@@ -6,12 +6,12 @@
   
   <title>Power BI レポートの埋め込み方法の種類について | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームの山崎です。    Power BIで作成したレポートをPower BI サービス上で共有する方法は以前に以下Blogでご紹介させていただきましたが、WebサイトやSharePoint Online、Webアプリケーションにレポートを埋め込むことができるのをご存じでしょうか？他のWebサイトなどのコンテンツにレポートを埋め込むことは、より多くのユーザー">
+  <meta name="description" content="こんにちは、Power BI サポート チームの山崎です。    Power BI で作成したレポートを Power BI サービス上で共有する方法は以前に以下 Blog でご紹介させていただきましたが、Web サイトや SharePoint Online、Web アプリケーションにレポートを埋め込むことができるのをご存じでしょうか？他の Web サイトなどのコンテンツにレポートを埋め込むことは、">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Power BI レポートの埋め込み方法の種類について">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームの山崎です。    Power BIで作成したレポートをPower BI サービス上で共有する方法は以前に以下Blogでご紹介させていただきましたが、WebサイトやSharePoint Online、Webアプリケーションにレポートを埋め込むことができるのをご存じでしょうか？他のWebサイトなどのコンテンツにレポートを埋め込むことは、より多くのユーザー">
+<meta property="og:description" content="こんにちは、Power BI サポート チームの山崎です。    Power BI で作成したレポートを Power BI サービス上で共有する方法は以前に以下 Blog でご紹介させていただきましたが、Web サイトや SharePoint Online、Web アプリケーションにレポートを埋め込むことができるのをご存じでしょうか？他の Web サイトなどのコンテンツにレポートを埋め込むことは、">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/1.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/2.png">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/4.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/5.png">
 <meta property="article:published_time" content="2021-11-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-28T00:44:30.718Z">
+<meta property="article:modified_time" content="2024-02-28T01:52:14.614Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI　　">
 <meta property="article:tag" content="埋め込み">
@@ -117,47 +117,47 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+c1377508-c00e-59fb-92ae-327c9e6119e9%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E6%96%B9%E6%B3%95%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_embed%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_embed.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_embed.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/" data-id="clt52quq200170mpg51j54c3z" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/" data-id="clt555yji00170nscaszl0pyd" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームの山崎です。   </p>
-<p>Power BIで作成したレポートをPower BI サービス上で共有する方法は以前に以下Blogでご紹介させていただきましたが、WebサイトやSharePoint Online、Webアプリケーションにレポートを埋め込むことができるのをご存じでしょうか？<br>他のWebサイトなどのコンテンツにレポートを埋め込むことは、より多くのユーザーにレポートを閲覧してもらいやすいようにするために大変有効な方法であり、弊社サポートへお問い合わせとしてもいただくことが多い課題となります。<br>埋め込み方法ごとに必要なライセンスや手順などが異なりますので、本ブログではメリット・デメリットもあわせてご紹介いたします。</p>
+<p>Power BI で作成したレポートを Power BI サービス上で共有する方法は以前に以下 Blog でご紹介させていただきましたが、Web サイトや SharePoint Online、Web アプリケーションにレポートを埋め込むことができるのをご存じでしょうか？<br>他の Web サイトなどのコンテンツにレポートを埋め込むことは、より多くのユーザーにレポートを閲覧してもらいやすいようにするために大変有効な方法であり、弊社サポートへお問い合わせとしてもいただくことが多い課題となります。<br>埋め込み方法ごとに必要なライセンスや手順などが異なりますので、本ブログではメリット・デメリットもあわせてご紹介いたします。</p>
 <span id="more"></span>
 
 <p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/">Power BIサービスでのコンテンツ共有方法の種類</a>  </p>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、　　</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 <hr>
 <h2 id="埋め込み方法の種類について"><a href="#埋め込み方法の種類について" class="headerlink" title="埋め込み方法の種類について"></a>埋め込み方法の種類について</h2><p>レポートの埋め込み方法は、以下４つに分けられ、対象レポートの “ファイル” ＞ “レポートの埋め込み” から埋め込み操作を開始できます。<br>選択肢に表示されない場合は、Power BI 管理者にて機能の使用を制限されているか、各埋め込み機能における制限事項に該当している可能性がありますので、本メールの最後にご案内する参考情報にて詳細をご確認ください。</p>
-<p>・SharePoint Online<br>・Web サイトまたはポータル<br>・Webに公開（パブリック）<br>・Power BI Embeddedによる埋め込み（開発者playグラウンド）</p>
+<p>・SharePoint Online<br>・Web サイトまたはポータル<br>・Web に公開（パブリック）<br>・Power BI Embedded による埋め込み（開発者playグラウンド）</p>
 <div align="center">
 <img src="1.png">
 </div>
 
 
-<h4 id="１．SharePoint-Online-にレポート-Web-パーツを埋め込む"><a href="#１．SharePoint-Online-にレポート-Web-パーツを埋め込む" class="headerlink" title="１．SharePoint Online にレポート Web パーツを埋め込む"></a>１．SharePoint Online にレポート Web パーツを埋め込む</h4><p>SharePoint Online 用レポート Web パーツとして、Power BI レポートを SharePoint Online のページに簡単に埋め込むことができます。<br>簡単ですべてのPower BI ユーザーにおいて最も頻繁に使用されている方法となりますが、Power BI サービス上のレポートにSharePoint Online上でアクセスすることになりますので、共有されるときと同様に閲覧する側がProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に<br>作成されている必要があります。</p>
-<p>//  要件<br>・閲覧する側がProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている<br>・閲覧者はPower BIにサインインする必要がある<br>・閲覧者は、対象のレポートに対して閲覧権限を持っている<br>　（Power BI サービス上で、管理者が明示的に設定する必要があり、埋め込みによって自動的には設定されません。）</p>
+<h4 id="１．SharePoint-Online-にレポート-Web-パーツを埋め込む"><a href="#１．SharePoint-Online-にレポート-Web-パーツを埋め込む" class="headerlink" title="１．SharePoint Online にレポート Web パーツを埋め込む"></a>１．SharePoint Online にレポート Web パーツを埋め込む</h4><p>SharePoint Online 用レポート Web パーツとして、Power BI レポートを SharePoint Online のページに簡単に埋め込むことができます。<br>簡単ですべてのPower BI ユーザーにおいて最も頻繁に使用されている方法となりますが、Power BI サービス上のレポートに SharePoint Online 上でアクセスすることになりますので、共有されるときと同様に閲覧する側が Pro または PPU のライセンスを持っているか、対象のレポートが Premium 領域のワークスペース内に作成されている必要があります。  </p>
+<p>//  要件<br>・閲覧する側が Pro または PPU のライセンスを持っているか、対象のレポートが Premium 領域のワークスペース内に作成されている<br>・閲覧者は Power BI にサインインする必要がある<br>・閲覧者は、対象のレポートに対して閲覧権限を持っている<br>　（Power BI サービス上で、管理者が明示的に設定する必要があり、埋め込みによって自動的には設定されません。）</p>
 <div align="center">
 <img src="2.png">
 </div>
 
 
-<h4 id="２．Web-サイトまたはポータル"><a href="#２．Web-サイトまたはポータル" class="headerlink" title="２．Web サイトまたはポータル"></a>２．Web サイトまたはポータル</h4><p>URL または i Frame の埋め込みを受け取るあらゆるポータルにノーコードで、安全にレポートを埋め込むことができます。<br>上記１と同様、閲覧する側がProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている必要があります。</p>
-<p>//  要件<br>・閲覧する側がProまたはPPUのライセンスを持っているか、対象のレポートがPremium領域のワークスペース内に作成されている<br>・閲覧者はPower BIにサインインする必要がある<br>・閲覧者は、対象のレポートに対して閲覧権限を持っている<br>　（Power BI サービス上で、管理者が明示的に設定する必要があり、埋め込みによって自動的には設定されません。）</p>
+<h4 id="２．Web-サイトまたはポータル"><a href="#２．Web-サイトまたはポータル" class="headerlink" title="２．Web サイトまたはポータル"></a>２．Web サイトまたはポータル</h4><p>URL または i Frame の埋め込みを受け取るあらゆるポータルにノーコードで、安全にレポートを埋め込むことができます。<br>上記１と同様、閲覧する側が Pro または PPU のライセンスを持っているか、対象のレポートが Premium 領域のワークスペース内に作成されている必要があります。</p>
+<p>//  要件<br>・閲覧する側が Pro または PPU のライセンスを持っているか、対象のレポートが Premium 領域のワークスペース内に作成されている<br>・閲覧者は Power BI にサインインする必要がある<br>・閲覧者は、対象のレポートに対して閲覧権限を持っている<br>　（ Power BI サービス上で、管理者が明示的に設定する必要があり、埋め込みによって自動的には設定されません。）</p>
 <div align="center">
 <img src="3.png">
 </div>
 
 
-<h4 id="３．Webに公開（パブリック）"><a href="#３．Webに公開（パブリック）" class="headerlink" title="３．Webに公開（パブリック）"></a>３．Webに公開（パブリック）</h4><p>レポートをブログ記事、Web サイト、メールやソーシャル メディアなどに簡単に埋め込むことができます。<br>閲覧者はインターネット上のすべてのユーザーとなり、Power BI ライセンスは不要となります。<br>Webに公開したレポートはインターネット上で公開されてしまい、URLさえ辿り着けば誰でも閲覧できてしまいますので、機密データでのWeb公開はおすすめしません。<br>本機能を使用される場合は、取り扱うデータに十分ご注意くださいますようお願いいたします。</p>
+<h4 id="３．Webに公開（パブリック）"><a href="#３．Webに公開（パブリック）" class="headerlink" title="３．Webに公開（パブリック）"></a>３．Webに公開（パブリック）</h4><p>レポートをブログ記事、Web サイト、メールやソーシャル メディアなどに簡単に埋め込むことができます。<br>閲覧者はインターネット上のすべてのユーザーとなり、Power BI ライセンスは不要となります。<br>Web に公開したレポートはインターネット上で公開されてしまい、URL さえ辿り着けば誰でも閲覧できてしまいますので、機密データでの Web 公開はおすすめしません。<br>本機能を使用される場合は、取り扱うデータに十分ご注意くださいますようお願いいたします。</p>
 <p>//  要件<br>・閲覧者はインターネット上のすべてのユーザーとなり、Power BI ライセンスは不要</p>
 <div align="center">
 <img src="4.png">
 </div>
 
-<h4 id="４．Power-BI-Embeddedによる埋め込み（開発者playグラウンド）"><a href="#４．Power-BI-Embeddedによる埋め込み（開発者playグラウンド）" class="headerlink" title="４．Power BI Embeddedによる埋め込み（開発者playグラウンド）"></a>４．Power BI Embeddedによる埋め込み（開発者playグラウンド）</h4><p>こちらは上記１～３とは異なり、Power BI Embeddedの環境と開発が必要となりますが、レポート、ダッシュボードおよびタイルなどのPower BI コンテンツをアプリケーションに埋め込むことができます。<br>閲覧ユーザー一人ひとりがPower BI ライセンスを持つ必要がなく、閲覧用の環境を自由に作成することが可能でございますが、別途開発環境が必要で自由に作成できる分、開発コストがかかります。<br>なお、埋め込みには顧客向け埋め込みと組織向け埋め込みの２つの方法がありますので、詳細については後述の参考情報をご確認いただければと思います。</p>
-<p>//  要件<br>・Power BI Embedded環境が必要<br>・ユーザー自身で開発を行う</p>
+<h4 id="４．Power-BI-Embeddedによる埋め込み（開発者playグラウンド）"><a href="#４．Power-BI-Embeddedによる埋め込み（開発者playグラウンド）" class="headerlink" title="４．Power BI Embeddedによる埋め込み（開発者playグラウンド）"></a>４．Power BI Embeddedによる埋め込み（開発者playグラウンド）</h4><p>こちらは上記１～３とは異なり、Power BI Embedded の環境と開発が必要となりますが、レポート、ダッシュボードおよびタイルなどの Power BI コンテンツをアプリケーションに埋め込むことができます。<br>閲覧ユーザー一人ひとりが Power BI ライセンスを持つ必要がなく、閲覧用の環境を自由に作成することが可能でございますが、別途開発環境が必要で自由に作成できる分、開発コストがかかります。<br>なお、埋め込みには顧客向け埋め込みと組織向け埋め込みの２つの方法がありますので、詳細については後述の参考情報をご確認いただければと思います。</p>
+<p>//  要件<br>・Power BI Embedded 環境が必要<br>・ユーザー自身で開発を行う</p>
 <div align="center">
 <img src="5.png">
 </div>
