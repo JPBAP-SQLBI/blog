@@ -175,8 +175,8 @@ $activities | Export-Csv $outputFile -NoTypeInformation
 </div>
 
 > **参考情報：**
-> - [監査ログの使用 - Power BI | Microsoft Docs](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-auditing#use-the-audit-log)
-
+> - [Microsoft Fabric でユーザー アクティビティを追跡する | Microsoft Docs](https://learn.microsoft.com/ja-jp/fabric/admin/track-user-activities)
+> - [操作一覧 - Fabric | Microsoft Docs ](https://learn.microsoft.com/ja-jp/fabric/admin/operation-list)
 
 ---
 ## 管理者監視ワークスペース（Admin Monitoring）
