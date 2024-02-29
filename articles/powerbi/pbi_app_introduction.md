@@ -142,18 +142,18 @@ Power BIサービス左側のナビゲーションの[アプリ]>[アプリの�
 
 以下、例としてPower BI関連の便利なテンプレートアプリを２つご紹介します：
 
-[■Power BI Premium Capacity Utilization and Metrics](https://appsource.microsoft.com/en-us/product/power-bi/pbi_pcmm.pbipremiumcapacitymonitoringreport)
+[■Microsoft Fabric Capacity Metrics](https://learn.microsoft.com/ja-jp/fabric/enterprise/metrics-app)
 
 
 <div align="center">
-<img src="9.png">
+<img src="9.jpg">
 </div>
 
-Premium 容量管理者が、Power BI Premium Gen2 (プレビュー) ワークスペースのデータセット、レポート、データフローなどで使用されている CPU 使用率、処理時間、メモリの量を確認できるアプリです。
+Microsoft Fabric Capacity Metrics アプリは、Microsoft Fabric 容量の監視機能を提供するように設計されています。アプリを使用して容量の消費量を監視し、容量リソースの使用方法に関する情報に基づいた意思決定を行います。 
 
 > [!TIP]
-> 前提条件：Gen2 容量であること及び容量管理者アカウントが必要です
-> 公開情報：[Premium Gen2 メトリック アプリをインストールする - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-install-gen2-app?tabs=1st)
+> 前提条件：メトリック アプリをインストールするには、容量管理者である必要があります。
+> 公開情報：[Microsoft Fabric Capacity Metrics アプリをインストールする - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/metrics-app-install?tabs=1st)
 
 
 [■Power BI Release Plan](https://appsource.microsoft.com/en-us/product/power-bi/pbicat.powerbi-release-plan)
