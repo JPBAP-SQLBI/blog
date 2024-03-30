@@ -6,34 +6,34 @@
   
   <title>Power BIにおけるデータソースのパラメーター化 | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームの呂です。Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用性">
+  <meta name="description" content="こんにちは、Power BI サポート チームの呂です。 Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Power BIにおけるデータソースのパラメーター化">
-<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/index.html">
+<meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームの呂です。Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用性">
+<meta property="og:description" content="こんにちは、Power BI サポート チームの呂です。 Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/1.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/2.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/3.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/4.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/5.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/6.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/7.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/8.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/9.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/10.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/11.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/12.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/13.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/3.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/4.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/5.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/6.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/7.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/8.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/9.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/10.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/11.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/12.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/13.png">
 <meta property="article:published_time" content="2023-07-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-30T17:31:48.631Z">
+<meta property="article:modified_time" content="2024-03-30T17:37:23.658Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="パラメーター">
 <meta property="article:tag" content="Power Query">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/1.png">
+<meta name="twitter:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/1.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan CSS Support Power BI Blog" type="application/atom+xml">
   
@@ -97,7 +97,7 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-powerbi/pbi_datasoource_parameter" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-powerbi/pbi_datasource_parameter" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -119,14 +119,15 @@
         
         
         
-        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+851ce625-04ff-5d89-b396-73169c43fd09%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC%E5%8C%96%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_datasoource_parameter%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_datasoource_parameter.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_datasoource_parameter.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+7de41cb7-159a-5528-a002-297178cb657d%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC%E5%8C%96%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_datasource_parameter%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_datasource_parameter.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_datasource_parameter.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasoource_parameter/" data-id="clueddnru000y0mrm1fbigopb" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/" data-id="cluedkul400100mmz2l15b98k" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用性と拡張性を向上させられます。<br>今回の記事では、SQL Serverを例に、データソースのパラメーター化の設定方法をご紹介いたします。</p>
+        <p>こんにちは、Power BI サポート チームの呂です。</p>
+<p>Power BI では、Power Queryのパラメーターを活用して、データセットのデータソースを動的に変更する方法があることをご存知ですか。パラメーターを使ってデータソースに接続し、パラメーターを編集することで、データソースを必要に応じて簡単に変更できます。これにより、異なる要件に対応する柔軟性を持ったレポートを作成し、レポートの再利用性と拡張性を向上させられます。<br>今回の記事では、SQL Serverを例に、データソースのパラメーター化の設定方法をご紹介いたします。</p>
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 <hr>
@@ -258,7 +259,7 @@
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-BI/" rel="tag">Power BI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Power-Query/" rel="tag">Power Query</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC/" rel="tag">パラメーター</a></li></ul>
 
         
-        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_datasoource_parameter.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/edit/main/articles/powerbi/pbi_datasource_parameter.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
