@@ -1,12 +1,13 @@
 ---
 title: Power BIユーザーの退職・異動への備え
-date: 2024-03-31 00:00:00 
+date: 2024-03-29 00:00:00 
 tags:
   - Power BI
   - 引き継ぎ
   - ロール
 ---
 こんにちは、Power BI サポート チームの呂です。
+
 Power BIでコンテンツを作成または共有しているユーザーが退職や異動になった場合、そのユーザーが保持していたコンテンツや権限の扱いについての質問がよく寄せられます。
 本記事では、組織内のPower BIユーザーの退職や異動が発生した場合に、コンテンツや権限を引き継ぐ方法についてご説明します。
 
@@ -139,4 +140,4 @@ Japan CSS Support Power BI Blog では、作成する記事やブログの品質
 ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
 
 ※　所要時間は1分程度となります。
-[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/) 
