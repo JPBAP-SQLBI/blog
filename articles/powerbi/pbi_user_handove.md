@@ -58,7 +58,7 @@ Power BI管理者がユーザーのマイワークスペースにアクセスす
 ### Fabric管理者
 ---
 Fabric管理者は、Microsoft Fabric と Power BI 内でグローバル アクセス許可を持ち、サポート チケットを管理し、サービス正常性を監視できるテナントレベルの管理者ロールです。
-Fabric管理者ロールは、特権ロール管理者またはグローバル管理者がMicrosoft 365 管理センターもしくはAzure Entraから変更できます。
+Fabric管理者ロールは、特権ロール管理者またはグローバル管理者が Microsoft 365 管理センターもしくは Azure Entra から変更できます。
 
 Microsoft 365 管理センター：
 ![](1.png)
@@ -78,7 +78,7 @@ Azure Entra ：
 グローバル管理者、Fabric管理者、または容量管理者は、[管理ポータル]>[容量の設定]から Premium 容量の管理者と共同作成者を変更できます。
 ![](3.png)
 
-FabricやEmbedded の場合、容量管理者はAzure portal 内で定義します。
+Fabric や Embedded の場合、容量管理者は Azure portal 内で定義します。
 ![](4.png)
 
 > [!TIP]
