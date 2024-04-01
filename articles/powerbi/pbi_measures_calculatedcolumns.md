@@ -43,7 +43,7 @@ Power BI Desktop でメジャーおよび計算列を作成する方法は以下
 ・「モデリング」タブから選択
 
 1つ目は意図するテーブルに作成できるため、この方法を推奨いたします。
-2つ目は期待したテーブルと異なる場所に作成される可能性があり、データモデルの管理が上がってしまうため、可能な限り1つ目の方法の利用を推奨します。
+2つ目は意図したテーブルと異なる場所に作成される可能性があり、データモデルの管理コストが上がってしまうため、可能な限り1つ目の方法の利用を推奨します。
 
 </br>
 <div align="center">
@@ -128,13 +128,13 @@ Power BI Desktop でメジャーおよび計算列を作成する方法は以下
 メジャー用、計算列用にそれぞれファイルを用意し、以下のDAX式で作成を行った結果のデータサイズを確認してみます。
 
 【メジャー】
-```m
+```sql
 Gross Profit = SUM(Sales[SalesAmount]) - SUM(Sales[TotalCost])
 Net Sales = SUM(Sales[SalesAmount]) - SUM(Sales[DiscountAmount]) - SUM(Sales[ReturnAmount])
 Net Sales Quantity = SUM(Sales[SalesQuantity]) - SUM(Sales[ReturnQuantity]) - SUM(Sales[DiscountQuantity])
 ```
 【計算列】
-```m
+```sql
  Gross Profit = Sales[SalesAmount] - Sales[TotalCost]
  Net Sales = Sales[SalesAmount] - Sales[DiscountAmount] - Sales[ReturnAmount]  
  Net Sales Quantity = Sales[SalesQuantity] - Sales[ReturnQuantity] - Sales[DiscountQuantity]   
