@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handove/7.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handove/8.png">
 <meta property="article:published_time" content="2024-03-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-01T00:54:13.864Z">
+<meta property="article:modified_time" content="2024-04-01T01:38:43.585Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="引き継ぎ">
@@ -116,7 +116,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2af16303-bcc6-50eb-921a-46941d92dc16%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E9%80%80%E8%81%B7%E3%83%BB%E7%95%B0%E5%8B%95%E3%81%B8%E3%81%AE%E5%82%99%E3%81%88%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_user_handove%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_user_handove.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_user_handove.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handove/" data-id="clug8mgjp003k0mmqbsnhh4py" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handove/" data-id="cluga7owp003k0mo2fwvda652" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -152,14 +152,14 @@
 <p>退職や異動するユーザーがテナント、容量やワークスペースなどのロールを次の担当者に引き継ぎたい場合があるかと思います。<br>続いては、各ロールの引き継ぎ方法についてそれぞれ説明します。<br></br></p>
 <hr>
 <h3 id="Fabric管理者"><a href="#Fabric管理者" class="headerlink" title="Fabric管理者"></a>Fabric管理者</h3><hr>
-<p>Fabric管理者は、Microsoft Fabric と Power BI 内でグローバル アクセス許可を持ち、サポート チケットを管理し、サービス正常性を監視できるテナントレベルの管理者ロールです。<br>Fabric管理者ロールは、特権ロール管理者またはグローバル管理者がMicrosoft 365 管理センターもしくはAzure Entraから変更できます。</p>
+<p>Fabric管理者は、Microsoft Fabric と Power BI 内でグローバル アクセス許可を持ち、サポート チケットを管理し、サービス正常性を監視できるテナントレベルの管理者ロールです。<br>Fabric管理者ロールは、特権ロール管理者またはグローバル管理者が Microsoft 365 管理センターもしくは Azure Entra から変更できます。</p>
 <p>Microsoft 365 管理センター：<br><img src="1.png"></p>
 <p>Azure Entra ：<br><img src="2.png"></p>
 <div class="alert is-success"><p class="alert-title">ヒント</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide">Microsoft 365 管理センターを管理者ロールに割り当てる - Microsoft 365 admin | Microsoft Learn</a></p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-JP/entra/identity/role-based-access-control/manage-roles-portal">ユーザーに Microsoft Entra ロールを割り当てる - Microsoft Entra ID | Microsoft Learn</a></p><p></p><p></p></div>
 <hr>
 <h3 id="容量管理者と共同作成者"><a href="#容量管理者と共同作成者" class="headerlink" title="容量管理者と共同作成者"></a>容量管理者と共同作成者</h3><hr>
 <p>容量管理者は、容量にワークスペースを割り当てる、容量に対するユーザーアクセス許可を管理する、容量のワークロードを制御できるロールであり、容量共同作成者は、ワークスペースを容量に割り当てることができるロールです。<br>グローバル管理者、Fabric管理者、または容量管理者は、[管理ポータル]&gt;[容量の設定]から Premium 容量の管理者と共同作成者を変更できます。<br><img src="3.png"></p>
-<p>FabricやEmbedded の場合、容量管理者はAzure portal 内で定義します。<br><img src="4.png"></p>
+<p>Fabric や Embedded の場合、容量管理者は Azure portal 内で定義します。<br><img src="4.png"></p>
 <div class="alert is-success"><p class="alert-title">ヒント</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/developer/embedded/embedded-capacity">Power BI Embedded の分析の容量と SKU - Power BI | Microsoft Learn</a></p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-capacity-manage">Microsoft Power BI Premium 容量を管理する - Power BI | Microsoft Learn</a></p><p></p><p></p></div>
 <hr>
 <h3 id="データゲートウェイやデータソースロール"><a href="#データゲートウェイやデータソースロール" class="headerlink" title="データゲートウェイやデータソースロール"></a>データゲートウェイやデータソースロール</h3><hr>
