@@ -98,7 +98,7 @@ Power BI公式ブログでもご案内している通り、新しいアプリで
 >While legacy Power BI apps allowed you to turn off navigation completely, new Power BI apps do not offer this option. However, you can hide the navigation by default.</br>
 >機械翻訳：従来の Power BI アプリでは、ナビゲーションを完全にオフにすることができましたが、新しい Power BI アプリにはこのオプションはありません。ただし、デフォルトでナビゲーションを非表示にすることはできます。
 
-下図がナビゲーションをオフにした従来の　Power BI　アプリのスクリーンショットとなります。 
+下図がナビゲーションをオフにした従来の Power BI アプリのスクリーンショットとなります。 
 従来の　Power BI　アプリでは、ナビゲーションペインを完全にオフにすることができました。 
 
 <div align="center">
