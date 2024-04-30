@@ -34,18 +34,17 @@ Power BI ではアプリを作成することができますが、 2023年に新
  2.[アプリのアップグレード方法](#アプリのアップグレード方法)
  3.[アップグレードをしない場合の影響](#アップグレードをしない場合の影響)
  4.[従来のアプリと新しいアプリの違いについて](#従来のアプリと新しいアプリの違いについて)
- 5.[まとめ](#まとめ)
 
 
 ---
 ## Power BI アプリとは
 ---
-Power BI アプリはレポートやダッシュボード等をパッケージ化、アプリとして組織のユーザー多くの対象ユーザーに配布できる機能です。
+Power BI アプリはレポートやダッシュボード等をパッケージ化し、アプリとして組織のユーザー多くの対象ユーザーに配布できる機能です。
 アプリはワークスペースと異なるアクセス許可を設定でき、また各対象ユーザーに対して異なるコンテンツを表示することができるため、組織内における大規模なコンテンツ配布する際に便利な機能になっています。
 
 詳細につきましては弊サポートチームの公開ブログをご確認いただけますと幸いです。
 
-// 参考方法：[Power BI アプリの紹介 | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_app_introduction/)
+// 参考：[Power BI アプリの紹介 | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_app_introduction/)
 
 </br>
 </br>
@@ -53,7 +52,7 @@ Power BI アプリはレポートやダッシュボード等をパッケージ�
 ---
 ## アプリのアップグレード方法
 ---
-アプリが存在するワークスペースあるいはワークスペース内で[アプリを更新]を選択するとアプリのアップグレードを促すバナーが表示されますので、案内に従い更新を行います。
+アプリが存在するワークスペースあるいはワークスペース内で[アプリを更新]を選択すると、アプリのアップグレードを促すバナーが表示されますので、案内に従い更新を行います。
 
 <div align="center">
 <img src="1.png">
@@ -71,24 +70,20 @@ Power BI アプリはレポートやダッシュボード等をパッケージ�
 ## アップグレードをしない場合の影響
 ---
 従来の Power BI アプリは引き続きご利用いただくことは可能ですが、従来の Power BIアプリ をご利用の際に発生した問題については、弊社よりご支援ができかねるものとなりますので、ご注意いただくようお願いいたします。
-
 </br>
-
-> [重要]  
+> [!重要]  
 > 新しい Power BI アプリにアップグレードすると、従来のアプリに戻すことはできません。</br>
 > しかしながら、アプリのアップグレードに伴ってユーザー様が不利益となる影響はないため 、可能な限りアプリのアップグレードをしていただくことを推奨いたします。
 
-
 </br>
 </br>
-
 
 ---
 ## 従来のアプリと新しいアプリの違いについて
 ---
 Power BI公式ブログでもご案内している通り、新しいアプリでは、お客様のご要望をもとに昨日の追加やパフォーマンスの改善が行われています。
 ここでは、新しいアプリでは廃止された機能について[こちらのPower BI 公式ブログ](https://powerbi.microsoft.com/ja-jp/blog/announcing-the-retirement-of-legacy-power-bi-apps-pre-audiences/)から抜粋し、それぞれの用語について説明いたします。
-
+</br>
 >The list view landing experience in legacy Power BI apps is no longer supported. When upgrading, consider which content you’d like app users to land on. The first navigation item visible per audience will be used as the default landing location for your app users. </br>
 >機械翻訳：従来の Power BI アプリのリストビューのランディングエクスペリエンスはサポートされなくなりました。アップグレードする場合は、アプリのユーザーにどのコンテンツに移動してもらいたいかを検討してください。オーディエンスごとに表示される最初のナビゲーション項目が、アプリユーザーのデフォルトのランディング場所として使用されます。
 
@@ -103,8 +98,8 @@ Power BI公式ブログでもご案内している通り、新しいアプリで
 >While legacy Power BI apps allowed you to turn off navigation completely, new Power BI apps do not offer this option. However, you can hide the navigation by default.</br>
 >機械翻訳：従来の Power BI アプリでは、ナビゲーションを完全にオフにすることができましたが、新しい Power BI アプリにはこのオプションはありません。ただし、デフォルトでナビゲーションを非表示にすることはできます。
 
-下図がナビゲーションをオフにした従来の　Power BI　アプリのスクリーンショットとなります。 
-従来の　Power BI　アプリでは、ナビゲーションペインを完全にオフにすることができました。 
+下図がナビゲーションをオフにした従来の Power BI アプリのスクリーンショットとなります。
+従来の　Power BI　アプリでは、ナビゲーションペインを完全にオフにすることができました。  
 
 <div align="center">
 <img src="3.png">
