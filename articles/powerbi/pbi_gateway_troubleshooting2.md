@@ -25,9 +25,8 @@ tags:
 
 </br>
 
----
+
 ## 目次
----
 1.[最新版のゲートウェイをインストールする](#1-最新版のゲートウェイをインストールする)
 2.[データソースや容量の問題であるかを切り分ける](#2-データソースや容量の問題であるかを切り分ける)
 3.[ゲートウェイマシンのリソース状況を確認](#3-ゲートウェイマシンのリソース状況を確認)
@@ -36,6 +35,7 @@ tags:
 &emsp;・[ゲートウェイマシンのリソース不足時の対処方法](#ゲートウェイマシンのリソース不足時の対処方法)
 4.[ゲートウェイマシンのイベントログの確認](#4-ゲートウェイマシンのイベントログの確認)
 
+</br>
 
 ## 1.最新版のゲートウェイをインストールする
 
@@ -63,6 +63,7 @@ Microsoft では、最新の6つのリリースのみを積極的にサポート
 
 ゲートウェイがインストールされているマシンのリソース不足が、一般的なエラー原因の一つと言えます。
 リソースの使用状況はゲートウェイログに記録されており、Gateway Performance PBI テンプレートファイルを使用して確認できます。
+本ブログでは、リソース状況を確認する手順、リソース不足の判断方法、および対処方法について紹介します。
 
 > [!NOTE]
 >[オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance)
@@ -71,15 +72,16 @@ Microsoft では、最新の6つのリリースのみを積極的にサポート
 
 ### ゲートウェイマシンのリソース状況の確認方法
 [Gateway Performance PBI テンプレート ファイル](https://download.microsoft.com/download/D/A/1/DA1FDDB8-6DA8-4F50-B4D0-18019591E182/OnPremisesDataGatewayLogs.pbit) をダウンロードし、Power BI Desktop で開きます。
-ゲートウェイのログファイルが保存されているフォルダーパスは以下のいずれかであるため、保存先を確認し”Folder Path”に入力します。
+ゲートウェイのログファイルは、ゲートウェイがインストールされているマシンの以下のいずれかのフォルダーに保存されています。
 -	\Users\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report
 -	\Windows\ServiceProfiles\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report
+保存先を確認し、テンプレートファイルのポップアップの "Folder Path" に入力し、データを読み込みます。
 
 <div align="left">
 <img src="1.png">
 </div>
 
-データの読み込み後、“System Counters Over Time” ページで“System CPU Usage” や “System Memory Usage” を確認します。
+ログデータの読み込み後、“System Counters Over Time” ページで“System CPU Usage” や “System Memory Usage” を確認します。
 更新エラーもしくはゲートウェイがオフラインになる問題が発生した場合、フィルターでエラー発生時点のリソース使用状況の平均値と最大値を確認しましょう。
 
 <div align="left">
@@ -94,10 +96,10 @@ Microsoft では、最新の6つのリリースのみを積極的にサポート
 > [!NOTE]
 >[オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance)
 
-CPU: CPU 使用率が長期間 80% を超える
-RAM: 使用可能なメモリが定期的に 20% 未満に低下する
-ディスク: ディスクの空き領域が頻繁に 5 GB を下回る
-コンカレンシー: 1 つのノードで 40 を超えるクエリを同時に実行している
+**CPU**: CPU 使用率が長期間 80% を超える
+**RAM**: 使用可能なメモリが定期的に 20% 未満に低下する
+**ディスク**: ディスクの空き領域が頻繁に 5 GB を下回る
+**コンカレンシー**: 1 つのノードで 40 を超えるクエリを同時に実行している
 ※同時に実行されているクエリ数は、テンプレートファイルの ”Query Execution By Query Type” ページで確認できます。
 <div align="left">
 <img src="3.png">
