@@ -1,5 +1,5 @@
 ---
-title: Power BIでデータに接続しレポートを作成・共有する手順
+title: Power BI とData Activator のデータアラート機能の比較
 date: 2024-05-31 00:00:00 
 tags:
   - Power BI サービス
@@ -106,7 +106,7 @@ Data Activator は Microsoft Fabric 内のサービスであるため、Premium 
 
 > [!NOTE]
 > 参考情報 ：[Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites)
-> 参考情報 ：[PFabric 試用版の容量 - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials)
+> 参考情報 ：[Fabric 試用版の容量 - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials)
 
 
 ライセンスの他に、テナント設定から [ Data Activator (プレビュー) ] を有効にする必要があります。
@@ -116,7 +116,7 @@ Data Activator は Microsoft Fabric 内のサービスであるため、Premium 
 </div>
 
 
-なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br>
+なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse 等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br>
 つまり、 [ ユーザーは Fabric アイテムを作成できます ] が無効となっている場合でも、[ Data Activator (プレビュー) ] が有効となっていれば、 Data Activator を利用いただくことが可能です。
 
 <div align="center">
@@ -230,6 +230,7 @@ Power BI データアラート では、ゲストユーザーとして招待し�
 Data Activator データアラート では、受信者は Fabric テナントを所有する組織に属している必要があります。 
 外部メール アドレスまたはゲスト メール アドレスのいずれにもメール アラートを送信はできません。
 
+> [!NOTE]
 > 参考情報：[Data Activator の制限事項 - Microsoft Fabric | Microsoft Learn ](https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-limitations#allowed-recipients-of-email-alerts)
 
 ---
@@ -238,13 +239,13 @@ Data Activator データアラート では、受信者は Fabric テナント�
 ### Power BI データアラート
 Power BI データアラートでは、追跡対象データがユーザー設定のしきい値に達した場合、以下の条件を満たした場合にアラートが送信されます。
  
-- 最初に、最後のアラートが送信されてから 1 時間以上または 24 時間以上 (選択したオプションによる) 経過していること
+- 最後のアラートが送信されてから 1 時間以上または 24 時間以上 (選択したオプションによる) 経過していること
 - データがしきい値を超えるまたは下回る場合
  
 なお、対象の値は数値である必要があります。
 
 ### Data Activator
-Data Activator データアラートでは条件が満たされるたびにアラートがトリガーされます。
+Data Activator データアラートでは、条件が満たされるたびにアラートがトリガーされます。
 
 > [!NOTE]
 > 参考情報：[Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#create-your-data-activator-trigger)
