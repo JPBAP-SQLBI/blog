@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   
-  <title>Power BIでデータに接続しレポートを作成・共有する手順 | Japan CSS Support Power BI Blog</title>
+  <title>Power BI とData Activator のデータアラート機能の比較 | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="こんにちは、Power BI サポート チームの中川です。 Power BI では、データが変化したときにユーザーに通知するアラート機能があります。Microsoft Fabric の Data Activator にも同様の機能が実装されたことにより、「両者機能がどう違うのか」、「どのように使い分けるべきか」と悩まれている方も多いかと思います。 本ブログでは、 Power BI と Data A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Power BIでデータに接続しレポートを作成・共有する手順">
+<meta property="og:title" content="Power BI とData Activator のデータアラート機能の比較">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
 <meta property="og:description" content="こんにちは、Power BI サポート チームの中川です。 Power BI では、データが変化したときにユーザーに通知するアラート機能があります。Microsoft Fabric の Data Activator にも同様の機能が実装されたことにより、「両者機能がどう違うのか」、「どのように使い分けるべきか」と悩まれている方も多いかと思います。 本ブログでは、 Power BI と Data A">
@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/data_activator_alert_creation_2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/data_activator_alert_creation_3.png">
 <meta property="article:published_time" content="2024-05-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-31T13:27:50.663Z">
+<meta property="article:modified_time" content="2024-05-31T13:39:18.561Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Fabric">
 <meta property="article:tag" content="Power BI サービス">
@@ -102,7 +102,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Power BIでデータに接続しレポートを作成・共有する手順
+      Power BI とData Activator のデータアラート機能の比較
     </h1>
   
 
@@ -115,9 +115,9 @@
         
         
         
-        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+1861c909-efa7-5b6f-a947-40d1c2f9f45d%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%97%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%E3%83%BB%E5%85%B1%E6%9C%89%E3%81%99%E3%82%8B%E6%89%8B%E9%A0%86%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_data_activator_alert%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_data_activator_alert.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_data_activator_alert.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+1861c909-efa7-5b6f-a947-40d1c2f9f45d%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%81%A8Data+Activator+%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%E6%A9%9F%E8%83%BD%E3%81%AE%E6%AF%94%E8%BC%83%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_data_activator_alert%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_data_activator_alert.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_data_activator_alert.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/" data-id="clwupyqk900ne0mr6ewv77sfi" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/" data-id="clwuqdhen00ne0mps34zy3w1m" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -243,14 +243,14 @@
 <p>これらのワークスペースにアクセスできるユーザーは、そのワークスペース内のダッシュボードに対しデータアラートを設定することができます。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-alerts#who-can-set-alerts">Power BI サービス ダッシュボードでデータ アラートを設定するためのチュートリアル。 - Power BI | Microsoft Learn</a></p></div>
 <h3 id="Data-Activator"><a href="#Data-Activator" class="headerlink" title="Data Activator"></a>Data Activator</h3><p>Data Activator は Microsoft Fabric 内のサービスであるため、Premium ライセンスまたは Fabric ライセンスが必要となります。<br>また、Fabric 試用版を有効にすることで Data Activator をお試しいただくことも可能です。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials">PFabric 試用版の容量 - Microsoft Fabric | Microsoft Learn</a></p></div>
+<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials">Fabric 試用版の容量 - Microsoft Fabric | Microsoft Learn</a></p></div>
 <p>ライセンスの他に、テナント設定から [ Data Activator (プレビュー) ] を有効にする必要があります。</p>
 <div align="center">
 <img src="Tenant Settings Data Activator.png">
 </div>
 
 
-<p>なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br><br>つまり、 [ ユーザーは Fabric アイテムを作成できます ] が無効となっている場合でも、[ Data Activator (プレビュー) ] が有効となっていれば、 Data Activator を利用いただくことが可能です。</p>
+<p>なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse 等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br><br>つまり、 [ ユーザーは Fabric アイテムを作成できます ] が無効となっている場合でも、[ Data Activator (プレビュー) ] が有効となっていれば、 Data Activator を利用いただくことが可能です。</p>
 <div align="center">
 <img src="Tenant Settings Users can create Fabric items.png">
 </div>
@@ -334,17 +334,15 @@
 <h2 id="ゲストユーザーを受信者とした設定"><a href="#ゲストユーザーを受信者とした設定" class="headerlink" title="ゲストユーザーを受信者とした設定"></a>ゲストユーザーを受信者とした設定</h2><h3 id="Power-BI-データアラート-4"><a href="#Power-BI-データアラート-4" class="headerlink" title="Power BI データアラート"></a>Power BI データアラート</h3><p>Power BI データアラート では、ゲストユーザーとして招待したユーザーがダッシュボードにアクセスが可能な場合、アラートの作成が可能です。</br><br>ゲストユーザーとして招待する方法については以下のブログをご参照ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/">組織外のユーザーとPower BIコンテンツの共有 | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)</a></p></div>
 <h3 id="Data-Activator-4"><a href="#Data-Activator-4" class="headerlink" title="Data Activator"></a>Data Activator</h3><p>Data Activator データアラート では、受信者は Fabric テナントを所有する組織に属している必要があります。<br>外部メール アドレスまたはゲスト メール アドレスのいずれにもメール アラートを送信はできません。</p>
-<blockquote>
-<p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-limitations#allowed-recipients-of-email-alerts">Data Activator の制限事項 - Microsoft Fabric | Microsoft Learn </a></p>
-</blockquote>
+<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-limitations#allowed-recipients-of-email-alerts">Data Activator の制限事項 - Microsoft Fabric | Microsoft Learn </a></p></div>
 <hr>
 <h2 id="通知タイミングおよびトリガーできるデータ型と条件"><a href="#通知タイミングおよびトリガーできるデータ型と条件" class="headerlink" title="通知タイミングおよびトリガーできるデータ型と条件"></a>通知タイミングおよびトリガーできるデータ型と条件</h2><h3 id="Power-BI-データアラート-5"><a href="#Power-BI-データアラート-5" class="headerlink" title="Power BI データアラート"></a>Power BI データアラート</h3><p>Power BI データアラートでは、追跡対象データがユーザー設定のしきい値に達した場合、以下の条件を満たした場合にアラートが送信されます。</p>
 <ul>
-<li>最初に、最後のアラートが送信されてから 1 時間以上または 24 時間以上 (選択したオプションによる) 経過していること</li>
+<li>最後のアラートが送信されてから 1 時間以上または 24 時間以上 (選択したオプションによる) 経過していること</li>
 <li>データがしきい値を超えるまたは下回る場合</li>
 </ul>
 <p>なお、対象の値は数値である必要があります。</p>
-<h3 id="Data-Activator-5"><a href="#Data-Activator-5" class="headerlink" title="Data Activator"></a>Data Activator</h3><p>Data Activator データアラートでは条件が満たされるたびにアラートがトリガーされます。</p>
+<h3 id="Data-Activator-5"><a href="#Data-Activator-5" class="headerlink" title="Data Activator"></a>Data Activator</h3><p>Data Activator データアラートでは、条件が満たされるたびにアラートがトリガーされます。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#create-your-data-activator-trigger">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p></div>
 <p>こちらも同様に対象の値は数値である必要があります。</p>
 <p>また、メール、Teams、Power Automateのトリガーアクションによって制限があるため、ご注意ください。</p>
@@ -448,7 +446,7 @@
           </li>
         
           <li>
-            <a href="">Power BIでデータに接続しレポートを作成・共有する手順</a>
+            <a href="">Power BI とData Activator のデータアラート機能の比較</a>
           </li>
         
           <li>
