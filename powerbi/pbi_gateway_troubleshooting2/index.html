@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/5.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/6.png">
 <meta property="article:published_time" content="2024-05-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-31T04:14:32.678Z">
+<meta property="article:modified_time" content="2024-05-31T04:36:19.606Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="オンプレミスデータゲートウェイ">
@@ -114,7 +114,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2ac403da-efcd-543a-bce6-babcfb02857a%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9+%E3%83%87%E3%83%BC%E3%82%BF+%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%EF%BC%9A%E9%81%8B%E7%94%A8%E6%99%82%E3%81%AB%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B%E3%82%A8%E3%83%A9%E3%83%BC%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_gateway_troubleshooting2%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_gateway_troubleshooting2.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_gateway_troubleshooting2.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/" data-id="clwu676t5001v0mqv1fiuf2qg" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/" data-id="clwu6z78t001v0mny6wop1ht5" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -126,9 +126,10 @@
 <div class="alert is-info"><p class="alert-title">Note</p><p>関連情報：</p><p><a href="https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/">オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー | Japan CSS Support Power BI Blog</a></p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-tshoot">オンプレミス データ ゲートウェイのトラブルシューティング | Microsoft Learn</a></p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-gateway-personal-mode#on-premises-data-gateway-vs-on-premises-data-gateway-personal-mode">オンプレミス データ ゲートウェイとオンプレミス データ ゲートウェイ (個人用モード) - Power BI | Microsoft Learn</a></p></div>
 </br>
 
-<hr>
-<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
-<p>1.<a href="#1-%E6%9C%80%E6%96%B0%E7%89%88%E3%81%AE%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B">最新版のゲートウェイをインストールする</a><br>2.<a href="#2-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%84%E5%AE%B9%E9%87%8F%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%A7%E3%81%82%E3%82%8B%E3%81%8B%E3%82%92%E5%88%87%E3%82%8A%E5%88%86%E3%81%91%E3%82%8B">データソースや容量の問題であるかを切り分ける</a><br>3.<a href="#3-%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E7%8A%B6%E6%B3%81%E3%82%92%E7%A2%BA%E8%AA%8D">ゲートウェイマシンのリソース状況を確認</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E7%8A%B6%E6%B3%81%E3%81%AE%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース状況の確認方法</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%B8%8D%E8%B6%B3%E3%81%AE%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース不足の判断方法</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%B8%8D%E8%B6%B3%E6%99%82%E3%81%AE%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース不足時の対処方法</a><br>4.<a href="#4-%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AD%E3%82%B0%E3%81%AE%E7%A2%BA%E8%AA%8D">ゲートウェイマシンのイベントログの確認</a></p>
+
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><p>1.<a href="#1-%E6%9C%80%E6%96%B0%E7%89%88%E3%81%AE%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B">最新版のゲートウェイをインストールする</a><br>2.<a href="#2-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%84%E5%AE%B9%E9%87%8F%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%A7%E3%81%82%E3%82%8B%E3%81%8B%E3%82%92%E5%88%87%E3%82%8A%E5%88%86%E3%81%91%E3%82%8B">データソースや容量の問題であるかを切り分ける</a><br>3.<a href="#3-%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E7%8A%B6%E6%B3%81%E3%82%92%E7%A2%BA%E8%AA%8D">ゲートウェイマシンのリソース状況を確認</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E7%8A%B6%E6%B3%81%E3%81%AE%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース状況の確認方法</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%B8%8D%E8%B6%B3%E3%81%AE%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース不足の判断方法</a><br>&emsp;・<a href="#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%B8%8D%E8%B6%B3%E6%99%82%E3%81%AE%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95">ゲートウェイマシンのリソース不足時の対処方法</a><br>4.<a href="#4-%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AD%E3%82%B0%E3%81%AE%E7%A2%BA%E8%AA%8D">ゲートウェイマシンのイベントログの確認</a></p>
+</br>
+
 <h2 id="1-最新版のゲートウェイをインストールする"><a href="#1-最新版のゲートウェイをインストールする" class="headerlink" title="1.最新版のゲートウェイをインストールする"></a>1.最新版のゲートウェイをインストールする</h2><p>Microsoft では、最新の6つのリリースのみを積極的にサポートしています。<br>毎月新しい更新プログラムがリリースされるため、ゲートウェイをバージョンアップすることで問題が解消する可能性があります。</p>
 </br>
 
@@ -141,20 +142,20 @@
 <p>全般的にエラーが発生する場合、Premium 容量のスロットリングによって更新エラーが発生する可能性もありますため、ご利用容量のリソースの消費状況も確認してください。</p>
 </br>
 
-<h2 id="3-ゲートウェイマシンのリソース状況を確認"><a href="#3-ゲートウェイマシンのリソース状況を確認" class="headerlink" title="3.ゲートウェイマシンのリソース状況を確認"></a>3.ゲートウェイマシンのリソース状況を確認</h2><p>ゲートウェイがインストールされているマシンのリソース不足が、一般的なエラー原因の一つと言えます。<br>リソースの使用状況はゲートウェイログに記録されており、Gateway Performance PBI テンプレートファイルを使用して確認できます。</p>
+<h2 id="3-ゲートウェイマシンのリソース状況を確認"><a href="#3-ゲートウェイマシンのリソース状況を確認" class="headerlink" title="3.ゲートウェイマシンのリソース状況を確認"></a>3.ゲートウェイマシンのリソース状況を確認</h2><p>ゲートウェイがインストールされているマシンのリソース不足が、一般的なエラー原因の一つと言えます。<br>リソースの使用状況はゲートウェイログに記録されており、Gateway Performance PBI テンプレートファイルを使用して確認できます。<br>本ブログでは、リソース状況を確認する手順、リソース不足の判断方法、および対処方法について紹介します。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance">オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn</a></p></div>
 </br>
 
-<h3 id="ゲートウェイマシンのリソース状況の確認方法"><a href="#ゲートウェイマシンのリソース状況の確認方法" class="headerlink" title="ゲートウェイマシンのリソース状況の確認方法"></a>ゲートウェイマシンのリソース状況の確認方法</h3><p><a target="_blank" rel="noopener" href="https://download.microsoft.com/download/D/A/1/DA1FDDB8-6DA8-4F50-B4D0-18019591E182/OnPremisesDataGatewayLogs.pbit">Gateway Performance PBI テンプレート ファイル</a> をダウンロードし、Power BI Desktop で開きます。<br>ゲートウェイのログファイルが保存されているフォルダーパスは以下のいずれかであるため、保存先を確認し”Folder Path”に入力します。</p>
+<h3 id="ゲートウェイマシンのリソース状況の確認方法"><a href="#ゲートウェイマシンのリソース状況の確認方法" class="headerlink" title="ゲートウェイマシンのリソース状況の確認方法"></a>ゲートウェイマシンのリソース状況の確認方法</h3><p><a target="_blank" rel="noopener" href="https://download.microsoft.com/download/D/A/1/DA1FDDB8-6DA8-4F50-B4D0-18019591E182/OnPremisesDataGatewayLogs.pbit">Gateway Performance PBI テンプレート ファイル</a> をダウンロードし、Power BI Desktop で開きます。<br>ゲートウェイのログファイルは、ゲートウェイがインストールされているマシンの以下のいずれかのフォルダーに保存されています。</p>
 <ul>
 <li>   \Users\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report</li>
-<li>   \Windows\ServiceProfiles\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report</li>
+<li>   \Windows\ServiceProfiles\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report<br>保存先を確認し、テンプレートファイルのポップアップの “Folder Path” に入力し、データを読み込みます。</li>
 </ul>
 <div align="left">
 <img src="1.png">
 </div>
 
-<p>データの読み込み後、“System Counters Over Time” ページで“System CPU Usage” や “System Memory Usage” を確認します。<br>更新エラーもしくはゲートウェイがオフラインになる問題が発生した場合、フィルターでエラー発生時点のリソース使用状況の平均値と最大値を確認しましょう。</p>
+<p>ログデータの読み込み後、“System Counters Over Time” ページで“System CPU Usage” や “System Memory Usage” を確認します。<br>更新エラーもしくはゲートウェイがオフラインになる問題が発生した場合、フィルターでエラー発生時点のリソース使用状況の平均値と最大値を確認しましょう。</p>
 <div align="left">
 <img src="2.png">
 </div>
@@ -164,7 +165,7 @@
 
 <h3 id="ゲートウェイマシンのリソース不足の判断方法"><a href="#ゲートウェイマシンのリソース不足の判断方法" class="headerlink" title="ゲートウェイマシンのリソース不足の判断方法"></a>ゲートウェイマシンのリソース不足の判断方法</h3><p>ゲートウェイマシンがリソース不足であるかどうかを判断する基準については、以下公開情報にて説明されています。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance">オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn</a></p></div>
-<p>CPU: CPU 使用率が長期間 80% を超える<br>RAM: 使用可能なメモリが定期的に 20% 未満に低下する<br>ディスク: ディスクの空き領域が頻繁に 5 GB を下回る<br>コンカレンシー: 1 つのノードで 40 を超えるクエリを同時に実行している<br>※同時に実行されているクエリ数は、テンプレートファイルの ”Query Execution By Query Type” ページで確認できます。</p>
+<p><strong>CPU</strong>: CPU 使用率が長期間 80% を超える<br><strong>RAM</strong>: 使用可能なメモリが定期的に 20% 未満に低下する<br><strong>ディスク</strong>: ディスクの空き領域が頻繁に 5 GB を下回る<br><strong>コンカレンシー</strong>: 1 つのノードで 40 を超えるクエリを同時に実行している<br>※同時に実行されているクエリ数は、テンプレートファイルの ”Query Execution By Query Type” ページで確認できます。</p>
 <div align="left">
 <img src="3.png">
 </div>
