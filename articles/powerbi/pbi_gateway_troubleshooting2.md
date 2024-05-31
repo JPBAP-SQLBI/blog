@@ -1,0 +1,157 @@
+---
+title: オンプレミス データ ゲートウェイのトラブルシューティング：運用時に発生するエラー 
+date: 2024-05-31 00:00:00 
+tags:
+  - Power BI
+  - オンプレミスデータゲートウェイ
+  - On-Premises Data Gateway
+---
+こんにちは、Power BI サポートチームの呂です。
+
+オンプレミス データ ゲートウェイ（以下、ゲートウェイ）を使用してデータソースと接続し、スケジュール更新を運用されているお客様が多くいらっしゃいます。
+しかし、運用いただく中、ゲートウェイが時々オフラインになったり、更新が断続的にエラーになることもございます。
+本記事では、エンタープライズ ゲートウェイ構成後にデータ更新時に問題が発生した際にまずお試しいただきたいトラブルシューティング方法をご紹介します。
+
+<!-- more -->
+> [!IMPORTANT]  
+> 本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。
+> 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
+
+> [!NOTE]
+> 関連情報：
+>[オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/)
+>[オンプレミス データ ゲートウェイのトラブルシューティング | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-tshoot)
+>[オンプレミス データ ゲートウェイとオンプレミス データ ゲートウェイ (個人用モード) - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-gateway-personal-mode#on-premises-data-gateway-vs-on-premises-data-gateway-personal-mode)
+
+</br>
+
+---
+## 目次
+---
+1.[最新版のゲートウェイをインストールする](#1-最新版のゲートウェイをインストールする)
+2.[データソースや容量の問題であるかを切り分ける](#2-データソースや容量の問題であるかを切り分ける)
+3.[ゲートウェイマシンのリソース状況を確認](#3-ゲートウェイマシンのリソース状況を確認)
+&emsp;・[ゲートウェイマシンのリソース状況の確認方法](#ゲートウェイマシンのリソース状況の確認方法)
+&emsp;・[ゲートウェイマシンのリソース不足の判断方法](#ゲートウェイマシンのリソース不足の判断方法)
+&emsp;・[ゲートウェイマシンのリソース不足時の対処方法](#ゲートウェイマシンのリソース不足時の対処方法)
+4.[ゲートウェイマシンのイベントログの確認](#4-ゲートウェイマシンのイベントログの確認)
+
+
+## 1.最新版のゲートウェイをインストールする
+
+
+Microsoft では、最新の6つのリリースのみを積極的にサポートしています。
+毎月新しい更新プログラムがリリースされるため、ゲートウェイをバージョンアップすることで問題が解消する可能性があります。
+
+</br>
+
+## 2.データソースや容量の問題であるかを切り分ける
+
+
+ゲートウェイ経由の更新でエラーが発生した場合、エラーメッセージに「DM_GWPipeline_Gateway_xxxxxxxx」のような形式で表示されますが、必ずしもゲートウェイが原因であるとは限りません。
+ゲートウェイが原因であるかを切り分けるため、まずは特定のデータソースでのみエラーが発生するのか、それとも全般的に発生するのかを確認しましょう。
+
+特定のデータソースでのみ発生する場合、以下の調査を行うことが有効です：
+-	ゲートウェイマシン上に Power BI Desktop をインストールし、Power BI Desktop でデータソースへの接続可否を確認
+-	クラウドデータソースの場合、ゲートウェイを使用しない構成での接続可否を確認
+
+全般的にエラーが発生する場合、Premium 容量のスロットリングによって更新エラーが発生する可能性もありますため、ご利用容量のリソースの消費状況も確認してください。
+
+</br>
+
+## 3.ゲートウェイマシンのリソース状況を確認
+
+ゲートウェイがインストールされているマシンのリソース不足が、一般的なエラー原因の一つと言えます。
+リソースの使用状況はゲートウェイログに記録されており、Gateway Performance PBI テンプレートファイルを使用して確認できます。
+
+> [!NOTE]
+>[オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance)
+
+</br>
+
+### ゲートウェイマシンのリソース状況の確認方法
+[Gateway Performance PBI テンプレート ファイル](https://download.microsoft.com/download/D/A/1/DA1FDDB8-6DA8-4F50-B4D0-18019591E182/OnPremisesDataGatewayLogs.pbit) をダウンロードし、Power BI Desktop で開きます。
+ゲートウェイのログファイルが保存されているフォルダーパスは以下のいずれかであるため、保存先を確認し”Folder Path”に入力します。
+-	\Users\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report
+-	\Windows\ServiceProfiles\PBIEgwService\AppData\Local\Microsoft\On-premises data gateway\Report
+
+<div align="left">
+<img src="1.png">
+</div>
+
+データの読み込み後、“System Counters Over Time” ページで“System CPU Usage” や “System Memory Usage” を確認します。
+更新エラーもしくはゲートウェイがオフラインになる問題が発生した場合、フィルターでエラー発生時点のリソース使用状況の平均値と最大値を確認しましょう。
+
+<div align="left">
+<img src="2.png">
+</div>
+
+</br>
+</br>
+
+### ゲートウェイマシンのリソース不足の判断方法
+ゲートウェイマシンがリソース不足であるかどうかを判断する基準については、以下公開情報にて説明されています。
+> [!NOTE]
+>[オンプレミス データ ゲートウェイのパフォーマンスの監視と最適化 | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-performance)
+
+CPU: CPU 使用率が長期間 80% を超える
+RAM: 使用可能なメモリが定期的に 20% 未満に低下する
+ディスク: ディスクの空き領域が頻繁に 5 GB を下回る
+コンカレンシー: 1 つのノードで 40 を超えるクエリを同時に実行している
+※同時に実行されているクエリ数は、テンプレートファイルの ”Query Execution By Query Type” ページで確認できます。
+<div align="left">
+<img src="3.png">
+</div>
+
+</br>
+</br>
+
+### ゲートウェイマシンのリソース不足時の対処方法
+使用量が増えることにつれて、ゲートウェイクラスターをスケールアップまたはスケールアウトして、正常なパフォーマンスを維持する必要があります。
+一般的に、スケールアップ (個々のノードの CPU、RAM、またはディスク領域の増加) よりスケールアウト (クラスターへのノードの追加) を優先的に行うことを推奨しています。
+
+#### スケールアップ
+ゲートウェイが 1 つ以上のクエリを実行するときに、使用量が最大 CPU または最大メモリに達した時点で、スケールアップが必要になることがあります。
+クエリは 1 つのゲートウェイ サーバーでのみ実行できるため、ゲートウェイ サーバーには、クエリ全体と結果のデータを処理するための十分なリソースが必要です。
+<div align="left">
+<img src="4.png">
+</div>
+
+</br>
+
+#### スケール アウト
+ゲートウェイクラスターを使ってトラフィックを複数のゲートウェイに負荷分散します。これにより、単一障害点を回避できます。
+ゲートウェイ サーバーが高性能である場合や、実行する同時クエリの数が多いために単一のゲートウェイ サーバーで管理できる上限に達している場合は、スケール アウトが必要です。
+
+> [!NOTE]
+>[オンプレミス データ ゲートウェイの高可用性クラスターと負荷分散の管理 | Microsoft Learn](https://learn.microsoft.com/ja-jp/data-integration/gateway/service-gateway-high-availability-clusters#)
+
+<div align="left">
+<img src="5.png">
+</div>
+
+</br>
+</br>
+
+## 4.ゲートウェイマシンのイベントログの確認
+
+ゲートウェイがサービスとしての動作開始または停止した場合、マシンの Windows イベントログで記録されます。
+イベントビューアーを開き、[アプリケーションとサービスログ] > [On-premises data gateway service] を選択することで、イベントログを確認できます。
+ゲートウェイのパフォーマンス テンプレートファイルと合わせて、トラブルシューティングにご活用ください。
+
+<div align="left">
+<img src="6.png">
+</div>
+
+</br>
+
+以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
+
+---
+
+**アンケートご協力のお願い**
+Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。
+ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 
+
+※　所要時間は1分程度となります。
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
