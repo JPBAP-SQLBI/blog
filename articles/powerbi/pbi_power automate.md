@@ -5,6 +5,15 @@ tags:
   - Power BI
   - Power Automate
   - 自動化
+  - 更新
+  - Share Point
+  - PDF
+  - Excel
+  - Teams
+  - アラート
+  - メール
+  - 通知
+
 ---
 
 こんにちは、Power BI サポート チームの中川です。
@@ -30,7 +39,7 @@ Power BI では、Power Automate と連携することで、Power BI だけで�
 * [SharePoint の Excel ファイルが更新されたことをトリガーにセマンティックモデルを更新する](#SharePoint-の-Excel-ファイルが更新されたことをトリガーにセマンティックモデルを更新する)
 * [データアラートの通知を Teams に送信する](#データアラートの通知を-Teams-に送信する)
 * [レポートを定期的にエクスポートしてメール送信する](#レポートを定期的にエクスポートしてメール送信する)
-* [[番外編] Power BI レポートに Power Automate のボタンを追加する](#[番外編]-Power-BI-レポートに-Power-Automate-のボタンを追加する)
+* [番外編：Power BI レポートに Power Automate のボタンを追加する](#番外編：Power-BI-レポートに-Power-Automate-のボタンを追加する)
 * [おわりに](#おわりに)
 
 ---
@@ -211,7 +220,7 @@ Power Automate を利用することで、レポートのエクスポートと�
 
 ---
 
-## [番外編] Power BI レポートに Power Automate のボタンを追加する
+## 番外編：Power BI レポートに Power Automate のボタンを追加する
 これまで 、Power BI だけでは実現できなかったことが、Power Automate を組み合わせることで実現可能になるシナリオを紹介してきました。</br>
 Power BI レポートには、 Power Automate のフローを実行するボタンを作成することも可能ですので、こちらについても紹介します。
 例えば、Power BI レポート内にボタンを配置し、それをクリックすることで Excel にデータを追加したり、セマンティックモデルを更新したりといった操作を実行することができます。
