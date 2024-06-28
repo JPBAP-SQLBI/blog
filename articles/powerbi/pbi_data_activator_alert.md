@@ -57,7 +57,7 @@ Power BI と Data Activator の両方でデータアラート機能が提供さ�
 | 機能 | Power BI データアラート | Data Activator |
 |---|---|---|
 | リリース状況 | リリース済み | パブリックプレビュー中 |
-| 必要なライセンス</br> （アクセス可能なワークスペースで利用可能） | <ul><li>マイ ワークスペース</li><li>Premium 容量</li><li>Power BI Pro</li><li>Premium Per User (PPU)</li></ul>  | <ul><li>Fabric 容量</li><li>Fabric 試用版</li></ul> |
+ 必要なライセンス</br> （アクセス可能なワークスペースで利用可能） | <ul><li>マイ ワークスペース</li><li>Premium 容量</li><li>Power BI Pro</li><li>Premium Per User (PPU)</li></ul>  | <ul><li>Premium 容量</li><li>Fabric 容量</li><li>Fabric 試用版</li></ul> |
 | テナント設定 | 不要 | [ Data Activator (プレビュー) ] を有効にする |
 | 対象アイテム | ダッシュボード | レポート |
 | 対象ビジュアル | ゲージ、KPI、カード | 多くのビジュアルに対応 |
@@ -101,7 +101,7 @@ Power BI のデータアラート機能は、以下のいずれかのライセ�
 
 
 ### Data Activator
-Data Activator は Microsoft Fabric 内のサービスであるため、Fabric ライセンスが必要となります。
+Data Activator は Microsoft Fabric 内のサービスであるため、Premium ライセンスまたは Fabric ライセンスが必要となります。
 また、Fabric 試用版を有効にすることで Data Activator をお試しいただくことも可能です。
 
 > [!NOTE]
