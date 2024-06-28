@@ -1,11 +1,10 @@
 ---
-title: Power BI とData Activator のデータアラート機能の比較
+title: Power BI と Power Automate の連携
 date: 2024-06-28 00:00:00 
 tags:
-  - Power BI サービス
-  - Data Activator
-  - データアラート
-  - Fabric
+  - Power BI
+  - Power Automate
+  - 自動化
 ---
 
 こんにちは、Power BI サポート チームの中川です。
