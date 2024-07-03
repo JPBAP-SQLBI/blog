@@ -55,7 +55,7 @@ gmail.com、outlook.com、hotmail.com などの個人用メールアカウント
 
 #### ■ 計画的招待
 
-Azure Active Directory (AAD) からゲストユーザーを招待する方法です。
+Microsoft Entra ID (旧 Azure Active Directory) からゲストユーザーを招待する方法です。
 
 まず、[Azure ポータル](https://portal.azure.com/) へアクセスし、 Microsoft Entra ID (旧 Azure Active Directory) を選択します。
 次に、 Microsoft Entra ID (旧 Azure Active Directory) で、[ユーザー]>[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。
