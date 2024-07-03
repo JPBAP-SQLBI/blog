@@ -1,5 +1,5 @@
 ---
-title: Azure AD の外部コラボレーションの設定が与える影響について
+title: Microsoft Entra ID の外部コラボレーションの設定が与える影響について
 date: 2023-04-30 00:00:00 
 tags:
   - Power BI
@@ -12,7 +12,7 @@ tags:
 ゲスト ユーザーに関する Power BI の動作については、以前私たちのブログ記事 [組織外のユーザーに対する Power BI コンテンツの共有](https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/) でご紹介させていただきました。
 
 ゲスト ユーザーを招待する側のテナントの管理者様によっては「Power BI のコンテンツはアクセスさせてもよいが、テナント内のユーザー情報が見えてしまうのは避けたい」というようなご意見をいただくことがあります。
-上記動作は Azure Active Directory (以下 Azure AD) に存在する外部コラボレーションの設定 (ゲストユーザーのアクセス許可に関する設定) で変更することが可能です。
+上記動作は Microsoft Entra ID (旧 Azure Active Directory、以下 Entra ID) に存在する外部コラボレーションの設定 (ゲストユーザーのアクセス許可に関する設定) で変更することが可能です。
 今回は、外部コラボレーションの設定とは何か、また設定がどのように影響するか、各設定値による動作を検証ベースで確認した内容をご紹介いたします。
 
 <!-- more -->
@@ -21,6 +21,13 @@ tags:
 > 本記事は弊社公式ドキュメントの公開情報を元に検証を踏まえた結果として構成しておりますが、　　
 > 本記事編集時点と実際の機能に相違がある場合がございます。  
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
+
+---
+## 更新履歴
+---
+Update: 2024/07/03
+Microsoft Fabric 一般提供に伴い、テナント設定の表記が変わったため、内容を一部修正しました。
+[エクスポートと共有のテナント設定](https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-portal-export-sharing)
 
 ---
 ## 目次
@@ -37,11 +44,11 @@ tags:
 ## 外部コラボレーションの設定とは
 ---
 
-Azure AD には、テナントに招待したゲスト ユーザーに対して、組織内のユーザーとグループ メンバーシップの表示を制限する設定があります。
+Microsoft Entra ID (旧 Azure Active Directory、以下 Entra ID)  には、テナントに招待したゲスト ユーザーに対して、組織内のユーザーとグループ メンバーシップの表示を制限する設定があります。
 
 > [!TIP]
 > 遷移方法：
-> Azure Active Directory の管理メニュー [ユーザーのプロパティ] をクリックし、[外部コラボレーションの設定を管理します] の文字をクリックすると、設定画面が表示されます。
+> Microsoft Entra ID の管理メニュー [ユーザーのプロパティ] をクリックし、[外部コラボレーションの設定を管理します] の文字をクリックすると、設定画面が表示されます。
 
 この設定には、以下３つのアクセス レベルがあります。
 
@@ -67,7 +74,7 @@ Azure AD には、テナントに招待したゲスト ユーザーに対して�
 > ゲスト ユーザー アクセスを構成するには、全体管理者ロールである必要があります。 
 > またゲスト アクセスを制限するための追加のライセンス要件はありません。
 > 
-> [Azure Active Directory でゲストのアクセス許可を制限する](https://learn.microsoft.com/ja-jp/azure/active-directory/enterprise-users/users-restrict-guest-permissions#update-in-the-azure-portal)
+> [Microsoft Entra ID でゲスト アクセス許可を制限する](https://learn.microsoft.com/ja-jp/entra/identity/users/users-restrict-guest-permissions#update-in-the-azure-portal)
 
 </br>
 
@@ -113,8 +120,8 @@ Azure AD には、テナントに招待したゲスト ユーザーに対して�
 <img src="7.png">
 </div>
 
-さらにゲスト ユーザーに関するテナント設定「Azure Active Directory のゲスト ユーザーによる Power BI へのアクセスを許可する」「組織への外部ユーザーの招待」「Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する」は有効化されている状態とします。
-候補リストにゲスト ユーザーが表示される「また候補者のリストに Azure Active Directory のゲストを表示する」も有効化されています。
+さらにゲスト ユーザーに関するテナント設定「ゲスト ユーザーが Microsoft Fabric へのアクセスが可能」「ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます」「ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます」は有効化されている状態とします。
+候補リストにゲスト ユーザーが表示される「ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます」も有効化されています。
 
 <div align="center">
 <img src="8.png">
@@ -125,7 +132,7 @@ Azure AD には、テナントに招待したゲスト ユーザーに対して�
 ### 制限が最も少ない
 
 制限が最も少ないアクセス レベルでは、テナントのユーザーやグループの候補検索が制限なく可能になります。
-またテナント設定「また候補者のリストに Azure Active Directory のゲストを表示する」が有効化されている場合、テナント A に属する自身以外のゲスト ユーザーも候補検索が可能です。
+またテナント設定「ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます」が有効化されている場合、テナント A に属する自身以外のゲスト ユーザーも候補検索が可能です。
 （レポートやダッシュボードのコメント機能についてはゲスト ユーザーへのメンション機能はありません）
 
 //リンク共有
@@ -163,7 +170,7 @@ Power BI に影響する部分としては両設定に違いはありません�
 </br>
 
 
-またテナント設定「組織への外部ユーザーの招待」を有効化している場合でも、ゲスト ユーザーからの [アドホック招待](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#ad-hoc-invites) はできなくなります。
+またテナント設定「ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます」を有効化している場合でも、ゲスト ユーザーからの [アドホック招待](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#ad-hoc-invites) はできなくなります。
 
 <div align="center">
 <img src="14.png">
