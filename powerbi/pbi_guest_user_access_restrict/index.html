@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   
-  <title>Azure AD の外部コラボレーションの設定が与える影響について | Japan CSS Support Power BI Blog</title>
+  <title>Microsoft Entra ID の外部コラボレーションの設定が与える影響について | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="こんにちは、Power BI サポート チームの山本です。ゲスト ユーザーに関する Power BI の動作については、以前私たちのブログ記事 組織外のユーザーに対する Power BI コンテンツの共有 でご紹介させていただきました。 ゲスト ユーザーを招待する側のテナントの管理者様によっては「Power BI のコンテンツはアクセスさせてもよいが、テナント内のユーザー情報が見えてしまうのは避け">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Azure AD の外部コラボレーションの設定が与える影響について">
+<meta property="og:title" content="Microsoft Entra ID の外部コラボレーションの設定が与える影響について">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
 <meta property="og:description" content="こんにちは、Power BI サポート チームの山本です。ゲスト ユーザーに関する Power BI の動作については、以前私たちのブログ記事 組織外のユーザーに対する Power BI コンテンツの共有 でご紹介させていただきました。 ゲスト ユーザーを招待する側のテナントの管理者様によっては「Power BI のコンテンツはアクセスさせてもよいが、テナント内のユーザー情報が見えてしまうのは避け">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/14.png">
 <meta property="article:published_time" content="2023-04-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-06-30T04:33:26.043Z">
+<meta property="article:modified_time" content="2024-07-03T08:51:29.254Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="ゲストユーザー">
@@ -103,7 +103,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Azure AD の外部コラボレーションの設定が与える影響について
+      Microsoft Entra ID の外部コラボレーションの設定が与える影響について
     </h1>
   
 
@@ -116,18 +116,21 @@
         
         
         
-        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+8ca4e99c-7df5-5b6d-9230-09472edb1526%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BAzure+AD+%E3%81%AE%E5%A4%96%E9%83%A8%E3%82%B3%E3%83%A9%E3%83%9C%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E4%B8%8E%E3%81%88%E3%82%8B%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_guest_user_access_restrict%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_guest_user_access_restrict.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_guest_user_access_restrict.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+8ca4e99c-7df5-5b6d-9230-09472edb1526%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BMicrosoft+Entra+ID+%E3%81%AE%E5%A4%96%E9%83%A8%E3%82%B3%E3%83%A9%E3%83%9C%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E4%B8%8E%E3%81%88%E3%82%8B%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_guest_user_access_restrict%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_guest_user_access_restrict.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_guest_user_access_restrict.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/" data-id="cly1231f400230mnr7mj72te9" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/" data-id="cly5lmg8i00230mo24ipvcijy" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームの山本です。<br>ゲスト ユーザーに関する Power BI の動作については、以前私たちのブログ記事 <a href="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/">組織外のユーザーに対する Power BI コンテンツの共有</a> でご紹介させていただきました。</p>
-<p>ゲスト ユーザーを招待する側のテナントの管理者様によっては「Power BI のコンテンツはアクセスさせてもよいが、テナント内のユーザー情報が見えてしまうのは避けたい」というようなご意見をいただくことがあります。<br>上記動作は Azure Active Directory (以下 Azure AD) に存在する外部コラボレーションの設定 (ゲストユーザーのアクセス許可に関する設定) で変更することが可能です。<br>今回は、外部コラボレーションの設定とは何か、また設定がどのように影響するか、各設定値による動作を検証ベースで確認した内容をご紹介いたします。</p>
+<p>ゲスト ユーザーを招待する側のテナントの管理者様によっては「Power BI のコンテンツはアクセスさせてもよいが、テナント内のユーザー情報が見えてしまうのは避けたい」というようなご意見をいただくことがあります。<br>上記動作は Microsoft Entra ID (旧 Azure Active Directory、以下 Entra ID) に存在する外部コラボレーションの設定 (ゲストユーザーのアクセス許可に関する設定) で変更することが可能です。<br>今回は、外部コラボレーションの設定とは何か、また設定がどのように影響するか、各設定値による動作を検証ベースで確認した内容をご紹介いたします。</p>
 <span id="more"></span>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に検証を踏まえた結果として構成しておりますが、　　</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="更新履歴"><a href="#更新履歴" class="headerlink" title="更新履歴"></a>更新履歴</h2><hr>
+<p>Update: 2024/07/03<br>Microsoft Fabric 一般提供に伴い、テナント設定の表記が変わったため、内容を一部修正しました。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-portal-export-sharing">エクスポートと共有のテナント設定</a></p>
 <hr>
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
 <ul>
@@ -143,8 +146,8 @@
 </ul>
 <hr>
 <h2 id="外部コラボレーションの設定とは"><a href="#外部コラボレーションの設定とは" class="headerlink" title="外部コラボレーションの設定とは"></a>外部コラボレーションの設定とは</h2><hr>
-<p>Azure AD には、テナントに招待したゲスト ユーザーに対して、組織内のユーザーとグループ メンバーシップの表示を制限する設定があります。</p>
-<div class="alert is-success"><p class="alert-title">ヒント</p><p>遷移方法：</p><p>Azure Active Directory の管理メニュー [ユーザーのプロパティ] をクリックし、[外部コラボレーションの設定を管理します] の文字をクリックすると、設定画面が表示されます。</p></div>
+<p>Microsoft Entra ID (旧 Azure Active Directory、以下 Entra ID)  には、テナントに招待したゲスト ユーザーに対して、組織内のユーザーとグループ メンバーシップの表示を制限する設定があります。</p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>遷移方法：</p><p>Microsoft Entra ID の管理メニュー [ユーザーのプロパティ] をクリックし、[外部コラボレーションの設定を管理します] の文字をクリックすると、設定画面が表示されます。</p></div>
 <p>この設定には、以下３つのアクセス レベルがあります。</p>
 <table>
 <thead>
@@ -174,7 +177,7 @@
 <p>既定値は「制限付きアクセス」レベルとなっており、特定のオブジェクト ID を元に照会することはできるものの、ユーザー一覧が確認できなかったり、グループが確認できない状態です。<br>さらに制限の強い「最も制限が多い」レベルでは、ゲスト ユーザー自身のプロパティ情報のみが確認できる状態となります。<br>一方「制限が最も少ない」レベルでは、管理者ではないメンバー ユーザーと同じアクセス権で組織内のユーザーとグループ メンバーシップの表示を行なうことができるようになります。</p>
 <p>より詳細な動作については、弊社 Azure ID サポートチームのブログ記事「<a target="_blank" rel="noopener" href="https://jpazureid.github.io/blog/azure-active-directory/external-collaboration-setting-b2b-access/">外部コラボレーションの設定 (ゲスト ユーザーのアクセス制限) について</a>」にて紹介されておりますので、こちらも合わせてご確認ください。</p>
 <div class="alert is-success"><p class="alert-title">ヒント</p><p>ゲスト ユーザー アクセスを構成するには、全体管理者ロールである必要があります。</p><p>またゲスト アクセスを制限するための追加のライセンス要件はありません。</p>
-<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/azure/active-directory/enterprise-users/users-restrict-guest-permissions#update-in-the-azure-portal">Azure Active Directory でゲストのアクセス許可を制限する</a></p></div>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/entra/identity/users/users-restrict-guest-permissions#update-in-the-azure-portal">Microsoft Entra ID でゲスト アクセス許可を制限する</a></p></div>
 </br>
 
 <hr>
@@ -217,14 +220,14 @@
 <img src="7.png">
 </div>
 
-<p>さらにゲスト ユーザーに関するテナント設定「Azure Active Directory のゲスト ユーザーによる Power BI へのアクセスを許可する」「組織への外部ユーザーの招待」「Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する」は有効化されている状態とします。<br>候補リストにゲスト ユーザーが表示される「また候補者のリストに Azure Active Directory のゲストを表示する」も有効化されています。</p>
+<p>さらにゲスト ユーザーに関するテナント設定「ゲスト ユーザーが Microsoft Fabric へのアクセスが可能」「ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます」「ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます」は有効化されている状態とします。<br>候補リストにゲスト ユーザーが表示される「ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます」も有効化されています。</p>
 <div align="center">
 <img src="8.png">
 </div>
 
 </br>
 
-<h3 id="制限が最も少ない"><a href="#制限が最も少ない" class="headerlink" title="制限が最も少ない"></a>制限が最も少ない</h3><p>制限が最も少ないアクセス レベルでは、テナントのユーザーやグループの候補検索が制限なく可能になります。<br>またテナント設定「また候補者のリストに Azure Active Directory のゲストを表示する」が有効化されている場合、テナント A に属する自身以外のゲスト ユーザーも候補検索が可能です。<br>（レポートやダッシュボードのコメント機能についてはゲスト ユーザーへのメンション機能はありません）</p>
+<h3 id="制限が最も少ない"><a href="#制限が最も少ない" class="headerlink" title="制限が最も少ない"></a>制限が最も少ない</h3><p>制限が最も少ないアクセス レベルでは、テナントのユーザーやグループの候補検索が制限なく可能になります。<br>またテナント設定「ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます」が有効化されている場合、テナント A に属する自身以外のゲスト ユーザーも候補検索が可能です。<br>（レポートやダッシュボードのコメント機能についてはゲスト ユーザーへのメンション機能はありません）</p>
 <p>//リンク共有</p>
 <div align="center">
 <img src="9.png" width=40%>
@@ -256,7 +259,7 @@
 </br>
 
 
-<p>またテナント設定「組織への外部ユーザーの招待」を有効化している場合でも、ゲスト ユーザーからの <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#ad-hoc-invites">アドホック招待</a> はできなくなります。</p>
+<p>またテナント設定「ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます」を有効化している場合でも、ゲスト ユーザーからの <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#ad-hoc-invites">アドホック招待</a> はできなくなります。</p>
 <div align="center">
 <img src="14.png">
 </div>
