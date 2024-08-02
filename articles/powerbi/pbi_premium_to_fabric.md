@@ -65,16 +65,17 @@ Power BIの利用において、Premium容量とFabric容量では以下のよ�
 
 <div align=center>
 表1. Premium容量とFabric容量の機能比較
-</div>
+  
 |  | Premium容量 | Fabric容量 |
-| --- | --- | --- |
-| Power BI Report Server | 〇 | 〇(1) |
+|---|---|---|
+| Power BI Report Server | 〇 | 〇(2) |
 | Power BI Embedded | × | 〇 |
-| Microsoft Fabric(無料)ユーザーのコンテンツの閲覧 (2) | 〇 | 〇(1) |
+| Microsoft Fabric(無料)ユーザーのコンテンツの閲覧 (1) | 〇 | 〇(2) |
 | 容量の自動スケーリング(3) | 〇 | × |
 | 容量の手動スケーリング(4) | × | 〇 |
-| Copilot | 〇(2) | 〇(2) |
+| Copilot | 〇(2) | 〇 |
 | 容量の一時停止と再開(5) | × | 〇 |
+</div>
 
 >[!NOTE]
 > (1):F64以上のSKUが必要です。
