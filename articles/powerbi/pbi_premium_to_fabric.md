@@ -69,7 +69,7 @@ Power BIの利用において、Premium容量とFabric容量では以下のよ�
 
 | 機能                                     | Premium容量 | Fabric容量 |
 |------------------------------------------|-------------|-------------|
-| Power BI Report Server                   | 〇           | 〇(2)       |
+| Power BI Report Server                   | 〇           | 〇(1,6)       |
 | Power BI Embedded                        | ×           | 〇          |
 | Microsoft Fabric(無料)ユーザーのコンテンツの閲覧 (1) | 〇           | 〇(2)       |
 | 容量の自動スケーリング(3)                | 〇           | ×           |
@@ -84,6 +84,7 @@ Power BIの利用において、Premium容量とFabric容量では以下のよ�
 > (3):[Power BI Premium で自動スケーリングを使用する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-auto-scale)
 > (4):[Fabric の容量をスケーリングする - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/scale-capacity)
 > (5):[容量を一時停止して再開する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/pause-resume)
+> (6):F64以上のSKUを予約容量にてご使用いただく場合にご使用いただけます。[Microsoft Fabric July 2024 Update](https://blog.fabric.microsoft.com/ja-jp/blog/microsoft-fabric-july-2024-update?ft=All#post-12969-_Toc172214873)
 
 
 ### 2-2.	課金形態の違い
