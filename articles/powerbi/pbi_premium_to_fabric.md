@@ -69,22 +69,23 @@ Power BIの利用において、Premium容量とFabric容量では以下のよ�
 
 | 機能                                     | Premium容量 | Fabric容量 |
 |------------------------------------------|-------------|-------------|
-| Power BI Report Server                   | 〇           | 〇(1,6)       |
+| Power BI Report Server                   | 〇           | 〇(1)       |
 | Power BI Embedded                        | ×           | 〇          |
-| Microsoft Fabric(無料)ユーザーのコンテンツの閲覧 (1) | 〇           | 〇(2)       |
-| 容量の自動スケーリング(3)                | 〇           | ×           |
-| 容量の手動スケーリング(4)                | ×           | 〇          |
-| Copilot                                  | 〇(2)       | 〇          |
-| 容量の一時停止と再開(5)                 | ×           | 〇          |
+| Microsoft Fabric(無料)ユーザーのコンテンツの閲覧 (2) | 〇           | 〇(3)       |
+| 容量の自動スケーリング(4)                | 〇           | ×           |
+| 容量の手動スケーリング(5)                | ×           | 〇          |
+| Copilot(2)                               | 〇       | 〇          |
+| 容量の一時停止と再開(6)                 | ×           | 〇          |
 </div>
 
 >[!NOTE]
-> (1):F64以上のSKUが必要です。
+> (1):F64以上の予約容量のSKUをご購入いただく場合にご使用いただけます。[Microsoft Fabric July 2024 Update](https://blog.fabric.microsoft.com/ja-jp/blog/microsoft-fabric-july-2024-update?ft=All#post-12969-_Toc172214873)
 > (2):Premium容量またはFabric容量を割り当てたワークスペースに閲覧対象のコンテンツを格納する必要があります。[Power BI Premium のよく寄せられる質問 - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-faq#f-sku---p-sku--------------)
-> (3):[Power BI Premium で自動スケーリングを使用する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-auto-scale)
-> (4):[Fabric の容量をスケーリングする - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/scale-capacity)
-> (5):[容量を一時停止して再開する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/pause-resume)
-> (6):F64以上の予約容量のSKUをご購入いただく場合にご使用いただけます。[Microsoft Fabric July 2024 Update](https://blog.fabric.microsoft.com/ja-jp/blog/microsoft-fabric-july-2024-update?ft=All#post-12969-_Toc172214873)
+> (3):F64以上のSKUが必要です。
+> (4):[Power BI Premium で自動スケーリングを使用する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-auto-scale)
+> (5):[Fabric の容量をスケーリングする - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/scale-capacity)
+> (6):[容量を一時停止して再開する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/enterprise/pause-resume)
+
 
 
 ### 2-2.	課金形態の違い
