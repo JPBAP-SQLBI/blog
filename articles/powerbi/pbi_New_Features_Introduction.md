@@ -1,6 +1,6 @@
 ---
 title: Power BI 新規機能のご紹介（2024年5月～ 7月）
-date: 2024-08-31 00:00:00 
+date: 2024-08-30 00:00:00 
 tags:
   - Power BI
   - Power BI Desktop
