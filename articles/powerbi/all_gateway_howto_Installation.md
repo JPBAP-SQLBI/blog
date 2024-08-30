@@ -131,11 +131,13 @@ Power BIサービスに発行したレポートをWebブラウザーやモバイ
 ## 3．オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー
 
 ゲートウェイ構成時にエラーが発生した際にまずお試しいただきたいトラブルシューティングについて、以下のブログにおまとめしておりますので、併せてご参考ください。
-[オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/)
+
+1. [オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/)
+2. [オンプレミス データ ゲートウェイのトラブルシューティング：運用時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/)
 
 </br>
 
-## 4．Power BI サービスのデータセット更新手順について
+## 4．Power BI サービスのデータセット更新手順について 
 
 ゲートウェイが正常に構成できたら、いよいよゲートウェイを経由してデータセットの更新をご設定いただけます。Power BI サービス上でのデータ更新設定方法について、以下のブログにおまとめしておりますので、併せてご参考ください。
 [Power BI サービスのデータセット更新手順について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/)
