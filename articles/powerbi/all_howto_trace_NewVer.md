@@ -495,12 +495,12 @@ Fiddler 自体が Proxy の役目となるため、ご利用環境からイン�
 
 「環境変数」の「ユーザー変数」に 変数名：PBI_forceTracing、変数値： 1 を設定します。
 
-
 </br>
 
 <div align="center">
 <img src="pic9.png">
 </div>
+
 
 **3．Xbox Game Barによる録画開始**
 1) XBOX Game Barが起動します。
