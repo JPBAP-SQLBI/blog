@@ -389,22 +389,13 @@ Fiddler のメニューバーの[File] - [Capture Traffic] を選択し、トレ
 または
 %USERPROFILE%\Microsoft\Power BI Desktop Store App\Traces
 
-1)「環境変数」の「ユーザー変数」に 変数名：PBI_forceTracing、変数値： 1 を設定します。
+「環境変数」の「ユーザー変数」に 変数名：PBI_forceTracing、変数値： 1 を設定します。
 
 
 </br>
 
 <div align="center">
 <img src="pic9.png">
-</div>
-
-2)左上にあるキャプチャウィンドウから、マイクをオフにし、●ボタンをクリックすると、録画が開始されます。
-
-</br>
-
-<div align="center">
-
-<img src="pic10.png">
 </div>
 
 **5．事象の再現**
@@ -504,12 +495,12 @@ Fiddler 自体が Proxy の役目となるため、ご利用環境からイン�
 
 「環境変数」の「ユーザー変数」に 変数名：PBI_forceTracing、変数値： 1 を設定します。
 
-
 </br>
 
 <div align="center">
 <img src="pic9.png">
 </div>
+
 
 **3．Xbox Game Barによる録画開始**
 1) XBOX Game Barが起動します。
