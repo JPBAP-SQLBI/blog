@@ -7,7 +7,8 @@ tags:
   - Power BI Service
   - ワークスペース
   - workspace
-  - ガバナンス
+  - Admin
+  - 管理者
 ---
 
 こんにちは、Power BI サポート チームの呂です。

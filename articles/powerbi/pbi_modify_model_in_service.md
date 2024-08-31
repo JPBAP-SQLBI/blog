@@ -5,7 +5,7 @@ tags:
   - Power BI
   - Power BI Service
   - データモデル
-  - Power BIサービス
+  - Power BI サービス
   - モデル編集
   - リレーションシップ
   - DAX
@@ -13,7 +13,7 @@ tags:
   - measure
   - calculated column
   - 計算列
-  - 行レベルのセキュリティー
+  - 行レベルのセキュリティ
 ---
 
 こんにちは、Power BI サポート チームのチャンです。 
