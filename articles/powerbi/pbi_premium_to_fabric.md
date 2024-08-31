@@ -5,6 +5,7 @@ tags:
   - Power BI
   - Power BI サービス
   - Microsoft Fabric
+  - Power BI Premium
   - 容量
 ---
 

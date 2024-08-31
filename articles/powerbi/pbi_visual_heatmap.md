@@ -5,8 +5,11 @@ tags:
   - Power BI
   - ビジュアル
   - マトリックス
+  - matrix
   - ヒートマップ
+  - heat map
   - 条件付き書式
+  - conditional formatting
   - Creator
 ---
 

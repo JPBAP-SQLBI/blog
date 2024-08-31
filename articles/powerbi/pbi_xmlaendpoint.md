@@ -5,6 +5,7 @@ tags:
   - Power BI Premium
   - XMLAエンドポイント
   - 更新
+  - refresh
 ---
 
 こんにちは、Power BI サポート チームの亀田です。

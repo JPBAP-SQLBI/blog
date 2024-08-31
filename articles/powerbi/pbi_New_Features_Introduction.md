@@ -14,7 +14,7 @@ tags:
   - Download large semantic models
   - 大規模なセマンティック モデルのダウンロード
   - Row-level security 
-  - 行レベルセキュリティ（RLS）
+  - 行レベルセキュリティ
 ---
 
 

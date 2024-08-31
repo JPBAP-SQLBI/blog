@@ -13,7 +13,7 @@ tags:
   - Support
   - サポート
   - トラブルシューティング
-  - Troubleshooting
+  - troubleshooting
 
 ---
   

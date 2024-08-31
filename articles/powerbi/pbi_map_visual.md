@@ -9,6 +9,7 @@ tags:
   - Azure Map
   - Bing Map
   - ArcGIS Map
+  - Creator
 ---
 
 こんにちは、Power BI サポート チームのチャンです。

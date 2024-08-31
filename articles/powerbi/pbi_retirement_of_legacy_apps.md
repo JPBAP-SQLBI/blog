@@ -3,10 +3,11 @@ title: 従来の Power BI アプリ (プレオーディエンス) 廃止につ�
 date: 2024-04-30 00:00:00 
 tags:
   - Power BI
+  - Power BI サービス
   - Power BI Service
-  - Power BI Apss
+  - App
   - Creator
-  - Learning
+  - deprecation
 ---
 
 

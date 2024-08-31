@@ -3,17 +3,16 @@ title: Power BI と Power Automate の連携
 date: 2024-06-28 00:00:00 
 tags:
   - Power BI
+  - Power BI サービス
+  - Power BI Service
   - Power Automate
   - 自動化
   - 更新
-  - Share Point
-  - PDF
-  - Excel
-  - Teams
+  - integration
+  - エクスポート
+  - Export
   - アラート
-  - メール
-  - 通知
-
+  - Alert
 ---
 
 こんにちは、Power BI サポート チームの中川です。

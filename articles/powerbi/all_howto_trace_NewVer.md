@@ -3,13 +3,13 @@ title: トラブル発生時の事象調査における情報採集
 date: 2023-08-31 00:00:00 
 tags:
   - Power BI
-  - Troubleshooting
+  - Power BI Desktop
+  - Power BI サービス
+  - Power BI Service
+  - トラブルシューティング
+  - troubleshooting
   - Fiddler
   - PSR
-  - Power BI Desktop trace
-  - browser trace
-  - Process Monitor
-  - Xbox Game Bar
 ---
 
 

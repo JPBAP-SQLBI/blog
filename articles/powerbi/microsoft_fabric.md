@@ -2,7 +2,7 @@
 title: Microsoft Fabric パブリック プレビュー
 date: 2023-06-18 00:00:00 
 tags:
-  - Fabric
+  - Microsoft Fabric
   - Power BI
 ---
 

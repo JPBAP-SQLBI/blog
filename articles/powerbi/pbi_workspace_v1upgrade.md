@@ -3,8 +3,10 @@ title: 【2022年4月27日より】クラシックワークスペースの自動
 date: 2022-04-21 01:00:00 
 tags:
   - Power BI
-  - Workspace
+  - workspace
   - ワークスペース
+  - Power BI サービス
+  - Power BI Service
 ---
 
 こんにちは、Power BI サポート チームの山本です。   

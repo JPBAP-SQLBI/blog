@@ -4,7 +4,9 @@ date: 2021-07-30 16:00:00
 tags:
   - Power BI
   - ライセンス
+  - license
   - Power BI サービス
+  - Power BI Service
 ---
 
 こんにちは、Power BI サポート チームのチャンです。

@@ -3,6 +3,9 @@ title: Power BI でフォルダー・SharePointフォルダーコネクタを使
 date: 2022-09-27 18:00:00 
 tags:
   - Power BI
+  - Power BI Desktop
+  - Power BI サービス
+  - Power BI Service
   - Power Query
   - データセット
   - 増分更新

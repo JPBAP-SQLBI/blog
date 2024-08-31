@@ -3,7 +3,9 @@ title: Power BIにおけるデータソースのパラメーター化
 date: 2023-07-31 00:00:00 
 tags:
   - Power BI
+  - Power BI Desktop
   - パラメーター
+  - parameter
   - Power Query
 ---
 こんにちは、Power BI サポート チームの呂です。

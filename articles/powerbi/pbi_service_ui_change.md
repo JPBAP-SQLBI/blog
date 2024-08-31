@@ -4,7 +4,9 @@ date: 2022-09-30 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - Admin
+  - 管理者
 ---
 
 </br>

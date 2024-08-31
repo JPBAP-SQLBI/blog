@@ -2,9 +2,13 @@
 title: Power BI のリアルタイム分析
 date: 2023-01-31 00:00:00 
 tags:
-  - Power BI　　
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
   - リアルタイム
+  - real-time
   - ストリーミング
+  - streaming
 ---
 
 こんにちは、Power BI サポート チームの山本です。  

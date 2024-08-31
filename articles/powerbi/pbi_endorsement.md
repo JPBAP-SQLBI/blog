@@ -4,7 +4,9 @@ date: 2023-05-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
-  - Power BI アプリ
+  - Power BI Service
+  - アプリ
+  - App
   - 共有
 ---
 

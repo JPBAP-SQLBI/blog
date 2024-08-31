@@ -4,7 +4,11 @@ date: 2024-03-29 00:00:00
 tags:
   - Power BI
   - 引き継ぎ
+  - handover
   - ロール
+  - role
+  - Power BI サービス
+  - Power BI Service
 ---
 こんにちは、Power BI サポート チームの呂です。
 

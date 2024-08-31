@@ -3,10 +3,13 @@ title: Premium / Fabric 容量のスロットリングについて
 date: 2024-04-30 00:00:00
 tags:
   - Power BI
-  - Premium
-  - Fabric 
+  - Premium Capacity
+  - Microsoft Fabric 
   - CapacityLimitExceed
   - throttling
+  - スロットリング
+  - エラー
+  - error
 ---  
 
 

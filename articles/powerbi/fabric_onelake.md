@@ -2,7 +2,7 @@
 title: Microsoft Fabric の OneLake について
 date: 2024-06-28 15:00:00 
 tags:
-  - Fabric
+  - Microsoft Fabric
   - OneLake
   - ショートカット
 ---

@@ -4,11 +4,12 @@ date: 2022-03-30 00:00:00
 tags:
   - Power BI　　
   - Power BI Desktop
-  - Outofmemory
-  - メモリ不足
+  - memory
+  - メモリ
   - パフォーマンス
-  - 最小要件
-  - メモリ不足のため完了できません
+  - performance
+  - Error
+  - エラー
 ---
 
 こんにちは、Power BI サポート チームの山崎です。   

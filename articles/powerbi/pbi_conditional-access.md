@@ -5,6 +5,7 @@ tags:
   - Power BI　　
   - アクセス制御
   - 条件付きアクセス
+  - Conditional Access
 ---
 
 こんにちは、Power BI サポート チームの亀田です。

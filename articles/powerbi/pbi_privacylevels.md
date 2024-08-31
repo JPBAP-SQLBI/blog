@@ -4,6 +4,7 @@ date: 2022-05-31 00:00:00
 tags:
   - Power BI　　
   - Power BI サービス
+  - Power BI Service
   - Power BI Desktop
   - プライバシーレベル
   - Creator

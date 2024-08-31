@@ -3,11 +3,15 @@ title: 動的にビジュアル変換ができる「フィールドパラメー�
 date: 2022-06-30 15:00:00
 tags:
   - Power BI
+  - Power BI Desktop
   - ビジュアル
   - フィールドパラメーター
+　- field parameter
   - 動的
   - スライサー
+  - slicer
   - パラメーター
+  - parameter
 ---
 
 こんにちは、Power BI サポート チームのチャンです。 

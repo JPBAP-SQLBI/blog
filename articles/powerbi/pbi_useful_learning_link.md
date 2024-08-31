@@ -3,10 +3,8 @@ title: Power BI を学習するために役に立つコンテンツのご紹介
 date: 2022-12-29 15:00:00 
 tags:
   - Power BI
-  - 学習
-  - 自習
   - Learning
-  - 勉強
+  - 学習
 ---
 
 </br>

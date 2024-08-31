@@ -3,8 +3,11 @@ title: Power BI Service へのアクセス制御③ 秘密度ラベル
 date: 2023-01-31 00:00:00 
 tags:
   - Power BI
+  - Power BI サービス
+  - Power BI Service
   - アクセス制御
   - 秘密度ラベル
+  - sensitivity label
 ---
 
 こんにちは、Power BI サポート チームの亀田です。

@@ -3,9 +3,13 @@ title: Microsoft Entra ID の外部コラボレーションの設定が与える
 date: 2023-04-30 00:00:00 
 tags:
   - Power BI
+  - Power BI サービス
+  - Power BI Service
   - ゲストユーザー
+  - external user
   - アクセス許可
-  - 管理者向け
+  - 管理者
+  - Admin
 ---
 
 こんにちは、Power BI サポート チームの山本です。

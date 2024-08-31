@@ -3,13 +3,15 @@ title: Power BI の既知の問題や障害に関する公開情報について
 date: 2023-04-28 00:00:00 
 tags:
   - PowerBI　　
-  - knownissue
+  - known issue
   - 既知の問題
   - 不具合
   - bug
   - 障害
   - Outage
-  - Degradation
+  - Power BI Desktop
+  - Power BI サービス
+  - Power BI Service
 ---
 
 
