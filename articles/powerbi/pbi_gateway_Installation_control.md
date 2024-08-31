@@ -3,7 +3,7 @@ title: Power Platform管理センターからオンプレミス データ ゲー
 date: 2023-01-31 00:00:00 
 tags:
   - Power BI
-  - オンプレミス データゲート ウェイ
+  - オンプレミス データ ゲートウェイ
   - On-Premises Data Gateway
   - Admin
   - 管理者
