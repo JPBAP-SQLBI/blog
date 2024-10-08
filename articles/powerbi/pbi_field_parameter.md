@@ -6,7 +6,7 @@ tags:
   - Power BI Desktop
   - ビジュアル
   - フィールドパラメーター
-　- field parameter
+  - field parameter
   - 動的
   - スライサー
   - slicer
