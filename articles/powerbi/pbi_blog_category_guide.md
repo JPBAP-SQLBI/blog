@@ -24,7 +24,7 @@ tags:
 ・[ビジュアルと表示](#ビジュアルと表示)
 ・[Power Query](#Power-Query)
 ・[コンテンツ共有](#コンテンツ共有)
-・[オンプレミス データ ゲートウェイ](#オンプレミス-データ-ゲートウェイ)
+・[データ ゲートウェイ](#データ-ゲートウェイ)
 ・[ワークスペース管理](#ワークスペース管理)
 ・[テナント及びユーザー管理](#テナント及びユーザー管理)
 ・[REST API](#REST-API)
@@ -72,12 +72,13 @@ tags:
 [組織外のユーザーとPower BIコンテンツの共有](https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/)
 [Power BIでデータに接続しレポートを作成・共有する手順](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_how_to_create_report/)
 
-## オンプレミス データ ゲートウェイ
+## データ ゲートウェイ
 [オンプレミス データ ゲートウェイのインストールの手順](https://jpbap-sqlbi.github.io/blog/powerbi/all_gateway_howto_Installation/)
 [オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/)
 [オンプレミス データ ゲートウェイのトラブルシューティング：運用時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/)
 [オンプレミスデータゲートウェイのセキュリティーロール](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/)
 [Power Platform管理センターからオンプレミス データ ゲートウェイのインストールの制御方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/)
+[**NEW! 9月**  仮想ネットワーク (VNet) データ ゲートウェイ について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
 
 ## ワークスペース管理
 [Power BI Pro のワークスペース容量について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/)
@@ -95,21 +96,24 @@ tags:
 [Power BIユーザーの退職・異動への備え](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handover/)
 [コンテンツの承認（昇格・認定）と検出について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_endorsement/)
 [ユーザーの操作におけるPower BIのアクティビティログ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/)
+[**NEW! 10月**Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
 [Power BI のテナント設定の状況を一括抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_api_export_tenant_settings/)
 [REST API を組み合わせて情報を取得する](https://jpbap-sqlbi.github.io/blog/powerbi/restapi/)
+[**NEW! 9月** セマンティック モデルの更新履歴を REST API で取得する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refreshhistory/)
 
 ## データ接続
 [「インポート」と「Direct Query」データセットの違い](https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/)
 [Power BI のリアルタイム分析](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_realtime_analytics/)
 [Private なデータソースへ接続する](https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/)
 [プライバシー レベルの選択について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/)
+[**NEW! 9月** Power BI 複合モデル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_composite_mode/)
 
 ## トラブルシューティング
 [「テーブルの列 ‘***’ が見つかりませんでした。」Power BI更新エラーについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/)
-[_NEW! 8月_][レポート発行後の「ファイルは公開されましたが、切断されました」メッセージについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_publish_error/)
+[レポート発行後の「ファイルは公開されましたが、切断されました」メッセージについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_publish_error/)
 [Oracle データベースとの接続におけるトラブルシューティング](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_oracle_driver/)
 [Power BI の既知の問題や障害に関する公開情報について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_knownissue/)
 [セマンティック モデル更新遅延のトラブル シューティング](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_delay/)
@@ -143,16 +147,16 @@ tags:
 [Power BI ビジネスユーザー向けの使い方紹介](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_enduser_usage/)
 [Power BI レポートの埋め込み方法の種類について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/)
 [エクスポート可能なファイルの種類について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_export/)
-[_NEW! 7月_][ページ分割されたレポート①](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_1/)
-[_NEW! 8月_][Power BI 新規機能のご紹介（2024年5月～ 7月）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_New_Features_Introduction/)
+[ページ分割されたレポート①](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_1/)
+[Power BI 新規機能のご紹介（2024年5月～ 7月）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_New_Features_Introduction/)
 
 ## Premium 機能
 [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
 [Power BI 用 Copilot を利用する](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_for_PBI/)
 [Premium / Fabric 容量のスロットリングについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_throttling/)
 [XMLAエンドポイント](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_xmlaendpoint/)
-[_NEW! 7月_][Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/)
-[_NEW! 8月_][Power BI ユーザーから見た Microsoft Fabric について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/)
+[Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/)
+[Power BI ユーザーから見た Microsoft Fabric について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/)
 
 ## 通信設定
 [Power BI で ExpressRoute の使用について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/)
@@ -164,7 +168,7 @@ tags:
 
 ## サポート関連
 [Power BI のお問い合わせについて](https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary/)
-[_NEW! 8月_][Power BI サポートチームへのお問い合わせ時に気をつけるポイント](https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/)
+[Power BI サポートチームへのお問い合わせ時に気をつけるポイント](https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/)
 [Power BI の開発支援・コンサルティングを含む内容に関するお問い合わせについて](https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/)
 [Power BI Report Server のサポートについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbirs_support_boundary/)
 [「Power BI Windows アプリ」のサポート終了](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_windows_app_reach_retirement/)
