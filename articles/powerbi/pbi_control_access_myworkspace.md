@@ -3,9 +3,12 @@ title: 組織内のユーザーのマイ ワークスペースへアクセスす
 date: 2023-02-28 00:00:00 
 tags:
   - Power BI
-  - users in your organization
-  - myworkspace
-  - control
+  - Power BI サービス
+  - Power BI Service
+  - ワークスペース
+  - マイ ワークスペース
+  - workspace
+  - My workspace
 ---
 
 こんにちは、Power BI サポート チームのファムです。

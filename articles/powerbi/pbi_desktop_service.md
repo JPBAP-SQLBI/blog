@@ -5,6 +5,7 @@ tags:
   - Power BI
   - Power BI Desktop
   - Power BI サービス
+  - Power BI Service
 ---
 
 こんにちは、Power BI サポート チームです。

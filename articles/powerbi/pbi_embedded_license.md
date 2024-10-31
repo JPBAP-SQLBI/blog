@@ -1,4 +1,3 @@
-
 ---
 title: Power BI Embedded とは？ライセンスと埋め込み方法
 date: 2022-03-31 15:00:00 

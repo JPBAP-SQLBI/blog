@@ -7,8 +7,8 @@ tags:
   - dataset
   - 更新　
   - refresh
-  - オンプレミスデータゲートウェイ
-  - onpremisedatagateway
+  - オンプレミス データ ゲートウェイ
+  - On-Premises Data Gateway
 ---
 
 

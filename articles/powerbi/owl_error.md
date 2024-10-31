@@ -3,11 +3,11 @@ title: フクロウエラーについて
 date: 2023-12-29 00:00:00  
 tags:  
   - Power BI
-  - ふくろう
-  - フクロウ
-  - owl
+  - Power BI サービス
+  - Power BI Service
   - エラー
   - error
+  - troubleshooting
   - トラブルシューティング
 ---
     

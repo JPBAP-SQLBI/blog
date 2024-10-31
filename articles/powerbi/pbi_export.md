@@ -4,9 +4,10 @@ date: 2022-06-30 00:00:00
 tags:
   - Power BI　　
   - Power BI サービス
+  - Power BI Service
   - エクスポート
   - Admin
-  - Consumer
+  - 管理者
 ---
 
 こんにちは、Power BI サポート チームの山崎です。

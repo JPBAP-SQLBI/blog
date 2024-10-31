@@ -2,14 +2,13 @@
 title: Power BI サービスに発行したレポートの時刻のずれについて
 date: 2023-02-28 00:00:00 
 tags: 
-- PowerBI
-- UTC
-- 相対時間
-- タイムゾーン
-- 9時間
-- JST
-- DateTimeZone
-- Now
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
+  - UTC
+  - 相対時間
+  - タイムゾーン
+  - TimeZone
 ---
 
 

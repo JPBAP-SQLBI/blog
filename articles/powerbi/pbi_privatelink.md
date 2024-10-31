@@ -2,7 +2,9 @@
 title: Power BI Service へのアクセス制御② Azure Private Link
 date: 2022-12-29 00:00:00 
 tags:
-  - Power BI　　
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
   - ダッシュボード
 ---
 

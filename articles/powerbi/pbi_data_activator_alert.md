@@ -2,10 +2,13 @@
 title: Power BI とData Activator のデータアラート機能の比較
 date: 2024-05-31 00:00:00 
 tags:
+  - Power BI
   - Power BI サービス
+  - Power BI Service
   - Data Activator
-  - データアラート
-  - Fabric
+  - アラート
+  - Alert
+  - Microsoft Fabric
 ---
 
 

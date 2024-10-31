@@ -2,8 +2,10 @@
 title: Power BI で ExpressRoute の使用について
 date: 2023-03-31 16:00:00 
 tags:
-  - Power BI　　
-  - Express Route
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
+  - ExpressRoute
   - 通信
 ---
 

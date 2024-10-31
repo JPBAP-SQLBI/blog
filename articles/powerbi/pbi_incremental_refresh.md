@@ -3,6 +3,9 @@ title: 増分更新の概要と設定方法
 date: 2022-10-31 00:00:00 
 tags:
   - Power BI
+  - Power BI Desktop
+  - Power BI サービス
+  - Power BI Service
   - Power Query
   - データセット
   - 増分更新

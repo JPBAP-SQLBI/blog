@@ -4,9 +4,9 @@ date: 2022-01-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - データセット
   - ストレージ
-  - Pro
   - 容量
   - storage
 ---

@@ -5,9 +5,13 @@ tags:
   - Power BI
   - ビジュアル
   - テーブル
+  - table
   - マトリックス
+  - matrix
   - プレビュー
+  - preview
   - スパークライン
+  - sparkline
 ---
 
 こんにちは、Power BI サポート チームの丸山です。 

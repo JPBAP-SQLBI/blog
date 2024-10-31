@@ -4,8 +4,11 @@ date: 2023-08-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - ワークスペース
-  - ガバナンス
+  - workspace
+  - Admin
+  - 管理者
 ---
 
 こんにちは、Power BI サポート チームの呂です。

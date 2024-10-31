@@ -5,8 +5,10 @@ tags:
   - Power BI　　
   - Power BI Desktop
   - Power BI サービス
-  - Power BI モバイル
+  - Power BI Service
+  - モバイル アプリ
   - オンプレミス データ ゲートウェイ
+  - on-premises data gateway
   - リリースプラン
   - 更新情報
   - アップデート

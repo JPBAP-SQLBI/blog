@@ -3,13 +3,17 @@ title: Power BI サービスでデータモデルを編集する
 date: 2023-05-31 15:00:00
 tags:
   - Power BI
+  - Power BI Service
   - データモデル
-  - Power BIサービス
+  - Power BI サービス
   - モデル編集
   - リレーションシップ
+  - DAX
   - メジャー
+  - measure
+  - calculated column
   - 計算列
-  - 行レベルのセキュリティー
+  - 行レベルのセキュリティ
 ---
 
 こんにちは、Power BI サポート チームのチャンです。 

@@ -1,18 +1,18 @@
-
 ---
 title: Power BI のユーザーアクティビティ追跡方法の比較
 date: 2023-12-29 14:00:00 
 tags:
-  - Power BI　　
+  - Power BI
   - Audit Log
   - Activity Log
   - Usage Metrics
   - 監査ログ
   - アクティビティログ
-  - 利用状況メトリック
   - 使用状況メトリック
   - Admin Monitoring
   - 管理者監視ワークスペース
+  - Admin
+  - 管理者
 ---
 
 

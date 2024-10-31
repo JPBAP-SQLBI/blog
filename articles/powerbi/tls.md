@@ -3,6 +3,7 @@ title: TLS1.0/1.1のサポート終了
 date: 2023-05-31 00:00:00 
 tags:
   - Power BI
+  - deprecation
 ---
 
 こんにちは、Power BI サポート チームの亀田です。

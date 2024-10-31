@@ -1,12 +1,12 @@
-
 ---
 title: オンプレミス データ ゲートウェイのトラブルシューティング：構成時に発生するエラー
 date: 2023-05-31 00:00:00 
 tags:
   - PowerBI　　
-  - Onpreisesdatagateway
-  - gateway
+  - オンプレミス データ ゲートウェイ
+  - on-premises data gateway
   - troubleshooting
+  - トラブルシューティング
 ---
 
 

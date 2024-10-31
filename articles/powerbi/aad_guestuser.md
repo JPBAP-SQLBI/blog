@@ -7,11 +7,13 @@ tags:
   - 共有
   - 組織外ユーザー
   - B2B
+  - Admin
+  - 管理者
 ---
 
 こんにちは、Power BI サポート チームのチャンです。
 
-Power BI ご利用のユーザー様から、「組織外のユーザーはPower BI のレポートを共有できますか？制限する方法はありますか？」などの質問をよく頂いていますが、
+Power BI ご利用のユーザー様から、「組織外のユーザーは Power BI のレポートを共有できますか？制限する方法はありますか？」などの質問をよくいただていますが、
 本ブログでは、組織外のユーザーを招待し、組織内のゲストユーザーとしてコンテンツを共有する方法、及び権限を制御する方法につきまして、ご紹介いたします。
 
 <!-- more -->
@@ -20,6 +22,14 @@ Power BI ご利用のユーザー様から、「組織外のユーザーはPower
 > 本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、
 > 本記事編集時点と実際の機能に相違がある場合がございます。
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
+
+
+---
+## 更新履歴
+---
+Update: 2024/07/03
+Microsoft Fabric 一般提供に伴い、テナント設定の表記が変わったため、内容を一部修正しました。
+[エクスポートと共有のテナント設定](https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-portal-export-sharing)
 
 ---
 ## 目次
@@ -33,11 +43,11 @@ Power BI ご利用のユーザー様から、「組織外のユーザーはPower
 ## 組織外のユーザーとは？
 ---
 
-組織外のユーザー（または外部ユーザー）とは、ご利用のAzure Active Directory（AAD）テナントのドメイン以外のユーザーを指します。
+組織外のユーザー（または外部ユーザー）とは、ご利用の Microsoft Entra ID (旧 Azure Active Directory) テナントのドメイン以外のユーザーを指します。
 具体的には、メールアドレスの@ マーク後の表記が異なるユーザーです。
 gmail.com、outlook.com、hotmail.com などの個人用メールアカウントのユーザーにつきましても、組織外のユーザーと見なします。
 
-組織外のユーザーと、Power BI内のレポートを共有するには、組織外のユーザーをゲストユーザーとして招待する必要があります。
+組織外のユーザーと、 Power BI 内のレポートを共有するには、組織外のユーザーをゲストユーザーとして招待する必要があります。
 
 ---
 ## 組織外のユーザーをゲストユーザーとして招待するには
@@ -47,10 +57,10 @@ gmail.com、outlook.com、hotmail.com などの個人用メールアカウント
 
 #### ■ 計画的招待
 
-Azure Active Directory（AAD）からゲストユーザーを招待する方法です。
+Microsoft Entra ID (旧 Azure Active Directory) からゲストユーザーを招待する方法です。
 
-まず、[Azureポータル](https://portal.azure.com/) へアクセスし、Azure Active Directoryを選択します。
-次に、Azure Active Directoryで、[ユーザー]>[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。
+まず、[Azure ポータル](https://portal.azure.com/) へアクセスし、 Microsoft Entra ID (旧 Azure Active Directory) を選択します。
+次に、 Microsoft Entra ID (旧 Azure Active Directory) で、[ユーザー]>[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。
 
 ![](./aad_guestuser.png)
 
@@ -59,12 +69,12 @@ Azure Active Directory（AAD）からゲストユーザーを招待する方法�
 ![](./guestuser_mail.png)
 
 > [!TIP]
-> Azure Active Directory （AAD）側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。
-> 参考：[B2B 外部コラボレーションを有効にしてゲストを招待できるユーザーを管理する](https://docs.microsoft.com/ja-jp/azure/active-directory/external-identities/delegate-invitations)
+>  Microsoft Entra ID (旧 Azure Active Directory) 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。
+> 参考：[外部コラボレーションの設定を構成する](https://learn.microsoft.com/ja-jp/entra/external-id/external-collaboration-settings-configure)
 
 #### ■ アドホック招待
 
-レポートやダッシュボードの共有機能、またはアプリ発行のアクセスページで、AADに存在しない組織外のユーザーを招待する方法です。
+レポートやダッシュボードの共有機能、またはアプリ発行のアクセスページで、Microsoft Entra ID (旧 Azure Active Directory) に存在しない組織外のユーザーを招待する方法です。
 
 レポートの直接アクセスから追加する方法には、レポートの[アクセス許可の管理]にアクセスし、
 直接アクセスで、[+ユーザーの追加]を行ない、組織外のユーザーのメールアドレスを入力すると、招待メールが対象のユーザーに届きます。
@@ -83,64 +93,60 @@ Azure Active Directory（AAD）からゲストユーザーを招待する方法�
 > 管理ポータルで、テナント設定「組織への外部ユーザーの招待」を無効化することによって、アドホック招待を使用できないように設定することができます。
 
 > **参考情報**
-> - [Azure AD B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b)
+> - [Microsoft Entra B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b)
 
 計画的招待で、ゲストユーザーとして招待されたユーザーは、ワークスペースのアクセス許可、レポートやダッシュボード、アプリのアクセス許可でも追加できるようになります。
 また、アドホック招待を通してアカウントを作成したゲストユーザーも、招待元のレポート・ダッシュボード・アプリを閲覧できる上に、計画的招待のゲストユーザーと同様、他のレポートやダッシュボード、アプリのアクセス許可にも追加されることが可能です。
 
 ただし、ゲストユーザーがコンテンツを閲覧するには、以下のライセンス条件が必要です。
 
-- ゲストユーザーにPower BI Pro ライセンスまたはPremium Per User ライセンスの付与
-- Premium Per Capacity のワークスペースで、ゲストユーザーにはライセンスなしで閲覧可能
-- ゲストユーザーが本来所属しているテナントで、Power BI Pro ライセンスまたはPremium Per User ライセンスを所持している
+- ゲストユーザーに Power BI Pro ライセンスまたは Premium Per User ライセンスの付与
+- Premium Per Capacity (または F64 以上のFabric 容量) のワークスペースで、ゲストユーザーにはライセンスなしで閲覧可能
+- ゲストユーザーが本来所属しているテナントで、Power BI Pro ライセンスまたは Premium Per User ライセンスを所持している
 
 
-また、対象のゲストユーザーが、コンテンツを編集・作成・管理できるようになるには、Power BI Pro ライセンスまたはPremium Per User ライセンスを所持する上で、管理ポータルのテナント設定で、「Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する」を有効化しておく必要があります。
-こちらのテナント設定は、既定値では、無効となっています。
-
-![](./tenant_setting1.png)
+また、対象のゲストユーザーが、コンテンツを編集・作成・管理できるようになるには、Power BI Pro ライセンスまたは Premium Per User ライセンスを所持する上で、共同作成者以上のワークスペースロールが付与されている必要がございます。
 
 しがしながら、通常のユーザーと異なり、コンテンツを編集・作成・管理できるようになったとしても、ゲストユーザーには一部利用できない機能があります。
 詳細につきましては、下記参考情報のドキュメントに記載されている、「考慮事項と制限事項」の内容をご確認ください。
 
 > **参考情報**
-> - [Azure AD B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する（考慮事項と制限事項）](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#considerations-and-limitations)
+> - [Microsoft Entra B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する（考慮事項と制限事項）](https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b#considerations-and-limitations)
 
 ---
 ## ゲストユーザーの権限を制御するには
 ---
 
-管理ポータルのテナント設定で、ゲストユーザーがPower BIサービスのテナントへアクセスできないようにすることや、アドホック招待を無効化にすることができます。
+管理ポータルのテナント設定で、ゲストユーザーが Power BI サービスのテナントへアクセスできないようにすることや、アドホック招待を無効化にすることができます。
 
-#### ■ Azure Active Directory のゲスト ユーザーによる Power BI へのアクセスを許可する
+#### ■ ゲスト ユーザーが Microsoft Fabric へのアクセスが可能
 
-既定値は有効化されていますが、この設定を無効にすると、Power BI サービスにアクセスしようとしたときに、ゲストユーザーにエラーが表示されます。
+既定値は有効化されていますが、この設定を無効にすると、Power BI サービスや Fabric にアクセスしようとしたときに、ゲストユーザーにエラーが表示されます。
 
 ![](./tenant_setting2.png)
 
-#### ■ 組織への外部ユーザーの招待
+#### ■ ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます
 
 既定値は有効化されていますが、この設定を無効にすると、アドホック招待でレポートやダッシュボード、アプリから組織外のユーザーを招待することができません。
-ただし、計画的招待、Azure Active Directoryでゲストユーザーを招待することは引き続き可能です。
+ただし、計画的招待ー Microsoft Entra ID (旧 Azure Active Directory) でゲストユーザーを招待することは引き続き可能です。
 
 ![](./tenant_setting3.png)
 
 > [!TIP]
-> 計画的招待－Azure Active Directory （AAD）側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。
-> 参考：[B2B 外部コラボレーションを有効にしてゲストを招待できるユーザーを管理する](https://learn.microsoft.com/ja-jp/azure/active-directory/external-identities/external-collaboration-settings-configure)
+> 計画的招待－Microsoft Entra ID (旧 Azure Active Directory) 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。
+> 参考：[外部コラボレーションの設定を構成する](https://learn.microsoft.com/ja-jp/entra/external-id/external-collaboration-settings-configure)
 
-#### ■ Azure Active Directory のゲスト ユーザーによる組織内のコンテンツの編集および管理を許可する
+#### ■ ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます
 
-既定値では無効となっていますが、この設定を有効にすると、適切なライセンスを持つゲストユーザーは、組織内のコンテンツを編集および管理できます。
-また、左側のワークスペースの一覧タブも利用できるようになります。
+既定値では無効となっていますが、この設定を有効にすると、組織において左側のナビゲーション ウィンドウを使用して閲覧エクスペリエンスにフル アクセスすることができます。
 
 ![](./tenant_setting1.png)
 
 > **参考情報**
-> - [管理ポータルでの Power BI の管理](https://learn.microsoft.com/ja-jp/power-bi/admin/service-admin-portal#export-and-sharing-settings)
+> - [エクスポートと共有のテナント設定](https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-portal-export-sharing)
 
 > **本ブログの関連記事**
-> - [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded）](../pbi_license/)
+> - [Microsoft Entra ID の外部コラボレーションの設定が与える影響について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/)
 
 </br>
 

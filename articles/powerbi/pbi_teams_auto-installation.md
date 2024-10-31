@@ -4,6 +4,9 @@ date: 2021-09-30 00:00:00
 tags:
   - Power BI
   - Teams
+  - integration
+  - Power BI サービス
+  - Power BI Service
 ---
 
 

@@ -3,8 +3,11 @@ title: Power BI テーマについて
 date: 2023-02-28 00:00:00 
 tags:
   - Power BI
-  - Power BI テーマ
-  - Power BI デザイン
+  - テーマ
+  - theme
+  - Power BI サービス
+  - Power BI Service
+  - Power BI Desktop
 ---
 こんにちは、Power BI サポート チームの呂です。
 レポートやダッシュボードのデザインを一括で設定する方法として、Power BI テーマという便利な機能があることをみなさんご存知でしょうか？

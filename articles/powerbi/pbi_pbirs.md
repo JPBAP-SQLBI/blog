@@ -5,6 +5,7 @@ tags:
   - Power BI
   - Power BI Report Server
   - 管理者
+  - Admin
 ---
 
 

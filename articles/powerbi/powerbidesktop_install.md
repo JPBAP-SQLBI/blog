@@ -2,10 +2,7 @@
 title: Power BI Desktop のインストール・更新方法について
 date: 2023-09-29 00:00:00 
 tags:
-  - PowerBIDesktop　　
-  - インストール
-  - ストアアプリ
-  - MicrosoftStore
+  - Power BI Desktop
   - 更新
   - アップデート
 ---

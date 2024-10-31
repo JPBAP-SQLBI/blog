@@ -4,15 +4,16 @@ date: 2024-05-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - 更新
-  - Reflesh
-  - 更新エラー
+  - Refresh
+  - エラー
+  - error
   - スケジュール更新
   - データセット
   - タイムアウトエラー
-  - Premium
-  - Fabric
-  - delay
+  - Power BI Premium
+  - Microsoft Fabric
   - セマンティックモデル
 ---
 
