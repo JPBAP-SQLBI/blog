@@ -172,6 +172,7 @@ Microsoft Purview ハブは、ファブリックのデータ資産を管理す�
 ---
 Power BI サポート チームは、お客様が開発を進める中で発生した問題のトラブルシューティングにおいて、問題箇所に限定して 1 問 1 答 でのご支援が可能です。レポート開発、DAX 式や M クエリの作成、Embedded 環境の開発、REST API や PowerShell でのスクリプト作成等開発にかかわる内容やコンサルティングを含む内容は当リアクティブ サポート範囲外となります。
 原因追及の可否については、ご利用されているサポート契約に基づきます。
+※Power BI Desktop のサポートにお問い合わせいただいた場合、アプリケーションを最新バージョンにアップグレードするように求められます。
 
 **関連ブログ** 
 [Power BI のお問い合わせについて | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary/)
