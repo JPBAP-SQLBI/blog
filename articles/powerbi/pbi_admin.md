@@ -195,6 +195,8 @@ Power BI でよくある質問の公開情報や、一部公開情報にない�
 **関連ブログ** 
 [Power BI ライセンスに関するよくある質問(FAQ) | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license_faq/)
 
+
+**その他よくある質問** 
 ---
 
 **Q. マイ ワークスペースを利用させない方法はありますか？**  
