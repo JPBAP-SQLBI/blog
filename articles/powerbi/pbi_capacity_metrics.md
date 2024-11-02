@@ -28,11 +28,11 @@ Microsoft Fabric Capacity Metrics アプリは、Microsoft Fabric や Premium �
 ## 目次
 ---
 - [目次](#目次)
-- [1. Microsoft Fabric Capacity Metrics アプリの概要](#1-microsoft-fabric-capacity-metrics-アプリの概要)
-    - [1-1. 使用要件](#11-使用要件)
+- [1. Microsoft Fabric Capacity Metrics アプリの概要](#1-Microsoft-Fabric-Capacity-Metrics-アプリの概要)
+    - [1-1. 使用要件](#1-1-使用要件)
     - [1-2. インストール方法](#1-2-インストール方法)
-- [2.Microsoft Fabric Capacity Metrics アプリの各アイテムの見方](#2-microsoft-fabric-capacity-metrics-アプリの各アイテムの見方)
-    - [2-1.コンピューティング ページ](#21-コンピューティング-ページ)
+- [2.Microsoft Fabric Capacity Metrics アプリの各アイテムの見方](#2-Microsoft-Fabric-Capacity-Metrics-アプリの各アイテムの見方)
+    - [2-1.コンピューティング ページ](#2-1-コンピューティング-ページ)
     - [2-2.ストレージ ページ](#2-2-ストレージ-ページ)
 
 ---
