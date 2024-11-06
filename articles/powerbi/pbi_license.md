@@ -26,7 +26,7 @@ tags:
 ## 更新履歴
 ---
 Update: 2024/11/06
-日本マイクロソフトの法人向けライセンスおよびサービスの価格改定に伴い、Power BI 各種ライセンスの価格表記を変更いたしました。
+日本マイクロソフトの法人向けソフトウエアおよびクラウドサービスの価格改定に伴い、Power BI 各種ライセンスの価格表記を変更いたしました。
 [法人向けソフトウエアおよびクラウドサービスの価格改定について - Japan News Center](https://news.microsoft.com/ja-jp/2023/12/06/231206-information/?msockid=10a1aee0bd6f65da201ebef9bc13649a)
 
 
@@ -184,7 +184,6 @@ Fabric は 端的に表現すると Power BI 、Azure Synapse Analytics 、Azure
 ※7：Power BIの高度なAI機能より深度な[データサイエンスの機能](https://learn.microsoft.com/ja-jp/fabric/data-science/)なら利用可能。
 ※8：価格は定期的に改訂されることがありますので、最新の価格は[Power BI の価格](https://www.microsoft.com/ja-jp/power-platform/products/power-bi/pricing)よりご確認ください。
 ※9：2024 年 7 月以降、新規で Power BI Premium Per Capacity 容量を購入できなくなり、今後すべて Fabric Capacity に移行されます。詳細な移行スケジュールにつきましては、[Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/) のブログ記事をご確認ください。
-
 
 
 ---
