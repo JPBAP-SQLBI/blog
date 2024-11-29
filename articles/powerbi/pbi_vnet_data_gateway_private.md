@@ -20,16 +20,6 @@ Microsoft Fabric からプライベートなデータソースに接続する際
 
 本ブログでは、 VNet データゲートウェイを利用し、Private Endpoint を有効にした SQL Server に接続する手順についてご紹介します。
 
-なお、オンプレミスデータゲートウェイを利用したプライベートなデータソースへ接続する方法につきましては、以下の公開ブログをご参照ください。
->[!NOTE]
-> 参考情報：[Private なデータソースへ接続する | Japan CSS Support Power BI Blogn)](https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/)
-
-
-VNet データゲートウェイの紹介に関する前回のブログはこちらをご参照ください。
->[!NOTE]
-> 参考情報：[仮想ネットワーク (VNet) データ ゲートウェイ について | Japan CSS Support Power BI Blog)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
-
-</br>
 
 <!-- more -->
 > [!IMPORTANT]  
@@ -58,6 +48,7 @@ VNet データゲートウェイの紹介に関する前回のブログはこち
 <img src="1_Configuration_image.png">
 </div>
 
+
 </br>
 ユーザーはインターネットを経由して Microsoft Fabric にアクセスすることが可能ですが、SQL Server にはパブリック アクセスが禁止されているため、直接接続することはできません。
 また、Microsoft Fabric も同様に、SQL Server に直接アクセスすることはできません。
@@ -68,6 +59,16 @@ VNet データゲートウェイの紹介に関する前回のブログはこち
 
 >[!NOTE]
 > 参考情報：[初めての Microsoft Fabric データフローを作成する - Microsoft Fabric | Microsoft Learn)](https://learn.microsoft.com/ja-jp/fabric/data-factory/create-first-dataflow-gen2)
+
+
+なお、オンプレミスデータゲートウェイを利用したプライベートなデータソースへ接続する方法につきましては、以下の公開ブログをご参照ください。
+>[!NOTE]
+> 参考情報：[Private なデータソースへ接続する | Japan CSS Support Power BI Blogn)](https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/)
+
+
+VNet データゲートウェイの紹介に関する前回のブログはこちらをご参照ください。
+>[!NOTE]
+> 参考情報：[仮想ネットワーク (VNet) データ ゲートウェイ について | Japan CSS Support Power BI Blog)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
 
 ---
 ## 作成する構成
