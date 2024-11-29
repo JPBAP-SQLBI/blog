@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/5_Dataflow_SQLDB_VnetGW.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/5_vnet_gw_connect_get_data.png">
 <meta property="article:published_time" content="2024-11-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-11-29T08:48:30.960Z">
+<meta property="article:modified_time" content="2024-11-29T08:56:21.502Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -125,7 +125,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+25e07a0c-6ad4-53ff-9405-cad366dee89a%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E4%BB%AE%E6%83%B3%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF+%28VNet%29+%E3%83%87%E3%83%BC%E3%82%BF+%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%8B%E3%82%89%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%B8%E3%81%AE%E6%8E%A5%E7%B6%9A%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_vnet_data_gateway_private%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_vnet_data_gateway_private.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_vnet_data_gateway_private.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/" data-id="cm42i4jve004p0mo765i4b2dd" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/" data-id="cm42ien2m004p0mnyad504wmo" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -133,12 +133,6 @@
         <p>こんにちは、Power BI サポート チームの中川です。</p>
 <p>Microsoft Fabric からプライベートなデータソースに接続する際には、従来、オンプレミス データ ゲートウェイが主に利用されてきましたが、VNet データ ゲートウェイを利用することで、同様にプライベートなデータソースへの接続が可能となります。</p>
 <p>本ブログでは、 VNet データゲートウェイを利用し、Private Endpoint を有効にした SQL Server に接続する手順についてご紹介します。</p>
-<p>なお、オンプレミスデータゲートウェイを利用したプライベートなデータソースへ接続する方法につきましては、以下の公開ブログをご参照ください。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/">Private なデータソースへ接続する | Japan CSS Support Power BI Blogn)</a></p></div>
-<p>VNet データゲートウェイの紹介に関する前回のブログはこちらをご参照ください。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/">仮想ネットワーク (VNet) データ ゲートウェイ について | Japan CSS Support Power BI Blog)</a></p></div>
-</br>
-
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 <hr>
@@ -157,6 +151,7 @@
 <img src="1_Configuration_image.png">
 </div>
 
+
 </br>
 ユーザーはインターネットを経由して Microsoft Fabric にアクセスすることが可能ですが、SQL Server にはパブリック アクセスが禁止されているため、直接接続することはできません。
 また、Microsoft Fabric も同様に、SQL Server に直接アクセスすることはできません。
@@ -166,6 +161,10 @@
 今回は、この構成を データフロー Gen2 を使用して作成する例をご紹介します。
 
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-factory/create-first-dataflow-gen2">初めての Microsoft Fabric データフローを作成する - Microsoft Fabric | Microsoft Learn)</a></p></div>
+<p>なお、オンプレミスデータゲートウェイを利用したプライベートなデータソースへ接続する方法につきましては、以下の公開ブログをご参照ください。</p>
+<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/">Private なデータソースへ接続する | Japan CSS Support Power BI Blogn)</a></p></div>
+<p>VNet データゲートウェイの紹介に関する前回のブログはこちらをご参照ください。</p>
+<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/">仮想ネットワーク (VNet) データ ゲートウェイ について | Japan CSS Support Power BI Blog)</a></p></div>
 <hr>
 <h2 id="作成する構成"><a href="#作成する構成" class="headerlink" title="作成する構成"></a>作成する構成</h2><hr>
 <p>VNet データ ゲートウェイを利用する構成について、以下の項目ごとにご説明します。</p>
