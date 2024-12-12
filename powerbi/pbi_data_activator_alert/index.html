@@ -14,7 +14,6 @@
 <meta property="og:description" content="こんにちは、Power BI サポート チームの中川です。 Power BI では、データが変化したときにユーザーに通知するアラート機能があります。Microsoft Fabric の Data Activator にも同様の機能が実装されたことにより、「両者機能がどう違うのか」、「どのように使い分けるべきか」と悩まれている方も多いかと思います。 本ブログでは、 Power BI と Data A">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/Tenant%20Settings%20Data%20Activator.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/Tenant%20Settings%20Users%20can%20create%20Fabric%20items.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/M365_Allow%20users%20outside%20the%20organization%20to%20send%20email.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/pbi_alert_creation_1.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/pbi_alert_creation_2.png">
@@ -22,7 +21,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/data_activator_alert_creation_2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/data_activator_alert_creation_3.png">
 <meta property="article:published_time" content="2024-05-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-03T06:45:34.841Z">
+<meta property="article:modified_time" content="2024-12-12T08:27:58.307Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -121,7 +120,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+1861c909-efa7-5b6f-a947-40d1c2f9f45d%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%81%A8Data+Activator+%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%E6%A9%9F%E8%83%BD%E3%81%AE%E6%AF%94%E8%BC%83%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_data_activator_alert%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_data_activator_alert.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_data_activator_alert.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/" data-id="cm483hvq700xo0mqib9m8gjg2" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_data_activator_alert/" data-id="cm4l248cn00xo0mqh5g0766zn" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -132,6 +131,11 @@
 <span id="more"></span>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="更新履歴"><a href="#更新履歴" class="headerlink" title="更新履歴"></a>更新履歴</h2><hr>
+<p>Update: 2024/12/12<br>Data Activator の一般提供開始に伴い、内容を一部変更しました。<br><a target="_blank" rel="noopener" href="https://community.fabric.microsoft.com/t5/Activator/How-to-resolve-inability-to-create-new-Data-Activator-items/m-p/4278610#M601">How to resolve inability to create new Data Activator items</a></p>
+</br>
+
 <hr>
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
 <ul>
@@ -164,7 +168,7 @@
 <tbody><tr>
 <td>リリース状況</td>
 <td>リリース済み</td>
-<td>パブリックプレビュー中</td>
+<td>2024/11 リリース<br><del>パブリックプレビュー中</del></td>
 </tr>
 <tr>
 <td>必要なライセンス</br> （アクセス可能なワークスペースで利用可能）</td>
@@ -174,7 +178,7 @@
 <tr>
 <td>テナント設定</td>
 <td>不要</td>
-<td>[ Data Activator (プレビュー) ] を有効にする</td>
+<td>「ユーザーは Fabric アイテムを作成できます」を有効にする<br><del>「Data Activator (プレビュー) 」 を有効にする</del></td>
 </tr>
 <tr>
 <td>対象アイテム</td>
@@ -233,9 +237,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="リリース状況"><a href="#リリース状況" class="headerlink" title="リリース状況"></a>リリース状況</h2><p>Power BI のデータアラート機能はすでに正式にリリース（GA）されていますが、 Data Activator は現在プレビュー段階にあります。</br><br>プレビュー段階の機能は、今後予告なしに機能が削除されたり、動作変更が発生する可能性があります。また、公開情報に記載されていない制限事項が存在する場合もございます。</br><br>そのため、プレビュー機能を使用する際には、これらの点に留意してご利用いただけますようお願いします。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/#AzureOpenAI-PoweredPreviews">プレビュー使用条件 | Microsoft Azure</a></p></div>
-<p>本ブログの情報は記事執筆時点のものであり、詳細については最新の公開ドキュメントをご参照ください。</p>
+<h2 id="リリース状況"><a href="#リリース状況" class="headerlink" title="リリース状況"></a>リリース状況</h2><p>Power BI のデータアラート機能は正式にリリース（GA）されており、 Data Activator はプレビュー段階にありましたが、2024年11月に正式にリリースされました。</p>
 <hr>
 <h2 id="必要なライセンスとテナント設定"><a href="#必要なライセンスとテナント設定" class="headerlink" title="必要なライセンスとテナント設定"></a>必要なライセンスとテナント設定</h2><h3 id="Power-BI-データアラート"><a href="#Power-BI-データアラート" class="headerlink" title="Power BI データアラート"></a>Power BI データアラート</h3><p>Power BI のデータアラート機能は、以下のいずれかのライセンスモードのワークスペースにアクセスできるユーザーが利用可能です。</br></p>
 <ul>
@@ -248,19 +250,14 @@
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/consumer/end-user-alerts#who-can-set-alerts">Power BI サービス ダッシュボードでデータ アラートを設定するためのチュートリアル。 - Power BI | Microsoft Learn</a></p></div>
 <h3 id="Data-Activator"><a href="#Data-Activator" class="headerlink" title="Data Activator"></a>Data Activator</h3><p>Data Activator は Microsoft Fabric 内のサービスであるため、Premium ライセンスまたは Fabric ライセンスが必要となります。<br>また、Fabric 試用版を有効にすることで Data Activator をお試しいただくことも可能です。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials">Fabric 試用版の容量 - Microsoft Fabric | Microsoft Learn</a></p></div>
-<p>ライセンスの他に、テナント設定から [ Data Activator (プレビュー) ] を有効にする必要があります。</p>
+<p>ライセンスの他に、テナント設定から [ ユーザーは Fabric アイテムを作成できます ] を有効にする必要があります。</p>
 <div align="center">
 <img src="Tenant Settings Data Activator.png">
 </div>
 
-
-<p>なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse 等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br><br>つまり、 [ ユーザーは Fabric アイテムを作成できます ] が無効となっている場合でも、[ Data Activator (プレビュー) ] が有効となっていれば、 Data Activator を利用いただくことが可能です。</p>
-<div align="center">
-<img src="Tenant Settings Users can create Fabric items.png">
-</div>
-
+<p><span style="color: red;">Update: 2024/12/12<br>パブリックプレビュー時には [Data Activator (プレビュー)] というテナント設定が存在しましたが、 GA（一般提供）に伴い、この設定項目は廃止され、[ユーザーは Fabric アイテムを作成できます] に統合されました。</p>
 <p>設定手順や詳細については、以下のリンクをご参照ください。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/admin/data-activator-switch">Data Activator を有効にする - Microsoft Fabric | Microsoft Learn</a></p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p></div>
+<div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi">Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn</a></p></div>
 <p>それぞれのライセンスの違いについて以下の弊社公開ブログをご参照ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報 ：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/">Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded・Fabric） | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)</a></p></div>
 <hr>
