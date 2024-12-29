@@ -179,6 +179,8 @@ Power BI サポート チームは、お客様が開発を進める中で発生�
 [Power BI の開発支援・コンサルティングを含む内容に関するお問い合わせについて | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/)
 [Power BI サポートチームへのお問い合わせ時に気をつけるポイント | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/)
 
+<br>
+
 ---
 ### よくある質問
 ---
@@ -195,6 +197,9 @@ Power BI でよくある質問の公開情報や、一部公開情報にない�
 **関連ブログ** 
 [Power BI ライセンスに関するよくある質問(FAQ) | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license_faq/)
 
+
+**その他よくある質問** 
+<br>
 ---
 
 **Q. マイ ワークスペースを利用させない方法はありますか？**  

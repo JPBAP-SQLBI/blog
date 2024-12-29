@@ -25,6 +25,11 @@ tags:
 ---
 ## 更新履歴
 ---
+Update: 2024/11/06
+日本マイクロソフトの法人向けソフトウエアおよびクラウドサービスの価格改定に伴い、Power BI 各種ライセンスの価格表記を変更いたしました。
+[法人向けソフトウエアおよびクラウドサービスの価格改定について - Japan News Center](https://news.microsoft.com/ja-jp/2023/12/06/231206-information/?msockid=10a1aee0bd6f65da201ebef9bc13649a)
+
+
 Update: 2023/11/30
 Microsoft Fabric 一般提供開始に伴い、内容を一部追加・変更しました。
 [Prepare your data for AI innovation with Microsoft Fabric—now generally available](https://www.microsoft.com/en-us/microsoft-fabric/blog/2023/11/15/prepare-your-data-for-ai-innovation-with-microsoft-fabric-now-generally-available/)
@@ -59,7 +64,7 @@ Power BI Free（Power BI （無料））（以下Free）は、Office365 / Micros
 ## Power BI Pro とは？
 ---
 
-Power BI Pro （以下Pro）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。（¥1,250 / 月）
+Power BI Pro （以下Pro）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。
 
 Office365/ Microsoft 365 E3 以下のプランには含まれませんので、必要数をご契約いただく必要がありますが、E5 プランにはもとから含まれますので、別途Pro ライセンスをご契約いただく必要はありません。Pro ライセンスを所持することで、Proライセンスユーザー同士でのコンテンツ共有が可能となります。
 
@@ -67,7 +72,7 @@ Office365/ Microsoft 365 E3 以下のプランには含まれませんので、�
 ## Power BI Premium Per User とは？
 ---
 
-Power BI Premium Per User（以下Premium Per User）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。（¥2,500 / 月）
+Power BI Premium Per User（以下Premium Per User）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。
 
 Proライセンスより使用可能なデータモデルサイズ、ストレージ容量が大幅に向上する上に、ページ分割されたレポート、データフロー、高度なAI などPremium 機能が利用可能です。
 
@@ -83,7 +88,7 @@ Premium Per User 容量が割り当てられたワークスペースには、ダ
 ## Power BI Premium Per Capacity とは？
 ---
 
-Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro か Premium Per User に追加可能な容量ベースのプランとなります。（¥624,375 から / 月）
+Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro か Premium Per User に追加可能な容量ベースのプランとなります。
 
 Free、Pro、Premium Per User はユーザーに紐づくライセンスですが、Premium Per Capacity はテナントの容量に紐づくライセンスとご理解いただければと思います。
 
@@ -93,6 +98,13 @@ Free と Pro では、Azure 上の共有リソースが割り当てられます�
 
 Premium Per Capacity 容量が割り当てられたワークスペースには、ダイヤモンドアイコンが表示されます。
 ![](./PPC.png)
+
+<span style="color: red;">Update: 2024/11/06
+2024 年 7 月以降、新規で Power BI Premium Per Capacity 容量を購入できなくなり、今後すべて Fabric Capacity に移行されます。詳細な移行スケジュールにつきましては、以下のブログ記事をご確認ください。
+
+> - [Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/)
+
+</span>
 
 Power BI Premium Per Capacity の詳細については以下公開情報をご参考にしていただけますと幸いです。
 
@@ -104,7 +116,7 @@ Power BI Premium Per Capacity の詳細については以下公開情報をご�
 ---
 ## Power BI Embeddedとは？
 ---
-Power BI Embedded（以下Embedded）とは、アプリケーションの開発者向けにご用意した、利用時間ごとで従量課金される容量プランとなります。（¥150.8168 から / 時間）
+Power BI Embedded（以下Embedded）とは、アプリケーションの開発者向けにご用意した、利用時間ごとで従量課金される容量プランとなります。
 
 Embedded には、顧客向け埋め込みと組織向け埋め込みという2種類の埋め込みがあります。
 
@@ -126,15 +138,15 @@ Power BI Embedded の詳細については以下公開情報をご参考にし�
 ## Fabric Capacity とは？
 ---
 
-Microsoft Fabric はデータサイエンスやリアルタイム分析、可視化などデータに関する操作が行えるオールインワンの分析ソリューションです。Fabric Capacity（以下Fabric）では様々なソリューションをご利用いただけます。（¥37.368 から / 時間）
+Microsoft Fabric はデータサイエンスやリアルタイム分析、可視化などデータに関する操作が行えるオールインワンの分析ソリューションです。Fabric Capacity（以下Fabric）では様々なソリューションをご利用いただけます。
 
-Fabric は 端的に表現するとPower BI、Azure Synapse Analytics、Azure Data Factory を1つのSaaS環境で利用できるオールインワンの分析ソリューションです。この統合によって、データを一元管理でき、コラボレーションをより容易に行うことが可能となります。Fabric で利用できる機能に関しては、以下のブログ記事にて詳しく紹介しておりますので、ご確認ください。
+Fabric は 端的に表現すると Power BI 、Azure Synapse Analytics 、Azure Data Factory を 1 つの SaaS 環境で利用できるオールインワンの分析ソリューションです。この統合によって、データを一元管理でき、コラボレーションをより容易に行うことが可能となります。Fabric で利用できる機能に関しては、以下のブログ記事にて詳しく紹介しておりますので、ご確認ください。
+
 
 > **参考情報**
 > - [Microsoft Fabric パブリック プレビュー](../microsoft_fabric/)
 > - [Microsoft Fabric の価格](https://azure.microsoft.com/ja-jp/pricing/details/microsoft-fabric/)
 > - [Microsoft Fabric の概念とライセンス](https://learn.microsoft.com/ja-jp/fabric/enterprise/licenses)
-
 
 
 ---
@@ -145,7 +157,7 @@ Fabric は 端的に表現するとPower BI、Azure Synapse Analytics、Azure Da
 
 |   | **Free** | **Pro** | **Premium Per User** | **Premium	Per Capacity** | **Embedded** | **Fabric Capacity** |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| **価格** | 無償（ユーザー数無制限） |	¥1,250/月額・ユーザー | ¥2,500/月額・ユーザー | ¥624,375 ～/月額・容量 | ¥150.8168～/ 時間・容量 | ¥37.368～/ 時間・容量 |
+| **価格**※8 | 無償（ユーザー数無制限） |	¥1,499/月額・ユーザー | ¥2,998/月額・ユーザー | 新規購入不可 ※9 | ¥154.7232～/ 時間・容量 | ¥38.335～/ 時間・容量 |
 | **用途** | 個人利用 | 複数人共同作業 | 高度な機能利用、複数人共同作業 | 大規模組織専用 | アプリケーション開発者用 | オールインワンの分析ソリューション |
 | **レポート・データセット作成** | 〇 ※1 | 〇 |	〇 | × ※2 | × ※2 | × ※2 |
 | **レポート・データセット発行** | 〇 ※1 | 〇 | 〇 | × ※2 | × ※2 | × ※2 |
@@ -170,9 +182,9 @@ Fabric は 端的に表現するとPower BI、Azure Synapse Analytics、Azure Da
 ※5：共有ワークスペースの総容量はライセンス数による上限がございます。詳細はこちらのブログ記事「[Power BI Pro のワークスペース容量について](../pbi_storage)」をご参照ください。
 ※6：Embedded容量のA2以降でサポートされます。
 ※7：Power BIの高度なAI機能より深度な[データサイエンスの機能](https://learn.microsoft.com/ja-jp/fabric/data-science/)なら利用可能。
+※8：価格は定期的に改訂されることがありますので、最新の価格は[Power BI の価格](https://www.microsoft.com/ja-jp/power-platform/products/power-bi/pricing)よりご確認ください。
+※9：2024 年 7 月以降、新規で Power BI Premium Per Capacity 容量を購入できなくなり、今後すべて Fabric Capacity に移行されます。詳細な移行スケジュールにつきましては、[Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/) のブログ記事をご確認ください。
 
-> [!NOTE]
-> Premium Per Capacity とEmbedded につきましては、Premium Generation 2 及びEmbedded Generation 2 の仕様を基づき記載しております。
 
 ---
 ## ライセンス組み合わせの Power BI コンテンツ閲覧可否
