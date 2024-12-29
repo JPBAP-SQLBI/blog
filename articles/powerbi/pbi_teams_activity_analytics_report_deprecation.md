@@ -16,6 +16,8 @@ tags:
 > 参考情報：[Teams 用 Power BI アプリで Teams の利用状況を分析する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-teams-analytics)
 > 参考情報：[Power BI in Teams – ‘Teams activity analytics’ report deprecation | Microsoft Power BI ブログ | Microsoft Power BI](https://powerbi.microsoft.com/ja-jp/blog/power-bi-in-teams-teams-activity-analytics-report-deprecation/)
 
+</br>
+
 ## Teams アクティビティ分析レポート機能はどんな機能であるか
 
 「Teams アクティビティ分析レポート」は、ユーザーが自身のワークスペース内で作成できる標準のレポートであり、Teams の利用データを追跡するためのツールです。
