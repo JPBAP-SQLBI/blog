@@ -18,11 +18,18 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/adhoc_invitation.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/pending.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/adhoc_invite_mail.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_url1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_url2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting3.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting4.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting5.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting6.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting7.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/tenant_setting8.png">
 <meta property="article:published_time" content="2021-09-30T07:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-28T02:09:37.261Z">
+<meta property="article:modified_time" content="2025-03-03T07:10:07.378Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="ゲストユーザー">
@@ -121,7 +128,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+9e8648f6-6faa-5bae-b0a0-af8c8d207463%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8Power+BI%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E5%85%B1%E6%9C%89%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Faad_guestuser%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Faad_guestuser.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Faad_guestuser.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/" data-id="cm7o4y3pf00010mo7gk4xeodh" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/" data-id="cm7sq03vv00010lnq0n6p2lhe" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -133,6 +140,7 @@
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 <hr>
 <h2 id="更新履歴"><a href="#更新履歴" class="headerlink" title="更新履歴"></a>更新履歴</h2><hr>
+<p>Update: 2025/03/03<br>ゲストユーザー関連のテナント設定が追加されたため、内容を一部修正しました。</p>
 <p>Update: 2024/07/03<br>Microsoft Fabric 一般提供に伴い、テナント設定の表記が変わったため、内容を一部修正しました。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-portal-export-sharing">エクスポートと共有のテナント設定</a></p>
 <hr>
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
@@ -140,22 +148,23 @@
 <li><a href="#%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%AF%EF%BC%9F">組織外のユーザーとは？</a></li>
 <li><a href="#%E7%B5%84%E7%B9%94%E5%A4%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%97%E3%81%A6%E6%8B%9B%E5%BE%85%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">組織外のユーザーをゲストユーザーとして招待するには</a></li>
 <li><a href="#%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E5%85%B1%E6%9C%89%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">ゲストユーザーとコンテンツを共有するには</a></li>
+<li><a href="#%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%85%B1%E6%9C%89%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">ゲストユーザーとレポートのリンクを共有するには</a></li>
 <li><a href="#%E3%82%B2%E3%82%B9%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%88%B6%E5%BE%A1%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">ゲストユーザーの権限を制御するには</a></li>
 </ol>
 <hr>
 <h2 id="組織外のユーザーとは？"><a href="#組織外のユーザーとは？" class="headerlink" title="組織外のユーザーとは？"></a>組織外のユーザーとは？</h2><hr>
-<p>組織外のユーザー（または外部ユーザー）とは、ご利用の Microsoft Entra ID (旧 Azure Active Directory) テナントのドメイン以外のユーザーを指します。<br>具体的には、メールアドレスの@ マーク後の表記が異なるユーザーです。<br>gmail.com、outlook.com、hotmail.com などの個人用メールアカウントのユーザーにつきましても、組織外のユーザーと見なします。</p>
-<p>組織外のユーザーと、 Power BI 内のレポートを共有するには、組織外のユーザーをゲストユーザーとして招待する必要があります。</p>
+<p>組織外のユーザー（または外部ユーザー）とは、ご利用の Microsoft Entra ID テナントのドメイン以外のユーザーを指します。<br>具体的には、メールアドレスの@ マーク後の表記が異なるユーザーです。<br>gmail.com、outlook.com、hotmail.com などの個人用メールアカウントのユーザーにつきましても、組織外のユーザーと見なします。</p>
+<p>組織内のユーザーが、組織外のユーザーと Power BI 内のレポートを共有するには、組織外のユーザーをゲストユーザーとして招待する必要があります。</p>
 <hr>
 <h2 id="組織外のユーザーをゲストユーザーとして招待するには"><a href="#組織外のユーザーをゲストユーザーとして招待するには" class="headerlink" title="組織外のユーザーをゲストユーザーとして招待するには"></a>組織外のユーザーをゲストユーザーとして招待するには</h2><hr>
 <p>ゲストユーザーとして招待するには、計画的招待とアドホック招待という二つの方法があります。</p>
-<h4 id="■-計画的招待"><a href="#■-計画的招待" class="headerlink" title="■ 計画的招待"></a>■ 計画的招待</h4><p>Microsoft Entra ID (旧 Azure Active Directory) からゲストユーザーを招待する方法です。</p>
-<p>まず、<a target="_blank" rel="noopener" href="https://portal.azure.com/">Azure ポータル</a> へアクセスし、 Microsoft Entra ID (旧 Azure Active Directory) を選択します。<br>次に、 Microsoft Entra ID (旧 Azure Active Directory) で、[ユーザー]&gt;[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。</p>
+<h4 id="■-計画的招待"><a href="#■-計画的招待" class="headerlink" title="■ 計画的招待"></a>■ 計画的招待</h4><p>Microsoft Entra ID からゲストユーザーを招待する方法です。</p>
+<p>まず、<a target="_blank" rel="noopener" href="https://portal.azure.com/">Azure ポータル</a> へアクセスし、 Microsoft Entra ID を選択します。<br>次に、 Microsoft Entra ID で、[ユーザー]&gt;[＋新しいゲストユーザー]の順で選択し、ゲストユーザーのメールアドレスを入力し、招待メールを送信します。</p>
 <p><img src="./aad_guestuser.png"></p>
 <p>招待されたユーザーは、下記画像のようなメールが届きますので、メールに記載されているリンクをクリックし、指示に従いアカウントの有効化を行なってください。</p>
 <p><img src="./guestuser_mail.png"></p>
-<div class="alert is-success"><p class="alert-title">ヒント</p><p> Microsoft Entra ID (旧 Azure Active Directory) 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/entra/external-id/external-collaboration-settings-configure">外部コラボレーションの設定を構成する</a></p></div>
-<h4 id="■-アドホック招待"><a href="#■-アドホック招待" class="headerlink" title="■ アドホック招待"></a>■ アドホック招待</h4><p>レポートやダッシュボードの共有機能、またはアプリ発行のアクセスページで、Microsoft Entra ID (旧 Azure Active Directory) に存在しない組織外のユーザーを招待する方法です。</p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p> Microsoft Entra ID 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/entra/external-id/external-collaboration-settings-configure">外部コラボレーションの設定を構成する</a></p></div>
+<h4 id="■-アドホック招待"><a href="#■-アドホック招待" class="headerlink" title="■ アドホック招待"></a>■ アドホック招待</h4><p>レポートやダッシュボードの共有機能、またはアプリ発行のアクセスページで、Microsoft Entra ID に存在しない組織外のユーザーを招待する方法です。</p>
 <p>レポートの直接アクセスから追加する方法には、レポートの[アクセス許可の管理]にアクセスし、<br>直接アクセスで、[+ユーザーの追加]を行ない、組織外のユーザーのメールアドレスを入力すると、招待メールが対象のユーザーに届きます。</p>
 <p><img src="./adhoc_invitation.png"></p>
 <p>また、招待されたユーザーは、保留のリストで表示されます。</p>
@@ -169,7 +178,8 @@
 <li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-azure-ad-b2b">Microsoft Entra B2B で外部ゲスト ユーザーに Power BI コンテンツを配布する</a></li>
 </ul>
 </blockquote>
-<p>計画的招待で、ゲストユーザーとして招待されたユーザーは、ワークスペースのアクセス許可、レポートやダッシュボード、アプリのアクセス許可でも追加できるようになります。<br>また、アドホック招待を通してアカウントを作成したゲストユーザーも、招待元のレポート・ダッシュボード・アプリを閲覧できる上に、計画的招待のゲストユーザーと同様、他のレポートやダッシュボード、アプリのアクセス許可にも追加されることが可能です。</p>
+<hr>
+<h4 id="■-ライセンスとアクセス許可"><a href="#■-ライセンスとアクセス許可" class="headerlink" title="■ ライセンスとアクセス許可"></a>■ ライセンスとアクセス許可</h4><p>計画的招待で、ゲストユーザーとして招待されたユーザーは、ワークスペースのアクセス許可、レポートやダッシュボード、アプリのアクセス許可でも追加できるようになります。<br>また、アドホック招待を通してアカウントを作成したゲストユーザーも、招待元のレポート・ダッシュボード・アプリを閲覧できる上に、計画的招待のゲストユーザーと同様、他のレポートやダッシュボード、アプリのアクセス許可にも追加されることが可能です。</p>
 <p>ただし、ゲストユーザーがコンテンツを閲覧するには、以下のライセンス条件が必要です。</p>
 <ul>
 <li>ゲストユーザーに Power BI Pro ライセンスまたは Premium Per User ライセンスの付与</li>
@@ -185,15 +195,38 @@
 </ul>
 </blockquote>
 <hr>
+<h2 id="ゲストユーザーとレポートのリンクを共有するには"><a href="#ゲストユーザーとレポートのリンクを共有するには" class="headerlink" title="ゲストユーザーとレポートのリンクを共有するには"></a>ゲストユーザーとレポートのリンクを共有するには</h2><hr>
+<p>組織外のユーザーを招待してから、招待されたゲストユーザーとレポートのリンクを共有する際に、ブラウザー上に表示されるレポートの URL をそのまま共有することがございます。<br>しかしながら、その場合、ゲストユーザーは招待されたテナントにサインインできず、自分の所属テナントにサインインしてしまうため、レポートが見つからないまたはアクセス許可がないというエラー事象が発生します。</p>
+<p>正しくゲストユーザーとレポートを共有するには、まずはゲストユーザーをレポートまたはワークスペースのアクセス許可に追加します。次に以下の手順で<strong>テナント ID</strong> が含まれる URL をゲストユーザーと共有してください。</p>
+<p><strong>テナント ID</strong> が含まれる URL を取得するには、[ヘルプ] &gt; [Power BI について] の順でクリックし、[テナントのURL] をコピーしてください。</p>
+<p><img src="./tenant_url1.png"><br><img src="./tenant_url2.png"></p>
+<hr>
 <h2 id="ゲストユーザーの権限を制御するには"><a href="#ゲストユーザーの権限を制御するには" class="headerlink" title="ゲストユーザーの権限を制御するには"></a>ゲストユーザーの権限を制御するには</h2><hr>
 <p>管理ポータルのテナント設定で、ゲストユーザーが Power BI サービスのテナントへアクセスできないようにすることや、アドホック招待を無効化にすることができます。</p>
 <h4 id="■-ゲスト-ユーザーが-Microsoft-Fabric-へのアクセスが可能"><a href="#■-ゲスト-ユーザーが-Microsoft-Fabric-へのアクセスが可能" class="headerlink" title="■ ゲスト ユーザーが Microsoft Fabric へのアクセスが可能"></a>■ ゲスト ユーザーが Microsoft Fabric へのアクセスが可能</h4><p>既定値は有効化されていますが、この設定を無効にすると、Power BI サービスや Fabric にアクセスしようとしたときに、ゲストユーザーにエラーが表示されます。</p>
 <p><img src="./tenant_setting2.png"></p>
-<h4 id="■-ユーザーはゲスト-ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます"><a href="#■-ユーザーはゲスト-ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます" class="headerlink" title="■ ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます"></a>■ ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます</h4><p>既定値は有効化されていますが、この設定を無効にすると、アドホック招待でレポートやダッシュボード、アプリから組織外のユーザーを招待することができません。<br>ただし、計画的招待ー Microsoft Entra ID (旧 Azure Active Directory) でゲストユーザーを招待することは引き続き可能です。</p>
+<h4 id="■-ユーザーはゲスト-ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます"><a href="#■-ユーザーはゲスト-ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます" class="headerlink" title="■ ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます"></a>■ ユーザーはゲスト ユーザーを招待して、項目の共有とアクセス許可を通じて共同作業できます</h4><p>既定値は有効化されていますが、この設定を無効にすると、アドホック招待でレポートやダッシュボード、アプリから組織外のユーザーを招待することができません。<br>ただし、計画的招待ー Microsoft Entra ID でゲストユーザーを招待することは引き続き可能です。</p>
 <p><img src="./tenant_setting3.png"></p>
-<div class="alert is-success"><p class="alert-title">ヒント</p><p>計画的招待－Microsoft Entra ID (旧 Azure Active Directory) 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のドキュメントをご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/entra/external-id/external-collaboration-settings-configure">外部コラボレーションの設定を構成する</a></p></div>
-<h4 id="■-ゲスト-ユーザーは-Fabric-コンテンツを閲覧およびアクセスできます"><a href="#■-ゲスト-ユーザーは-Fabric-コンテンツを閲覧およびアクセスできます" class="headerlink" title="■ ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます"></a>■ ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます</h4><p>既定値では無効となっていますが、この設定を有効にすると、組織において左側のナビゲーション ウィンドウを使用して閲覧エクスペリエンスにフル アクセスすることができます。</p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>計画的招待－Microsoft Entra ID 側でゲストユーザーを招待できるユーザーを制限することも可能ですので、その詳細については下記のブログ記事をご参考ください。</p><p><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_guest_user_access_restrict/">Microsoft Entra ID の外部コラボレーションの設定が与える影響について</a></p></div>
+<h4 id="■-ゲスト-ユーザーは-Fabric-コンテンツを閲覧およびアクセスできます"><a href="#■-ゲスト-ユーザーは-Fabric-コンテンツを閲覧およびアクセスできます" class="headerlink" title="■ ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます"></a>■ ゲスト ユーザーは Fabric コンテンツを閲覧およびアクセスできます</h4><p>既定値では無効となっていますが、この設定を有効にすると、組織において左側のナビゲーション ウィンドウを使用してワークスペースやアプリにフル アクセスすることができます。</p>
 <p><img src="./tenant_setting1.png"></p>
+<h4 id="■-ユーザーは、提案されているユーザーの一覧でゲスト-ユーザーを確認できます"><a href="#■-ユーザーは、提案されているユーザーの一覧でゲスト-ユーザーを確認できます" class="headerlink" title="■ ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます"></a>■ ユーザーは、提案されているユーザーの一覧でゲスト ユーザーを確認できます</h4><p>既定値では有効となっていますが、この設定を無効にすると、アクセス許可を追加するときに、ゲストユーザーの一部のユーザー名を入力する際に、ゲストユーザーは候補として自動的にリストアップされず、ゲストユーザーを追加するには、完全なメールアドレスを入力する必要があります。</p>
+<p><img src="./tenant_setting4.png"></p>
+<h4 id="■-B2B-ゲスト-ユーザーによるメール-サブスクリプションの設定と登録が可能"><a href="#■-B2B-ゲスト-ユーザーによるメール-サブスクリプションの設定と登録が可能" class="headerlink" title="■ B2B ゲスト ユーザーによるメール サブスクリプションの設定と登録が可能"></a>■ B2B ゲスト ユーザーによるメール サブスクリプションの設定と登録が可能</h4><p>既定値では有効となっていますが、この設定を無効にすると、ゲストユーザーがメールサブスクリプションの登録を実施できなくなります。<br><img src="./tenant_setting5.png"></p>
+<p>メールサブスクリプションの機能につきましては、以下の公開情報をご参考ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/end-user-subscribe?tabs=creator#subscriptions-for-users-outside-your-organization">組織外のユーザーのサブスクリプション | Power BI サービスのレポートとダッシュボードのメール サブスクリプション</a></p>
+<p>また、本設定を無効にすると、次に紹介する [ユーザーによる外部ユーザーへのメール サブスクリプションの送信が可能] 設定も自動的に無効になります。</p>
+<h4 id="■-ユーザーによる外部ユーザーへのメール-サブスクリプションの送信が可能"><a href="#■-ユーザーによる外部ユーザーへのメール-サブスクリプションの送信が可能" class="headerlink" title="■ ユーザーによる外部ユーザーへのメール サブスクリプションの送信が可能"></a>■ ユーザーによる外部ユーザーへのメール サブスクリプションの送信が可能</h4><p>既定値では有効となっていますが、この設定を無効にすると、外部ユーザー（※）をメールサブスクリプションの送信先として登録することができなくなります。<br><img src="./tenant_setting6.png"></p>
+<p>また、本設定は、前項の[B2B ゲスト ユーザーによるメール サブスクリプションの設定と登録が可能] を無効にすることで、自動的に無効となります。</p>
+<p>（※）外部ユーザーとは、テナントにゲストユーザーとして招待・登録されていないユーザーのことを指します。</p>
+<h4 id="■-ゲスト-ユーザーは自身のテナントで共有セマンティック-モデルを操作できます"><a href="#■-ゲスト-ユーザーは自身のテナントで共有セマンティック-モデルを操作できます" class="headerlink" title="■ ゲスト ユーザーは自身のテナントで共有セマンティック モデルを操作できます"></a>■ ゲスト ユーザーは自身のテナントで共有セマンティック モデルを操作できます</h4><p>既定値では無効となっています。その場合、このテナントに招待されたゲストユーザーは自分の所属テナントでゲストとして共有されたセマンティックモデルにアクセスできません。<br>この設定を有効化すると、以下の公開情報の手順の通り、自分の所属テナントから、ゲストテナントで外部共有されたセマンティックモデルにアクセスすることが可能です。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-dataset-external-org-share-view#access-shared-semantic-models">外部組織からゲスト ユーザーとして Power BI の共有セマンティック モデルにアクセスする (プレビュー) - コンシューマー</a></p>
+<p><img src="./tenant_setting7.png"></p>
+<h4 id="■-特定のユーザーが外部データ共有を有効にすることを許可する"><a href="#■-特定のユーザーが外部データ共有を有効にすることを許可する" class="headerlink" title="■ 特定のユーザーが外部データ共有を有効にすることを許可する"></a>■ 特定のユーザーが外部データ共有を有効にすることを許可する</h4><p>既定値では無効となっていますが、この設定を有効化すると、以下の公開情報の手順の通り、セマンティックモデルの[外部共有]をオンにすることで、ゲストユーザーは自分の所属テナントからそのセマンティックモデルにアクセスできます。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-dataset-external-org-share-provider">Power BI インプレース セマンティック モデル共有 (プレビュー) を使用してセマンティック モデルを外部ユーザーと共有する - データ プロバイダー</a></p>
+<p><img src="./tenant_setting8.png"></p>
+</p>
+
+<div class="alert is-warning"><p class="alert-title">警告</p><p><strong>「外部データ共有」</strong> というテナント設定がございます、その設定は OneLake のデータを外部テナントとの共有可否を制御する設定でございます。本記事で紹介する B2B ゲストユーザーの概念とは全く異なる共有方法でございます。</p><p>詳細につきましては、以下の公開情報をご参考ください。</p><p>参考：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/governance/external-data-sharing-overview">Microsoft Fabric での外部データ共有</a></p></div>
 <blockquote>
 <p><strong>参考情報</strong></p>
 <ul>
