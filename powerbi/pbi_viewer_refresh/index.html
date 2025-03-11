@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/11.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/12.png">
 <meta property="article:published_time" content="2025-02-27T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-11T01:29:02.128Z">
+<meta property="article:modified_time" content="2025-03-11T01:34:04.531Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -125,7 +125,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+e742a64a-72d8-5707-ae57-f035296eb36a%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E9%96%B2%E8%A6%A7%E8%80%85%E3%81%8C%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_viewer_refresh%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_viewer_refresh.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_viewer_refresh.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/" data-id="cm83tc9f3004u0mqo21w81zjk" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/" data-id="cm83tiqx3004u0mo38rdp6mpk" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -134,7 +134,7 @@
 <p>通常、Power BI レポートのデータは、セマンティック モデルの所有者、またはモデルの更新権限を持つユーザーによって、スケジュール更新またはオンデマンド更新を実行することで最新の状態に保たれます。このようなデータの更新操作は、一部の権限を持つユーザーに限定されており、閲覧者（Viewer）ロールのユーザーはレポートの閲覧のみが許可され、通常は更新を実行することはできません。</p>
 <p>しかし、お客様の運用方針や要件はさまざまであり、「閲覧者ロールのユーザーにもデータを更新させたい」といったご要望をいただくことがあります。本記事では、Power Automate ビジュアルとフローを活用し、閲覧者ロールのユーザーがレポートのデータを更新できる方法についてご紹介します。</p>
 <span id="more"></span>
-<div class="alert is-important"><p class="alert-title">重要</p><p>本記事で紹介した方法は、あくまでユーザーからのリクエストに応じた「ワークアラウンド」であり、標準的な運用として推奨されるものではありません。</p><p>通常、閲覧者ロールは「レポートの閲覧のみを許可し、それ以外の操作を制限する」ことを目的としています。そのため、閲覧者に対してセマンティックモデルの更新を許可する運用は、組織のポリシーやセキュリティルールに抵触する可能性があり、社内ルールの混乱や意図しないデータ更新が発生するリスクを伴います。</p><p>また、容量ベースで運用している場合、更新操作によって容量リソースが消費され、閲覧者による更新が組織全体のリソース利用に影響を与える可能性がある点にもご留意ください。</p><p>本方法を採用する場合は、既存の運用ルールや社内ポリシーとの整合性を確認し、セキュリティやリソース管理の観点から問題がないことを関係者間で十分に協議したうえで実施することを推奨します。</p></div>
+<div class="alert is-important"><p class="alert-title">重要</p><p>本記事で紹介した方法は、お客様からのリクエストに応じた「ワークアラウンド」であり、標準的な運用として推奨されるものではありません。</p><p>通常、閲覧者ロールは「レポートの閲覧のみを許可し、それ以外の操作を制限する」ことを目的としています。そのため、閲覧者に対してセマンティックモデルの更新を許可する運用は、組織のポリシーやセキュリティルールに抵触する可能性があり、社内ルールの混乱や意図しないデータ更新が発生するリスクを伴います。</p><p>また、容量ベースで運用している場合、更新操作によって容量リソースが消費され、閲覧者による更新が組織全体のリソース利用に影響を与える可能性がある点にもご留意ください。</p><p>本方法を採用する場合は、既存の運用ルールや社内ポリシーとの整合性を確認し、セキュリティやリソース管理の観点から問題がないことを関係者間で十分に協議したうえで実施することを推奨します。</p></div>
 <hr>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><hr>
 <p>•    Power BI Pro/Premium Per User ライセンス（セマンティックモデルの所有者）<br>•    更新対象のセマンティック モデルの所有者が設定したレポート<br>•    Power BI Desktop（更新を実行するPower Automate ビジュアルの追加/編集に必要）</p>
