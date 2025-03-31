@@ -60,6 +60,7 @@ tags:
 [条件付き書式で作るヒートマップ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_heatmap/)
 [Power BI サービスに発行したレポートの時刻のずれについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_timezone/)
 [Power BI サービスにおける固定フィルター](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_persistent_filters/)
+[**NEW! 3月** ブックマークとボタンで動的にレポート画面を切り替える方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/)
 
 ## Power Query
 [pbix ファイルのデータソースのファイル格納場所が変更される場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/)
