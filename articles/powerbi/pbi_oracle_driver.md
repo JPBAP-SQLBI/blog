@@ -5,11 +5,13 @@ tags:
   - Power BI　　
   - Power BI Desktop
   - 資格情報
-  - 認証　
+  - credential
   - データソース設定
-  - オンプレミスデータゲートウェイ
+  - オンプレミス データ ゲートウェイ
+  - On-Premises Data Gateway
   - Oracle
   - トラブルシューティング
+  - troubleshooting
   - ドライバー
 ---
 

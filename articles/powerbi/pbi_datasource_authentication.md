@@ -5,11 +5,12 @@ tags:
   - Power BI　　
   - Power BI Desktop
   - 資格情報
-  - 認証　
+  - credential
   - データソース設定
-  - グローバルアクセス許可
-  - アクセス許可のクリア
+  - error
+  - エラー
   - トラブルシューティング
+  - troubleshooting
 ---
 
 

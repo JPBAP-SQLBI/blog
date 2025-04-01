@@ -4,7 +4,10 @@ date: 2024-01-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - テナント設定
+  - Admin
+  - 管理者
 ---
 
 

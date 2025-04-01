@@ -7,7 +7,7 @@ tags:
   - データ接続
   - ストレージモード
   - インポート
-  - Direct Query
+  - DirectQuery
 ---
 
 こんにちは、Power BI サポート チームのチャンです。

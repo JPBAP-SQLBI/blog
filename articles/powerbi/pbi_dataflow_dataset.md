@@ -4,7 +4,7 @@ date: 2022-08-31 00:00:00
 tags:
   - Power BI
   - Power BI サービス
-  - Power BI Desktop
+  - Power BI Service
   - データフロー
   - データセット
   - Dataflow

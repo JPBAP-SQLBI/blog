@@ -4,8 +4,12 @@ date: 2022-08-31 00:00:00
 tags:
   - Power BI
   - ライセンス
+  - license
   - Power BI サービス
+  - Power BI Service
   - 管理者
+  - Admin
+  - FAQ
 ---
 
 こんにちは、Power BI サポート チームの山本です。

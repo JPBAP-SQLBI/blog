@@ -3,7 +3,11 @@ title: Power BI 試用版（無料体験）を無効化する方法
 date: 2022-12-29 00:00:00 
 tags:
   - Power BI
-  - trial version
+  - ライセンス
+  - Power BI サービス
+  - Power BI Service
+  - Admin
+  - 管理者
 ---
 
 

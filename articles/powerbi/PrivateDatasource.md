@@ -4,6 +4,7 @@ date: 2024-03-29 00:00:00
 tags:
   - Power BI
   - オンプレミス データ ゲートウェイ
+  - On-Premises Data Gateway
   - セマンティック モデル
 ---
 

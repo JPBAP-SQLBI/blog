@@ -1,5 +1,5 @@
 ---
-title: 「Power BI Windows アプリ」のサポート終了
+title: Power BI Windows アプリのサポート終了
 date: 2024-01-31 00:00:00 
 tags:
   - Power BI
@@ -8,15 +8,15 @@ tags:
 
 こんにちは、Power BI サポート チームの呂です。
 
-マイクロソフトでは、2023年12月31日をもちまして、Power BIの閲覧・共有を目的として開発されたアプリケーションである 「Power BI Windows アプリ」 のサポートを終了しました。
-レポート作成が可能な 「Power BI Desktop」とは異なるアプリですが、ご質問をいただくことが多いため本ブログにて詳細をご案内いたします。
+マイクロソフトでは、2023年12月31日をもちまして、Power BIの閲覧・共有を目的として開発されたアプリケーションである Power BI Windows アプリのサポートを終了しました。
+レポート作成が可能な Power BI Desktop とは異なるアプリですが、ご質問をいただくことが多いため本ブログにて詳細をご案内いたします。
 
 > [!TIP]
 > 参考情報：[2023 年 12 月 31 日に廃止予定の Power BI Windows アプリ](https://learn.microsoft.com/ja-jp/lifecycle/announcements/power-bi-windows-app-retirement-12-31-2023)
 
-今回サポート終了の対象の「Power BI Windows アプリ」は、以下イメージの通り、Power BIコンテンツの閲覧や共有を目的として開発されたアプリケーションです。
+今回サポート終了の対象の Power BI Windows アプリは、以下イメージの通り、Power BIコンテンツの閲覧や共有を目的として開発されたアプリケーションです。
 2023 年 12 月 31 日以降、このアプリはセキュリティ更新プログラム、セキュリティ以外の更新プログラム、バグ修正プログラムは提供されません。また、テクニカル サポートを受け取ることができなくなり、Microsoft アプリ ストアからダウンロードできる「Power BI Windows アプリ」も削除されます。
-「Power BI Windows アプリ」のサポート終了後も、Power BI サービス(app.powerbi.com)で引き続きPower BIのコンテンツを閲覧・共有することが可能でございますので、ご安心ください。
+Power BI Windows アプリのサポート終了後も、Power BI サービス(app.powerbi.com)で引き続きPower BIのコンテンツを閲覧・共有することが可能でございますので、ご安心ください。
 
 <div align="left">
 <img src="1.png">
@@ -25,7 +25,7 @@ tags:
 > [!TIP]
 > 参考情報：[Windows 用の Power BI アプリの概要](https://learn.microsoft.com/ja-jp/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)
 
-また、冒頭でご案内の通り、「Power BI Windows アプリ」は、「Power BI Desktop」と異なるアプリケーションであり、「Power BI Windows アプリ」の廃止にPower BI Desktopの使用には影響はありません。
+また、冒頭でご案内の通り、Power BI Windows アプリは、Power BI Desktop と異なるアプリケーションであり、Power BI Windows アプリの廃止にPower BI Desktop の使用には影響はありません。
 Power BI Desktopは、以下イメージの通り、データへ接続や変換を行い、データモデルをもとにデータ分析およびレポート作成可能なツールです。
 
 <div align="left">

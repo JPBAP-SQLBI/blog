@@ -4,6 +4,7 @@ date: 2023-07-31 00:00:00
 tags:
   - Power BI
   - サービス プリンシパル
+  - service principal
   - REST API
 ---
 

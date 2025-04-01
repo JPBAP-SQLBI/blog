@@ -5,6 +5,7 @@ tags:
   - Power BI
   - Power BI Desktop
   - Power BI サービス
+  - Power BI Service
 ---
 
 こんにちは、Power BI サポート チームです。
@@ -22,6 +23,15 @@ tags:
 > 本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、
 > 本記事編集時点と実際の機能に相違がある場合がございます。
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
+
+
+---
+## 更新履歴
+---
+Update: 2025/02/18
+Power BI の機能アップデートに伴い、記事内の機能比較の一覧をアップデートしました。
+[Power BI Desktop と Power BI サービスを比較する](https://learn.microsoft.com/ja-jp/power-bi/fundamentals/service-service-vs-desktop)
+
 
 ---
 ## Power BI でレポート作成・分析を行うために必要なものは？
@@ -44,11 +54,11 @@ Power BI Desktop とPower BI サービスの機能比較を一覧にすると以
 | 多くのデータソース  | 〇  |   |
 | 変換  | 〇  |   |
 | 整形とモデリング  | 〇  |   |
-| メジャー  | 〇  |   |
-| 計算列  | 〇  |   |
+| メジャー  | 〇  | 〇  |
+| 計算列  | 〇  |  〇 |
 | Python  | 〇  |   |
 | テーマ  | 〇  |   |
-| RLS の作成  | 〇  |   |
+| RLS の作成  | 〇  | 〇 |
 | レポート  | 〇  | 〇  |
 | 視覚化  | 〇  | 〇  |
 | セキュリティ  | 〇  | 〇  |

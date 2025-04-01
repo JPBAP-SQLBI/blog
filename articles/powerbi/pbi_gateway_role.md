@@ -3,11 +3,12 @@ title: オンプレミスデータゲートウェイのセキュリティーロ�
 date: 2022-05-31 00:00:00 
 tags:
   - Power BI
-  - オンプレミスデータゲートウェイ
+  - オンプレミス データ ゲートウェイ
   - On-Premises Data Gateway
   - セキュリティーロール
   - Security Roles
   - 管理者
+  - Admin
   - Creator
 ---
 

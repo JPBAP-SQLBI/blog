@@ -3,6 +3,8 @@ title: Power BI サービスでのコンテンツ共有方法の種類
 date: 2021-09-30 00:00:00 
 tags:
   - Power BI
+  - Power BI サービス
+  - Power BI Service
   - 共有
 ---
 

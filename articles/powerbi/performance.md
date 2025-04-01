@@ -5,6 +5,7 @@ tags:
   - Power BI
   - データセット
   - パフォーマンス
+  - performance
 --- 
 
 こんにちは、Power BI サポート チームの亀田です。

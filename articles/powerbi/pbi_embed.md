@@ -1,15 +1,13 @@
-
 ---
 title: Power BI レポートの埋め込み方法の種類について
 date: 2021-11-30 00:00:00 
 tags:
-  - Power BI　　
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
   - 埋め込み
-  - embed
-  - embedded
-  - SharePoint Online
-  - Webに公開
-  - Webパーツ
+  - Embed
+  - Embedded
 ---
 
 

@@ -4,9 +4,11 @@ date: 2021-12-28 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - 更新
-  - Reflesh
-  - 更新エラー
+  - Refresh
+  - エラー
+  - error
   - スケジュール更新
   - データセット
 ---

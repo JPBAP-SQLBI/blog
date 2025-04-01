@@ -2,9 +2,12 @@
 title: セルフサービス サインアップの無効化
 date: 2023-06-09 00:00:00 
 tags:
-  - Power BI　　
+  - Power BI
+  - Power BI サービス
+  - Power BI Service
   - ライセンス
-  - Power BI Free
+  - license
+  - self-service sign-up
   - セルフサービス サインアップ
 ---
 

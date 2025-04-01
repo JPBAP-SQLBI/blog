@@ -4,8 +4,10 @@ date: 2022-02-07 00:00:00
 tags:
   - Power BI
   - Power BI サービス
+  - Power BI Service
   - ライセンス
   - Power BI Premium
+  - 容量
 ---
 
 <span style="color: red; ">

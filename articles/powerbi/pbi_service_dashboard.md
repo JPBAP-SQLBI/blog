@@ -4,6 +4,7 @@ date: 2022-10-31 00:00:00
 tags:
   - Power BI　　
   - ダッシュボード
+  - dashboard
 ---
 
 こんにちは、Power BI サポート チームの亀田です。

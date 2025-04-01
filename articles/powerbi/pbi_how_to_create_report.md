@@ -3,9 +3,11 @@ title: Power BIでデータに接続しレポートを作成・共有する手�
 date: 2024-04-30 00:00:00 
 tags:
   - Power BI
-  - Power BI サービス
   - Power BI Desktop
+  - Power BI サービス
+  - Power BI Service
   - レポート
+  - Creator
 ---
 
 

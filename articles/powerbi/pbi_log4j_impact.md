@@ -6,8 +6,8 @@ tags:
   - Power BI
   - Power BI Desktop
   - Power BI Report Server
-  - オンプレミスデータゲートウェイ
-  - onpremisedatagateway
+  - オンプレミス データ ゲートウェイ
+  - On-Premises Data Gateway
   - Apache log4j
 ---
 

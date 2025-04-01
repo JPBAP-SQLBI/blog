@@ -5,7 +5,11 @@ tags:
   - Power BI
   - Power BI Desktop
   - Creator
-  - Learning
+  - DAX
+  - メジャー
+  - measure
+  - calculated column
+  - 計算列
 ---
 
 

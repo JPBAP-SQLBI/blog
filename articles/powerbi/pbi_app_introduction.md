@@ -4,7 +4,9 @@ date: 2022-11-30 00:00:00
 tags:
   - Power BI
   - Power BI サービス
-  - Power BI アプリ
+  - Power BI Service
+  - アプリ
+  - App 
 ---
 
 こんにちは、Power BI サポート チームの呂です。
