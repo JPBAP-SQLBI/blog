@@ -30,7 +30,7 @@ Power BI では、データが変化したときにユーザーに通知する�
 ---
 Update: 2024/12/12
 Data Activator の一般提供開始に伴い、内容を一部変更しました。
-[How to resolve inability to create new Data Activator items](https://community.fabric.microsoft.com/t5/Activator/How-to-resolve-inability-to-create-new-Data-Activator-items/m-p/4278610#M601)
+[Announcing the General Availability of Activator](https://blog.fabric.microsoft.com/en-us/blog/announcing-the-general-availability-of-activator)
 
 
 
@@ -82,13 +82,14 @@ Power BI と Data Activator の両方でデータアラート機能が提供さ�
 | トリガーできるデータ型 | 数値のみ | 数値のみ |
 | 設定できる条件 | 閾値超過時に通知可能 | 閾値超過時、回数、値の範囲など |
 | 作成方法 | 数クリックで作成可能 | 数クリックで作成可能 |
-| 管理方法 | ダッシュボード タイルまたは設定メニューから | reflexアイテムで管理 |
+| 管理方法 | ダッシュボード タイルまたは設定メニューから |  Activator アイテムで管理<br>~~reflex アイテムで管理~~ |
 
 
 ---
 ## リリース状況
 Power BI のデータアラート機能は正式にリリース（GA）されており、 Data Activator はプレビュー段階にありましたが、2024年11月に正式にリリースされました。
 
+=======
 
 ---
 ## 必要なライセンスとテナント設定
@@ -305,8 +306,10 @@ Data Activator データアラート では、レポート内のビジュアル�
 <img src="data_activator_alert_creation_1.png">
 </div>
 
-作成したアラートの設定は、Reflex アイテムとして作成されます。
-Power BI Service (Microsoft Fabric) の画面左下部にあるメニューから [Data Activator] を選択し、対象ワークスペースにアクセスすると、Reflex アイテムが表示され、設定の変更や削除を行うことが可能です。
+作成したアラートの設定は、 Activator アイテムとして作成されます。
+Power BI Service (Microsoft Fabric) の画面左下部にあるメニューから [Data Activator] を選択し、対象ワークスペースにアクセスすると、 Activator アイテムが表示され、設定の変更や削除を行うことが可能です。
+
+<span style="color: red;">GA（一般提供）に伴い、アイテムの名称は Reflex から Activator に変更されました。
 
  <div align="center">
 <img src="data_activator_alert_creation_2.png">
