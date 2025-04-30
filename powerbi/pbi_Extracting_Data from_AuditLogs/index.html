@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   
-  <title>監査ログのAudiｔDataカラムからデータを抽出する方法 | Japan CSS Support Power BI Blog</title>
+  <title>監査ログのAuditDataカラムからデータを抽出する方法 | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="こんにちは、Power BI サポート チームのファムです。  Power BI のユーザーアクティビティログには、セキュリティ対策や利用状況の把握、コンプライアンス対応に役立つ情報が含まれています。ログを定期的に確認することで、Power BI をより安心して活用することができます。また、ログの取得だけでなく、監査ログのデータはCSVファイルにエクスポートすることができ、そのファイルの中のAud">
 <meta property="og:type" content="article">
-<meta property="og:title" content="監査ログのAudiｔDataカラムからデータを抽出する方法">
+<meta property="og:title" content="監査ログのAuditDataカラムからデータを抽出する方法">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
 <meta property="og:description" content="こんにちは、Power BI サポート チームのファムです。  Power BI のユーザーアクティビティログには、セキュリティ対策や利用状況の把握、コンプライアンス対応に役立つ情報が含まれています。ログを定期的に確認することで、Power BI をより安心して活用することができます。また、ログの取得だけでなく、監査ログのデータはCSVファイルにエクスポートすることができ、そのファイルの中のAud">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic10.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic11.png">
 <meta property="article:published_time" content="2025-04-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-30T09:21:30.910Z">
+<meta property="article:modified_time" content="2025-04-30T09:24:31.261Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI Desktop">
@@ -109,7 +109,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      監査ログのAudiｔDataカラムからデータを抽出する方法
+      監査ログのAuditDataカラムからデータを抽出する方法
     </h1>
   
 
@@ -122,9 +122,9 @@
         
         
         
-        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+31d22941-44b9-589d-a4b4-f7fec79f39a7%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E3%81%AEAudi%EF%BD%94Data%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_Extracting_Data+from_AuditLogs.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+31d22941-44b9-589d-a4b4-f7fec79f39a7%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E3%81%AEAuditData%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_Extracting_Data+from_AuditLogs.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/" data-id="cma3q8hp3000d0moe11xc2hpy" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/" data-id="cma3qcgxh000d0mqg4mambuys" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -348,7 +348,7 @@
           </li>
         
           <li>
-            <a href="">監査ログのAudiｔDataカラムからデータを抽出する方法</a>
+            <a href="">監査ログのAuditDataカラムからデータを抽出する方法</a>
           </li>
         
           <li>
