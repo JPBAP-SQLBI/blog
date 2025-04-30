@@ -1,5 +1,5 @@
 ---
-title: 監査ログのAudiｔDataカラムからデータを抽出する方法
+title: 監査ログのAuditDataカラムからデータを抽出する方法
 date: 2025-04-30 00:00:00 
 tags:
   - Power BI
