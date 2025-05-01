@@ -53,6 +53,7 @@ UI 上の操作は、実は Power BI Desktop 内に付属している Power Quer
 </div>
 
 データフロー Gen1 は、端的に言えば、Power Query Editor のオンライン版としてご認識いただけます。
+作成されたデータフロー Gen1 をレポートで利用するには、Power BI Desktop からデータフローに接続して、セマンティックモデルを構成する必要がございます。
 
 > [!NOTE]
 > // 参考情報 (1)：[Common Data Model](https://learn.microsoft.com/ja-JP/common-data-model/)
@@ -62,10 +63,10 @@ UI 上の操作は、実は Power BI Desktop 内に付属している Power Quer
 ## データフロー Gen2 とは？
 ---
 
-データフロー Gen2 は Fabric 容量または Fabric 機能を有効化した Premium 容量を利用する必要があり、 Pro ワークスペースでは作成することができません。
+データフロー Gen2 は Fabric 容量または Fabric 機能を有効化した Premium 容量を利用する必要があり、 Pro ワークスペースでは作成することができません。また、Fabric 容量または Premium 容量が割り当てられたワークスペースでは、 Free ライセンスを持つユーザーでデータフロー Gen2 を作成いただけます。
 
 データフロー Gen2 は、 Gen1 と同様に多数のデータ ソースへ接続して、 Power Query Editor の UI 操作でデータ加工・準備を行なうことが可能です。
-データフロー Gen1 で作成した M クエリをそのまま Gen2 でも利用できます。
+データフロー Gen1 で作成した M クエリをそのまま Gen2 でも利用できます。一方で、データフロー Gen2 で接続可能なデータ ソースは Gen1 より多く、例えば Fabric レイクハウス、Fabric ウェアハウス コネクタはデータフロー Gen 2 でのみ利用可能です。
 
 Gen1 との違いにつきましては、データフロー Gen2 は Fabric Data Factory の製品群に分類されます。アーキテクチャの面において、Gen2 の内部では、ステージング コンピューティングとステージング ストレージにレイクハウスを使用してデータ処理を行なっているため、より大量のデータを効率的に取り込むことができます。
 
@@ -75,7 +76,7 @@ Gen1 との違いにつきましては、データフロー Gen2 は Fabric Data
 
 さらに、[高速コピー](https://learn.microsoft.com/ja-jp/fabric/data-factory/dataflows-gen2-fast-copy) という機能があり、該当機能がサポートされている特定のコネクタや変換内容に合致する場合、より高いパフォーマンスを実現できます。
 
-また、データフロー Gen2 で変換処理されたデータの出力先として、 Fabric レイクハウス、ウェアハウス、Azure SQL Database などを選択して設定することが可能です。
+また、データフロー Gen2 で変換処理されたデータの出力先として、 Fabric レイクハウス、Fabric ウェアハウス、Azure SQL Database などを選択して設定することが可能です。データの出力先として　Fabric レイクハウスか Fabric ウェアハウスと設定することで、セマンティックモデルからはそれらに対して [DirectLake モード](https://learn.microsoft.com/ja-jp/fabric/fundamentals/direct-lake-overview)で接続できます。
 
 Fabric データパイプラインとの統合によって、パイプラインからデータフローのデータ更新をトリガーすることも可能となっております。
 
@@ -93,7 +94,8 @@ Fabric データパイプラインとの統合によって、パイプライン�
 
 |    | データフロー Gen1 | データフロー Gen2  | 
 | ---- | ----| ---- | 
-| ライセンス | Pro 以上  | Fabric 容量（試用版含む）または Premium 容量 | 
+| ユーザーライセンス | Pro | Free 以上 | 
+| ワークスペースのライセンス | Pro 以上  | Fabric 容量（試用版含む）または Premium 容量 | 
 | Power Query データ ソースのサポート | 〇  | 〇   | 
 | 自動保存 | ×  | 〇   | 
 | スケジュール更新 | [〇](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-understand-optimize-refresh)  | [〇](https://learn.microsoft.com/ja-jp/fabric/data-factory/dataflow-gen2-refresh) | 
