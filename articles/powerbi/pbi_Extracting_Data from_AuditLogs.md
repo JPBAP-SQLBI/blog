@@ -19,12 +19,6 @@ Power BI のユーザーアクティビティログには、セキュリティ�
 
 本ブログでは、監査ログファイルの AuditData カラムから必要な情報を抽出する方法の一例をご紹介します。
 
-<!-- more -->
-
->[!NOTE]
->本ブログでは、Power BIにおける JSONデータの扱い方の一例として、DAX関数を用いた方法をご紹介しています。
->目的やデータの特性によっては、Power Queryを使用する方法など、他にもさまざまなアプローチが考えられますので、運用シナリオに応じてご検討ください。
-
 </br>
 
 > [!IMPORTANT]
@@ -38,8 +32,7 @@ Power BI のユーザーアクティビティログには、セキュリティ�
 ## 目次
 ---
 1. [監査ログとは](#1．監査ログとは)
-2. [AuditDataカラムの値を抽出するDAX関数の説明](#2．AuditDataカラムの値を抽出するDAX関数の説明)
-3. [AuditDataカラムの値を抽出して新しい列を作成する手順](#3．AuditDataカラムの値を抽出して新しい列を作成する手順)
+2. [Power QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法](#2．Power-QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法)
 </br>
 
 ---
@@ -116,7 +109,7 @@ https://purview.microsoft.com/audit/
 <img src="pic3.png">
 </div>
 
-エクスポートしたファイルはCSV形式ですが、 AuditData カラムはJSON形式となっています。このJSONを成型すると、例えば、どのアイテムのアクティビティログか、アイテムのワークスペース名は何か、どのオペレーションで実施したか、どの環境で利用されていたか、などの情報が入っています。これらの情報を抽出する方法について次の章で説明します。
+エクスポートしたファイルはCSV形式ですが、 AuditData カラムはJSON形式となっています。このJSONを整形すると、例えば、どのアイテムのアクティビティログか、アイテムのワークスペース名は何か、どのオペレーションで実施したか、どの環境で利用されていたか、などの情報が入っています。これらの情報を抽出する方法について次の章で説明します。
 
 </br>
 
@@ -130,85 +123,9 @@ https://purview.microsoft.com/audit/
 >  [Power BI のユーザーアクティビティ追跡方法の比較](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_activity_log_usage_metrics/)
 
 
+## 2．Power QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法
+AuditData カラムは JSON 形式ですので、Power QueryのJSON分析機能を使って中身を分解します。詳しい手順は以下をご確認ください。
 
-## 2．AuditDataカラムの値を抽出するDAX関数の説明
-例えば、AuditDataカラムの値から、アイテム名（ItemName）を抽出したい場合のシナリオを考えます。
-
-</br>
-
-<div align="center">
-<img src="pic5.png">
-</div>
-
-DAX関数の利用方法については、Power BI Desktopでレポートを開き、「**ホーム**」 ＞ 「**新しい列**」をクリックします。以下のイメージの青枠にDAX関数を入力し、新しい列を作成します。
-
-</br>
-
-<div align="center">
-<img src="pic6.png">
-</div>
-
-以下のDAX式はAuditDataカラムの値から、特定のキーである"**ItemName**"に関連する値を抽出します。SEARCH、MID、IF、TRIMといったDAX関数を組み合わせて作成されます。
-
->[!NOTE]
->本DAX式および手法は一つのサンプルであり、Power BIサポートチームはDAX関数に関する開発支援をサポートしかねますので、予めご理解ください。お客様のシナリオに合わせて適宜ご活用いただければ幸いです。
-
-```CMD
-
-ItemName = 
-VAR StartPos = SEARCH("""ItemName"":""", 'auditLog'[AuditData], 1, BLANK()) + LEN("""ItemName"":""")
-VAR EndPos = SEARCH(""",""WorkSpaceName"":""", 'auditLog'[AuditData], StartPos, BLANK())
-VAR ExtractedText = IF(
-    NOT ISBLANK(StartPos) && NOT ISBLANK(EndPos) && EndPos > StartPos,
-    MID('auditLog'[AuditData], StartPos, EndPos - StartPos),
-    BLANK()
-)
-RETURN
-    TRIM(ExtractedText)
-
-```
-
-**StartPosの計算** 
-```CMD
-VAR StartPos = SEARCH("""ItemName"":""", 'auditLog'[AuditData], 1, BLANK()) + LEN("""ItemName"":""")
-```
-
-・SEARCH関数は、'auditLog'[AuditData]カラムの中から特定の文字列"ItemName":"を探し、その開始位置を返します。
-・見つかった位置に、LEN("""ItemName"":""")を加算することで、"ItemName":"の直後の位置、つまり実際に抽出したいテキストの開始位置を求めます。
-・もし"ItemName":"が見つからなければ、SEARCH関数はBLANK()を返します。
-
-**EndPosの計算**
-```CMD
-VAR EndPos = SEARCH(""",""WorkSpaceName"":""", 'auditLog'[AuditData], StartPos, BLANK())
-```
-
-・SEARCH関数を使って、"WorkSpaceName":"という文字列を探します。ただし、検索の開始位置をStartPosからに設定しています。これによって、"ItemName":"の後から"WorkSpaceName":"までの間のテキストを抽出する準備をします。
-・もし"WorkSpaceName":"が見つからなければ、SEARCH関数はBLANK()を返します。
-
-**ExtractedTextの計算**
-```CMD
-VAR ExtractedText = IF(
-    NOT ISBLANK(StartPos) && NOT ISBLANK(EndPos) && EndPos > StartPos,
-    MID('auditLog'[AuditData], StartPos, EndPos - StartPos),
-    BLANK()
-)
-```
-
-・IF関数を使って、StartPosとEndPosがともにBLANK()でなく、さらにEndPosがStartPosよりも大きい場合にのみ、MID関数を使ってテキストを抽出します。
-・MID関数は、'auditLog'[AuditData]からStartPosの位置から始まり、長さがEndPos - StartPosのテキストを抽出します。
-・条件を満たさない場合は、BLANK()を返します。
-
-**最終的な結果の返却**
-RETURN
-    TRIM(ExtractedText)
-
-・TRIM関数を使って、抽出されたテキストの前後の余分なスペースを取り除きます。
-・最終的に整形されたテキストがItemName列として返されます。
-
-
-
-
-## 3．AuditDataカラムの値を抽出して新しい列を作成する手順
 1) Power BI Desktopを起動します。
 「**データを取得**」 ＞ 「**テキスト/CSV**」 をクリックし、監査ログのCSVファイルを選択します。
 
@@ -227,36 +144,55 @@ RETURN
 </div>
 
 
-3) ItemNameの新しい列を作成します。
-「**テーブル ビュー**」 ＞ 「**ホーム**」 ＞ 「**新しい列**」をクリックし、第2章で説明したDAX関数を入力します。“**ItemName**”という列が作成されており、アイテム名を取得できることをご確認いただけます。
-
->[!NOTE]
->今回の検証では、**AuditLog**のテーブル名にしましたが、お客様のシナリオに合わせてDAX関数の'auditLog'[AuditData]の部分については適宜変更してください。
+3) 「**ホーム**」 ＞ 「**データの変換**」をクリックし、Power Query エディターを起動します。
 
 </br>
 
 <div align="center">
-<img src="pic9.png">
+<img src="pic1new.png">
 </div>
 
-4) ItemNameの列と同様に取得したい情報を他の列にも作成します。
-例えば、WorkSpaceNameの値を抽出する場合のDAXの関数は、以下のイメージの通りです。ItemNameのDAX関数と同様で、ハイライト部分を適宜変更してください。
+
+
+4) 「**AuditData**」カラムを選択し、「**変換**」 ＞ 「**分析**」 ＞ 「**JSON**」を選択します。
 
 </br>
 
 <div align="center">
-<img src="pic10.png">
+<img src="pic2new.png">
 </div>
 
 
-同様に、Operation、UserID、ConsumptionMethod、DistributionMethodなどを新しい列で値を取得できます。取得後の列は、以下のイメージをご確認ください。その他の情報を取得されたい場合、同様の手順でカスタマイズしてみてください。
+5) 「**AuditData**」カラムの拡張アイコンを選択し、「**OK**」をクリックします。
 
 </br>
 
 <div align="center">
-<img src="pic11.png">
+<img src="pic3new.png">
 </div>
 
+
+6) 「**AuditData**」カラムを展開後、「**閉じて適用**」をクリックします。
+
+</br>
+
+<div align="center">
+<img src="pic4new.png">
+</div>
+
+
+7) レポートビューで、必要な項目をテーブルとして作成します。
+たとえば、以下のイメージでは「**アイテム名**」、「**ワークスペース名**」、「**操作名**」、「**ユーザーID**」などの項目が含まれています。
+お客様のシナリオに応じて、必要な項目を追加してみてください。
+
+</br>
+
+<div align="center">
+<img src="pic5new.png">
+</div>
+
+
+手順は以上となります。
 
 </br>
 以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
