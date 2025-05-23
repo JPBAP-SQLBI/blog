@@ -17,15 +17,15 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic2.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic3.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic4.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic5.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic6.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic7.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic8.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic9.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic10.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic11.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic1new.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic2new.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic3new.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic4new.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/pic5new.png">
 <meta property="article:published_time" content="2025-04-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-08T06:35:39.715Z">
+<meta property="article:modified_time" content="2025-05-23T14:46:09.356Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI Desktop">
@@ -124,7 +124,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+31d22941-44b9-589d-a4b4-f7fec79f39a7%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E3%81%AEAuditData%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_Extracting_Data+from_AuditLogs.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_Extracting_Data%2520from_AuditLogs.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/" data-id="cmaezu08i000e0mpu4xuja2aj" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/" data-id="cmb0wykh7000e0mmn7bw06ouo" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -132,9 +132,6 @@
         <p>こんにちは、Power BI サポート チームのファムです。 </p>
 <p>Power BI のユーザーアクティビティログには、セキュリティ対策や利用状況の把握、コンプライアンス対応に役立つ情報が含まれています。ログを定期的に確認することで、Power BI をより安心して活用することができます。また、ログの取得だけでなく、監査ログのデータはCSVファイルにエクスポートすることができ、そのファイルの中のAuditData カラムには、監査対象のアクティビティの詳細情報が含まれます。このため、 「AuditData カラムの内容を Power BI 上で分析したい」といったご要望をいただくことがあります。</p>
 <p>本ブログでは、監査ログファイルの AuditData カラムから必要な情報を抽出する方法の一例をご紹介します。</p>
-<span id="more"></span>
-
-<div class="alert is-info"><p class="alert-title">Note</p><p>本ブログでは、Power BIにおける JSONデータの扱い方の一例として、DAX関数を用いた方法をご紹介しています。</p><p>目的やデータの特性によっては、Power Queryを使用する方法など、他にもさまざまなアプローチが考えられますので、運用シナリオに応じてご検討ください。</p></div>
 </br>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>弊社サポートをご利用いただいている場合、状況に合わせた調査方針を策定するため、記載の内容とご案内が異なる場合がございます。</p><p>ご不明な点がございましたら弊社サポート担当までお気軽にご質問ください。</p><p>また掲載している画像・手順は投稿時点のものとなります。最新の情報とは異なる可能性がございますので予めご了承ください。</p></div>
@@ -144,8 +141,7 @@
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
 <ol>
 <li><a href="#1%EF%BC%8E%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E3%81%A8%E3%81%AF">監査ログとは</a></li>
-<li><a href="#2%EF%BC%8EAuditData%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%AE%E5%80%A4%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8BDAX%E9%96%A2%E6%95%B0%E3%81%AE%E8%AA%AC%E6%98%8E">AuditDataカラムの値を抽出するDAX関数の説明</a></li>
-<li><a href="#3%EF%BC%8EAuditData%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%AE%E5%80%A4%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%97%E3%81%A6%E6%96%B0%E3%81%97%E3%81%84%E5%88%97%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E6%89%8B%E9%A0%86">AuditDataカラムの値を抽出して新しい列を作成する手順</a></br></li>
+<li><a href="#2%EF%BC%8EPower-Query%E3%81%AEJSON%E5%88%86%E6%9E%90%E6%A9%9F%E8%83%BD%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6AuditData%E3%82%AB%E3%83%A9%E3%83%A0%E3%81%AE%E5%80%A4%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">Power QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法</a></br></li>
 </ol>
 <hr>
 <h2 id="1．監査ログとは"><a href="#1．監査ログとは" class="headerlink" title="1．監査ログとは"></a>1．監査ログとは</h2><p>監査ログは、システム内で行われたアクティビティを記録したもので、ユーザーの操作、システムの変更、データのアクセス状況などが含まれます。例えば、Power BI レポートの表示に関するアクティビティログを通じて、誰がいつ、どの環境からレポートにアクセスしたかを追跡することができます。これらの監査ログは、Microsoft Purview ポータルから取得することが可能です。監査ログの取得方法は、以下の手順をご参考ください。</p>
@@ -193,7 +189,7 @@
 <img src="pic3.png">
 </div>
 
-<p>エクスポートしたファイルはCSV形式ですが、 AuditData カラムはJSON形式となっています。このJSONを成型すると、例えば、どのアイテムのアクティビティログか、アイテムのワークスペース名は何か、どのオペレーションで実施したか、どの環境で利用されていたか、などの情報が入っています。これらの情報を抽出する方法について次の章で説明します。</p>
+<p>エクスポートしたファイルはCSV形式ですが、 AuditData カラムはJSON形式となっています。このJSONを整形すると、例えば、どのアイテムのアクティビティログか、アイテムのワークスペース名は何か、どのオペレーションで実施したか、どの環境で利用されていたか、などの情報が入っています。これらの情報を抽出する方法について次の章で説明します。</p>
 </br>
 
 <div align="center">
@@ -204,39 +200,8 @@
 <blockquote>
 <p><strong>参考情報</strong><br> <a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_activity_log_usage_metrics/">Power BI のユーザーアクティビティ追跡方法の比較</a></p>
 </blockquote>
-<h2 id="2．AuditDataカラムの値を抽出するDAX関数の説明"><a href="#2．AuditDataカラムの値を抽出するDAX関数の説明" class="headerlink" title="2．AuditDataカラムの値を抽出するDAX関数の説明"></a>2．AuditDataカラムの値を抽出するDAX関数の説明</h2><p>例えば、AuditDataカラムの値から、アイテム名（ItemName）を抽出したい場合のシナリオを考えます。</p>
-</br>
-
-<div align="center">
-<img src="pic5.png">
-</div>
-
-<p>DAX関数の利用方法については、Power BI Desktopでレポートを開き、「<strong>ホーム</strong>」 ＞ 「<strong>新しい列</strong>」をクリックします。以下のイメージの青枠にDAX関数を入力し、新しい列を作成します。</p>
-</br>
-
-<div align="center">
-<img src="pic6.png">
-</div>
-
-<p>以下のDAX式はAuditDataカラムの値から、特定のキーである”<strong>ItemName</strong>“に関連する値を抽出します。SEARCH、MID、IF、TRIMといったDAX関数を組み合わせて作成されます。</p>
-<div class="alert is-info"><p class="alert-title">Note</p><p>本DAX式および手法は一つのサンプルであり、Power BIサポートチームはDAX関数に関する開発支援をサポートしかねますので、予めご理解ください。お客様のシナリオに合わせて適宜ご活用いただければ幸いです。</p></div>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ItemName = </span><br><span class="line">VAR StartPos = SEARCH(&quot;&quot;&quot;ItemName&quot;&quot;:&quot;&quot;&quot;, &#x27;auditLog&#x27;[AuditData], <span class="number">1</span>, BLANK()) + LEN(&quot;&quot;&quot;ItemName&quot;&quot;:&quot;&quot;&quot;)</span><br><span class="line">VAR EndPos = SEARCH(&quot;&quot;&quot;,&quot;&quot;WorkSpaceName&quot;&quot;:&quot;&quot;&quot;, &#x27;auditLog&#x27;[AuditData], StartPos, BLANK())</span><br><span class="line">VAR ExtractedText = <span class="keyword">IF</span>(</span><br><span class="line">    <span class="keyword">NOT</span> ISBLANK(StartPos) &amp;&amp; <span class="keyword">NOT</span> ISBLANK(EndPos) &amp;&amp; EndPos &gt; StartPos,</span><br><span class="line">    MID(&#x27;auditLog&#x27;[AuditData], StartPos, EndPos - StartPos),</span><br><span class="line">    BLANK()</span><br><span class="line">)</span><br><span class="line">RETURN</span><br><span class="line">    TRIM(ExtractedText)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>StartPosの計算</strong> </p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VAR StartPos = SEARCH(&quot;&quot;&quot;ItemName&quot;&quot;:&quot;&quot;&quot;, &#x27;auditLog&#x27;[AuditData], <span class="number">1</span>, BLANK()) + LEN(&quot;&quot;&quot;ItemName&quot;&quot;:&quot;&quot;&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>・SEARCH関数は、’auditLog’[AuditData]カラムの中から特定の文字列”ItemName”:”を探し、その開始位置を返します。<br>・見つかった位置に、LEN(“””ItemName””:”””)を加算することで、”ItemName”:”の直後の位置、つまり実際に抽出したいテキストの開始位置を求めます。<br>・もし”ItemName”:”が見つからなければ、SEARCH関数はBLANK()を返します。</p>
-<p><strong>EndPosの計算</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VAR EndPos = SEARCH(&quot;&quot;&quot;,&quot;&quot;WorkSpaceName&quot;&quot;:&quot;&quot;&quot;, &#x27;auditLog&#x27;[AuditData], StartPos, BLANK())</span><br></pre></td></tr></table></figure>
-
-<p>・SEARCH関数を使って、”WorkSpaceName”:”という文字列を探します。ただし、検索の開始位置をStartPosからに設定しています。これによって、”ItemName”:”の後から”WorkSpaceName”:”までの間のテキストを抽出する準備をします。<br>・もし”WorkSpaceName”:”が見つからなければ、SEARCH関数はBLANK()を返します。</p>
-<p><strong>ExtractedTextの計算</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">VAR ExtractedText = <span class="keyword">IF</span>(</span><br><span class="line">    <span class="keyword">NOT</span> ISBLANK(StartPos) &amp;&amp; <span class="keyword">NOT</span> ISBLANK(EndPos) &amp;&amp; EndPos &gt; StartPos,</span><br><span class="line">    MID(&#x27;auditLog&#x27;[AuditData], StartPos, EndPos - StartPos),</span><br><span class="line">    BLANK()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>・IF関数を使って、StartPosとEndPosがともにBLANK()でなく、さらにEndPosがStartPosよりも大きい場合にのみ、MID関数を使ってテキストを抽出します。<br>・MID関数は、’auditLog’[AuditData]からStartPosの位置から始まり、長さがEndPos - StartPosのテキストを抽出します。<br>・条件を満たさない場合は、BLANK()を返します。</p>
-<p><strong>最終的な結果の返却</strong><br>RETURN<br>    TRIM(ExtractedText)</p>
-<p>・TRIM関数を使って、抽出されたテキストの前後の余分なスペースを取り除きます。<br>・最終的に整形されたテキストがItemName列として返されます。</p>
-<h2 id="3．AuditDataカラムの値を抽出して新しい列を作成する手順"><a href="#3．AuditDataカラムの値を抽出して新しい列を作成する手順" class="headerlink" title="3．AuditDataカラムの値を抽出して新しい列を作成する手順"></a>3．AuditDataカラムの値を抽出して新しい列を作成する手順</h2><ol>
+<h2 id="2．Power-QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法"><a href="#2．Power-QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法" class="headerlink" title="2．Power QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法"></a>2．Power QueryのJSON分析機能を使用してAuditDataカラムの値を抽出する方法</h2><p>AuditData カラムは JSON 形式ですので、Power QueryのJSON分析機能を使って中身を分解します。詳しい手順は以下をご確認ください。</p>
+<ol>
 <li>Power BI Desktopを起動します。<br>「<strong>データを取得</strong>」 ＞ 「<strong>テキスト/CSV</strong>」 をクリックし、監査ログのCSVファイルを選択します。</li>
 </ol>
 </br>
@@ -256,33 +221,57 @@
 
 
 <ol start="3">
-<li>ItemNameの新しい列を作成します。<br>「<strong>テーブル ビュー</strong>」 ＞ 「<strong>ホーム</strong>」 ＞ 「<strong>新しい列</strong>」をクリックし、第2章で説明したDAX関数を入力します。“<strong>ItemName</strong>”という列が作成されており、アイテム名を取得できることをご確認いただけます。</li>
+<li>「<strong>ホーム</strong>」 ＞ 「<strong>データの変換</strong>」をクリックし、Power Query エディターを起動します。</li>
 </ol>
-<div class="alert is-info"><p class="alert-title">Note</p><p>今回の検証では、<strong>AuditLog</strong>のテーブル名にしましたが、お客様のシナリオに合わせてDAX関数の’auditLog’[AuditData]の部分については適宜変更してください。</p></div>
 </br>
 
 <div align="center">
-<img src="pic9.png">
+<img src="pic1new.png">
 </div>
+
+
 
 <ol start="4">
-<li>ItemNameの列と同様に取得したい情報を他の列にも作成します。<br>例えば、WorkSpaceNameの値を抽出する場合のDAXの関数は、以下のイメージの通りです。ItemNameのDAX関数と同様で、ハイライト部分を適宜変更してください。</li>
+<li>「<strong>AuditData</strong>」カラムを選択し、「<strong>変換</strong>」 ＞ 「<strong>分析</strong>」 ＞ 「<strong>JSON</strong>」を選択します。</li>
 </ol>
 </br>
 
 <div align="center">
-<img src="pic10.png">
+<img src="pic2new.png">
 </div>
 
 
-<p>同様に、Operation、UserID、ConsumptionMethod、DistributionMethodなどを新しい列で値を取得できます。取得後の列は、以下のイメージをご確認ください。その他の情報を取得されたい場合、同様の手順でカスタマイズしてみてください。</p>
+<ol start="5">
+<li>「<strong>AuditData</strong>」カラムの拡張アイコンを選択し、「<strong>OK</strong>」をクリックします。</li>
+</ol>
 </br>
 
 <div align="center">
-<img src="pic11.png">
+<img src="pic3new.png">
 </div>
 
 
+<ol start="6">
+<li>「<strong>AuditData</strong>」カラムを展開後、「<strong>閉じて適用</strong>」をクリックします。</li>
+</ol>
+</br>
+
+<div align="center">
+<img src="pic4new.png">
+</div>
+
+
+<ol start="7">
+<li>レポートビューで、必要な項目をテーブルとして作成します。<br>たとえば、以下のイメージでは「<strong>アイテム名</strong>」、「<strong>ワークスペース名</strong>」、「<strong>操作名</strong>」、「<strong>ユーザーID</strong>」などの項目が含まれています。<br>お客様のシナリオに応じて、必要な項目を追加してみてください。</li>
+</ol>
+</br>
+
+<div align="center">
+<img src="pic5new.png">
+</div>
+
+
+<p>手順は以上となります。</p>
 </br>
 以上、本ブログ が少しでも皆様のお役に立てますと幸いでございます。
 
