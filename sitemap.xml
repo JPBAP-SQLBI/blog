@@ -352,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiservice_network/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_persistent_filters/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_persistent_filters/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiservice_network/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_1/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_oracle_driver/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_oracle_driver/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_1/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
@@ -611,6 +611,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
+    
+    <lastmod>2025-05-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
     
     <lastmod>2025-05-30</lastmod>
@@ -619,13 +626,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
-    
-    <lastmod>2025-05-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
@@ -730,14 +730,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
@@ -814,20 +814,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/</loc>
-    
-    <lastmod>2025-05-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/fabric_onelake/</loc>
-    
-    <lastmod>2025-05-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/</loc>
     
     <lastmod>2025-05-30</lastmod>
@@ -836,6 +822,20 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/microsoft_fabric/</loc>
+    
+    <lastmod>2025-05-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/</loc>
+    
+    <lastmod>2025-05-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/fabric_onelake/</loc>
     
     <lastmod>2025-05-30</lastmod>
     
