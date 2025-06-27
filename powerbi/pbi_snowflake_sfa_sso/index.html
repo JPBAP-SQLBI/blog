@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/tenant_snowflake_sso.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/tenant_gateway_sso.png">
 <meta property="article:published_time" content="2025-06-26T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-06-27T13:39:45.804Z">
+<meta property="article:modified_time" content="2025-06-27T13:52:45.175Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -113,7 +113,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+c3c47738-d580-53df-b0ec-7d3d8f6dacaa%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BSnowflake+%E5%8D%98%E4%B8%80%E8%A6%81%E7%B4%A0%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E8%AA%8D%E8%A8%BC%E5%BB%83%E6%AD%A2%E3%81%AB%E4%BC%B4%E3%81%86+Power+BI+%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E5%AF%BE%E5%BF%9C%E3%81%A8+Power+BI+%E3%81%8B%E3%82%89%E3%81%AE%E6%8E%A5%E7%B6%9A%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_snowflake_sfa_sso%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_snowflake_sfa_sso.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_snowflake_sfa_sso.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/" data-id="cmceuzznj004h0mp662ia4euk" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/" data-id="cmcevgp3h004h0moedanyepgl" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -138,19 +138,19 @@
 <p>単一要素パスワード認証の廃止について、Snowflake 社の公開情報では大きく以下の 2 点が案内されています。</p>
 <ul>
 <li>2025 年 11 月からすべてのユーザーに対して単一要素パスワード認証がブロックされる</li>
-<li>今後は多要素認証 (MFA)、SSO (SAML/OAuth)、または証明書やキーペアなどのセキュアな認証方式を利用する必要がある</li>
+<li>今後は多要素認証 (MFA)、SSO (SAML/OAuth)、またはキーペアなどのセキュアな認証方式を利用する必要がある</li>
 </ul>
 <p>詳細については、必ず Snowflake 社の公開情報をご参照ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/">Snowflake Will Block Single-Factor Password Authentication by November 2025</a></p></div>
 <hr>
 <h2 id="Power-BI-から利用可能な接続方法"><a href="#Power-BI-から利用可能な接続方法" class="headerlink" title="Power BI から利用可能な接続方法"></a>Power BI から利用可能な接続方法</h2><hr>
 <p>単一要素パスワード認証の廃止に伴い、Power BI から Snowflake に接続する方法としては、主に以下の2種類が挙げられます。</p>
-<h3 id="ODBC-コネクタ"><a href="#ODBC-コネクタ" class="headerlink" title="ODBC コネクタ"></a>ODBC コネクタ</h3><p>Snowflake の ODBC ドライバーを使って接続が可能です。<br>キーペア認証に対応しているとされており、SFA 廃止後はキーペア認証が選択肢であると考えられます。<br>ただし、キーペアの生成や設定方法については Snowflake 側のドキュメントやサポートをご確認ください。</p>
+<h3 id="ODBC-コネクタ"><a href="#ODBC-コネクタ" class="headerlink" title="ODBC コネクタ"></a>ODBC コネクタ</h3><p>Snowflake の ODBC ドライバーを使って接続が可能です。キーペア認証に対応しているとされており、SFA 廃止後はキーペア認証が選択肢であると考えられます。<br>ただし、キーペアの生成や設定方法については Snowflake 側のドキュメントやサポートをご確認ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://docs.snowflake.com/ja/user-guide/key-pair-auth">キーペア認証とキーペアローテーション | Snowflake Documentation</a></p></div>
 <p>なお、 ODBC コネクタでは Power BI の DirectQuery は利用できません。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-query/connectors/odbc">Power Query ODBC コネクタ - Power Query | Microsoft Learn</a></p></div>
 <h3 id="Snowflake-コネクタ"><a href="#Snowflake-コネクタ" class="headerlink" title="Snowflake コネクタ"></a>Snowflake コネクタ</h3><p>Snowflake コネクタでは、Microsoft アカウントを用いた認証が可能です。ただし、Snowflake 側での設定などが別途必要になります。接続手順は <a href="#Microsoft-%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">Microsoft アカウントで接続する方法</a> のセクションにてご紹介します。</p>
-<p>なお、本コネクタは DirectQuery に対応しており、データベース名やウェアハウス、ロール指定などの詳細オプションも利用可能です。</p>
+<p>なお、本コネクタは DirectQuery に対応しており、ロールやデータベースの指定などの詳細オプションも利用可能です。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake">Power Query Snowflake コネクタ - Power Query | Microsoft Learn</a></p></div>
 <p>下表は、単一要素パスワード認証の廃止に伴い可能となる接続方法を整理したものです。</p>
 <table>
@@ -189,7 +189,7 @@
 <p>キーペア認証が正式にサポートされるまでの間は、当ブログでご紹介している他の認証方法の活用をご検討ください。</p>
 <hr>
 <h2 id="Microsoft-アカウントで接続する方法"><a href="#Microsoft-アカウントで接続する方法" class="headerlink" title="Microsoft アカウントで接続する方法"></a>Microsoft アカウントで接続する方法</h2><hr>
-<p>Snowflake に対して Microsoft アカウント (Microsoft Entra ID) を使用して Power BI から接続する方法についても、多くのお問い合わせをいただいています。本セクションでは、Microsoft アカウントを使用した Snowflake 接続に必要な設定についてご紹介します。</p>
+<p>Snowflake に対して、Microsoft アカウント (Microsoft Entra ID) を使用して Power BI から接続する方法についても、多くのお問い合わせをいただいています。本セクションでは、Microsoft アカウントを使用した Snowflake 接続に必要な設定についてご紹介します。</p>
 <h3 id="Snowflake-側の設定"><a href="#Snowflake-側の設定" class="headerlink" title="Snowflake 側の設定"></a>Snowflake 側の設定</h3><p>Snowflake に対して Microsoft Entra ID で認証を行うには、Snowflake 側で Entra ID との統合設定が必要です。<br>詳細な手順については、以下の公開情報をご参照ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a target="_blank" rel="noopener" href="https://docs.snowflake.com/en/user-guide/oauth-powerbi#getting-started">Power BI SSO to Snowflake | Snowflake Documentation
 </a></p></div>
