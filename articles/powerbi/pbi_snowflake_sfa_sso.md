@@ -39,7 +39,7 @@ Power BI では データソースとして Snowflake に接続することが�
 単一要素パスワード認証の廃止について、Snowflake 社の公開情報では大きく以下の 2 点が案内されています。
 
 - 2025 年 11 月からすべてのユーザーに対して単一要素パスワード認証がブロックされる
-- 今後は多要素認証 (MFA)、SSO (SAML/OAuth)、または証明書やキーペアなどのセキュアな認証方式を利用する必要がある
+- 今後は多要素認証 (MFA)、SSO (SAML/OAuth)、またはキーペアなどのセキュアな認証方式を利用する必要がある
 
 詳細については、必ず Snowflake 社の公開情報をご参照ください。
 
@@ -53,8 +53,7 @@ Power BI では データソースとして Snowflake に接続することが�
 単一要素パスワード認証の廃止に伴い、Power BI から Snowflake に接続する方法としては、主に以下の2種類が挙げられます。
 
 ### ODBC コネクタ
-Snowflake の ODBC ドライバーを使って接続が可能です。
-キーペア認証に対応しているとされており、SFA 廃止後はキーペア認証が選択肢であると考えられます。
+Snowflake の ODBC ドライバーを使って接続が可能です。キーペア認証に対応しているとされており、SFA 廃止後はキーペア認証が選択肢であると考えられます。
 ただし、キーペアの生成や設定方法については Snowflake 側のドキュメントやサポートをご確認ください。
 
 >[!NOTE]
@@ -70,7 +69,7 @@ Snowflake の ODBC ドライバーを使って接続が可能です。
 ### Snowflake コネクタ
 Snowflake コネクタでは、Microsoft アカウントを用いた認証が可能です。ただし、Snowflake 側での設定などが別途必要になります。接続手順は [Microsoft アカウントで接続する方法](#Microsoft-アカウントで接続する方法) のセクションにてご紹介します。
 
-なお、本コネクタは DirectQuery に対応しており、データベース名やウェアハウス、ロール指定などの詳細オプションも利用可能です。
+なお、本コネクタは DirectQuery に対応しており、ロールやデータベースの指定などの詳細オプションも利用可能です。
 
 >[!NOTE]
 > 参考情報：[Power Query Snowflake コネクタ - Power Query | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
@@ -102,7 +101,7 @@ Snowflake コネクタでは、Microsoft アカウントを用いた認証が可
 ## Microsoft アカウントで接続する方法
 ---
 
-Snowflake に対して Microsoft アカウント (Microsoft Entra ID) を使用して Power BI から接続する方法についても、多くのお問い合わせをいただいています。本セクションでは、Microsoft アカウントを使用した Snowflake 接続に必要な設定についてご紹介します。
+Snowflake に対して、Microsoft アカウント (Microsoft Entra ID) を使用して Power BI から接続する方法についても、多くのお問い合わせをいただいています。本セクションでは、Microsoft アカウントを使用した Snowflake 接続に必要な設定についてご紹介します。
 
 ### Snowflake 側の設定
 
