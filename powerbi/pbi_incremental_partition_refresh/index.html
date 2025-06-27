@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/13.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/14.png">
 <meta property="article:published_time" content="2025-06-26T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-06-27T06:51:28.244Z">
+<meta property="article:modified_time" content="2025-06-27T07:10:45.408Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -128,7 +128,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+4b780334-6030-5560-abaa-a9d29d1a310c%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%81%AE%E5%A2%97%E5%88%86%E6%9B%B4%E6%96%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%88%9D%E5%9B%9E%E6%9B%B4%E6%96%B0%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%82%92%E5%9B%9E%E9%81%BF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_incremental_partition_refresh%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_incremental_partition_refresh.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_incremental_partition_refresh.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/" data-id="cmcegexsm002k0mnqd82l79d5" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/" data-id="cmceh3qf6002k0mph5ur22qg4" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -137,7 +137,7 @@
 <p>Power BI では、大規模データをより効率的に更新するために 、「増分更新」機能が用意されています。この機能を活用することで、すべてのデータを毎回再読み込みする必要がなくなり、直近で変更があったデータのみに対象を絞って更新することが可能になります。<br>一方で、Power BI サービスにレポートを発行し、セマンティックモデルの初回更新を実行する際には、設定された保持期間全体のデータが一括で取得されるため、処理時間が長くなり、タイムアウトが発生することがあります。本記事では、こうした初回更新時のエラーを回避する手順を紹介します。</p>
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
-<h2 id="初回更新が失敗する主な原因とその回避アプローチ"><a href="#初回更新が失敗する主な原因とその回避アプローチ" class="headerlink" title="初回更新が失敗する主な原因とその回避アプローチ"></a>初回更新が失敗する主な原因とその回避アプローチ</h2><p>Power BI の増分更新では、「アーカイブ期間（データ保持期間）」と「増分更新期間」を指定できますが、初回更新時には保持期間全体のデータが一括で処理されるため、タイムアウトが発生しやすくなります。<br>この問題を回避するには、Premium 容量で利用できる XMLA エンドポイントを使い、Tabular Editor や SSMS からパーティションを段階的に手動で更新する方法が有効です。初回処理を小分けにして順に完了させることで、保持期間全体の一括処理を避けられ、サービス側のタイムアウト     リスクを低減できます。その後は、更新対象期間のみに限定した通常の増分更新が適用されるため、安定した運用が可能になります。<br></br></p>
+<h2 id="初回更新が失敗する主な原因とその回避アプローチ"><a href="#初回更新が失敗する主な原因とその回避アプローチ" class="headerlink" title="初回更新が失敗する主な原因とその回避アプローチ"></a>初回更新が失敗する主な原因とその回避アプローチ</h2><p>Power BI の増分更新では、「アーカイブ期間（データ保持期間）」と「増分更新期間」を指定できますが、初回更新時には保持期間全体のデータが一括で処理されるため、タイムアウトが発生しやすくなります。<br>この問題を回避するには、Premium 容量で利用できる XMLA エンドポイントを使い、Tabular Editor や SSMS からパーティションを段階的に手動で更新する方法が有効です。初回処理を小分けにして順に完了させることで、保持期間全体の一括処理を避けられ、サービス側のタイムアウト     リスクを低減できます。その後は、更新対象期間のみに限定した通常の増分更新が適用されるため、安定した運用が可能になります。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-xmla#prevent-timeouts-on-initial-full-refresh">Power BI での XMLA エンドポイントを使用した高度な増分更新およびリアルタイム データ - Power BI | Microsoft Learn</a><br></br></p>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p>ライセンス：XMLA エンドポイントを使用するには、Premium 容量、Premium Per User (PPU)、または Microsoft Fabric 容量 に割り当てられたワークスペースが必要です。<br>テナント設定：「XMLA の読み取り/書き込み」を有効にする必要があります。</p>
 <div class="alert is-success"><p class="alert-title">ヒント</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-connect-tools#enable-xmla-read-write">Power BI での XMLA エンドポイントを使用したセマンティック モデルの接続と管理 - Power BI | Microsoft Learn</a></p></div>
 </br>
