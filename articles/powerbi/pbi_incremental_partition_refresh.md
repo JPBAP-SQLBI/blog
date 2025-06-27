@@ -24,6 +24,7 @@ Power BI では、大規模データをより効率的に更新するために �
 ## 初回更新が失敗する主な原因とその回避アプローチ
 Power BI の増分更新では、「アーカイブ期間（データ保持期間）」と「増分更新期間」を指定できますが、初回更新時には保持期間全体のデータが一括で処理されるため、タイムアウトが発生しやすくなります。
 この問題を回避するには、Premium 容量で利用できる XMLA エンドポイントを使い、Tabular Editor や SSMS からパーティションを段階的に手動で更新する方法が有効です。初回処理を小分けにして順に完了させることで、保持期間全体の一括処理を避けられ、サービス側のタイムアウト 	リスクを低減できます。その後は、更新対象期間のみに限定した通常の増分更新が適用されるため、安定した運用が可能になります。
+[Power BI での XMLA エンドポイントを使用した高度な増分更新およびリアルタイム データ - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-xmla#prevent-timeouts-on-initial-full-refresh)
 </br>
 
 ## 前提条件
