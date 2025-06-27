@@ -82,7 +82,6 @@ Tabular Editor の詳細は、以下の公式サイトをご参照ください�
 </div>
 
 ⑤	以下のように、保持期間に基づく複数のパーティションが自動で作成されます。
-![](6.png)
 <div align="left">
 <img src="6.png">
 </div>
