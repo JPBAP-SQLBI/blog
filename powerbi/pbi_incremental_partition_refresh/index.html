@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/13.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/14.png">
 <meta property="article:published_time" content="2025-06-26T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-06-27T06:15:13.225Z">
+<meta property="article:modified_time" content="2025-06-27T06:30:41.249Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -127,27 +127,94 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+4b780334-6030-5560-abaa-a9d29d1a310c%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%81%AE%E5%A2%97%E5%88%86%E6%9B%B4%E6%96%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%88%9D%E5%9B%9E%E6%9B%B4%E6%96%B0%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%82%92%E5%9B%9E%E9%81%BF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_incremental_partition_refresh%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_incremental_partition_refresh.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_incremental_partition_refresh.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/" data-id="cmcef4b74002k0mo21js1cbcw" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/" data-id="cmcefo7e3002k0mnt9lpr2202" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームの呂です。</p>
-<p>Power BI では、大規模データをより効率的に更新するために 、「増分更新」機能が用意されています。この機能を活用することで、すべてのデータを毎回再読み込みする必要がなくなり、直近で変更があったデータのみに対象を絞って更新することが可能になります。<br>一方で、Power BI サービスにレポートを発行し、セマンティックモデルの初回更新を実行する際には、設定された保持期間全体のデータが一括で取得されるため、処理時間が長くなり、タイムアウトが発生することがあります。本記事では、こうした初回更新エラーを回避するための手順を紹介します。</p>
+<p>Power BI では、大規模データをより効率的に更新するために 、「増分更新」機能が用意されています。この機能を活用することで、すべてのデータを毎回再読み込みする必要がなくなり、直近で変更があったデータのみに対象を絞って更新することが可能になります。<br>一方で、Power BI サービスにレポートを発行し、セマンティックモデルの初回更新を実行する際には、設定された保持期間全体のデータが一括で取得されるため、処理時間が長くなり、タイムアウトが発生することがあります。本記事では、こうした初回更新時のエラーを回避する手順を紹介します。</p>
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 <h2 id="初回更新が失敗する主な原因とその回避アプローチ"><a href="#初回更新が失敗する主な原因とその回避アプローチ" class="headerlink" title="初回更新が失敗する主な原因とその回避アプローチ"></a>初回更新が失敗する主な原因とその回避アプローチ</h2><p>Power BI の増分更新では、「アーカイブ期間（データ保持期間）」と「増分更新期間」を指定できますが、初回更新時には保持期間全体のデータが一括で処理されるため、タイムアウトが発生しやすくなります。<br>この問題を回避するには、Premium 容量で利用できる XMLA エンドポイントを使い、Tabular Editor や SSMS からパーティションを段階的に手動で更新する方法が有効です。初回処理を小分けにして順に完了させることで、保持期間全体の一括処理を避けられ、サービス側のタイムアウト     リスクを低減できます。その後は、更新対象期間のみに限定した通常の増分更新が適用されるため、安定した運用が可能になります。<br></br></p>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p>ライセンス：XMLA エンドポイントを使用するには、Premium 容量、Premium Per User (PPU)、または Microsoft Fabric 容量 に割り当てられたワークスペースが必要です。<br>テナント設定：「XMLA の読み取り/書き込み」を有効にする必要があります。</p>
-<div class="alert is-success"><p class="alert-title">ヒント</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-connect-tools#enable-xmla-read-write">Power BI での XMLA エンドポイントを使用したセマンティック モデルの接続と管理 - Power BI | Microsoft Learn</a></p><p></br></p></div>
-<h2 id="手順：初回更新を手動で実行する方法"><a href="#手順：初回更新を手動で実行する方法" class="headerlink" title="手順：初回更新を手動で実行する方法"></a>手順：初回更新を手動で実行する方法</h2><h3 id="1-増分更新を設定し、Power-BI-サービスに発行（ただし更新は行わない）"><a href="#1-増分更新を設定し、Power-BI-サービスに発行（ただし更新は行わない）" class="headerlink" title="1. 増分更新を設定し、Power BI サービスに発行（ただし更新は行わない）"></a>1. 増分更新を設定し、Power BI サービスに発行（ただし更新は行わない）</h3><p>Power BI Desktop 上で増分更新を設定し、Power BI サービスに発行します。設定方法は以下のブログを参照してください。：<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_refresh/">増分更新の概要と設定方法 | Japan CSS Support Power BI Blog</a><br>この時点では Power BI サービス上での更新は実行しません。更新を行うと保持期間全体が一括で処理されるため、更新を行うとタイムアウトが発生する可能性があります。後続の XMLA エンドポイント更新に備えて、あくまで発行のみを行います。<br></br></p>
-<h3 id="2-ワークスペースの-XMLA-エンドポイントを取得"><a href="#2-ワークスペースの-XMLA-エンドポイントを取得" class="headerlink" title="2. ワークスペースの XMLA エンドポイントを取得"></a>2. ワークスペースの XMLA エンドポイントを取得</h3><p>Power BI サービスの対象ワークスペースを開き、以下の手順で XMLA エンドポイントをコピーします。<br>[ワークスペースの設定] → [プレミアム] タブ → [接続リンク] → [コピー]<br><img src="1.png"><br></br></p>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-premium-connect-tools#enable-xmla-read-write">Power BI での XMLA エンドポイントを使用したセマンティック モデルの接続と管理 - Power BI | Microsoft Learn</a></p></div>
+</br>
+
+<h2 id="手順：初回更新を手動で実行する方法"><a href="#手順：初回更新を手動で実行する方法" class="headerlink" title="手順：初回更新を手動で実行する方法"></a>手順：初回更新を手動で実行する方法</h2><h3 id="1-増分更新を設定し、Power-BI-サービスに発行（ただし更新は行わない）"><a href="#1-増分更新を設定し、Power-BI-サービスに発行（ただし更新は行わない）" class="headerlink" title="1. 増分更新を設定し、Power BI サービスに発行（ただし更新は行わない）"></a>1. 増分更新を設定し、Power BI サービスに発行（ただし更新は行わない）</h3><p>Power BI Desktop 上で増分更新を設定し、Power BI サービスに発行します。<br>設定方法は以下のブログを参照してください。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_refresh/">増分更新の概要と設定方法 | Japan CSS Support Power BI Blog</a><br>この時点では Power BI サービス上での更新は実行しません。更新を行うと保持期間全体が一括で処理されるため、更新を行うとタイムアウトが発生する可能性があります。後続の XMLA エンドポイント更新に備えて、あくまで発行のみを行います。<br></br></p>
+<h3 id="2-ワークスペースの-XMLA-エンドポイントを取得"><a href="#2-ワークスペースの-XMLA-エンドポイントを取得" class="headerlink" title="2. ワークスペースの XMLA エンドポイントを取得"></a>2. ワークスペースの XMLA エンドポイントを取得</h3><p>Power BI サービスの対象ワークスペースを開き、以下の手順で XMLA エンドポイントをコピーします。<br>[ワークスペースの設定] → [プレミアム] タブ → [接続リンク] → [コピー]</p>
+<div align="left">
+<img src="1.png">
+</div>
+</br>
+
 <h3 id="3-Tabular-Editor-でセマンティックモデルに接続し、パーティションを作成"><a href="#3-Tabular-Editor-でセマンティックモデルに接続し、パーティションを作成" class="headerlink" title="3. Tabular Editor でセマンティックモデルに接続し、パーティションを作成"></a>3. Tabular Editor でセマンティックモデルに接続し、パーティションを作成</h3><div class="alert is-success"><p class="alert-title">ヒント</p><p>TIPS：Tabular Editor は、表形式モデルを直感的に管理できる外部ツールです。</p><p>Tabular Editor の詳細は、以下の公式サイトをご参照ください。</p><p><a target="_blank" rel="noopener" href="https://github.com/TabularEditor/TabularEditor/releases">Releases · TabularEditor/TabularEditor</a></p><p><a target="_blank" rel="noopener" href="https://docs.tabulareditor.com/">Tabular Editor | Tabular Editor Documentation</a></p><p>※サードパーティ製ツールのため、Microsoft によるサポートは提供されていません。</p></div>
-<p>①     Tabular Editor を起動し、[File] &gt; [Open] &gt; [From DB] を選択します。<br><img src="2.png"><br>②    ステップ 2 で取得した XMLA エンドポイントと資格情報を入力し、ワークスペースに接続します。<br><img src="3.png"><br>③    設定対象のセマンティックモデルを選択します。<br><img src="4.png"><br>④    増分更新が設定されたテーブルを右クリックし、[Apply Refresh Policy] を選択します。<br><a target="_blank" rel="noopener" href="https://docs.tabulareditor.com/te3/tutorials/incremental-refresh/incremental-refresh-about.html?tabs=filterstep,import">What is a Refresh Policy? | Tabular Editor Documentation</a><br><img src="5.png"><br>⑤    以下のように、保持期間に基づく複数のパーティションが自動で作成されます。<br><img src="6.png"><br></br></p>
-<h3 id="4-SSMS-からパーティション更新"><a href="#4-SSMS-からパーティション更新" class="headerlink" title="4. SSMS からパーティション更新"></a>4. SSMS からパーティション更新</h3><p>①SSMSを起動し、Server type を「Analysis Services」に設定して XMLA エンドポイントに接続します。<br><img src="7.png"><br>②対象のセマンティックモデルを展開し、該当テーブルを右クリックして [Partitions] を選択します。<br><img src="8.png"><br>③自動作成された複数のパーティションが表示され、[Last Processed] が「Never」になっていることを確認します。<br>パーティションを更新するには、緑色の [Process] ボタンを押します。<br><img src="9.png"><br>④更新対象のパーティションを選択する画面が表示されます。ここで複数のパーティションを段階的に処理することで、<br>初回更新のタイムアウトを回避できます。GUI 操作だけでなく、XMLA クエリによる処理も可能です。<br>※この例ではすべてのパーティションを一括処理しましたが、大量のデータを処理する場合は、パーティションは個別にもしくは少数単位で分割して処理することもできます。<br><img src="10.png"><br>⑤処理が完了すると、完了メッセージが表示されます。<br><img src="11.png"><br>⑥ [Last Processed] の日時が更新されたことを確認します。<br><img src="12.png"><br></br></p>
-<h3 id="5-Power-BI-サービス上で更新"><a href="#5-Power-BI-サービス上で更新" class="headerlink" title="5. Power BI サービス上で更新"></a>5. Power BI サービス上で更新</h3><p>① Power BI サービスのワークスペース上で「今すぐ更新」を実行します。保持期間のパーティションがすでに処理済みであるため、更新期間のパーティションのみが処理対象になります。<br><img src="13.png"><br>② 更新後、SSMS で再度確認すると、[Last Processed] の日付が更新期間のパーティションにだけ反映されていることが確認できます。<br>※本件では過去7日分を増分更新の対象としております<br><img src="14.png"><br></br></p>
+<p>①     Tabular Editor を起動し、[File] &gt; [Open] &gt; [From DB] を選択します。</p>
+<div align="left">
+<img src="2.png">
+</div>
+②    ステップ 2 で取得した XMLA エンドポイントと資格情報を入力し、ワークスペースに接続します。
+<div align="left">
+<img src="3.png">
+</div>
+③    設定対象のセマンティックモデルを選択します。
+<div align="left">
+<img src="4.png">
+</div>
+④    増分更新が設定されたテーブルを右クリックし、[Apply Refresh Policy] を選択します。
+[What is a Refresh Policy? | Tabular Editor Documentation](https://docs.tabulareditor.com/te3/tutorials/incremental-refresh/incremental-refresh-about.html?tabs=filterstep%2Cimport)
+<div align="left">
+<img src="5.png">
+</div>
+⑤    以下のように、保持期間に基づく複数のパーティションが自動で作成されます。
+![](6.png)
+<div align="left">
+<img src="6.png">
+</div>
+
+<h3 id="4-SSMS-からパーティションを更新"><a href="#4-SSMS-からパーティションを更新" class="headerlink" title="4. SSMS からパーティションを更新"></a>4. SSMS からパーティションを更新</h3><p>①SSMS を起動し、Server type を「Analysis Services」に設定して XMLA エンドポイントに接続します。</p>
+<div align="left">
+<img src="7.png">
+</div>
+②対象のセマンティックモデルを展開し、該当テーブルを右クリックして [Partitions] を選択します。
+<div align="left">
+<img src="8.png">
+</div>
+③自動作成された複数のパーティションが表示され、[Last Processed] が「Never」になっていることを確認します。
+パーティションを更新するには、緑色の [Process] ボタンを押します。
+<div align="left">
+<img src="9.png">
+</div>
+④更新対象のパーティションを選択する画面が表示されます。ここで複数のパーティションを段階的に処理することで、
+初回更新のタイムアウトを回避できます。GUI 操作だけでなく、XMLA クエリによる処理も可能です。
+※この例ではすべてのパーティションを一括処理しましたが、大量のデータを処理する場合は、パーティションは個別にもしくは少数単位で分割して処理することもできます。
+<div align="left">
+<img src="10.png">
+</div>
+⑤処理が完了すると、完了メッセージが表示されます。
+<div align="left">
+<img src="11.png">
+</div>
+⑥ [Last Processed] の日時が更新されたことを確認します。
+<div align="left">
+<img src="12.png">
+</div>
+</br>
+
+<h3 id="5-Power-BI-サービス上で更新"><a href="#5-Power-BI-サービス上で更新" class="headerlink" title="5. Power BI サービス上で更新"></a>5. Power BI サービス上で更新</h3><p>① Power BI サービスのワークスペース上で「今すぐ更新」を実行します。保持期間のパーティションがすでに処理済みであるため、更新期間のパーティションのみが処理対象になります。 </p>
+<div align="left">
+<img src="13.png">
+</div>
+② 更新後、SSMS で再度確認すると、[Last Processed] の日付が更新期間のパーティションにだけ反映されていることが確認できます。
+※本件では過去7日分を増分更新の対象としております
+<div align="left">
+<img src="14.png">
+</div>
+</br>
+
 <h2 id="おまけ：少量データでセマンティックモデルを発行する方法"><a href="#おまけ：少量データでセマンティックモデルを発行する方法" class="headerlink" title="おまけ：少量データでセマンティックモデルを発行する方法"></a>おまけ：少量データでセマンティックモデルを発行する方法</h2><p>本番データのボリュームが大きい場合、初回発行時にアップロードが完了するまでに時間がかかることがあります。また、Premium 容量をご利用の場合でも、Power BI Desktop からの発行時には 10GB のファイルサイズ上限があるため、大規模なデータモデルではアップロード自体が失敗する可能性もあります。<br>このようなケースを回避するために、初回は意図的に「データ量を極力抑えた状態」でセマンティックモデルを発行し、その後に運用構成へ切り替える方法が有効です。以下に代表的な 2 つの手法を紹介します。</p>
-<h3 id="Power-Query-で事前にデータを除外し、発行後に-ALM-Toolkit-でフィルターを削除する"><a href="#Power-Query-で事前にデータを除外し、発行後に-ALM-Toolkit-でフィルターを削除する" class="headerlink" title="Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する"></a>Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する</h3><p>Power BI Desktop 上でモデルを作成する際、Power Query に一時的なフィルター（例：少数行だけ残す、もしくは全件除外）を追加し、発行時のデータ量を最小限に抑えます。その後、ALM Toolkit を使ってフィルター条件を削除すれば、本来の構成に復元可能です。これにより、初回発行時の負荷を回避しつつ、構造を維持したまま運用データへ切り替えることができます。<br>詳細な手順は以下の公式ドキュメント・動画をご参照ください。：<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-xmla#power-query-filter-for-empty-partitions">Power BI での XMLA エンドポイントを使用した高度な増分更新およびリアルタイム データ - Power BI | Microsoft Learn</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=s0j6d3UAw9U">Deploy Power BI dataset schema changes WITHOUT refreshing! - YouTube</a><br><br></p>
-<h3 id="同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える"><a href="#同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える" class="headerlink" title="同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える"></a>同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える</h3><p>開発時には、本番環境と同じスキーマ構造を持つテスト用の軽量データソースに接続し、接続先を切り替えるためのパラメーターを作成します。Power BI サービスに発行した後、データの更新を行う前にパラメーターの値を編集し、本番環境のデータソースに切り替えることができます。<br>詳細な手順は以下のブログをご参照ください：<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/">オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)</a><br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/">Power BIにおけるデータソースのパラメーター化 | Japan CSS Support Power BI Blog</a><br><br></p>
+<h3 id="Power-Query-で事前にデータを除外し、発行後に-ALM-Toolkit-でフィルターを削除する"><a href="#Power-Query-で事前にデータを除外し、発行後に-ALM-Toolkit-でフィルターを削除する" class="headerlink" title="Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する"></a>Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する</h3><p>Power BI Desktop 上でモデルを作成する際、Power Query に一時的なフィルター（例：少数行だけ残す、もしくは全件除外）を追加し、発行時のデータ量を最小限に抑えます。その後、ALM Toolkit を使ってフィルター条件を削除すれば、本来の構成に復元可能です。これにより、初回発行時の負荷を回避しつつ、構造を維持したまま運用データへ切り替えることができます。<br>詳細な手順は以下の公式ドキュメント・動画をご参照ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-xmla#power-query-filter-for-empty-partitions">Power BI での XMLA エンドポイントを使用した高度な増分更新およびリアルタイム データ - Power BI | Microsoft Learn</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=s0j6d3UAw9U">Deploy Power BI dataset schema changes WITHOUT refreshing! - YouTube</a><br><br></p>
+<h3 id="同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える"><a href="#同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える" class="headerlink" title="同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える"></a>同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える</h3><p>開発時には、本番環境と同じスキーマ構造を持つテスト用の軽量データソースに接続し、接続先を切り替えるためのパラメーターを作成します。Power BI サービスに発行した後、データの更新を行う前にパラメーターの値を編集し、本番環境のデータソースに切り替えることができます。<br>詳細な手順は以下のブログをご参照ください。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/">オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)</a><br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/">Power BIにおけるデータソースのパラメーター化 | Japan CSS Support Power BI Blog</a><br><br></p>
 <p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。<br><br></p>
 <p><strong>アンケートご協力のお願い</strong><br>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 </p>
 <p>※　所要時間は1分程度となります。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</a></p>
