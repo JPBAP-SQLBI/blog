@@ -63,19 +63,23 @@ Tabular Editor の詳細は、以下の公式サイトをご参照ください�
 <div align="left">
 <img src="2.png">
 </div>
+
 ②	ステップ 2 で取得した XMLA エンドポイントと資格情報を入力し、ワークスペースに接続します。
 <div align="left">
 <img src="3.png">
 </div>
+
 ③	設定対象のセマンティックモデルを選択します。
 <div align="left">
 <img src="4.png">
 </div>
+
 ④	増分更新が設定されたテーブルを右クリックし、[Apply Refresh Policy] を選択します。
 [What is a Refresh Policy? | Tabular Editor Documentation](https://docs.tabulareditor.com/te3/tutorials/incremental-refresh/incremental-refresh-about.html?tabs=filterstep%2Cimport)
 <div align="left">
 <img src="5.png">
 </div>
+
 ⑤	以下のように、保持期間に基づく複数のパーティションが自動で作成されます。
 ![](6.png)
 <div align="left">
@@ -87,25 +91,30 @@ Tabular Editor の詳細は、以下の公式サイトをご参照ください�
 <div align="left">
 <img src="7.png">
 </div>
+
 ②対象のセマンティックモデルを展開し、該当テーブルを右クリックして [Partitions] を選択します。
 <div align="left">
 <img src="8.png">
 </div>
+
 ③自動作成された複数のパーティションが表示され、[Last Processed] が「Never」になっていることを確認します。
 パーティションを更新するには、緑色の [Process] ボタンを押します。
 <div align="left">
 <img src="9.png">
 </div>
+
 ④更新対象のパーティションを選択する画面が表示されます。ここで複数のパーティションを段階的に処理することで、
 初回更新のタイムアウトを回避できます。GUI 操作だけでなく、XMLA クエリによる処理も可能です。
 ※この例ではすべてのパーティションを一括処理しましたが、大量のデータを処理する場合は、パーティションは個別にもしくは少数単位で分割して処理することもできます。
 <div align="left">
 <img src="10.png">
 </div>
+
 ⑤処理が完了すると、完了メッセージが表示されます。
 <div align="left">
 <img src="11.png">
 </div>
+
 ⑥ [Last Processed] の日時が更新されたことを確認します。
 <div align="left">
 <img src="12.png">
@@ -117,6 +126,7 @@ Tabular Editor の詳細は、以下の公式サイトをご参照ください�
 <div align="left">
 <img src="13.png">
 </div>
+
 ② 更新後、SSMS で再度確認すると、[Last Processed] の日付が更新期間のパーティションにだけ反映されていることが確認できます。
 ※本件では過去7日分を増分更新の対象としております
 <div align="left">
@@ -125,20 +135,20 @@ Tabular Editor の詳細は、以下の公式サイトをご参照ください�
 </br>
 
 ## おまけ：少量データでセマンティックモデルを発行する方法
-本番データのボリュームが大きい場合、初回発行時にアップロードが完了するまでに時間がかかることがあります。また、Premium 容量をご利用の場合でも、Power BI Desktop からの発行時には 10GB のファイルサイズ上限があるため、大規模なデータモデルではアップロード自体が失敗する可能性もあります。
+本番データのボリュームが大きい場合、初回発行時にアップロードが完了するまでに時間がかかることがあります。
+また、Premium 容量をご利用の場合でも、Power BI Desktop からの発行時には 10GB のファイルサイズ上限があるため、大規模なデータモデルではアップロード自体が失敗する可能性もあります。
 このようなケースを回避するために、初回は意図的に「データ量を極力抑えた状態」でセマンティックモデルを発行し、その後に運用構成へ切り替える方法が有効です。以下に代表的な 2 つの手法を紹介します。
 
-### Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する
+### 1.Power Query で事前にデータを除外し、発行後に ALM Toolkit でフィルターを削除する
 Power BI Desktop 上でモデルを作成する際、Power Query に一時的なフィルター（例：少数行だけ残す、もしくは全件除外）を追加し、発行時のデータ量を最小限に抑えます。その後、ALM Toolkit を使ってフィルター条件を削除すれば、本来の構成に復元可能です。これにより、初回発行時の負荷を回避しつつ、構造を維持したまま運用データへ切り替えることができます。
 詳細な手順は以下の公式ドキュメント・動画をご参照ください。
 [Power BI での XMLA エンドポイントを使用した高度な増分更新およびリアルタイム データ - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/connect-data/incremental-refresh-xmla#power-query-filter-for-empty-partitions)
 [Deploy Power BI dataset schema changes WITHOUT refreshing! - YouTube](https://www.youtube.com/watch?v=s0j6d3UAw9U)
 <br>
 
-### 同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える
+### 2.同じスキーマのテストデータに接続し、パラメーターを使って接続先を切り替える
 開発時には、本番環境と同じスキーマ構造を持つテスト用の軽量データソースに接続し、接続先を切り替えるためのパラメーターを作成します。Power BI サービスに発行した後、データの更新を行う前にパラメーターの値を編集し、本番環境のデータソースに切り替えることができます。
 詳細な手順は以下のブログをご参照ください。
-[オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog (jpbap-sqlbi.github.io)](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/)
 [Power BIにおけるデータソースのパラメーター化 | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datasource_parameter/)
 <br>
 
