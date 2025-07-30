@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/1.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/2.png">
 <meta property="article:published_time" content="2025-07-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-30T16:14:35.025Z">
+<meta property="article:modified_time" content="2025-07-30T16:18:59.679Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI サービス">
 <meta property="article:tag" content="Power BI Service">
@@ -112,15 +112,15 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+3bd4697e-ae4e-5550-a2d7-433cd762ae7b%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI+%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AE%E5%BB%83%E6%AD%A2%E3%81%A8+Fabric+Data+Warehouse+%E3%81%B8%E3%81%AE%E7%A7%BB%E8%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_datamart_retirement%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_datamart_retirement.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_datamart_retirement.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/" data-id="cmdq627l600190mp6b66b3jkw" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/" data-id="cmdq67vtl00190mp87t8n94cq" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI データマートが 2025 年 10 月 1 日にサポートを終了し、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。サポート終了により、保存されたデータやレポートが失われる可能性があるため 、ご利用中のお客様は、移行計画を立てることが重要です。本記事では Microsoft 公式ドキュメントに基づき、その背景と影響、移行手順、およびよくある質問（FAQ）について解説します。 </p>
 <div class="alert is-success"><p class="alert-title">ヒント</p><p>公式ブログ：<a target="_blank" rel="noopener" href="https://powerbi.microsoft.com/ja-jp/blog/unify-datamart-with-fabric-data-warehouse/">Power BI Blog – Unify Datamart with Fabric Data Warehouse!</a></p></div>
-<h3 id="データマート廃止の背景"><a href="#データマート廃止の背景" class="headerlink" title="データマート廃止の背景"></a>データマート廃止の背景</h3><p>Power BI データマートは 2022 年 5 月に Power BI Premium のパブリック プレビューとして登場し、セルフサービス型のデータ分析とモデリングの新たな選択肢として活用されてきました。<br><strong>公式ドキュメント・サポートブログ</strong><br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-overview">datamarts の概要 - Power BI | Microsoft Learn</a><br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/">Power BI データフローとデータセット及びデータマートの紹介と比較 | Japan CSS Support Power BI Blog</a></p>
-<p>その後、Microsoft Fabric の登場により、より高度なエンタープライズ機能とスケーラビリティを備えた Fabric DW が 2024 年に一般提供（GA）されました。<br><strong>公式ドキュメント</strong><br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-warehouse/data-warehousing">Microsoft Fabric のデータ ウェアハウスとは？ - Microsoft Fabric | Microsoft Learn</a></p>
+<h3 id="データマート廃止の背景"><a href="#データマート廃止の背景" class="headerlink" title="データマート廃止の背景"></a>データマート廃止の背景</h3><p>Power BI データマートは 2022 年 5 月に Power BI Premium のパブリック プレビューとして登場し、セルフサービス型のデータ分析とモデリングの新たな選択肢として活用されてきました。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-overview">datamarts の概要 - Power BI | Microsoft Learn</a><br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/">Power BI データフローとデータセット及びデータマートの紹介と比較 | Japan CSS Support Power BI Blog</a></p>
+<p>その後、Microsoft Fabric の登場により、より高度なエンタープライズ機能とスケーラビリティを備えた Fabric DW が 2024 年に一般提供（GA）されました。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/data-warehouse/data-warehousing">Microsoft Fabric のデータ ウェアハウスとは？ - Microsoft Fabric | Microsoft Learn</a></p>
 <p>Fabric DW は OneLake と Delta Parquet を基盤とし、フル T-SQL 対応、Git 連携、列レベル セキュリティ、Copilot 支援など、より包括的で拡張性の高いデータ基盤を提供します。このような進化に伴い、Power BI データマートは 2025 年 10 月 1 日をもってサービスを終了し、Fabric DW へと統合されることになりました。これにより、今後は Fabric を中心としたより強力なデータ活用が可能になります。</p>
 <h3 id="移行スケジュールと影響"><a href="#移行スケジュールと影響" class="headerlink" title="移行スケジュールと影響"></a>移行スケジュールと影響</h3><p>2025 年 6 月 1 日以降、Power BI ポータルで新しくデータマートを作成することができなくなり、代わりに Fabric DW 作成への案内が表示されます。<br>2025 年 10 月 1 日午前 0 時（UTC）以降、既存のデータマートは廃止となり、ワークスペースから削除されます。<br><strong>重要</strong>：2025 年 10 月 1 日以降、データマートに保存されているデータや関連レポートへアクセスできなくなるため、事前に移行作業を行う必要があります。</p>
 <h3 id="現状の確認と影響の洗い出し"><a href="#現状の確認と影響の洗い出し" class="headerlink" title="現状の確認と影響の洗い出し"></a>現状の確認と影響の洗い出し</h3><p>■ Power BI 管理者向け REST API<br>Power BI 管理者向けの REST API を使用することで、テナント内のデータマート一覧を取得できます。<br>「Items - List Items」エンドポイントで type=Datamart を指定することで、データマートの作成者や最終更新日などの情報を確認できます。<br>詳細は、以下の公式ドキュメントをご参照ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/rest/api/power-bi/admin">Admin - REST API (Power BI Power BI REST APIs) | Microsoft Learn</a></p>
