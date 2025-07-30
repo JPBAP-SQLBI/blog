@@ -16,12 +16,10 @@ Power BI データマートが 2025 年 10 月 1 日にサポートを終了し�
 
 ### データマート廃止の背景
 Power BI データマートは 2022 年 5 月に Power BI Premium のパブリック プレビューとして登場し、セルフサービス型のデータ分析とモデリングの新たな選択肢として活用されてきました。 
-**公式ドキュメント・サポートブログ**
 [datamarts の概要 - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-overview)
 [Power BI データフローとデータセット及びデータマートの紹介と比較 | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/)
 
 その後、Microsoft Fabric の登場により、より高度なエンタープライズ機能とスケーラビリティを備えた Fabric DW が 2024 年に一般提供（GA）されました。
-**公式ドキュメント**
 [Microsoft Fabric のデータ ウェアハウスとは？ - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-warehouse/data-warehousing)
 
 Fabric DW は OneLake と Delta Parquet を基盤とし、フル T-SQL 対応、Git 連携、列レベル セキュリティ、Copilot 支援など、より包括的で拡張性の高いデータ基盤を提供します。このような進化に伴い、Power BI データマートは 2025 年 10 月 1 日をもってサービスを終了し、Fabric DW へと統合されることになりました。これにより、今後は Fabric を中心としたより強力なデータ活用が可能になります。
