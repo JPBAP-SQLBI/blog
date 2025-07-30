@@ -6,12 +6,12 @@
   
   <title>Power BIのマップビジュアル | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームのチャンです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
+  <meta name="description" content="こんにちは、Power BI サポート チームのチャンです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、 Bing マップ、Azure マップや ArcGIS マップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Power BIのマップビジュアル">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームのチャンです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
+<meta property="og:description" content="こんにちは、Power BI サポート チームのチャンです。 Power BI で地理データを可視化する際に、利用できるマップビジュアルは、 Bing マップ、Azure マップや ArcGIS マップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual1.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_visual2.png">
@@ -24,19 +24,21 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_sharpmap_icon.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_sharpmap.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_azuremap_icon.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_azuremap_preview.png">
-<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_tenant_settings.png">
-<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f7453509-dda9-48d6-b960-ecbebd696e4e.png">
-<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/56bc9253-8365-4187-9d79-72010f1606b7.png">
-<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/aee4e91e-b5ad-41a8-8f40-0011547cdfb6.png">
-<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c519e5e6-ad28-4cd6-a6c8-e4c451dee7ac.png">
-<meta property="og:image" content="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e25c79de-b33a-46a9-a059-e23641094d1f.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_tenant_settings1.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_tenant_settings2.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_tenant_settings3.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/azuremap_selection_tools.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/bubble-layer-thumb.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/3d-column-layer-thumb.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/reference-layer-thumb.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/tile-layer-thumb.png">
+<meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/traffic-layer-thumb.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap_icon.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap_options.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/arcgismap_tenant_settings.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/map_arcgismap.png">
 <meta property="article:published_time" content="2021-12-27T07:00:00.000Z">
-<meta property="article:modified_time" content="2025-06-27T13:52:44.706Z">
+<meta property="article:modified_time" content="2025-07-30T02:50:07.869Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Creator">
@@ -136,23 +138,26 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+9254b46a-d58e-5d71-9d40-9eb04c14b1cd%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BPower+BI%E3%81%AE%E3%83%9E%E3%83%83%E3%83%97%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_map_visual%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_map_visual.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_map_visual.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/" data-id="cmcevgp2s00310moecvgcezr7" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/" data-id="cmdpdbow401120mlc6sidex3w" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Power BI サポート チームのチャンです。</p>
-<p>Power BI で地理データを可視化する際に、利用できるマップビジュアルは、Bing マップ、Azure マップやArcGISマップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。</p>
+<p>Power BI で地理データを可視化する際に、利用できるマップビジュアルは、 Bing マップ、Azure マップや ArcGIS マップなど複数の選択肢がありますが、本ブログでは、それぞれの特徴と地理的データを使用する際の注意事項をご紹介いたします。</p>
 <span id="more"></span>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
+<hr>
+<h2 id="更新履歴"><a href="#更新履歴" class="headerlink" title="更新履歴"></a>更新履歴</h2><hr>
+<p>Update: 2025/07/30<br>Azure マップのテナント設定や利用要件に変更点がありましたので、 <a href="#Azure-%E3%83%9E%E3%83%83%E3%83%97">Azure マップ</a> セッションの内容を更新しました。</p>
 <hr>
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
 <ol>
 <li><a href="#%E3%83%9E%E3%83%83%E3%83%97">マップ</a></li>
 <li><a href="#%E5%A1%97%E3%82%8A%E5%88%86%E3%81%91%E5%9C%B0%E5%9B%B3">塗り分け地図</a></li>
 <li><a href="#%E5%9B%B3%E5%BD%A2%E3%81%AE%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB">図形のビジュアル</a></li>
-<li><a href="#Azure%E3%83%9E%E3%83%83%E3%83%97">Azure マップ</a></li>
+<li><a href="#Azure-%E3%83%9E%E3%83%83%E3%83%97">Azure マップ</a></li>
 <li><a href="#ArcGIS-Maps-for-Power-BI">ArcGIS Maps for Power BI</a></li>
 </ol>
 <hr>
@@ -160,9 +165,9 @@
 <div align="center">
 <img src="map_visual1.png" alt="Power BIマップ" title="Power BIマップ">
 </div>
-Power BI マップはBing マップと統合されており、緯度経度の地理的なデータ以外に、国名、都道府県、市区町村、郵便番号などの情報を持つデータでも、可視化できます。
+Power BI マップは Bing マップと統合されており、緯度経度の地理的なデータ以外に、国名、都道府県、市区町村、郵便番号などの情報を持つデータでも、可視化できます。
 
-<p>また、Bing マップがジオコーディング（地理座標を付与するプロセス）する際に、以下のURLへアクセスすることがあるため、ネットワーク環境に応じて以下のURLを許可する必要がございます。</p>
+<p>また、 Bing マップがジオコーディング（地理座標を付与するプロセス）する際に、以下のURLへアクセスすることがあるため、ネットワーク環境に応じて以下のURLを許可する必要がございます。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://dev.virtualearth.net/REST/V1/Locations">https://dev.virtualearth.net/REST/V1/Locations</a></li>
 <li><a target="_blank" rel="noopener" href="https://platform.bing.com/geo/spatial/v1/public/Geodata">https://platform.bing.com/geo/spatial/v1/public/Geodata</a></li>
@@ -206,7 +211,7 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 <img src="map_filledmap.png" alt="塗り分け地図" title="塗り分け地図">
 </div>
 
-<p>塗り分け地図は、前項で紹介したマップと同様に、Bingマップと統合されていますので、注意事項につきましては、上述の内容をご確認ください。</p>
+<p>塗り分け地図は、前項で紹介したマップと同様に、 Bing マップと統合されていますので、注意事項につきましては、上述の内容をご確認ください。</p>
 <p>ビジュアルはマップと異なり、地図上の地形によって、国・都道府県・市区町村などを塗りつぶして、色の色相や濃淡によってデータを表します。</p>
 <p>メリットとしては、地形によって色が塗りつぶされるため、見栄えがよくわかりやすいところです。デメリットとしては、地形上面積が大きいところに目が惹かれやすく、データによっては誤った印象や直感を与えてしまうところです。</p>
 <p>塗り分け地図を使用する最適な場合は以下を挙げられます。</p>
@@ -253,8 +258,8 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 <li>英国</li>
 <li>米国</li>
 </ul>
-<p>日本のデータを使用したい場合、TopoJSON ファイルをご用意いただく必要がございます。（シェイプファイルやGeoJSON マップの場合は変換が必要です。）</p>
-<p>国土交通省が公開している地域ごとのポリゴン（塗り分け地図用に適している）データはシェイプファイルがありますので、Map Shaper などのオンラインツールを使用してTopoJSON ファイルに変換することができます。</p>
+<p>日本のデータを使用したい場合、 TopoJSON ファイルをご用意いただく必要がございます。（シェイプファイルや GeoJSON マップの場合は変換が必要です。）</p>
+<p>国土交通省が公開している地域ごとのポリゴン（塗り分け地図用に適している）データはシェイプファイルがありますので、 Map Shaper などのオンラインツールを使用して TopoJSON ファイルに変換することができます。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html">国土数値情報ダウンロード</a></li>
 <li><a target="_blank" rel="noopener" href="https://mapshaper.org/">Map Shaper</a></li>
@@ -273,54 +278,89 @@ Power BI マップはBing マップと統合されており、緯度経度の地
 <br>
 
 <hr>
-<h2 id="Azureマップ"><a href="#Azureマップ" class="headerlink" title="Azureマップ"></a>Azureマップ</h2><hr>
+<h2 id="Azure-マップ"><a href="#Azure-マップ" class="headerlink" title="Azure マップ"></a>Azure マップ</h2><hr>
 <div align="center">
 <img src="map_azuremap_icon.png" alt="Azure マップ" title="Azure マップ">
 </div>
 
-<p>Azureマップは現在プレビュー機能であり、Power BI Desktopで使用するには、[ファイル] &gt; [オプションと設定] からオプション パネルを開き、[プレビュー機能] のオプションに移動し、[Azure Maps Visual] を選択する必要がございます。</p>
+<h4 id="テナント設定"><a href="#テナント設定" class="headerlink" title="テナント設定"></a>テナント設定</h4><p>現時点で、 Azure マップを利用するには、利用するリージョンや機能によって、[管理ポータル]&gt;[テナント設定]にて、以下の 3 つのテナント設定を必要に応じて有効化しておく必要があります。</p>
+<p><b>1. ユーザーは Azure Maps 視覚エフェクトを使用できます</b></p>
+<p>まず Azure マップを利用するためには、こちらのテナント設定を有効化する必要がございます。</p>
 <div align="center">
-<img src="map_azuremap_preview.png" alt="Azure マッププレビュー機能" title="Azure マッププレビュー機能">
+<img src="azuremap_tenant_settings1.png">
 </div>
 
-<p>Power BI サービスで使用するには、[管理ポータル]&gt;[テナント設定]にて、<br>[Azure Maps ビジュアルの使用]を有効化しておく必要があります。</p>
+<p><b>2. Azure Maps に送信されたデータを、テナントの地理的リージョン、コンプライアンス境界、または国内クラウド インスタンスの外部で処理することが可能</b></p>
+<p>ご利用のテナントリージョン（※）によって、こちらのテナント設定を有効化しないと Azure マップを利用できません。<br>具体的に、現時点では米国と <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations">ヨーロッパ</a> のリージョン以外のテナントで Azure マップを利用するには、こちらのテナント設定を有効化する必要がございます。</p>
 <div align="center">
-<img src="azuremap_tenant_settings.png" alt="Azure マップテナント設定" title="Azure マップテナント設定">
+<img src="azuremap_tenant_settings2.png">
 </div>
 
-<p>こちらのマップビジュアルはAzure マップが使用されており、Azure マッププラットフォームへのアクセスを許可するために、ネットワーク環境に応じて以下のURLを許可する必要がございます。</p>
+<p>※ テナントリージョンの確認方法は以下の公開情報をご確認ください。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/azure/azure-maps/power-bi-visual-data-residency">Azure Maps Power BI ビジュアルのデータ所在地</a></li>
+</ul>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/azure/azure-maps/geographic-scope">Azure Maps サービスの地域スコープ</a></li>
+</ul>
+</blockquote>
+<p><b>3. Azure Maps に送信されたデータは、Microsoft Online Services のサブプロセッサーで処理されます</b></p>
+<p>Azure マップ内の一部の機能、例えば選択ツールや一部のリージョン内での場所名の処理は、Microsoft Online Services サブプロセッサー（※）によって部分的に提供されるマッピング機能が必要となる場合がございます。</p>
+<p>それらを正しく機能させるには、本テナント設定を有効化する必要がございます。</p>
+<div align="center">
+<img src="azuremap_tenant_settings3.png">
+</div>
+
+<p>具体的例としては、本設定を無効化している場合は、Azure マップビジュアル内のコントロールにある [選択項目] がグレイアウトされ利用できません。</p>
+<div align="center">
+<img src="azuremap_selection_tools.png">
+</div>
+
+<p>※ Microsoft Online Services サブプロセッサーの説明につきまして、以下の公開情報をご確認ください。</p>
+<blockquote>
+<p><strong>参考情報</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/trust-center/privacy/data-access">Microsoft のデータ アクセス管理</a></li>
+</ul>
+</blockquote>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>Azure マップの利用要件やテナント設定が 2025 年 6 月から、上記の通りに変更されたことにより、 Azure マップを利用するには、Power BI Desktop 2025 年 4 月バージョン以降を利用する必要があります。 </p></div>
+<h4 id="通信要件"><a href="#通信要件" class="headerlink" title="通信要件"></a>通信要件</h4><p>こちらのマップビジュアルは Azure マップが使用されており、 Azure マッププラットフォームへのアクセスを許可するために、ネットワーク環境に応じて以下の URL を許可する必要がございます。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://atlas.microsoft.com/">https://atlas.microsoft.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://us.atlas.microsoft.com/">https://us.atlas.microsoft.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://eu.atlas.microsoft.com/">https://eu.atlas.microsoft.com</a></li>
 </ul>
-<p>また、Azure マップには、多彩なマップレイヤーが用意されており、例えば、バブルレイヤー、3D 棒グラフレイヤー、参照レイヤー（GeoJSON ファイルを使用する）、タイル レイヤー、トラフィックのオーバーレイなどをご利用いただけます。</p>
+<p>また、 Azure マップには、多彩なマップレイヤーが用意されており、例えば、バブルレイヤー、 3D 棒グラフレイヤー、参照レイヤー（GeoJSON ファイルを使用する）、タイル レイヤー、トラフィックのオーバーレイなどをご利用いただけます。</p>
 <h4 id="■バブルレイヤー"><a href="#■バブルレイヤー" class="headerlink" title="■バブルレイヤー"></a>■バブルレイヤー</h4><p>バブル レイヤーは、場所データをマップ上で拡大縮小された円として表現できる優れた方法です。</p>
 <p>例えば、以下の画像は、ノースカロライナ州で自転車の事故が発生した場所を示しています。円の色は事故が発生した道路の速度制限を表し、円のサイズは事故に巻き込まれた人の数に基づいています。</p>
 <div align="center">
-<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f7453509-dda9-48d6-b960-ecbebd696e4e.png" alt="Azure マップバブルレイヤー" width=600 title="Azure マップバブルレイヤー">
+<img src="bubble-layer-thumb.png" alt="Azure マップバブルレイヤー" width=600 title="Azure マップバブルレイヤー">
 </div>
 
 <h4 id="■3D-棒グラフレイヤー"><a href="#■3D-棒グラフレイヤー" class="headerlink" title="■3D 棒グラフレイヤー"></a>■3D 棒グラフレイヤー</h4><p>3D 棒グラフを使用すると、ユーザーは、データをさまざまな視点から見るために、マウスの右ボタンを押しながらドラッグするか、ナビゲーション コントロールのいずれかを使用することで、マップを傾けたり回転させたりすることができます。</p>
 <p>以下のマップは、店舗の場所を示しています。棒の高さは各場所から生み出される収益を表し、販売地域ごとに色分けされています。</p>
 <div align="center">
-<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/56bc9253-8365-4187-9d79-72010f1606b7.png" alt="Azure マップ3D 棒グラフレイヤー" width=600 title="Azure マップ3D 棒グラフレイヤー">
+<img src="3d-column-layer-thumb.png" alt="Azure マップ3D 棒グラフレイヤー" width=600 title="Azure マップ3D 棒グラフレイヤー">
 </div>
 
-<h4 id="■参照レイヤー"><a href="#■参照レイヤー" class="headerlink" title="■参照レイヤー"></a>■参照レイヤー</h4><p>参照レイヤーを使用すると、カスタムの場所データを含む GeoJSON ファイルをアップロードして、マップ上にオーバーレイすることができます。GeoJSON ファイルに含まれるプロパティを使用すると、形状のスタイルをカスタマイズできます。</p>
+<h4 id="■参照レイヤー"><a href="#■参照レイヤー" class="headerlink" title="■参照レイヤー"></a>■参照レイヤー</h4><p>参照レイヤーを使用すると、カスタムの場所データを含む GeoJSON ファイルをアップロードして、マップ上にオーバーレイすることができます。 GeoJSON ファイルに含まれるプロパティを使用すると、形状のスタイルをカスタマイズできます。</p>
 <p>例えば、以下のマップ画像は、人口で色分けされた国勢調査地域の境界線の GeoJSON ファイルを、不動産価値で色分けされた住所のレイヤーの下に追加したものです。</p>
 <div align="center">
-<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/aee4e91e-b5ad-41a8-8f40-0011547cdfb6.png" alt="Azure マップ参照レイヤー" width=600 title="Azure マップ参照レイヤー">
+<img src="reference-layer-thumb.png" alt="Azure マップ参照レイヤー" width=600 title="Azure マップ参照レイヤー">
 </div>
 
 <h4 id="■タイルレイヤー"><a href="#■タイルレイヤー" class="headerlink" title="■タイルレイヤー"></a>■タイルレイヤー</h4><p>タイル レイヤーを使用することで、Azure Maps ベース マップ タイルの上に画像を重ねることができます。</p>
 <p>以下のマップでは、サングラスを販売する店舗の売上データのバブル レイヤーが、Azure Maps から取得した現在の気象レーダーを示すタイル レイヤーの上に表示されています。</p>
 <div align="center">
-<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c519e5e6-ad28-4cd6-a6c8-e4c451dee7ac.png" alt="Azure マップタイルレイヤー" width=600 title="Azure マップタイルレイヤー">
+<img src="tile-layer-thumb.png" alt="Azure マップタイルレイヤー" width=600 title="Azure マップタイルレイヤー">
 </div>
 
 <h4 id="■トラフィックのオーバーレイ"><a href="#■トラフィックのオーバーレイ" class="headerlink" title="■トラフィックのオーバーレイ"></a>■トラフィックのオーバーレイ</h4><p>リアルタイムの交通流量データをオーバーレイすることで、交通渋滞と独自データの関連性を知ることができます。</p>
 <p>例えば以下のマップでは、フィールド技術者の現在地がマップ上でバブル レイヤーとしてレンダリングされ示されています。</p>
 <div align="center">
-<img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e25c79de-b33a-46a9-a059-e23641094d1f.png" alt="Azure マップトラフィックのオーバーレイ" width=600 title="Azure マップトラフィックのオーバーレイ">
+<img src="traffic-layer-thumb.png" alt="Azure マップトラフィックのオーバーレイ" width=600 title="Azure マップトラフィックのオーバーレイ">
 </div>
 
 
