@@ -9,7 +9,7 @@ tags:
 ---
 
 こんにちは、Power BI サポート チームの呂です。 
-Power BI データマートが 2025 年 10 月 1 日にサポートを終了し、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。サポート終了により、保存されたデータやレポートが失われる可能性があるため 、ご利用中のお客様は、移行計画を立てることが重要です。本記事では Microsoft 公式ドキュメントに基づき、その背景と影響、移行手順、およびよくある質問（FAQ）について解説します。 
+Power BI データマートが 2025 年 10 月 1 日に廃止され、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。機能廃止により、保存されたデータやレポートが失われる可能性があるため 、ご利用中のお客様は、移行計画を立てることが重要です。本記事では Microsoft 公式ドキュメントに基づき、その背景と影響、移行手順、およびよくある質問（FAQ）について解説します。 
 
 > [!TIP]
 > 公式ブログ：[Power BI Blog – Unify Datamart with Fabric Data Warehouse!](https://powerbi.microsoft.com/ja-jp/blog/unify-datamart-with-fabric-data-warehouse/)
@@ -30,6 +30,7 @@ Fabric DW は OneLake と Delta Parquet を基盤とし、フル T-SQL 対応、
 **重要**：2025 年 10 月 1 日以降、データマートに保存されているデータや関連レポートへアクセスできなくなるため、事前に移行作業を行う必要があります。
 
 ### 現状の確認と影響の洗い出し
+以下の方法を用いることで、テナント内のデータマートの現状を把握し、影響範囲を明確化できます。
 
 ■ Power BI 管理者向け REST API
 Power BI 管理者向けの REST API を使用することで、テナント内のデータマート一覧を取得できます。
