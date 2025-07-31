@@ -23,11 +23,13 @@ Power BI データマートは 2022 年 5 月に Power BI Premium のパブリ�
 [Microsoft Fabric のデータ ウェアハウスとは？ - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-warehouse/data-warehousing)
 
 Fabric DW は OneLake と Delta Parquet を基盤とし、フル T-SQL 対応、Git 連携、列レベル セキュリティ、Copilot 支援など、より包括的で拡張性の高いデータ基盤を提供します。このような進化に伴い、Power BI データマートは 2025 年 10 月 1 日をもってサービスを終了し、Fabric DW へと統合されることになりました。これにより、今後は Fabric を中心としたより強力なデータ活用が可能になります。
+</br>
 
 ### 移行スケジュールと影響
 2025 年 6 月 1 日以降、Power BI ポータルで新しくデータマートを作成することができなくなり、代わりに Fabric DW 作成への案内が表示されます。
 2025 年 10 月 1 日午前 0 時（UTC）以降、既存のデータマートは廃止となり、ワークスペースから削除されます。
 **重要**：2025 年 10 月 1 日以降、データマートに保存されているデータや関連レポートへアクセスできなくなるため、事前に移行作業を行う必要があります。
+</br>
 
 ### 現状の確認と影響の洗い出し
 以下の方法を用いることで、テナント内のデータマートの現状を把握し、影響範囲を明確化できます。
@@ -58,6 +60,7 @@ Purview Hub を使用することで、データ資産の分類、アクセス�
 Fabric 管理者は、管理ポータルの「機能の使用状況と導入」レポートを通じて、データマートを含む各種機能の利用状況を確認できます。
 詳細は、以下の公式ドキュメントをご参照ください。
 [機能の使用状況と導入レポート - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/admin/feature-usage-adoption)
+</br>
 
 ### ウェアハウスに移行する手順
 既存のデータマートを Fabric DW にアップグレードするには、次の 2 つの方法があります：
@@ -69,6 +72,7 @@ Fabric 管理者は、管理ポータルの「機能の使用状況と導入」�
 [fabric-toolbox · GitHub](https://github.com/microsoft/fabric-toolbox/tree/main/accelerators/power-bi-to-fabric-data-warehouse-modernization)
 
 **注意**：弊サポートチームでは、本ツールを使用したデータマートから Fabric への全体的な移行プロセスに対する包括的な支援やコンサルティングは行っておりません。スクリプト内の個別の Power BI コマンドや API を単体で実行した際にエラーが発生した場合には、コマンドや API 単位でのトラブルシューティング支援は可能です。
+</br>
 
 ### よくある質問（FAQ）
 **Q1. データマートが廃止されたら、保存されているデータはどうなりますか？**
