@@ -13,6 +13,7 @@ Power BI データマートが 2025 年 10 月 1 日に廃止され、Microsoft 
 
 > [!TIP]
 > 公式ブログ：[Power BI Blog – Unify Datamart with Fabric Data Warehouse!](https://powerbi.microsoft.com/ja-jp/blog/unify-datamart-with-fabric-data-warehouse/)
+</br>
 
 ### データマート廃止の背景
 Power BI データマートは 2022 年 5 月に Power BI Premium のパブリック プレビューとして登場し、セルフサービス型のデータ分析とモデリングの新たな選択肢として活用されてきました。 
