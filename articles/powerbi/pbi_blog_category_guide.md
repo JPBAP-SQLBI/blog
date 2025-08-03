@@ -59,6 +59,8 @@ tags:
 [動的にビジュアル変換ができる「フィールドパラメーター」](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_field_parameter/)
 [条件付き書式で作るヒートマップ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_heatmap/)
 [Power BI サービスに発行したレポートの時刻のずれについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_timezone/)
+[Power BI サービスにおける固定フィルター](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_persistent_filters/)
+[**NEW! 3月** ブックマークとボタンで動的にレポート画面を切り替える方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/)
 
 ## Power Query
 [pbix ファイルのデータソースのファイル格納場所が変更される場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/)
@@ -78,7 +80,9 @@ tags:
 [オンプレミス データ ゲートウェイのトラブルシューティング：運用時に発生するエラー](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/)
 [オンプレミスデータゲートウェイのセキュリティーロール](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/)
 [Power Platform管理センターからオンプレミス データ ゲートウェイのインストールの制御方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_Installation_control/)
-[**NEW! 9月**  仮想ネットワーク (VNet) データ ゲートウェイ について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
+[仮想ネットワーク (VNet) データ ゲートウェイ について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
+[仮想ネットワーク (VNet) データ ゲートウェイからプライベートデータソースへの接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/)
+[オンプレミス データ ゲートウェイのサービスが自動起動しない場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiegwservice/)
 
 ## ワークスペース管理
 [Power BI Pro のワークスペース容量について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/)
@@ -96,20 +100,20 @@ tags:
 [Power BIユーザーの退職・異動への備え](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_user_handover/)
 [コンテンツの承認（昇格・認定）と検出について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_endorsement/)
 [ユーザーの操作におけるPower BIのアクティビティログ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/)
-[**NEW! 10月**Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
+[Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
 [Power BI のテナント設定の状況を一括抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_api_export_tenant_settings/)
 [REST API を組み合わせて情報を取得する](https://jpbap-sqlbi.github.io/blog/powerbi/restapi/)
-[**NEW! 9月** セマンティック モデルの更新履歴を REST API で取得する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refreshhistory/)
+[セマンティック モデルの更新履歴を REST API で取得する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refreshhistory/)
 
 ## データ接続
 [「インポート」と「Direct Query」データセットの違い](https://jpbap-sqlbi.github.io/blog/powerbi/storage_mode/)
 [Power BI のリアルタイム分析](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_realtime_analytics/)
 [Private なデータソースへ接続する](https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/)
 [プライバシー レベルの選択について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/)
-[**NEW! 9月** Power BI 複合モデル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_composite_mode/)
+[Power BI 複合モデル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_composite_mode/)
 
 ## トラブルシューティング
 [「テーブルの列 ‘***’ が見つかりませんでした。」Power BI更新エラーについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/)
@@ -127,6 +131,7 @@ tags:
 [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded・Fabric）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)
 [セルフサービス サインアップの無効化](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/)
 [Power BI 試用版（無料体験）を無効化する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_disable_trial_version/)
+[**NEW! 1月** ライセンスとワークスペースの運用・棚卸方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/)
 
 ## 増分更新
 [Power BI でフォルダー・SharePointフォルダーコネクタを使用した増分更新](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_folder_incremental_refresh/)
@@ -148,7 +153,11 @@ tags:
 [Power BI レポートの埋め込み方法の種類について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/)
 [エクスポート可能なファイルの種類について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_export/)
 [ページ分割されたレポート①](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_1/)
+[ページ分割されたレポート② パラメーターを利用したレポートページ分割されたレポート①](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_parameter/)
 [Power BI 新規機能のご紹介（2024年5月～ 7月）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_New_Features_Introduction/)
+[ビジュアル計算](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_calculation/)
+[**NEW! 1月** Power BI モバイル アプリについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_mibile_app/)
+[**NEW! 2月** 閲覧者がセマンティックモデルを更新する方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/)
 
 ## Premium 機能
 [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
@@ -157,6 +166,7 @@ tags:
 [XMLAエンドポイント](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_xmlaendpoint/)
 [Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/)
 [Power BI ユーザーから見た Microsoft Fabric について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/)
+[**NEW! 2月** デプロイパイプラインについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_deployment_pipelines/)
 
 ## 通信設定
 [Power BI で ExpressRoute の使用について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/)
@@ -182,6 +192,7 @@ tags:
 [Power BI サービスのデザイン変更について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_ui_change/)
 [Power BI ワークスペースについて \~クラシックワークスペースと新しい(アプリ)ワークスペース\~](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_classic_and_app/)
 [従来の Power BI アプリ (プレオーディエンス) 廃止について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_retirement_of_legacy_apps/)
+[Teams アクティビティ分析レポートの廃止について（MC907531）](https://refactored-guacamole-p99p6r945j436q5-4000.app.github.dev/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/)
 [【2022年4月27日より】クラシックワークスペースの自動アップグレード](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/)
 [【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
 

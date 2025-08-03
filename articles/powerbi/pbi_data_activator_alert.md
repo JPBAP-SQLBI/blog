@@ -26,6 +26,18 @@ Power BI では、データが変化したときにユーザーに通知する�
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
 
 ---
+## 更新履歴
+---
+Update: 2024/12/12
+Data Activator の一般提供開始に伴い、内容を一部変更しました。
+[Announcing the General Availability of Activator](https://blog.fabric.microsoft.com/en-us/blog/announcing-the-general-availability-of-activator)
+
+
+
+
+</br>
+
+---
 ## 目次
 ---
 * [アラート機能とは](#アラート機能とは)
@@ -39,8 +51,6 @@ Power BI では、データが変化したときにユーザーに通知する�
 * [通知タイミングおよびトリガーできるデータ型と条件](#通知タイミングおよびトリガーできるデータ型と条件)
 * [作成方法および管理方法](#作成方法および管理方法)
 * [おわりに](#おわりに)
-
-
 
 ---
 ## アラート機能とは
@@ -59,9 +69,9 @@ Power BI と Data Activator の両方でデータアラート機能が提供さ�
 
 | 機能 | Power BI データアラート | Data Activator |
 |---|---|---|
-| リリース状況 | リリース済み | パブリックプレビュー中 |
+| リリース状況 | リリース済み | 2024/11 リリース<br>~~パブリックプレビュー中~~|
  必要なライセンス</br> （アクセス可能なワークスペースで利用可能） | <ul><li>マイ ワークスペース</li><li>Premium 容量</li><li>Power BI Pro</li><li>Premium Per User (PPU)</li></ul>  | <ul><li>Premium 容量</li><li>Fabric 容量</li><li>Fabric 試用版</li></ul> |
-| テナント設定 | 不要 | [ Data Activator (プレビュー) ] を有効にする |
+| テナント設定 | 不要 | 「ユーザーは Fabric アイテムを作成できます」を有効にする<br>~~「Data Activator (プレビュー) 」 を有効にする~~  |
 | 対象アイテム | ダッシュボード | レポート |
 | 対象ビジュアル | ゲージ、KPI、カード | 多くのビジュアルに対応 |
 | 通知方法 | メール、Teams（要Power Automate連携） | メール、Teams |
@@ -72,20 +82,14 @@ Power BI と Data Activator の両方でデータアラート機能が提供さ�
 | トリガーできるデータ型 | 数値のみ | 数値のみ |
 | 設定できる条件 | 閾値超過時に通知可能 | 閾値超過時、回数、値の範囲など |
 | 作成方法 | 数クリックで作成可能 | 数クリックで作成可能 |
-| 管理方法 | ダッシュボード タイルまたは設定メニューから | reflexアイテムで管理 |
+| 管理方法 | ダッシュボード タイルまたは設定メニューから |  Activator アイテムで管理<br>~~reflex アイテムで管理~~ |
 
 
 ---
 ## リリース状況
-Power BI のデータアラート機能はすでに正式にリリース（GA）されていますが、 Data Activator は現在プレビュー段階にあります。</br>
-プレビュー段階の機能は、今後予告なしに機能が削除されたり、動作変更が発生する可能性があります。また、公開情報に記載されていない制限事項が存在する場合もございます。</br>
-そのため、プレビュー機能を使用する際には、これらの点に留意してご利用いただけますようお願いします。
+Power BI のデータアラート機能は正式にリリース（GA）されており、 Data Activator はプレビュー段階にありましたが、2024年11月に正式にリリースされました。
 
-
->[!NOTE]
-> 参考情報：[プレビュー使用条件 | Microsoft Azure](https://azure.microsoft.com/ja-jp/support/legal/preview-supplemental-terms/#AzureOpenAI-PoweredPreviews)
-
-本ブログの情報は記事執筆時点のものであり、詳細については最新の公開ドキュメントをご参照ください。
+=======
 
 ---
 ## 必要なライセンスとテナント設定
@@ -112,24 +116,19 @@ Data Activator は Microsoft Fabric 内のサービスであるため、Premium 
 > 参考情報 ：[Fabric 試用版の容量 - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/get-started/fabric-trials)
 
 
-ライセンスの他に、テナント設定から [ Data Activator (プレビュー) ] を有効にする必要があります。
+ライセンスの他に、テナント設定から [ ユーザーは Fabric アイテムを作成できます ] を有効にする必要があります。
 
 <div align="center">
 <img src="Tenant Settings Data Activator.png">
 </div>
 
+<span style="color: red;">Update: 2024/12/12
+パブリックプレビュー時には [Data Activator (プレビュー)] というテナント設定が存在しましたが、 GA（一般提供）に伴い、この設定項目は廃止され、[ユーザーは Fabric アイテムを作成できます] に統合されました。
 
-なお、テナント設定の項目 [ ユーザーは Fabric アイテムを作成できます ] は、正式リリース済みの Fabric コンポーネント（Data Engineering、Data Warehouse 等）の Fabric アイテムの作成を制御する設定であり、プレビュー中の Data Activator は制御するコンポーネントの対象外となります。</br>
-つまり、 [ ユーザーは Fabric アイテムを作成できます ] が無効となっている場合でも、[ Data Activator (プレビュー) ] が有効となっていれば、 Data Activator を利用いただくことが可能です。
-
-<div align="center">
-<img src="Tenant Settings Users can create Fabric items.png">
-</div>
 
 設定手順や詳細については、以下のリンクをご参照ください。
 > [!NOTE]
-> 参考情報 ：[Data Activator を有効にする - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/admin/data-activator-switch)
-> 参考情報 ：[Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi#prerequisites)
+> 参考情報 ：[Power BI から Data Activator のデータを取得する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-activator/data-activator-get-data-power-bi)
 
 
 
@@ -307,8 +306,10 @@ Data Activator データアラート では、レポート内のビジュアル�
 <img src="data_activator_alert_creation_1.png">
 </div>
 
-作成したアラートの設定は、Reflex アイテムとして作成されます。
-Power BI Service (Microsoft Fabric) の画面左下部にあるメニューから [Data Activator] を選択し、対象ワークスペースにアクセスすると、Reflex アイテムが表示され、設定の変更や削除を行うことが可能です。
+作成したアラートの設定は、 Activator アイテムとして作成されます。
+Power BI Service (Microsoft Fabric) の画面左下部にあるメニューから [Data Activator] を選択し、対象ワークスペースにアクセスすると、 Activator アイテムが表示され、設定の変更や削除を行うことが可能です。
+
+<span style="color: red;">GA（一般提供）に伴い、アイテムの名称は Reflex から Activator に変更されました。
 
  <div align="center">
 <img src="data_activator_alert_creation_2.png">
