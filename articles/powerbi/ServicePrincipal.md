@@ -21,6 +21,10 @@ Azure Active Directoryでは、皆さまが普段利用されているユーザ�
 > 本記事編集時点と実際の機能に相違がある場合がございます。  
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
 
+## 更新履歴
+Update: 2025/08/04
+テナント設定の名称に変更がありましたので、 [Power BI のテナント設定](#Power-BI-のテナント設定) セクションの内容を更新しました。
+
 ## 目次
 
 * [サービス プリンシパルとは](#サービス-プリンシパルとは)
@@ -200,18 +204,18 @@ Azure Active Directoryでは、皆さまが普段利用されているユーザ�
 
 ## Power BI のテナント設定
 
-Power BI でサービス プリンシパルを利用して REST API を実行するためには、テナント設定 **[Power BI APIの使用をサービス プリンシパルに許可]** 、 **[読み取り専用管理APIの使用をサービス プリンシパルに許可する]** を有効化する必要がございます。
+Power BI でサービス プリンシパルを利用して REST API を実行するためには、テナント設定 **[サービス プリンシパルは Fabric の公開用 API を呼び出すことができます]** 、 **[サービス プリンシパルは読み取り専用管理 API にアクセスできます]** を有効化する必要がございます。
 
-* Power BI APIの使用をサービス プリンシパルに許可
+* サービス プリンシパルは Fabric の公開用 API を呼び出すことができます
    <div align="center">
    <img src="ServicePrincipal19.png">
    </div>  
 
-* 読み取り専用管理APIの使用をサービス プリンシパルに許可する
+* サービス プリンシパルは読み取り専用管理 API にアクセスできます
   こちらの設定は、セキュリティ グループ単位での有効化となります。そのため、Azure ADからセキュリティ グループを作成し、作成したサービス プリンシパルをグループに追加した上で、セキュリティ グループに対して設定を有効化します。
 
   詳細な手順については以下の公開情報をご確認ください。
-  参考# [読み取り専用の管理 API に対してサービス プリンシパル認証を有効にする - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/read-only-apis-service-principal-authentication)
+  参考# [Enable service principal authentication for admin APIs - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/enterprise/read-only-apis-service-principal-authentication)
 
    <div align="center">
    <img src="ServicePrincipal20.png">
