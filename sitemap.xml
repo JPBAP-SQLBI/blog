@@ -275,6 +275,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/</loc>
+    
+    <lastmod>2025-08-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_retirement_of_legacy_apps/</loc>
     
     <lastmod>2025-08-29</lastmod>
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_delay/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_delay/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -667,14 +674,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -835,13 +842,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_32bit_eol/</loc>
-    
-    <lastmod>2025-08-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/</loc>
     
     <lastmod>2025-08-29</lastmod>
@@ -850,6 +850,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/owl_error/</loc>
+    
+    <lastmod>2025-08-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_32bit_eol/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -2364,6 +2371,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/tags/refresh-history/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/tags/%E3%83%AA%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%A4%89%E6%9B%B4/</loc>
     <lastmod>2025-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
