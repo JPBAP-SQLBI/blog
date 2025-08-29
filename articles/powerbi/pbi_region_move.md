@@ -5,7 +5,6 @@ tags:
   - Power BI 
   - Power BI サービス
   - リージョン変更
-  ‐　
 ---
     
 こんにちは、Power BI サポート チームの山崎です。  
