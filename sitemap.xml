@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/tls/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/tls/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -625,6 +625,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
+    
+    <lastmod>2025-08-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
     
     <lastmod>2025-08-29</lastmod>
@@ -633,13 +640,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
-    
-    <lastmod>2025-08-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
@@ -667,14 +667,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
     
     <lastmod>2025-08-29</lastmod>
     
