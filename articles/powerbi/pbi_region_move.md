@@ -1,8 +1,8 @@
 ---
-title: Power BI Desktop 32 ビット バージョン のサポート終了についてのお知らせ  
-date: 2025-04-30 00:00:00  
-tags:  
-  - Power BI 
+title: ホーム テナント リージョンの変更についてのご案内
+date: 2025-08-29 00:00:00 
+tags:
+  - Power BI
   - Power BI サービス
   - リージョン変更
 ---
