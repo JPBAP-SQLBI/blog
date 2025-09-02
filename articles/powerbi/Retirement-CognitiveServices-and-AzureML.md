@@ -30,13 +30,9 @@ tags:
 影響を受ける機能は Cognitive service  および Azure ML です。
 
 - Cognitive Services 
-
   - 感情分析
-
   - キーフレーズ抽出
-
   - 言語検出 
-
   - 画像タグ付け
 
 - Azure ML 
@@ -45,16 +41,14 @@ tags:
 ## スケジュール
 
 **2025年8月11日**: 新規モデルの作成停止
-
 - Cognitive Servicesを使用した新しいモデルの作成ができなくなります。
   利用しようとした場合にはエラーが発生します。
   <div align="center">
-  <img src="Retirement-CognitiveServices-and-AzureML_01.png">
+  <img src="Retirement-CognitiveServices-and-AzureML_03.png">
   </div>  
 - 既存モデルの更新は 9 月 15 日 まで引き続き可能です。
 
 **2025年9月15日**: 完全廃止
-
 - Cognitive ServicesとAzure MLを使用するすべての機能が利用不可になり、既存モデルの更新が失敗するようになります。
 
  ## 必要な対応
@@ -63,11 +57,11 @@ tags:
 
 1. セマンティック モデルを Power BI Service からダウンロードし、Power BI Desktop で [データの変換] を選択し Power Query を開きます。
   <div align="center">
-  <img src="Retirement-CognitiveServices-and-AzureML_02.png">
+  <img src="Retirement-CognitiveServices-and-AzureML_01.png">
   </div> 
 2. [適用したステップ] から Cognitive service  および Azure ML を利用しているステップを削除します。
   <div align="center">
-  <img src="Retirement-CognitiveServices-and-AzureML_03.png">
+  <img src="Retirement-CognitiveServices-and-AzureML_02.png">
   </div> 
 
 データフローを利用している場合など、 Power BI Service 内で利用できる Power Query Online の場合でも同様の手順で Cognitive service  および Azure ML を含むステップを削除します。 
