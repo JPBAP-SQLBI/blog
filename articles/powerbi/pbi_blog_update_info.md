@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2025-07-31 00:00:00 
+date: 2025-09-01 00:00:00 
 tags:
   - Power BI
   - Microsoft Fabric
@@ -22,6 +22,35 @@ tags:
 > ブログの内容は弊社の公式ドキュメントに基づいて構成されておりますが、最新の機能に相違がある場合がございます。
 > 最新情報については、ブログ記載されている公式ドキュメントをご確認ください。
 
+</br>
+
+## 2025年8月の記事
+
+### 新規記事
+[Cognitive service と Azure ML の廃止](https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/)<br>
+Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能廃止に伴う必要な対応についてご案内しております。
+
+</br>
+
+[2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります](https://jpbap-sqlbi.github.io/blog/powerbi/PowerBIDesktop-AVX/)</br>
+サポートされていない CPU では予期しない動作となる場合とその対応についてご案内いたします。
+
+</br>
+
+[アプリ・レポートを閲覧できないときの対処法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_cannot_view_report/)<br>
+Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介しております。
+
+</br>
+
+[ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)</br>
+Power BI Datamart サポート終了の背景や影響、移行方法等についてご案内しております。
+
+
+### 更新した記事
+
+今月の更新した記事はございません。
+
+---
 
 </br>
 
