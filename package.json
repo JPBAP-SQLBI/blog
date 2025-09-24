@@ -1,7 +1,0 @@
-{
-  "name": "blog",
-  "version": "1.0.0",
-  "dependencies": {
-    "hexo-generator-sitemap": "^2.0.0"
-  }
-}
