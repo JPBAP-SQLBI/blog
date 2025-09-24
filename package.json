@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "hexo generate"
+  },
+  "dependencies": {
+    "hexo-generator-sitemap": "^2.0.0"
+  }
+}
