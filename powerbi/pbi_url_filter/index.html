@@ -15,7 +15,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/Picture1.png">
 <meta property="article:published_time" content="2025-09-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-09-30T08:52:13.575Z">
+<meta property="article:modified_time" content="2025-09-30T09:00:40.286Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -114,7 +114,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2c674c64-8cf3-590c-9fe1-8522de97c704%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BURL+%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_url_filter%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_url_filter.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_url_filter.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6bk5h6005l0mlx0jw415ql" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6bv009005l0mqrgyu7cedp" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -159,24 +159,28 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...?filter=Table_x0020_Special/_x005B_Column_x0020_Brackets_x005D_ eq &#x27;[C]&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>テーブル名と列名には、Unicode 形式で表される日本語の文字を含めることができます。その場合、すべての日本語文字をエスケープコード（Unicode 形式） に変換する必要があります。</p>
-<p>例③    テーブル1/列名 eq ‘HR 日本語’ の場合は、以下のように変換する</p>
+<p>例③    テーブル1/列名 eq ‘HR 日本語’ を変換する</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?filter=_x30c6__x30fc__x30d6__x30eb_1/_x5217__x540d_ eq &#x27;HR 日本語&#x27;</span><br></pre></td></tr></table></figure>
+
+</br>
 </br>
 
-<h2 id="値のデータ型ごとの書き方"><a href="#値のデータ型ごとの書き方" class="headerlink" title="値のデータ型ごとの書き方"></a>値のデータ型ごとの書き方</h2><p><strong>文字列：</strong>‘ ‘ で囲みます<br><strong>数値：</strong>クォート不要、そのまま記載します<br><strong>日付：</strong>日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime’YYYY-MM-DDThh:mm:ss’ の形式で指定します。<br><strong>特殊文字：</strong>値にほとんどの特殊文字をサポートしていますが、エスケープ コードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 (‘’) を使用します。値にエスケープ コードが必要な特殊文字の一覧は公開情報をご確認ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values">URL のクエリ文字列パラメーターを使用してレポートをフィルター処理する - Power BI | Microsoft Learn</a><br></br></p>
+<h2 id="値のデータ型ごとの書き方"><a href="#値のデータ型ごとの書き方" class="headerlink" title="値のデータ型ごとの書き方"></a>値のデータ型ごとの書き方</h2><p><strong>文字列：</strong>‘ ‘ で囲みます<br><strong>数値：</strong>クォート不要、そのまま記載します<br><strong>日付：</strong>日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime’YYYY-MM-DDThh:mm:ss’ の形式で指定します。<br><strong>特殊文字：</strong>値にほとんどの特殊文字をサポートしていますが、エスケープコードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 (‘’) を使用します。値にエスケープコードが必要な特殊文字の一覧は公開情報をご確認ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values">URL のクエリ文字列パラメーターを使用してレポートをフィルター処理する - Power BI | Microsoft Learn</a><br></br></p>
 <h2 id="制限と非対応シナリオ"><a href="#制限と非対応シナリオ" class="headerlink" title="制限と非対応シナリオ"></a>制限と非対応シナリオ</h2><ul>
 <li>テーブルおよび列名は大文字と小文字が区別されますが、値は区別されません</li>
 <li>条件は最大 10 個まで指定でき、URL の長さは最大 2000 文字までです</li>
 <li>既存フィルターの上書きや解除はできず、ページ単位での指定もできません</li>
 <li>Webに公開 、PDF エクスポート、Teams、SharePoint Web Part ではご利用いただけません</li>
 <li>大文字の INF で始まるテーブル名や列名をフィルタリングすることはできません</li>
-<li>JavaScript の制限により、long データ型の最大値は 2^53 - 1 までです</br></li>
+<li>JavaScript の制限により、long データ型の最大値は 2^53 - 1 までです</li>
 </ul>
+</br>
+
 <h2 id="おまけ"><a href="#おまけ" class="headerlink" title="おまけ"></a>おまけ</h2><p>埋め込み URL の場合、filter に加えて pageName パラメーターを指定することで、最初に表示するページをコントロールできます。<br>pageName は、Power BI サービスでレポートを開いたときに URL の末尾に表示されます。<br><a target="_blank" rel="noopener" href="https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/">https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/</a><u><strong>ReportSection2</strong></u></p>
 <p>埋め込み URL例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;autoAuth=true&amp;pageName=ReportSection&amp;filter=Industries/Industry eq &#x27;Energy&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;autoAuth=true&amp;pageName=ReportSection2&amp;filter=Industries/Industry eq &#x27;Energy&#x27;</span><br></pre></td></tr></table></figure>
 
-<div class="alert is-success"><p class="alert-title">ヒント</p><p>埋め込み URL を使用場合の URL 設定の詳細は、以下公開情報をご参照ください。</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-secure#customize-your-embed-experience-by-using-url-settings">セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む - Power BI | Microsoft Learn</a></p></div>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>埋め込み URL を利用する場合の URL 設定の詳細については、以下の公開情報をご参照ください。</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-secure#customize-your-embed-experience-by-using-url-settings">セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む - Power BI | Microsoft Learn</a></p></div>
 <br>
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
 
