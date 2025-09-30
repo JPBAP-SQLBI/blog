@@ -116,7 +116,7 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 ## おまけ
 埋め込み URL の場合、filter に加えて pageName パラメーターを指定することで、最初に表示するページをコントロールできます。
 pageName は、Power BI サービスでレポートを開いたときに URL の末尾に表示されます。
-https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/`ReportSection2`
+[https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/**ReportSection2**](#)
 
 
 埋め込み URL例：
