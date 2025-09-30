@@ -6,16 +6,16 @@
   
   <title>URL フィルターの使い方 | Japan CSS Support Power BI Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Power BI サポート チームの呂です。Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開いたときにどの状態を初期表示にするか」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。これは、リンクや埋">
+  <meta name="description" content="こんにちは、Power BI サポート チームの呂です。Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="URL フィルターの使い方">
 <meta property="og:url" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/index.html">
 <meta property="og:site_name" content="Japan CSS Support Power BI Blog">
-<meta property="og:description" content="こんにちは、Power BI サポート チームの呂です。Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開いたときにどの状態を初期表示にするか」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。これは、リンクや埋">
+<meta property="og:description" content="こんにちは、Power BI サポート チームの呂です。Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/Picture1.png">
 <meta property="article:published_time" content="2025-09-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-09-30T09:00:40.286Z">
+<meta property="article:modified_time" content="2025-09-30T12:57:58.816Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -114,12 +114,12 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2c674c64-8cf3-590c-9fe1-8522de97c704%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BURL+%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_url_filter%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_url_filter.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_url_filter.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6bv009005l0mqrgyu7cedp" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6kc6kl005l0mmy64frdtfe" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開いたときにどの状態を初期表示にするか」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。<br>こうした要件に応える機能の一つが URL フィルターです。これは、リンクや埋め込みコードにフィルター条件を付与して、レポートの初期表示を調整するための方法です。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>
+        <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 </br>
