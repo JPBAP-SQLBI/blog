@@ -11,7 +11,6 @@ tags:
   - 埋め込み
 ---
 こんにちは、Power BI サポート チームの呂です。
-
 Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開いたときにどの状態を初期表示にするか」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。
 こうした要件に応える機能の一つが URL フィルターです。これは、リンクや埋め込みコードにフィルター条件を付与して、レポートの初期表示を調整するための方法です。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。
 
@@ -29,6 +28,7 @@ Power BI サービスでレポートを開くと、各ページには固有の U
 <img src="Picture1.png">
 </div>
 
+</br>
 </br>
 
 ## 類似機能との使い分け
@@ -107,7 +107,7 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 ## 制限と非対応シナリオ
 - テーブルおよび列名は大文字と小文字が区別されますが、値は区別されません
 - 条件は最大 10 個まで指定でき、URL の長さは最大 2000 文字までです
- 既存フィルターの上書きや解除はできず、ページ単位での指定もできません
+- 既存フィルターの上書きや解除はできず、ページ単位での指定もできません
 - Webに公開 、PDF エクスポート、Teams、SharePoint Web Part ではご利用いただけません
 - 大文字の INF で始まるテーブル名や列名をフィルタリングすることはできません
 - JavaScript の制限により、long データ型の最大値は 2^53 - 1 までです
@@ -116,7 +116,7 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 ## おまけ
 埋め込み URL の場合、filter に加えて pageName パラメーターを指定することで、最初に表示するページをコントロールできます。
 pageName は、Power BI サービスでレポートを開いたときに URL の末尾に表示されます。
-[https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/**ReportSection2**](#)
+https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/<u><strong>ReportSection2</strong></u>
 
 
 埋め込み URL例：
@@ -125,12 +125,13 @@ https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
 ```
 
 > [!TIP]
-URL フィルターを利用する場合は、テーブル名や列名に特殊文字を含めないよう設計しておくことをおすすめします。そうすることでフィルター指定がシンプルになり、運用も容易になります。
-Unicode エスケープシーケンスへの変換が必要な場合は、以下のような外部の変換ツールを活用すると便利です。
+埋め込み URL を使用場合の URL 設定の詳細は、以下公開情報をご参照ください。
 [セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-secure#customize-your-embed-experience-by-using-url-settings)
 
 <br>
 以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。
+
+<br>
 <br>
 
 **アンケートご協力のお願い**
