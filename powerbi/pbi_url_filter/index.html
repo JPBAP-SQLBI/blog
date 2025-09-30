@@ -15,7 +15,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/Picture1.png">
 <meta property="article:published_time" content="2025-09-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-09-30T12:57:58.816Z">
+<meta property="article:modified_time" content="2025-09-30T13:13:11.274Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Power BI">
 <meta property="article:tag" content="Power BI サービス">
@@ -114,12 +114,12 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2c674c64-8cf3-590c-9fe1-8522de97c704%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BURL+%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_url_filter%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_url_filter.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_url_filter.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6kc6kl005l0mmy64frdtfe" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/" data-id="cmg6kvqnj005l0mp4cvuq6z0a" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>
+        <p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。<br>こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>
 <span id="more"></span>
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
 </br>
@@ -133,12 +133,12 @@
 </br>
 
 <h2 id="類似機能との使い分け"><a href="#類似機能との使い分け" class="headerlink" title="類似機能との使い分け"></a>類似機能との使い分け</h2><p>類似の機能として共有ビューがあります。これはレポートを特定の状態で保存し、そのビューを他のユーザーと共有できる仕組みです。共有ビューは簡単に作成でき、アクセス権限の付与も可能ですが、URL フィルターのようにパラメーターを自由に変更することはできず、埋め込みでも利用できません。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-share-reports">フィルター処理された Power BI レポートの共有 - Power BI | Microsoft Learn</a></p>
-<p>また、RLS（行レベル セキュリティ）も類似の機能として挙げられます。これはユーザーごとに参照できるデータ範囲を制御する仕組みで、同じレポートでもユーザーによって異なるデータを表示できます。RLS はデータアクセスを厳格に分けたい場合に有効です。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/security/service-admin-row-level-security">Power BI での行レベルのセキュリティ (RLS) - Microsoft Fabric | Microsoft Learn</a><br></br></p>
-<h2 id="基本の使い方"><a href="#基本の使い方" class="headerlink" title="基本の使い方"></a>基本の使い方</h2><div class="alert is-success"><p class="alert-title">ヒント</p><p>以下の小売りの分析サンプルレポートを使って、ここで紹介する例文を検証するすることができます。</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/create-reports/sample-retail-analysis#get-the-built-in-sample-in-the-power-bi-service">Power BI の小売りの分析サンプル: ツアーに参加する - Power BI | Microsoft Learn</a></p></div>
+<p>また、RLS（行レベルセキュリティ）も類似の機能として挙げられます。これはユーザーごとに参照できるデータ範囲を制御する仕組みで、同じレポートでもユーザーによって異なるデータを表示できます。RLS はデータアクセスを厳格に分けたい場合に有効です。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/fabric/security/service-admin-row-level-security">Power BI での行レベルのセキュリティ (RLS) - Microsoft Fabric | Microsoft Learn</a><br></br></p>
+<h2 id="基本の使い方"><a href="#基本の使い方" class="headerlink" title="基本の使い方"></a>基本の使い方</h2><div class="alert is-success"><p class="alert-title">ヒント</p><p>以下の小売りの分析サンプルレポートを使って「基本の使い方」で紹介する例文を検証するすることができます。</p><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/create-reports/sample-retail-analysis#get-the-built-in-sample-in-the-power-bi-service">Power BI の小売りの分析サンプル: ツアーに参加する - Power BI | Microsoft Learn</a></p></div>
 <p>URL フィルターの構文は非常にシンプルです。URL の末尾に ?filter= を付けて、以下のように記述します：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...?filter=Table/Column eq &#x27;Value&#x27;</span><br></pre></td></tr></table></figure>
 
-<p>例①    1 つの条件を指定：Store テーブルの Territory 列を「NC」に絞り込む（上記画像）</p>
+<p>例①    1 つの条件を指定（eq）：Store テーブルの Territory 列を「NC」に絞り込む（上記画像）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...?filter=Store/Territory eq &#x27;NC&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>例②    複数の値を指定（in）：Store テーブルの Territory 列を「NC」または「TN」に絞り込む</p>
@@ -151,21 +151,21 @@
 </br>
 
 <h2 id="特殊文字の扱い"><a href="#特殊文字の扱い" class="headerlink" title="特殊文字の扱い"></a>特殊文字の扱い</h2><p>URL フィルターでよくつまずくポイントが 特殊文字です。テーブル名や列名にスペース、記号、日本語、または数字で始まる場合は、そのままではフィルターが効きません。特殊文字を含む場合は、_x ＋「4桁のUnicode」＋ _ のUnicode 形式（エスケープコード）に変換する必要があります。</p>
-<div class="alert is-success"><p class="alert-title">ヒント</p><p>URL フィルターを利用する場合は、テーブル名や列名に特殊文字を含めないよう設計しておくことをおすすめします。</p><p>そうすることでフィルター指定がシンプルになり、運用も容易になります。</p><p>Unicode エスケープシーケンスへの変換が必要な場合は、以下のような外部の変換ツールを活用すると便利です。</p><p><a target="_blank" rel="noopener" href="https://tech-unlimited.com/escape-unicode.html">Unicodeエスケープシーケンス変換 | Tech-Unlimited</a></p></div>
+<div class="alert is-success"><p class="alert-title">ヒント</p><p>URL フィルターを利用する場合は、テーブル名や列名に特殊文字を含めないよう設計しておくことをご検討ください。そうすることでフィルター指定がシンプルになり、運用も容易になります。</p><p>Unicode エスケープシーケンスへの変換が必要な場合は、以下のような外部の変換ツールを活用すると便利です。</p><p><a target="_blank" rel="noopener" href="https://tech-unlimited.com/escape-unicode.html">Unicode エスケープシーケンス変換 | Tech-Unlimited</a></p></div>
 <p>例①    Table Name/Column+Plus eq 3 を変換する</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...?filter=Table_x0020_Name/Column_x002B_Plus eq 3</span><br></pre></td></tr></table></figure>
 
 <p>例②    Table Special/[Column Brackets] eq ‘[C]’ を変換する</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...?filter=Table_x0020_Special/_x005B_Column_x0020_Brackets_x005D_ eq &#x27;[C]&#x27;</span><br></pre></td></tr></table></figure>
 
-<p>テーブル名と列名には、Unicode 形式で表される日本語の文字を含めることができます。その場合、すべての日本語文字をエスケープコード（Unicode 形式） に変換する必要があります。</p>
+<p>テーブル名と列名には、Unicode 形式で表される日本語の文字を含めることができます。<br>その場合、日本語文字をエスケープコードに変換する必要があります。</p>
 <p>例③    テーブル1/列名 eq ‘HR 日本語’ を変換する</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?filter=_x30c6__x30fc__x30d6__x30eb_1/_x5217__x540d_ eq &#x27;HR 日本語&#x27;</span><br></pre></td></tr></table></figure>
 
 </br>
 </br>
 
-<h2 id="値のデータ型ごとの書き方"><a href="#値のデータ型ごとの書き方" class="headerlink" title="値のデータ型ごとの書き方"></a>値のデータ型ごとの書き方</h2><p><strong>文字列：</strong>‘ ‘ で囲みます<br><strong>数値：</strong>クォート不要、そのまま記載します<br><strong>日付：</strong>日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime’YYYY-MM-DDThh:mm:ss’ の形式で指定します。<br><strong>特殊文字：</strong>値にほとんどの特殊文字をサポートしていますが、エスケープコードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 (‘’) を使用します。値にエスケープコードが必要な特殊文字の一覧は公開情報をご確認ください。<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values">URL のクエリ文字列パラメーターを使用してレポートをフィルター処理する - Power BI | Microsoft Learn</a><br></br></p>
+<h2 id="値のデータ型ごとの書き方"><a href="#値のデータ型ごとの書き方" class="headerlink" title="値のデータ型ごとの書き方"></a>値のデータ型ごとの書き方</h2><p><strong>文字列：</strong>‘ ‘ で囲みます。<br><strong>数値：</strong>クォート不要、そのまま記載します。<br><strong>日付：</strong>日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime’YYYY-MM-DDThh:mm:ss’ の形式で指定します。<br><strong>特殊文字：</strong>値にほとんどの特殊文字をサポートしていますが、エスケープコードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 (‘’) を使用します。値にエスケープコードが必要な特殊文字の一覧は<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values">公開情報</a>をご確認ください。<br></br></p>
 <h2 id="制限と非対応シナリオ"><a href="#制限と非対応シナリオ" class="headerlink" title="制限と非対応シナリオ"></a>制限と非対応シナリオ</h2><ul>
 <li>テーブルおよび列名は大文字と小文字が区別されますが、値は区別されません</li>
 <li>条件は最大 10 個まで指定でき、URL の長さは最大 2000 文字までです</li>
