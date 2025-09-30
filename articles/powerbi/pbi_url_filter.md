@@ -90,17 +90,19 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 
 テーブル名と列名には、Unicode 形式で表される日本語の文字を含めることができます。その場合、すべての日本語文字をエスケープコード（Unicode 形式） に変換する必要があります。
 
-例③	テーブル1/列名 eq 'HR 日本語' の場合は、以下のように変換する
+例③	テーブル1/列名 eq 'HR 日本語' を変換する
 ```
 ?filter=_x30c6__x30fc__x30d6__x30eb_1/_x5217__x540d_ eq 'HR 日本語'
 ```
+
+</br>
 </br>
 
 ## 値のデータ型ごとの書き方
 **文字列：**' ' で囲みます
 **数値：**クォート不要、そのまま記載します
 **日付：**日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime'YYYY-MM-DDThh:mm:ss' の形式で指定します。
-**特殊文字：**値にほとんどの特殊文字をサポートしていますが、エスケープ コードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 ('') を使用します。値にエスケープ コードが必要な特殊文字の一覧は公開情報をご確認ください。
+**特殊文字：**値にほとんどの特殊文字をサポートしていますが、エスケープコードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 ('') を使用します。値にエスケープコードが必要な特殊文字の一覧は公開情報をご確認ください。
 [URL のクエリ文字列パラメーターを使用してレポートをフィルター処理する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values)
 </br>
 
@@ -111,6 +113,7 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 - Webに公開 、PDF エクスポート、Teams、SharePoint Web Part ではご利用いただけません
 - 大文字の INF で始まるテーブル名や列名をフィルタリングすることはできません
 - JavaScript の制限により、long データ型の最大値は 2^53 - 1 までです
+
 </br>
 
 ## おまけ
@@ -121,11 +124,11 @@ https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/<u><strong>ReportSectio
 
 埋め込み URL例：
 ```
-https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&autoAuth=true&pageName=ReportSection&filter=Industries/Industry eq 'Energy'
+https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&autoAuth=true&pageName=ReportSection2&filter=Industries/Industry eq 'Energy'
 ```
 
 > [!TIP]
-埋め込み URL を使用場合の URL 設定の詳細は、以下公開情報をご参照ください。
+埋め込み URL を利用する場合の URL 設定の詳細については、以下の公開情報をご参照ください。
 [セキュリティで保護されたポータルまたは Web サイトにレポートを埋め込む - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-embed-secure#customize-your-embed-experience-by-using-url-settings)
 
 <br>
