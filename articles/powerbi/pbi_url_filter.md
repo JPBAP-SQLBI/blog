@@ -20,12 +20,15 @@ Power BI でコンテンツを共有する際には、共有リンクや埋め�
 > 本記事編集時点と実際の機能に相違がある場合がございます。予めご了承ください。
 > 最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。
 
+</br>
+
 ## URL フィルターとは 
 Power BI サービスでレポートを開くと、各ページには固有の URL が割り当てられています。その URL にクエリ文字列パラメーターを追加することで、レポートを開いたときに自動的にでフィルターを適用できます。 
 フィルター適用後の URL は、ブラウザーによって自動的に標準のエスケープ文字に置き換えられる場合があります。 
 <div align="left">
 <img src="Picture1.png">
 </div>
+
 </br>
 
 ## 類似機能との使い分け
@@ -98,6 +101,7 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 **日付：**日付の URL フィルターは、日付型の場合は YYYY-MM-DD と記入すれば自動的に T00:00:00 と解釈され、日時型の場合は datetime'YYYY-MM-DDThh:mm:ss' の形式で指定します。
 **特殊文字：**値にほとんどの特殊文字をサポートしていますが、エスケープ コードが必要となるケースもあります。たとえば、単一引用符文字を検索するには、2 つの単一引用符 ('') を使用します。値にエスケープ コードが必要な特殊文字の一覧は公開情報をご確認ください。
 [URL のクエリ文字列パラメーターを使用してレポートをフィルター処理する - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-url-filters#special-characters-in-values)
+</br>
 
 ## 制限と非対応シナリオ
 ・テーブルおよび列名は大文字と小文字が区別されますが、値は区別されません
@@ -106,11 +110,14 @@ Unicode エスケープシーケンスへの変換が必要な場合は、以下
 ・Webに公開 、PDF エクスポート、Teams、SharePoint Web Part ではご利用いただけません
 ・大文字の INF で始まるテーブル名や列名をフィルタリングすることはできません
 ・JavaScript の制限により、long データ型の最大値は 2^53 - 1 までです。
+</br>
 
 ## おまけ
 埋め込み URL の場合、filter に加えて pageName パラメーターを指定することで、最初に表示するページをコントロールできます。
 pageName は、Power BI サービスでレポートを開いたときに URL の末尾に表示されます。
-https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/**ReportSection2**
+https://app.powerbi.com/groups/xxxxxxxx/reports/xxxxxxxx/`ReportSection2`
+
+
 埋め込み URL例：
 ```
 https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&autoAuth=true&pageName=ReportSection&filter=Industries/Industry eq 'Energy'
