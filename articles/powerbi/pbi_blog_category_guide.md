@@ -126,7 +126,9 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [条件付き書式で作るヒートマップ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_heatmap/)
 [Power BI サービスに発行したレポートの時刻のずれについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_service_timezone/)
 [Power BI サービスにおける固定フィルター](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_persistent_filters/)
-[**NEW! 3月** ブックマークとボタンで動的にレポート画面を切り替える方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/)
+[ブックマークとボタンで動的にレポート画面を切り替える方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/)
+[URL フィルターの使い方](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/)
+[Power BIレポートにおけるデータエクスポートの制御](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_exportcontrol/)
 
 ## Power Query
 [pbix ファイルのデータソースのファイル格納場所が変更される場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/)
@@ -139,6 +141,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI サービスでのコンテンツ共有方法の種類](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_contents_share_1/)
 [組織外のユーザーとPower BIコンテンツの共有](https://jpbap-sqlbi.github.io/blog/powerbi/aad_guestuser/)
 [Power BIでデータに接続しレポートを作成・共有する手順](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_how_to_create_report/)
+[アプリ・レポートを閲覧できないときの対処法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_cannot_view_report/)
 
 ## データ ゲートウェイ
 [オンプレミス データ ゲートウェイのインストールの手順](https://jpbap-sqlbi.github.io/blog/powerbi/all_gateway_howto_Installation/)
@@ -149,6 +152,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [仮想ネットワーク (VNet) データ ゲートウェイ について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet%20data%20gateway/)
 [仮想ネットワーク (VNet) データ ゲートウェイからプライベートデータソースへの接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_vnet_data_gateway_private/)
 [オンプレミス データ ゲートウェイのサービスが自動起動しない場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbiegwservice/)
+[オンプレミスとクラウドデータソースのマージ・アペンド時に必要な設定について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_cloud_merge/)
 
 ## ワークスペース管理
 [Power BI Pro のワークスペース容量について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/)
@@ -167,6 +171,8 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [コンテンツの承認（昇格・認定）と検出について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_endorsement/)
 [ユーザーの操作におけるPower BIのアクティビティログ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/)
 [Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
+[監査ログのAuditDataカラムからデータを抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/)
+[ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
@@ -180,6 +186,10 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Private なデータソースへ接続する](https://jpbap-sqlbi.github.io/blog/powerbi/PrivateDatasource/)
 [プライバシー レベルの選択について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_privacylevels/)
 [Power BI 複合モデル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_composite_mode/)
+[Power BI データフロー Gen2 と Gen1 の比較](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_gen1_gen2/)
+[Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
+[データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
+
 
 ## トラブルシューティング
 [「テーブルの列 ‘***’ が見つかりませんでした。」Power BI更新エラーについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_reflesh_error/)
@@ -197,11 +207,12 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded・Fabric）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)
 [セルフサービス サインアップの無効化](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/)
 [Power BI 試用版（無料体験）を無効化する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_disable_trial_version/)
-[**NEW! 1月** ライセンスとワークスペースの運用・棚卸方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/)
+[ライセンスとワークスペースの運用・棚卸方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/)
 
 ## 増分更新
 [Power BI でフォルダー・SharePointフォルダーコネクタを使用した増分更新](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_folder_incremental_refresh/)
 [増分更新の概要と設定方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_refresh/)
+[Power BI の増分更新における初回更新のタイムアウトを回避する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_incremental_partition_refresh/)
 
 ## 機能紹介
 [Microsoft Fabric パブリック プレビュー](https://jpbap-sqlbi.github.io/blog/powerbi/microsoft_fabric/)
@@ -222,8 +233,8 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [ページ分割されたレポート② パラメーターを利用したレポートページ分割されたレポート①](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_paginated_report_parameter/)
 [Power BI 新規機能のご紹介（2024年5月～ 7月）](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_New_Features_Introduction/)
 [ビジュアル計算](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_calculation/)
-[**NEW! 1月** Power BI モバイル アプリについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_mibile_app/)
-[**NEW! 2月** 閲覧者がセマンティックモデルを更新する方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/)
+[Power BI モバイル アプリについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_mibile_app/)
+[閲覧者がセマンティックモデルを更新する方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/)
 
 ## Premium 機能
 [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
@@ -232,7 +243,8 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [XMLAエンドポイント](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_xmlaendpoint/)
 [Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/)
 [Power BI ユーザーから見た Microsoft Fabric について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/)
-[**NEW! 2月** デプロイパイプラインについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_deployment_pipelines/)
+[デプロイパイプラインについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_deployment_pipelines/)
+[Cognitive service と Azure ML の廃止](https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/)
 
 ## 通信設定
 [Power BI で ExpressRoute の使用について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/)
@@ -261,6 +273,10 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Teams アクティビティ分析レポートの廃止について（MC907531）](https://refactored-guacamole-p99p6r945j436q5-4000.app.github.dev/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/)
 [【2022年4月27日より】クラシックワークスペースの自動アップグレード](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_workspace_v1upgrade/)
 [【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
+[2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります](https://jpbap-sqlbi.github.io/blog/powerbi/PowerBIDesktop-AVX/)
+[Power BI データマートの廃止と Fabric Data Warehouse への移行について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/)
+[Power BI Desktop 32 ビット バージョン のサポート終了についてのお知らせ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_32bit_eol/)
+
 
 </br>
 
