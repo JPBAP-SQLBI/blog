@@ -52,7 +52,7 @@ tags:
 
 #### 新規記事
 [URL フィルターの使い方](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/)
-Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能廃止に伴う必要な対応についてご案内しております。
+レポートを開いた際の初期表示を制御できるURL フィルター（クエリ文字列パラメーター）の使い方について解説しております。
 
 #### 更新した記事
 
