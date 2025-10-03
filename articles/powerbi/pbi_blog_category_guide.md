@@ -1,14 +1,16 @@
 ---
-title: Power BI ブログガイド - カテゴリ別
+title: Power BI ブログ更新情報
 date: 2024-06-28 00:00:00 
 tags:
   - Power BI
 ---
 こんにちは、Power BI サポートチームです。
 
-いつもPower BI CSS ブログをご覧いただき、誠にありがとうございます。これまで多くのサポートチームのブログ有志の尽力により、約100本のブログが作成されてきました。これらを参照しやすく、また検索しやすい形で整理しました。
+いつもPower BI CSS ブログをご覧いただき、誠にありがとうございます。これまで多くのサポートチームのブログ有志の尽力により、約100本のブログが作成されてきました。
 
-今後も新しい記事が作成され次第、こちらのブログで更新を続けてまいりますので、皆様のお役に立てるよう努めます。引き続きご支援のほどよろしくお願いいたします。
+これらの記事をより活用いただけるように、新規記事や更新記事の情報をまとめ、また、カテゴリごとに整理しました。
+
+今後も新しい記事が作成され次第、随時ブログを更新してまいりますので、皆様のお役に立てるよう努めます。引き続きご支援のほど、よろしくお願いいたします。
 
 <!-- more -->　
 
@@ -20,6 +22,8 @@ tags:
 </br>
 
 ## 目次
+・[ブログ更新情報](#ブログ更新情報)
+
 ・[Power BI Desktop](#Power-BI-Desktop)
 ・[ビジュアルと表示](#ビジュアルと表示)
 ・[Power Query](#Power-Query)
@@ -40,6 +44,68 @@ tags:
 ・[その他](#その他)
 
 </br>
+
+
+## ブログ更新情報
+
+### 2025年9月の記事
+
+#### 新規記事
+[URL フィルターの使い方](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/)
+Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能廃止に伴う必要な対応についてご案内しております。
+
+#### 更新した記事
+
+今月の更新した記事はございません。
+
+### 2025年8月の記事
+
+#### 新規記事
+[Cognitive service と Azure ML の廃止](https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/)
+Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能廃止に伴う必要な対応についてご案内しております。
+</br>
+
+[2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります](https://jpbap-sqlbi.github.io/blog/powerbi/PowerBIDesktop-AVX/)
+サポートされていない CPU では予期しない動作となる場合とその対応についてご案内いたします。
+</br>
+
+[アプリ・レポートを閲覧できないときの対処法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_cannot_view_report/)
+Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介しております。
+</br>
+
+[ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
+Power BI Datamart サポート終了の背景や影響、移行方法等についてご案内しております。
+
+
+#### 更新した記事
+
+今月の更新した記事はございません。
+
+---
+
+</br>
+
+### 2025年7月の記事
+
+#### 新規記事
+[データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
+各種データフロー（データフロー Gen1,Gen2,Gen2 CI/CD）の更新方法についてご案内しております。
+</br>
+
+[Power BI データマートの廃止と Fabric Data Warehouse への移行について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/)
+Power BI Datamart サポート終了の背景や影響、移行方法等についてご案内しております。
+</br>
+
+#### 更新した記事
+[Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
+Azure マップのテナント設定や利用要件に変更点がありましたので、 Azure マップ セッションの内容を更新しました。 
+</br>
+
+[Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
+テナント設定の名称に変更がありましたので、 Power BI のテナント設定 セクションの内容を更新しました。
+</br>
+
+---
 
 ## Power BI Desktop
 [「メモリ不足のため完了できません」エラーの対処策 - Power BI Desktop](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/)
