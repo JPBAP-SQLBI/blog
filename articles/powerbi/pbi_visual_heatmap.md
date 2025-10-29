@@ -50,7 +50,7 @@ Web サイト解析として、滞在時間の傾向把握として使用され�
 
 
 > **参考情報**
-> - [ヒートマップ | Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%BC%E3%83%88%E3%83%9E%E3%83%83%E3%83%97#cite_note-6)
+> - [ヒートマップ | Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%BC%E3%83%88%E3%83%9E%E3%83%83%E3%83%97)
 
 <br>
 <br>
@@ -175,8 +175,6 @@ Web サイト解析として、滞在時間の傾向把握として使用され�
 
 [レポートのダウンロード(右クリックで[名前を付けてリンクを保存])](https://github.com/JPBAP-SQLBI/blog/raw/main/articles/powerbi/pbi_visual_heatmap/sample_pbix/heatmap_sample.pbix)
 
-> **参考情報**
-> - [How To Create A Power BI Heat Map | Enterprise DNA](https://blog.enterprisedna.co/power-bi-heat-map-a-custom-visualization-tutorial/)
 
 </br>
 
