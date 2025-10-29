@@ -147,7 +147,7 @@ JSONの作成方法ですが、Power BI では"JSON スキーマ" に基づい�
 また、"JSON スキーマ"を確認しても、実際な設定につまずくこともあるかもしれません。以下のGitHubページでは、ビジュアルごとにテーマを設定したサンプルコードを用意しておりますため、ご参照いただけますと幸いです。
 
 > [!TIP]
-> 参考情報：[PowerBI-ThemeTemplates/README.md at master · MattRudy/PowerBI-ThemeTemplates](https://github.com/MattRudy/PowerBI-ThemeTemplates/blob/6f4ffcf1ae8a4454ff087b3e1b3f00c6fdf029e3/README.md)
+> 参考情報：[PowerBI-ThemeTemplates/README.md at master · MattRudy/PowerBI-ThemeTemplates](https://github.com/mattrudy/PowerBI-ThemeTemplates/blob/master/README.md)
 
 なお、以下の公開情報に、基本なJSON構文やすぐご利用可能な例文が紹介されておりますで、必要に応じてご活用ください。
 
