@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_throttling/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_throttling/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
@@ -457,6 +457,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_areaname/</loc>
+    
+    <lastmod>2025-10-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license2/</loc>
     
     <lastmod>2025-10-29</lastmod>
@@ -472,13 +479,6 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_log4j_impact/</loc>
-    
-    <lastmod>2025-10-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_areaname/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
@@ -576,14 +576,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_fabric_component/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_expressroute/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
@@ -639,13 +639,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
-    
-    <lastmod>2025-10-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
     
     <lastmod>2025-10-29</lastmod>
@@ -654,6 +647,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_outofmemory_error/</loc>
+    
+    <lastmod>2025-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
@@ -681,14 +681,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataset_unpivot/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
@@ -842,13 +842,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/owl_error/</loc>
-    
-    <lastmod>2025-10-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_32bit_eol/</loc>
     
     <lastmod>2025-10-29</lastmod>
@@ -857,6 +850,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/</loc>
+    
+    <lastmod>2025-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/owl_error/</loc>
     
     <lastmod>2025-10-29</lastmod>
     
