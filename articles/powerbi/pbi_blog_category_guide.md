@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2025-10-1 00:00:00 
+date: 2025-11-1 00:00:00 
 tags:
   - Power BI
 ---
