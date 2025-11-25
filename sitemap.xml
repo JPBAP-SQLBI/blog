@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/google168fcf01b0a8c0e2.html</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
     
     <lastmod>2025-11-25</lastmod>
@@ -205,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_auto-installation/</loc>
     
     <lastmod>2025-11-25</lastmod>
@@ -219,7 +205,7 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_teams_activity_analytics_report_deprecation/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -227,6 +213,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/</loc>
+    
+    <lastmod>2025-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -569,14 +562,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_field_parameter/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_feature_roadmap/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_feature_roadmap/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_field_parameter/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -618,6 +611,13 @@
   </url>
   
   <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
+    
+    <lastmod>2025-11-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embedded_license/</loc>
     
     <lastmod>2025-11-25</lastmod>
@@ -632,21 +632,7 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_disable_trial_version/</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -661,6 +647,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_service/</loc>
+    
+    <lastmod>2025-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_desktop_webview2/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -793,14 +786,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
@@ -877,20 +870,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/fabric_onelake/</loc>
-    
-    <lastmod>2025-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/gateway_troubleshooting/</loc>
     
     <lastmod>2025-11-25</lastmod>
@@ -899,6 +878,20 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/microsoft_fabric/</loc>
+    
+    <lastmod>2025-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/</loc>
+    
+    <lastmod>2025-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/fabric_onelake/</loc>
     
     <lastmod>2025-11-25</lastmod>
     
