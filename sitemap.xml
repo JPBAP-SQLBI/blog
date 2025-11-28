@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/tls/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/tls/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/performance/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbirs_support_boundary/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbirs_support_boundary/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/performance/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_throttling/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_throttling/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_storage/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_self-service-signup/</loc>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
@@ -618,13 +618,6 @@
   </url>
   
   <url>
-    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embedded_license/</loc>
-    
-    <lastmod>2025-11-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_endorsement/</loc>
     
     <lastmod>2025-11-28</lastmod>
@@ -633,6 +626,13 @@
   
   <url>
     <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embed/</loc>
+    
+    <lastmod>2025-11-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_embedded_license/</loc>
     
     <lastmod>2025-11-28</lastmod>
     
