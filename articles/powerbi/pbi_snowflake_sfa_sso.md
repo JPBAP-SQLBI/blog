@@ -38,8 +38,7 @@ Power BI では データソースとして Snowflake に接続することが�
 ---
 Update: 2025/11/28
 キーペア認証の一般提供に伴い、内容を一部変更しました。
-[Power Query Snowflake コネクタ - Power Query | Microsoft Learn]https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
-
+[Power Query Snowflake コネクタ - Power Query | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
 
 
 ---

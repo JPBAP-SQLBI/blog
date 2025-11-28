@@ -129,9 +129,8 @@ Power BI では、ワークスペースロールやレポート単位でアク�
 <img src="whole_org_link.png">
 </div>
  
-</br>
-なお、組織内で共有されているレポートは、現在プレビュー機能として提供されているコンテンツ共有レポートの [ Details ] → [ Is shared with whole org ] で確認できます。
 
+なお、組織内で共有されているレポートは、現在プレビュー機能として提供されているコンテンツ共有レポートの [ Details ] → [ Is shared with whole org ] で確認できます。
 
 
 <div align="left">
@@ -144,8 +143,10 @@ Power BI では、ワークスペースロールやレポート単位でアク�
 <img src="whole_org_report.png">
 </div>
  
+
 >[!NOTE]
-> 参考情報：[コンテンツ共有レポート - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/admin/content-sharing)
+> 参考情報：[コンテンツ共有レポート - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/admin/content-sharing/)
+
 
 ---
 ## Power BI Service へのアクセスを制限する
