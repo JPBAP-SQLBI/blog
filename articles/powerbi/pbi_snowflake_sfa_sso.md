@@ -34,6 +34,15 @@ Power BI では データソースとして Snowflake に接続することが�
 
 
 ---
+## 更新履歴
+---
+Update: 2025/11/28
+キーペア認証の一般提供に伴い、内容を一部変更しました。
+[Power Query Snowflake コネクタ - Power Query | Microsoft Learn]https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
+
+
+
+---
 ## Snowflake 公式アナウンスの概要
 ---
 単一要素パスワード認証の廃止について、Snowflake 社の公開情報では大きく以下の 2 点が案内されています。
@@ -74,28 +83,27 @@ Snowflake コネクタでは、Microsoft アカウントを用いた認証が可
 >[!NOTE]
 > 参考情報：[Power Query Snowflake コネクタ - Power Query | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
 
-下表は、単一要素パスワード認証の廃止に伴い可能となる接続方法を整理したものです。
 
-| 項目 | ODBC コネクタ | Snowflake コネクタ |
-|------|----------------|----------------------|
-| 認証方式 | キーペア認証 | Microsoft アカウント（Microsoft Entra ID） |
-| キーペア認証対応 | 対応 | 非対応（詳細は後述） |
-| 接続モード | インポート | インポート<br>Direct Query<br>※ Entra ID SSO は Direct Query のみ |
-| 接続に必要な準備 | ・ODBC ドライバのインストール<br>・キーペアの生成と設定 | ・Snowflake 側での設定<br>・Power BI 側でのオプション有効化、テナント設定 |
-
-
----
-## Snowflake コネクタのキーペア認証のサポート予定について
----
-2025 年 6 月現在、Snowflake コネクタにおけるキーペア認証はサポートされていません。ただし、正式なリリース時期は未定ですが、今後サポートが予定されています。 リリース予定日などの最新情報については公開情報からご確認ください。 
+### Snowflake コネクタ（キーペア認証）
+2025年11月より、Power BIからキーペア認証がサポートされました。
+キーペア認証を構成する手順につきましては、Snowflake および Microsoft 公開情報をご確認ください。
 
 >[!NOTE]
-> 参考情報：[Power Query Snowflake コネクタ - Microsoft Learn](https://learn.microsoft.com/ja-jp/power-query/connectors/snowflake)
-> 参考情報：[Microsoft Power BI プロダクト ロードマップ](https://roadmap.fabric.microsoft.com/?product=powerbi)
-> 参考情報：[Power BI ブログ — 更新とニュース](https://powerbi.microsoft.com/ja-jp/blog/)
+> 参考情報：[キーペア認証とキーペアローテーション | Snowflake Documentation](https://docs.snowflake.com/ja/user-guide/key-pair-auth)
+> 参考情報：[Snowflake データベース接続を設定する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/data-factory/connector-snowflake#authentication)
 
 
-キーペア認証が正式にサポートされるまでの間は、当ブログでご紹介している他の認証方法の活用をご検討ください。
+
+
+下表は、単一要素パスワード認証の廃止に伴い可能となる接続方法を整理したものです。
+
+| 項目                   | ODBC コネクタ                                | Snowflake コネクタ（Entra ID認証）                          | Snowflake コネクタ（キーペア認証）               |
+|------------------------|----------------------------------------------|-------------------------------------------------------------|---------------------------------------|
+| 認証方式               | キーペア認証                                 | Microsoft アカウント（Microsoft Entra ID）                   | キーペア認証                          |
+| 接続モード             | インポート                                   | インポート<br>Direct Query                                  | インポート<br>Direct Query            |
+| 接続に必要な準備        | ・ODBC ドライバのインストール<br>・キーペアの生成とSnowflake側での設定 | ・Snowflake側での設定<br>・Power BI側でのオプション有効化、テナント設定 | ・キーペアの生成とSnowflake側での設定 |
+
+
 
 ---
 ## Microsoft アカウントで接続する方法
