@@ -25,4 +25,23 @@ Update: 2025/11/28
 
 <!-- more -->
 
-<iframe width="100%" height="100%" src="https://forms.office.com/r/URv1HLcczP?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<!-- <iframe width="680px" height="600px" src="https://forms.office.com/r/URv1HLcczP?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe> -->
+
+<div style="position: relative; width: 100%; padding-top: 80%;">
+  <iframe 
+      src="https://forms.office.com/r/URv1HLcczP?embed=true"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      "
+      frameborder="0" 
+      allowfullscreen
+      webkitallowfullscreen 
+      mozallowfullscreen 
+      msallowfullscreen>
+  </iframe>
+</div>
