@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2025-11-1 00:00:00 
+date: 2025-12-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -47,6 +47,37 @@ tags:
 
 
 ## ブログ更新情報
+
+### 2025年11月の記事
+
+#### 新規記事
+[共有可能なクラウド接続と個人用クラウド接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_shareable_cloud_connection/)
+共有可能なクラウド接続と個人用クラウド接続の違いや使用例についてご紹介しております。
+
+[Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
+Power BIの利用にあたって特に考慮しておくべき設定をシナリオベースでご紹介しております。
+
+#### 更新した記事
+
+[Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
+キーペア認証の一般提供に伴い、内容を一部変更しました。
+
+[Power BI サービスでデータモデルを編集する](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_modify_model_in_service/)
+本機能の一般提供により、内容を修正しました。
+
+[Power BI サービスのデータセット更新手順について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/)
+手順内の画像が古いため最新化しました。
+
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
+アンケートフォームのリンクが切れていたため、新しく作り直しました。アンケートへのご協力をいただけますと幸いです。
+
+
+また、右上の検索ボックスがご利用いただけない状態となっておりましたが、修正を行い、再度ご利用いただけるようになりました。
+
+<div align="left">
+<img src="search_box.png">
+</div>
+
 
 ### 2025年10月の記事
 
@@ -175,6 +206,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
 [監査ログのAuditDataカラムからデータを抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/)
 [ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
+[Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
@@ -191,6 +223,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI データフロー Gen2 と Gen1 の比較](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_gen1_gen2/)
 [Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
 [データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
+[共有可能なクラウド接続と個人用クラウド接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_shareable_cloud_connection/)
 
 
 ## トラブルシューティング
