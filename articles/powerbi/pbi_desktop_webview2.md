@@ -179,7 +179,7 @@ c:\Users\\[username]\AppData\Local\Microsoft\Power BI Desktop\WebView2Elevated\E
 </div>
 
 > **参考情報：**
-> - [WebView2 に関連するイシューを解決する](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-error-launching-desktop#resolve-issues-related-to-webview2)  
+> - [WebView2 に関連した問題](https://learn.microsoft.com/ja-jp/power-bi/connect-data/desktop-error-launching-desktop#issues-related-to-webview2)  
 
 
 </br>

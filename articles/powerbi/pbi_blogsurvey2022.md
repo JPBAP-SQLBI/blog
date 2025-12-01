@@ -25,8 +25,6 @@ Update: 2025/11/28
 
 <!-- more -->
 
-<!-- <iframe width="680px" height="600px" src="https://forms.office.com/r/URv1HLcczP?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe> -->
-
 <div style="position: relative; width: 100%; padding-top: 80%;">
   <iframe 
       src="https://forms.office.com/r/URv1HLcczP?embed=true"
