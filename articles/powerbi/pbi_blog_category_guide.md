@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2025-10-1 00:00:00 
+date: 2025-12-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -48,6 +48,47 @@ tags:
 
 ## ブログ更新情報
 
+### 2025年11月の記事
+
+#### 新規記事
+[共有可能なクラウド接続と個人用クラウド接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_shareable_cloud_connection/)
+共有可能なクラウド接続と個人用クラウド接続の違いや使用例についてご紹介しております。
+
+[Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
+Power BIの利用にあたって特に考慮しておくべき設定をシナリオベースでご紹介しております。
+
+#### 更新した記事
+
+[Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
+キーペア認証の一般提供に伴い、内容を一部変更しました。
+
+[Power BI サービスでデータモデルを編集する](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_modify_model_in_service/)
+本機能の一般提供により、内容を修正しました。
+
+[Power BI サービスのデータセット更新手順について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/)
+手順内の画像が古いため最新化しました。
+
+[【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/)
+アンケートフォームのリンクが切れていたため、新しく作り直しました。アンケートへのご協力をいただけますと幸いです。
+
+
+また、右上の検索ボックスがご利用いただけない状態となっておりましたが、修正を行い、再度ご利用いただけるようになりました。
+
+<div align="left">
+<img src="search_box.png">
+</div>
+
+
+### 2025年10月の記事
+
+#### 新規記事
+[Copilotのセキュリティと使用制限方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_security/)
+Power BIでCopilot を安心してご利用いただくために、データの処理の流れと、管理者がCopilotの利用を制限する方法について説明おります。
+
+#### 更新した記事
+
+今月の更新した記事はございません。
+
 ### 2025年9月の記事
 
 #### 新規記事
@@ -63,15 +104,12 @@ tags:
 #### 新規記事
 [Cognitive service と Azure ML の廃止](https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/)
 Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能廃止に伴う必要な対応についてご案内しております。
-</br>
 
 [2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります](https://jpbap-sqlbi.github.io/blog/powerbi/PowerBIDesktop-AVX/)
 サポートされていない CPU では予期しない動作となる場合とその対応についてご案内いたします。
-</br>
 
 [アプリ・レポートを閲覧できないときの対処法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_cannot_view_report/)
 Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介しております。
-</br>
 
 [ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
 Power BI Datamart サポート終了の背景や影響、移行方法等についてご案内しております。
@@ -81,7 +119,6 @@ Power BI Datamart サポート終了の背景や影響、移行方法等につ�
 
 今月の更新した記事はございません。
 
----
 
 </br>
 
@@ -90,20 +127,16 @@ Power BI Datamart サポート終了の背景や影響、移行方法等につ�
 #### 新規記事
 [データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
 各種データフロー（データフロー Gen1,Gen2,Gen2 CI/CD）の更新方法についてご案内しております。
-</br>
 
 [Power BI データマートの廃止と Fabric Data Warehouse への移行について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/)
 Power BI Datamart サポート終了の背景や影響、移行方法等についてご案内しております。
-</br>
 
 #### 更新した記事
 [Power BIのマップビジュアル](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_map_visual/)
 Azure マップのテナント設定や利用要件に変更点がありましたので、 Azure マップ セッションの内容を更新しました。 
-</br>
 
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
 テナント設定の名称に変更がありましたので、 Power BI のテナント設定 セクションの内容を更新しました。
-</br>
 
 ---
 
@@ -173,6 +206,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI の管理について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin/)
 [監査ログのAuditDataカラムからデータを抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/)
 [ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
+[Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
@@ -189,6 +223,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI データフロー Gen2 と Gen1 の比較](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_gen1_gen2/)
 [Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
 [データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
+[共有可能なクラウド接続と個人用クラウド接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_shareable_cloud_connection/)
 
 
 ## トラブルシューティング
@@ -235,6 +270,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [ビジュアル計算](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_visual_calculation/)
 [Power BI モバイル アプリについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_mibile_app/)
 [閲覧者がセマンティックモデルを更新する方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/)
+[Copilotのセキュリティと使用制限方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_security/)
 
 ## Premium 機能
 [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
