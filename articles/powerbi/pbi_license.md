@@ -25,6 +25,11 @@ tags:
 ---
 ## 更新履歴
 ---
+
+Update: 2025/12/26
+ライセンスの価格が度々改正されるため、価格の記載をなくし、公開情報へ参照するように修正しました。
+機能比較表についても、現時点で利用可能な機能によって修正いたしました。
+
 Update: 2024/11/06
 日本マイクロソフトの法人向けソフトウエアおよびクラウドサービスの価格改定に伴い、Power BI 各種ライセンスの価格表記を変更いたしました。
 [法人向けソフトウエアおよびクラウドサービスの価格改定について - Japan News Center](https://news.microsoft.com/ja-jp/2023/12/06/231206-information/?msockid=10a1aee0bd6f65da201ebef9bc13649a)
@@ -64,7 +69,7 @@ Power BI Free（Power BI （無料））（以下Free）は、Office365 / Micros
 ## Power BI Pro とは？
 ---
 
-Power BI Pro （以下Pro）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。
+Power BI Pro （以下Pro）は、月額制の有償ライセンスで、1 ユーザーごとに 1 ライセンスが必要となります。
 
 Office365/ Microsoft 365 E3 以下のプランには含まれませんので、必要数をご契約いただく必要がありますが、E5 プランにはもとから含まれますので、別途Pro ライセンスをご契約いただく必要はありません。Pro ライセンスを所持することで、Proライセンスユーザー同士でのコンテンツ共有が可能となります。
 
@@ -72,11 +77,11 @@ Office365/ Microsoft 365 E3 以下のプランには含まれませんので、�
 ## Power BI Premium Per User とは？
 ---
 
-Power BI Premium Per User（以下Premium Per User）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。
+Power BI Premium Per User（以下 Premium Per User ）は、月額制の有償ライセンスで、1ユーザーごとに1ライセンスが必要となります。
 
-Proライセンスより使用可能なデータモデルサイズ、ストレージ容量が大幅に向上する上に、ページ分割されたレポート、データフロー、高度なAI などPremium 機能が利用可能です。
+Pro ライセンスより使用可能なデータモデルサイズ、ストレージ容量が大幅に向上する上に、ページ分割されたレポート、データフロー、高度な AI など Premium 機能が利用可能です。
 
-共有につきまして、Premium Per User の容量に保存されたコンテンツは、Premium Per User ユーザーしかアクセスできません。
+共有につきまして、Premium Per User の容量に保存されたコンテンツは、 Premium Per User ユーザーしかアクセスできません。
 
 Premium Per User 容量が割り当てられたワークスペースには、ダイヤモンドと人のアイコンが表示されます。
 ![](./ppu.png)
@@ -90,7 +95,7 @@ Premium Per User 容量が割り当てられたワークスペースには、ダ
 
 Power BI Premium Per Capacity （以下Premium Per Capacity）とは、Pro か Premium Per User に追加可能な容量ベースのプランとなります。
 
-Free、Pro、Premium Per User はユーザーに紐づくライセンスですが、Premium Per Capacity はテナントの容量に紐づくライセンスとご理解いただければと思います。
+Free、Pro、Premium Per User はユーザーに紐づくライセンスですが、 Premium Per Capacity はテナントの容量に紐づくライセンスとご理解いただければと思います。
 
 Free と Pro では、Azure 上の共有リソースが割り当てられますが、Premium Per Capacity をご契約いただくことで組織専用の拡張リソースを確保し、大容量のリソースを柔軟に運用いただくことが可能となります。
 
@@ -116,7 +121,7 @@ Power BI Premium Per Capacity の詳細については以下公開情報をご�
 ---
 ## Power BI Embeddedとは？
 ---
-Power BI Embedded（以下Embedded）とは、アプリケーションの開発者向けにご用意した、利用時間ごとで従量課金される容量プランとなります。
+Power BI Embedded（以下 Embedded ）とは、アプリケーションの開発者向けにご用意した、利用時間ごとで従量課金される容量プランとなります。
 
 Embedded には、顧客向け埋め込みと組織向け埋め込みという2種類の埋め込みがあります。
 
@@ -157,34 +162,34 @@ Fabric は 端的に表現すると Power BI 、Azure Synapse Analytics 、Azure
 
 |   | **Free** | **Pro** | **Premium Per User** | **Premium	Per Capacity** | **Embedded** | **Fabric Capacity** |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| **価格**※8 | 無償（ユーザー数無制限） |	¥1,499/月額・ユーザー | ¥2,998/月額・ユーザー | 新規購入不可 ※9 | ¥154.7232～/ 時間・容量 | ¥38.335～/ 時間・容量 |
+| **価格体系** | 無償（ユーザー数無制限） |	ユーザー単位 ※6 | ユーザー単位 ※6 | 新規購入不可 ※7 | 時間・容量単位 ※6 | 時間・容量単位 ※6 |
 | **用途** | 個人利用 | 複数人共同作業 | 高度な機能利用、複数人共同作業 | 大規模組織専用 | アプリケーション開発者用 | オールインワンの分析ソリューション |
-| **レポート・データセット作成** | 〇 ※1 | 〇 |	〇 | × ※2 | × ※2 | × ※2 |
-| **レポート・データセット発行** | 〇 ※1 | 〇 | 〇 | × ※2 | × ※2 | × ※2 |
+| **レポート・セマンティックモデル作成** | 〇 ※1 | 〇 |	〇 | × ※2 | × ※2 | × ※2 |
+| **レポート・セマンティックモデル発行** | 〇 ※1 | 〇 | 〇 | × ※2 | × ※2 | × ※2 |
 | **コンテンツ共有と共同作業** | × | 〇 | 〇 | × ※2 | × ※2 | × ※2 |
 | **無償ユーザーのコンテンツ閲覧** | × | × | × | 〇 | × | 〇 ※SKU F64以上 |
-| **ストレージ上限** ※5 <br>① マイワークスペース<br>② 共有ワークスペース<br>③ Premiumワークスペース | ① 10GB/ ユーザー <br> ② × <br>  ③ × | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ ×  | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/テナント | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 |
-| **データセットサイズ制限** | 1GB | 1GB | 100GB ※4 | 25GB～400GB ※4 | 3GB～400GB ※4 | 3GB～400GB ※4 |
+| **ストレージ上限** ※5 <br>① マイワークスペース<br>② 共有ワークスペース<br>③ 専用ワークスペース | ① 10GB/ ユーザー <br> ② × <br>  ③ × | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ ×  | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/テナント | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 | ① 10GB/ ユーザー<br> ② 10GB/ ワークスペース <br>③ 100TB/ 容量 |
+| **セマンティックモデルサイズ制限** | 1GB | 1GB | 100GB ※4 | 25GB - 400GB ※4 | 3GB - 400GB ※4 | 3GB - 400GB ※4 |
 | **自動更新** | 8回/日 | 8回/日 | 48回/日 | 48回/日 | 48回/日 | 48回/日 |
 | **ページ分割レポート** | 〇 | 〇 | 〇 |	〇 | 〇 | 〇 |
-| **データフロー** | × | 〇 ※3 | 〇 | 〇 | 〇 | 〇 |
+| **データフロー(Gen1)** | × | 〇 ※3 | 〇 | 〇 | 〇 | 〇 |
+| **データフロー(Gen2)** | × | × | × | 〇 | × | 〇 |
 | **デプロイパイプライン** | × | × | 〇 | 〇 | 〇 | 〇 |
-| **高度なAI（言語処理、画像処理、自動化機械学習）** | × | × | 〇 | 〇 | 〇※6 | - ※7 |
+| **Git 統合** | × | × | 〇 ※8 | 〇 | 〇 ※8 | 〇 |
 | **XMLAエンドポイント利用** | × | × | 〇 | 〇 | 〇 | 〇 |
-| **自動スケーリングのアドオン** | × | × | × | 〇 （US$85 /仮想コア/24 時間単位） | × | × |
+| **Copilot in Fabric** | × | × | ×  | 〇 | ×  | 〇 |
+| **自動スケーリングのアドオン** | × | × | × | 〇 （仮想コア/24 時間単位） | × | × |
 | **Multi-Geo（複数地域・リージョン利用）** | × | × | × | 〇 | 〇 | 〇 |
-| **Microsoft Fabric のすべてのワークロードにアクセスする (Data Factory、Data Engineering、Data Warehouse、Data Science、Real-Time Analytics、Data Activator など)** | × | × | × | 〇 | × | 〇 |
+| **Fabric ワークロードへのアクセス (Data Factory、Data Engineering、Data Warehouse、Data Science、Real-Time Intelligence など)** | × | × | × | 〇 | × | 〇 |
 
 ※1：マイワークスペース内のみ
 ※2：別途ユーザーライセンスが必要
 ※3：[Premiumデータフロー機能](https://learn.microsoft.com/ja-jp/power-bi/transform-model/dataflows/dataflows-premium-features) は利用できない
 ※4：Power BI Desktopから発行する際の[アップロード時のサイズ上限が10GBまで](https://learn.microsoft.com/ja-jp/power-bi/admin/service-premium-large-models)。
 ※5：共有ワークスペースの総容量はライセンス数による上限がございます。詳細はこちらのブログ記事「[Power BI Pro のワークスペース容量について](../pbi_storage)」をご参照ください。
-※6：Embedded容量のA2以降でサポートされます。
-※7：Power BIの高度なAI機能より深度な[データサイエンスの機能](https://learn.microsoft.com/ja-jp/fabric/data-science/)なら利用可能。
-※8：価格は定期的に改訂されることがありますので、最新の価格は[Power BI の価格](https://www.microsoft.com/ja-jp/power-platform/products/power-bi/pricing)よりご確認ください。
-※9：2024 年 7 月以降、新規で Power BI Premium Per Capacity 容量を購入できなくなり、今後すべて Fabric Capacity に移行されます。詳細な移行スケジュールにつきましては、[Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/) のブログ記事をご確認ください。
-
+※6：価格は定期的に改訂されることがありますので、最新の価格は[Power BI の価格](https://www.microsoft.com/ja-jp/power-platform/products/power-bi/pricing)よりご確認ください。
+※7：2024 年 7 月以降、新規で Power BI Premium Per Capacity 容量を購入できなくなり、今後すべて Fabric Capacity に移行されます。詳細な移行スケジュールにつきましては、[Premium容量からFabric容量への移行](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_to_fabric/) のブログ記事をご確認ください。
+※8： [Power BI アイテムのみ](https://learn.microsoft.com/ja-jp/fabric/cicd/git-integration/git-get-started?tabs=azure-devops%2CAzure%2Ccommit-to-git#prerequisites) 利用できます。
 
 ---
 ## ライセンス組み合わせの Power BI コンテンツ閲覧可否
