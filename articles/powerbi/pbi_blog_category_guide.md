@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2025-12-1 00:00:00 
+date: 2026-1-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -47,6 +47,18 @@ tags:
 
 
 ## ブログ更新情報
+
+### 2025年12月の記事
+
+#### 新規記事
+[ワークスペース ID と信頼されたワークスペース アクセス | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/WorkspaceID/#%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9-ID)
+ワークスペース ID を利用した信頼されたワークスペース アクセスで ADLS Gen2 に接続する方法の紹介についてご紹介しております。
+ 
+#### 更新した記事
+
+[Power BI ライセンスの違い（Free・Pro・Premium Per User・Premium Per Capacity・Embedded・Fabric） | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_license/)
+ライセンスの価格が度々改正されることが多いため価格の記載をなくし、公開情報へ参照するように修正。
+機能比較表についても、現時点で利用可能な機能を加筆修正しております。
 
 ### 2025年11月の記事
 
@@ -224,6 +236,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_snowflake_sfa_sso/)
 [データフローの更新方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_refresh/)
 [共有可能なクラウド接続と個人用クラウド接続](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_shareable_cloud_connection/)
+[ワークスペース ID と信頼されたワークスペース アクセス | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/WorkspaceID/#%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9-ID)
 
 
 ## トラブルシューティング
