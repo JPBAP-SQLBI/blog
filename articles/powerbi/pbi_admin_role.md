@@ -58,7 +58,7 @@ Power BI / Microsoft Fabric の管理者ロールは、主に以下のロール�
 ---
 ## Fabric 管理者
 ---
-Fabric 管理者は、Power BI を含むMicrosoft Fabricテナント全体を管理するロールです。グローバル管理者および Power Platform 管理者も、Fabric 管理者と同等の操作が可能です。 
+Fabric 管理者は、Power BI を含む Microsoft Fabric テナント全体を管理するロールです。グローバル管理者および Power Platform 管理者も、Fabric 管理者と同等の操作が可能です。 
 Fabric 管理者は、組織全体のガバナンスやセキュリティ設定などを担うロールであり、多くのタスクを実行することが可能です。 
 
 主に以下のような重要な管理タスクを担当します。 
@@ -80,7 +80,7 @@ Fabric 管理者は、組織全体のガバナンスやセキュリティ設定�
 >[Power BI 実装計画: テナント管理 - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/guidance/powerbi-implementation-planning-tenant-administration#govern-tenant-settings) 
 >[テナント設定について - Microsoft Fabric | Microsoft Learn ](https://learn.microsoft.com/ja-jp/fabric/admin/about-tenant-settings)
 >[テナント設定のインデックス - Microsoft Fabric | Microsoft Learn ](https://learn.microsoft.com/ja-jp/fabric/admin/tenant-settings-index)
->[Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
+>[Power BI 利用時に考慮すべき主要なセキュリティ設定 | Japan CSS Support Power BI Blog](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
 
 
 ### ワークスペースの管理 
@@ -107,11 +107,16 @@ Fabric 管理者は、組織全体のガバナンスやセキュリティ設定�
 
 #### 個人用ワークスペースの管理 
 マイワークスペースに対して既定の容量を指定することや一時的なアクセス権を取得し、容量の統制や復元を行うことができます。 
-- 一時的なアクセス権の取得：他ユーザーのマイワークスペースへ24時間のアクセス権を取得しアクセス可能です
-- 対象ワークスペースの[詳細]からIDを取得し、以下URLにてアクセスです
+- 一時的なアクセス権の取得：
+  他ユーザーのマイワークスペースへ24時間のアクセス権を取得しアクセス可能です
+　対象ワークスペースの[詳細]からIDを取得し、以下URLにてアクセスです
   https://app.powerbi.com/groups/[ワークスペースID] 
-- 既定の容量の指定：特定の容量をマイ ワークスペースの既定の容量として指定できます 
-- 復元：削除された マイ ワークスペースをアプリ ワークスペースとして復元可能 
+
+- 既定の容量の指定：
+  特定の容量をマイ ワークスペースの既定の容量として指定できます 
+
+- 復元：
+  削除された マイ ワークスペースをアプリ ワークスペースとして復元可能 
 
  
 >[!NOTE]
@@ -135,7 +140,7 @@ Fabric 管理者は、Microsoft Purview コンプライアンス ポータルを
  
 ### 容量の構成と監視 
 
-ご利用中の容量については、処理速度の低下を防ぐために、上位の SKU へのアップグレードや、自動的にコンピューティング容量を追加する自動スケーリングの設定が可能です。 
+ご利用中の容量については、パフォーマンスの低下を防ぐために、上位の SKU へのアップグレードや、自動的にコンピューティング容量を追加する自動スケーリングの設定が可能です。 
 
 - Premium 容量：管理ポータルからサイズ変更や自動スケーリング設定が可能 
 - Fabric 容量：Azure Portal からサイズ変更が可能（自動スケーリングは非対応） 
@@ -192,7 +197,11 @@ Microsoft Fabric Capacity Metrics アプリのインストールには容量管�
 <figcaption>左：テナント設定　　右：容量設定内の委任されたテナント設定</figcaption>
 </div>
  
+</br>
 その他にも、容量管理者はサージ保護（容量の過負荷を防ぐための設定）、マイワークスペースの優先容量を設定する項目などがあります。詳細については、容量の設定 の項目を参照してください。 
+
+>[!NOTE]
+> 参考情報：[Fabric 容量を管理する - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/ja-jp/fabric/admin/capacity-settings?tabs=power-bi-premium#capacity-settings)
 
 
 ---
@@ -215,10 +224,10 @@ Microsoft Fabric と Power BI は同一のワークスペース上に共存し�
 データゲートウェイ管理者は、Power BI および Microsoft Fabric からオンプレミスや仮想ネットワーク内のデータソースへ安全に接続するための「データゲートウェイ」を管理するロールです。 
 対象となるゲートウェイには、以下の 2 種類が含まれます。 
 
-<b>オンプレミス データゲートウェイ</b></br>
+<b>オンプレミス データゲートウェイ</b>
 社内ネットワークやオンプレミス環境上のデータソースに接続するために使用され、サーバーや VM 上にインストールして運用します。 
 
-<b>VNet データゲートウェイ</b></br>
+<b>VNet データゲートウェイ</b>
 Azure の仮想ネットワーク内で管理され、Azure PaaS サービスや VNet 内リソースへの接続を主な用途とします。Microsoft 管理型サービスであり、ハードウェア管理は不要です。 
 
 
@@ -229,7 +238,8 @@ Azure の仮想ネットワーク内で管理され、Azure PaaS サービスや
 
 ゲートウェイ管理者のロールの詳細につきましては、以下のブログをご参照ください。 
 
-[オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/)
+>[!NOTE]
+> 参考情報：[オンプレミスデータゲートウェイのセキュリティーロール | Japan CSS Support Power BI Blog ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_role/)
 
  
 
