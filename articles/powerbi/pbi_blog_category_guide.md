@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2026-1-1 00:00:00 
+date: 2026-2-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -47,6 +47,16 @@ tags:
 
 
 ## ブログ更新情報
+
+### 2026年1月の記事
+
+#### 新規記事
+[Power BI の管理者ロールについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin_role/)
+Power BI / Microsoft Fabric における代表的な管理者ロールそれぞれの管理対象を整理してご紹介しております。
+
+#### 更新した記事
+
+今月の更新した記事はございません。
 
 ### 2025年12月の記事
 
@@ -325,6 +335,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります](https://jpbap-sqlbi.github.io/blog/powerbi/PowerBIDesktop-AVX/)
 [Power BI データマートの廃止と Fabric Data Warehouse への移行について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/)
 [Power BI Desktop 32 ビット バージョン のサポート終了についてのお知らせ](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_32bit_eol/)
+[Power BI の管理者ロールについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_admin_role/)
 
 
 </br>
