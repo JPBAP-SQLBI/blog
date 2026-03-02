@@ -1,5 +1,5 @@
 ---
-title: Power BI Copilot　のセキュリティと使用制限方法
+title: Power BI の Copilot 機能
 date: 2026-02-27 00:00:00 
 tags:
   - Power BI
