@@ -85,8 +85,8 @@ Power BI サービスでのセマンティック モデル更新がエラーと�
 > 本方法はインポート モードのセマンティック モデルに対して有効です。以下のモードでは本方法は適用できません。  
 > - **DirectQuery モード**：データをセマンティック モデルに取り込まず、レポート閲覧時にデータ ソースへ直接クエリを発行する仕組みのため、Power BI Desktop から再発行してもデータの最新化にはなりません。
 > - **Direct Lake モード**：Direct Lake の更新（フレーミング）は Delta テーブルの最新バージョンへのメタデータ更新であり、インポートのようにデータを取り込む動作とは異なります。
-
 </br>
+
 
 ### Power BI サービスから PBIX ファイルをダウンロードする
 
@@ -194,7 +194,8 @@ Power BI Desktop から接続できなかった場合、SQL Server Management St
 
 > [!NOTE]
 > コネクタの中には、Microsoft 以外のサードパーティによって提供されているものがあります。対象コネクタの公開情報に「このコネクタは 〇〇 によって所有および提供されています。」のような記載がある場合、弊社では本コネクタに関する具体的な仕様や制限についての詳細な情報を持ち合わせておらず、調査が難しい場合がございます。そのため、該当のコネクタをご利用の場合は、並行してコネクタの開発元へのお問い合わせもご検討ください。
-> 参考情報：[すべての Power Query コネクタのリスト - Power Query | Microsoft Learn](すべての Power Query コネクタのリスト - Power Query | Microsoft Learn)
+
+> 参考情報：[すべての Power Query コネクタのリスト - Power Query | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-query/connectors/)
 
 <div align="left">
 <img src="third_party_connector_notice.png">
