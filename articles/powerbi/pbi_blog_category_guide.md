@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2026-2-1 00:00:00 
+date: 2026-4-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -46,7 +46,27 @@ tags:
 </br>
 
 
+
 ## ブログ更新情報
+
+### 2026年3月の記事
+
+#### 新規記事
+[セマンティック モデルの更新エラーが発生した際に確認すべきこと](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/)
+
+#### 更新した記事
+今月の更新した記事はございません。
+
+### 2026年2月の記事
+
+#### 新規記事
+[Power BI の Copilot 機能](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_function/)
+[Power BI の新しいレポートフォーマット PBIR について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbir_format/)
+
+#### 更新した記事
+
+今月の更新した記事はございません。
+
 
 ### 2026年1月の記事
 
@@ -294,6 +314,9 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI モバイル アプリについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_mibile_app/)
 [閲覧者がセマンティックモデルを更新する方法について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_viewer_refresh/)
 [Copilotのセキュリティと使用制限方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_security/)
+[Power BI の Copilot 機能](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_copilot_function/)
+[Power BI の新しいレポートフォーマット PBIR について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_pbir_format/)
+
 
 ## Premium 機能
 [Power BI Premium Gen2 について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_premium_gen2_roadmap/)
@@ -320,6 +343,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [Power BI Report Server のサポートについて](https://jpbap-sqlbi.github.io/blog/powerbi/pbirs_support_boundary/)
 [「Power BI Windows アプリ」のサポート終了](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_windows_app_reach_retirement/)
 [TLS1.0/1.1のサポート終了](https://jpbap-sqlbi.github.io/blog/powerbi/tls/)
+[セマンティック モデルの更新エラーが発生した際に確認すべきこと](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/)
 
 ## その他
 [Power BI を学習するために役に立つコンテンツのご紹介](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_useful_learning_link/)
