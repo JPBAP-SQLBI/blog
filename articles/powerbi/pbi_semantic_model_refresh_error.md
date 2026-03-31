@@ -88,9 +88,9 @@ Power BI サービスでのセマンティック モデル更新がエラーと�
 > 本方法はインポート モードのセマンティック モデルに対して有効です。以下のモードでは本方法は適用できません。  
 > - **DirectQuery モード**：データをセマンティック モデルに取り込まず、レポート閲覧時にデータ ソースへ直接クエリを発行する仕組みのため、Power BI Desktop から再発行してもデータの最新化にはなりません。
 > - **Direct Lake モード**：Direct Lake の更新（フレーミング）は Delta テーブルの最新バージョンへのメタデータ更新であり、インポートのようにデータを取り込む動作とは異なります。
-&nbsp;
 
-
+</br>
+</br>
 
 ### Power BI サービスから PBIX ファイルをダウンロードする
 
@@ -101,7 +101,7 @@ Power BI Desktop のファイル（.pbix）がお手元にない場合は、Powe
 > [!NOTE]  
 > 参考情報：[Power BI サービスから Power BI Desktop にレポートをダウンロードする - Power BI | Microsoft Learn](https://learn.microsoft.com/ja-jp/power-bi/create-reports/service-export-to-pbix)
 
-</br>
+
 
 ### Power BI Desktop でデータを更新し発行する
 
