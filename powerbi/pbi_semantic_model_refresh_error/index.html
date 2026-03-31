@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/gateway_troubleshooting_flow.png">
 <meta property="og:image" content="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/third_party_connector_notice.png">
 <meta property="article:published_time" content="2026-03-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-31T01:36:31.519Z">
+<meta property="article:modified_time" content="2026-03-31T01:59:33.151Z">
 <meta property="article:author" content="Japan Power BI Team">
 <meta property="article:tag" content="Data refresh">
 <meta property="article:tag" content="On-premises data gateway">
@@ -121,7 +121,7 @@
         
         <a href="https://github.com/jpbap-sqlbi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+1426521f-b535-540d-ae77-f770b2243726%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF+%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%99%E3%81%B9%E3%81%8D%E3%81%93%E3%81%A8%5D%28https%3A%2F%2Fjpbap-sqlbi.github.io%2Fblog%2Fpowerbi%2Fpbi_semantic_model_refresh_error%2F%29%0A*+Content+Source%3A+%5Barticles%2Fpowerbi%2Fpbi_semantic_model_refresh_error.md%5D%28https%3A%2F%2Fgithub.com%2Fjpbap-sqlbi%2Fblog%2Fblob%2Fmain%2Farticles%2Fpowerbi%2Fpbi_semantic_model_refresh_error.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/" data-id="cuidZPKSB3QBHVRK4MUrpgrZZ" class="article-share-link">共有</a>
+        <a data-url="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/" data-id="cuidnv1a40_p-29UM_Iz-Cc5C" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -132,7 +132,9 @@
 <span id="more"></span>
 
 <div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div>
-<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><ul>
+<hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr>
+<ul>
 <li><a href="#%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF-%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%9B%B4%E6%96%B0%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AF">セマンティック モデルの更新エラーとは</a></li>
 <li><a href="#%E6%9A%AB%E5%AE%9A%E5%AF%BE%E5%87%A6%EF%BC%9APower-BI-Desktop-%E3%81%8B%E3%82%89%E3%81%AE%E7%99%BA%E8%A1%8C%E3%81%AB%E3%82%88%E3%82%8B%E5%9B%9E%E9%81%BF">暫定対処：Power BI Desktop からの発行による回避</a></li>
 <li><a href="#%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9-%E3%83%87%E3%83%BC%E3%82%BF-%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%A9%E7%94%A8%E6%99%82%E3%81%AE%E5%88%87%E3%82%8A%E5%88%86%E3%81%91">オンプレミス データ ゲートウェイ利用時の切り分け</a></li>
@@ -140,7 +142,9 @@
 <li><a href="#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E5%AF%BE%E5%BF%9C%E6%96%B9%E6%B3%95">よくあるエラーと対応方法</a></li>
 <li><a href="#%E3%81%8A%E3%82%8F%E3%82%8A%E3%81%AB">おわりに</a></li>
 </ul>
-<h2 id="セマンティック-モデルの更新エラーとは"><a href="#セマンティック-モデルの更新エラーとは" class="headerlink" title="セマンティック モデルの更新エラーとは"></a>セマンティック モデルの更新エラーとは</h2><p>Power BI サービスでは、セマンティック モデルに対して、スケジュールされた更新や手動更新（「今すぐ更新」）を実行することで、データ ソースから最新のデータをセマンティック モデルに取り込むことができます。</p>
+<hr>
+<h2 id="セマンティック-モデルの更新エラーとは"><a href="#セマンティック-モデルの更新エラーとは" class="headerlink" title="セマンティック モデルの更新エラーとは"></a>セマンティック モデルの更新エラーとは</h2><hr>
+<p>Power BI サービスでは、セマンティック モデルに対して、スケジュールされた更新や手動更新（「今すぐ更新」）を実行することで、データ ソースから最新のデータをセマンティック モデルに取り込むことができます。</p>
 <p>この更新処理が何らかの理由で失敗した場合、セマンティック モデルには前回の更新成功時のデータが保持されたままとなり、レポートやダッシュボードに最新のデータが反映されません。</p>
 <p>更新エラーの原因はさまざまですが、代表的なものとして以下が挙げられます。</p>
 <ul>
@@ -168,15 +172,15 @@
 </br>
 
 <h3 id="更新履歴を確認する際のポイント"><a href="#更新履歴を確認する際のポイント" class="headerlink" title="更新履歴を確認する際のポイント"></a>更新履歴を確認する際のポイント</h3><p>更新履歴の詳細に表示されるエラーメッセージには、エラーの原因や対処方法に関するヒントが含まれている場合があります。例えば、メモリ制限に達したことを示すエラーメッセージが表示される場合や、共有容量（Pro ライセンス）のワークスペースで毎回約 2 時間で更新が失敗する場合はライセンス モードに制限事項に起因するタイムアウトの可能性があるなど、メッセージの内容や更新時間から原因の手がかりが得られる場合があります。まずは、エラーメッセージと更新履歴の期間をご確認ください。</p>
-<h2 id="暫定対処：Power-BI-Desktop-からの発行による回避"><a href="#暫定対処：Power-BI-Desktop-からの発行による回避" class="headerlink" title="暫定対処：Power BI Desktop からの発行による回避"></a>暫定対処：Power BI Desktop からの発行による回避</h2><p>Power BI サービスでのセマンティック モデル更新がエラーとなる場合でも、Power BI Desktop からデータの更新が可能であれば、更新後に Power BI サービスへ発行することで、手動ではあるものの最新のデータを Power BI サービス上で閲覧できるようになります。<br>そのため、急ぎデータを最新化する必要がある場合には、本方法によるデータの最新化をご検討ください。</p>
+<hr>
+<h2 id="暫定対処：Power-BI-Desktop-からの発行による回避"><a href="#暫定対処：Power-BI-Desktop-からの発行による回避" class="headerlink" title="暫定対処：Power BI Desktop からの発行による回避"></a>暫定対処：Power BI Desktop からの発行による回避</h2><hr>
+<p>Power BI サービスでのセマンティック モデル更新がエラーとなる場合でも、Power BI Desktop からデータの更新が可能であれば、更新後に Power BI サービスへ発行することで、手動ではあるものの最新のデータを Power BI サービス上で閲覧できるようになります。<br>そのため、急ぎデータを最新化する必要がある場合には、本方法によるデータの最新化をご検討ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>本方法はインポート モードのセマンティック モデルに対して有効です。以下のモードでは本方法は適用できません。  </p>
 <ul>
 <li><strong>DirectQuery モード</strong>：データをセマンティック モデルに取り込まず、レポート閲覧時にデータ ソースへ直接クエリを発行する仕組みのため、Power BI Desktop から再発行してもデータの最新化にはなりません。</li>
-<li><strong>Direct Lake モード</strong>：Direct Lake の更新（フレーミング）は Delta テーブルの最新バージョンへのメタデータ更新であり、インポートのようにデータを取り込む動作とは異なります。</li>
+<li><strong>Direct Lake モード</strong>：Direct Lake の更新（フレーミング）は Delta テーブルの最新バージョンへのメタデータ更新であり、インポートのようにデータを取り込む動作とは異なります。</p><p>&nbsp;</li>
 </ul>
 </blockquote>
-<br/>
-
 <h3 id="Power-BI-サービスから-PBIX-ファイルをダウンロードする"><a href="#Power-BI-サービスから-PBIX-ファイルをダウンロードする" class="headerlink" title="Power BI サービスから PBIX ファイルをダウンロードする"></a>Power BI サービスから PBIX ファイルをダウンロードする</h3><p>Power BI Desktop のファイル（.pbix）がお手元にない場合は、Power BI サービスからダウンロードすることができます。</p>
 <p>なお、増分更新が構成されたセマンティック モデルなど、一部のケースでは PBIX ファイルのダウンロードができない場合があります。ダウンロードの詳細な手順や制限事項については、以下の公開情報をご参照ください。</p>
 <blockquote>
@@ -190,7 +194,9 @@
 <li>[ホーム] リボン &gt; [発行] を選択し、元のワークスペースに発行します。</li>
 </ol>
 <p>これにより、Power BI サービス上のセマンティック モデルが最新のデータで更新されます。</p>
-<h2 id="オンプレミス-データ-ゲートウェイ利用時の切り分け"><a href="#オンプレミス-データ-ゲートウェイ利用時の切り分け" class="headerlink" title="オンプレミス データ ゲートウェイ利用時の切り分け"></a>オンプレミス データ ゲートウェイ利用時の切り分け</h2><p>オンプレミス データ ゲートウェイを使用してオンプレミスのデータ ソースに接続している場合、更新エラーの原因がゲートウェイ、Power BI サービス、ゲートウェイのネットワーク環境、データ ソースのいずれにあるのかを切り分けることが重要です。</p>
+<hr>
+<h2 id="オンプレミス-データ-ゲートウェイ利用時の切り分け"><a href="#オンプレミス-データ-ゲートウェイ利用時の切り分け" class="headerlink" title="オンプレミス データ ゲートウェイ利用時の切り分け"></a>オンプレミス データ ゲートウェイ利用時の切り分け</h2><hr>
+<p>オンプレミス データ ゲートウェイを使用してオンプレミスのデータ ソースに接続している場合、更新エラーの原因がゲートウェイ、Power BI サービス、ゲートウェイのネットワーク環境、データ ソースのいずれにあるのかを切り分けることが重要です。</p>
 <p>切り分けの際にポイントとなるのが、<strong>ゲートウェイが動作しているサーバー内の Power BI Desktop</strong> からデータ ソースへの接続を確認することです。</p>
 </br>
 
@@ -229,7 +235,9 @@
 </li>
 </ul>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-data#connecting-to-on-premises-data-sources">Power BI でのデータの更新 - オンプレミス データソースへの接続 | Microsoft Learn</a></p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/service-gateway-onprem-tshoot">オンプレミス データ ゲートウェイのトラブルシューティング - Power BI | Microsoft Learn</a></p></div>
-<h2 id="お問い合わせ時にご提供いただきたい情報"><a href="#お問い合わせ時にご提供いただきたい情報" class="headerlink" title="お問い合わせ時にご提供いただきたい情報"></a>お問い合わせ時にご提供いただきたい情報</h2><p>セマンティック モデルの更新エラーについてサポートにお問い合わせいただく際は、以下の情報をご提供いただけますと、よりスムーズな調査が可能となります。</p>
+<hr>
+<h2 id="お問い合わせ時にご提供いただきたい情報"><a href="#お問い合わせ時にご提供いただきたい情報" class="headerlink" title="お問い合わせ時にご提供いただきたい情報"></a>お問い合わせ時にご提供いただきたい情報</h2><hr>
+<p>セマンティック モデルの更新エラーについてサポートにお問い合わせいただく際は、以下の情報をご提供いただけますと、よりスムーズな調査が可能となります。</p>
 <div class="alert is-important"><p class="alert-title">重要</p><p>以下は一般的に必要となる情報です。すべての項目を起票時にご用意いただく必要はございませんが、ご提供いただける情報が多いほどスムーズな調査が可能となります。</p><p>また、お問い合わせの内容によっては、追加で情報をお願いする場合がございますので、あらかじめご了承ください。</p></div>
 </br>
 
@@ -317,7 +325,9 @@
 <img src="third_party_connector_notice.png">
 </div>
 
-<h2 id="よくあるエラーと対応方法"><a href="#よくあるエラーと対応方法" class="headerlink" title="よくあるエラーと対応方法"></a>よくあるエラーと対応方法</h2><p>以下では、エラーメッセージや更新履歴の情報から原因を特定しやすい代表的なパターンと対応方法をご紹介します。</p>
+<hr>
+<h2 id="よくあるエラーと対応方法"><a href="#よくあるエラーと対応方法" class="headerlink" title="よくあるエラーと対応方法"></a>よくあるエラーと対応方法</h2><hr>
+<p>以下では、エラーメッセージや更新履歴の情報から原因を特定しやすい代表的なパターンと対応方法をご紹介します。</p>
 </br>
 
 <h3 id="毎回約-2-時間（または約-5-時間）で更新が失敗する"><a href="#毎回約-2-時間（または約-5-時間）で更新が失敗する" class="headerlink" title="毎回約 2 時間（または約 5 時間）で更新が失敗する"></a>毎回約 2 時間（または約 5 時間）で更新が失敗する</h3><p>更新履歴で毎回同程度の時間で失敗している場合、タイムアウトに該当している可能性があります。スケジュールされた更新には以下の時間制限があります。</p>
@@ -361,7 +371,9 @@
 
 <h3 id="その他の参考情報"><a href="#その他の参考情報" class="headerlink" title="その他の参考情報"></a>その他の参考情報</h3><p>上記以外のエラーパターンについては、以下の公開情報やブログ記事もあわせてご参照ください。</p>
 <div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/connect-data/refresh-troubleshooting-refresh-scenarios">更新のシナリオに関するトラブルシューティング - Power BI | Microsoft Learn</a></p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_refresh_settings/">Power BI サービスのデータセット更新手順について</a></p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_gateway_troubleshooting2/">オンプレミス データ ゲートウェイのトラブルシューティング：運用時に発生するエラー</a></p></div>
-<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>本ブログでは、Power BI サービスでセマンティック モデルの更新エラーが発生した際に確認いただきたいポイントについてご紹介しました。<br>エラー発生時はまず更新履歴からエラーの詳細を確認し、インポートモードの場合は暫定対処として Power BI Desktop からの発行を検討いただくことができます。<br>また、オンプレミス データ ゲートウェイをご利用の場合は、ゲートウェイ サーバー内からの接続確認による切り分け等が効果的です。</p>
+<hr>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><hr>
+<p>本ブログでは、Power BI サービスでセマンティック モデルの更新エラーが発生した際に確認いただきたいポイントについてご紹介しました。<br>エラー発生時はまず更新履歴からエラーの詳細を確認し、インポートモードの場合は暫定対処として Power BI Desktop からの発行を検討いただくことができます。<br>また、オンプレミス データ ゲートウェイをご利用の場合は、ゲートウェイ サーバー内からの接続確認による切り分け等が効果的です。</p>
 <p>弊社サポートへお問い合わせいただく際は、本ブログに記載の情報をあらかじめご用意いただくことで、より迅速な調査・回答が可能となりますため、ぜひご協力をお願いいたします。</p>
 <p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p>
 <hr>
