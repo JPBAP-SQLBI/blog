@@ -1,6 +1,6 @@
 ---
 title: Power BI ブログ更新情報
-date: 2026-4-1 00:00:00 
+date: 2026-5-1 00:00:00 
 tags:
   - Power BI
 ---
@@ -48,6 +48,15 @@ tags:
 
 
 ## ブログ更新情報
+
+### 2026年4月の記事
+
+#### 新規記事
+[監査ログを活用した Power BI 有償ライセンスの利用状況確認方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_proppu_license_audit/)
+
+#### 更新した記事
+今月の更新した記事はございません。
+
 
 ### 2026年3月の記事
 
@@ -249,6 +258,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [監査ログのAuditDataカラムからデータを抽出する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/)
 [ホーム テナント リージョンの変更についてのご案内](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/)
 [Power BI 利用時に考慮すべき主要なセキュリティ設定](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_security_settings/)
+[監査ログを活用した Power BI 有償ライセンスの利用状況確認方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_proppu_license_audit/)
 
 ## REST API
 [Power BI Service でサービス プリンシパルを利用する](https://jpbap-sqlbi.github.io/blog/powerbi/ServicePrincipal/)
