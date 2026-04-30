@@ -10,7 +10,36 @@
   <rights>All rights reserved 2026, Japan Power BI Team</rights>
   <subtitle>日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</subtitle>
   <title>Japan CSS Support Power BI Blog</title>
-  <updated>2026-03-31T13:33:26.263Z</updated>
+  <updated>2026-04-30T02:42:32.108Z</updated>
+  <entry>
+    <author>
+      <name>Japan Power BI Team</name>
+    </author>
+    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
+    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
+    <category term="Admin" scheme="https://jpbap-sqlbi.github.io/blog/tags/Admin/"/>
+    <category term="管理者" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E7%AE%A1%E7%90%86%E8%80%85/"/>
+    <category term="監査ログ" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0/"/>
+    <category term="Audit Log" scheme="https://jpbap-sqlbi.github.io/blog/tags/Audit-Log/"/>
+    <category term="ライセンス" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/"/>
+    <category term="Power BI Pro" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Pro/"/>
+    <category term="PPU" scheme="https://jpbap-sqlbi.github.io/blog/tags/PPU/"/>
+    <category term="License" scheme="https://jpbap-sqlbi.github.io/blog/tags/License/"/>
+    <category term="棚卸" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E6%A3%9A%E5%8D%B8/"/>
+    <category term="Premium Per User" scheme="https://jpbap-sqlbi.github.io/blog/tags/Premium-Per-User/"/>
+    <content>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。</p><p>Power BI の有償ライセンス（Pro &#x2F; Premium Per User）の棚卸のため、「ライセンスを割り当てたユーザーが、実際に有償ライセンス固有の機能を利用しているかどうかを確認したい」というお問い合わせを多くいただきます。Microsoft 365 管理センターではライセンスの割り当て状況は確認できますが、割り当て済みのユーザーが本当にそのライセンスを必要とする操作を行っているかまでは判断できません。</p><p>本ブログでは、監査ログを活用して有償ライセンスが必要な操作を行っているユーザーを特定する方法をご紹介いたします。未使用ライセンスの把握やコスト最適化にお役立てください。</p><div class="alert is-info"><p class="alert-title">Note</p><p>本記事では Power BI Pro および Premium Per User (PPU) をまとめて「有償ライセンス」と表記します。監査ログの確認方法はどちらのライセンスでも同じ手順で実施いただけます。</p></div><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><hr><h2 id="有償ライセンスが必要な操作とは"><a href="#有償ライセンスが必要な操作とは" class="headerlink" title="有償ライセンスが必要な操作とは"></a><font color="DodgerBlue">有償ライセンスが必要な操作とは</font></h2><p>まず、有償ライセンス（Pro &#x2F; PPU）が必要となる操作と、不要な操作を整理いたします。</p><h3 id="有償ライセンスが不要な操作"><a href="#有償ライセンスが不要な操作" class="headerlink" title="有償ライセンスが不要な操作"></a><font color="HotPink">有償ライセンスが不要な操作</font></h3><ul><li><strong>Power BI Desktop の利用</strong>: Power BI Desktop はライセンスの有無にかかわらずインストール・利用が可能です。Desktop の起動ログのみでは有償ライセンスの利用実績を判別することはできません。</li><li><strong>マイ ワークスペースでの操作</strong>: 各ユーザーに割り当てられるマイ ワークスペースでの操作（レポートの作成・データの更新など）は、Fabric (Free) ライセンスでも実行可能です。</li></ul><h3 id="有償ライセンスが必要な代表的な操作"><a href="#有償ライセンスが必要な代表的な操作" class="headerlink" title="有償ライセンスが必要な代表的な操作"></a><font color="HotPink">有償ライセンスが必要な代表的な操作</font></h3><ul><li><strong>共有ワークスペースへのレポート発行</strong>: 他のユーザーと共同利用する共有ワークスペースにレポートを発行するには、Pro または PPU ライセンスが必要です。</li><li><strong>共有ワークスペース内のセマンティック モデルの更新</strong>: 共有ワークスペースにあるセマンティック モデル（データセット）の更新操作も同様です。</li><li><strong>コンテンツの共有</strong>: レポートやダッシュボードを他のユーザーに共有する操作には有償ライセンスが必要です。</li><li><strong>アプリの発行</strong>: 組織内にアプリとしてコンテンツを配布する操作にも有償ライセンスが必要です。</li><li><strong>Pro 容量ワークスペースのコンテンツ閲覧</strong>: Premium 容量や Fabric 容量に割り当てられていない共有ワークスペース（Pro 容量）では、レポートの閲覧だけでも Pro または PPU ライセンスが必要です。</li></ul><div class="alert is-info"><p class="alert-title">Note</p><p>Premium 容量（P SKU）や Fabric 容量（F64 以上）に割り当てられたワークスペースでは、閲覧者は Fabric (Free) ライセンスでもコンテンツを参照可能です。ただし、コンテンツの作成・発行・共有を行うユーザーには引き続き有償ライセンスが必要です。<strong>一方、これらの容量に割り当てられていない共有ワークスペース（Pro 容量）では、閲覧のみのユーザーにも有償ライセンスが必要です。</strong></p></div><p>このように、<strong>有償ライセンスが実際に必要かどうかは「共有ワークスペース上で特定の操作を行っているかどうか」が判断基準</strong>となります。ただし、Pro 容量のワークスペースでは閲覧も有償ライセンスが必要な操作に含まれる点にご注意ください。</p><hr><h2 id="監査ログの概要"><a href="#監査ログの概要" class="headerlink" title="監査ログの概要"></a><font color="DodgerBlue">監査ログの概要</font></h2><p>Power BI の操作は <strong>監査ログ</strong> として記録されます。監査ログを確認することで、どのユーザーがいつどのような操作を行ったかを把握できます。</p><h3 id="監査ログの確認方法"><a href="#監査ログの確認方法" class="headerlink" title="監査ログの確認方法"></a><font color="HotPink">監査ログの確認方法</font></h3><p>監査ログは以下の方法で取得できます。</p><ol><li><strong>Microsoft Purview ポータル</strong>: Web UI から対話形式で検索・取得できます。</li><li><strong>PowerShell（Get-PowerBIActivityEvent コマンドレット）</strong>: コマンドラインからアクティビティ ログを取得できます。</li></ol><p>本記事では、Microsoft Purview ポータルでの検索手順を中心にご説明し、PowerShell による取得方法についても概要をご紹介いたします。</p><div class="alert is-info"><p class="alert-title">Note</p><p>監査ログの検索には、Fabric 管理者ロールまたは監査ログの閲覧権限が必要です。また、監査ログは最大 180 日間（E5 ライセンスの場合は 1 年間）保持されます。</p></div><hr><h2 id="監査ログで有償ライセンスの利用実績を確認する方法"><a href="#監査ログで有償ライセンスの利用実績を確認する方法" class="headerlink" title="監査ログで有償ライセンスの利用実績を確認する方法"></a><font color="DodgerBlue">監査ログで有償ライセンスの利用実績を確認する方法</font></h2><p>有償ライセンスの利用実績を確認するためには、「共有ワークスペースでの操作」を示す監査ログを検索します。以下に、代表的な監査ログのアクティビティを紹介いたします。</p><h3 id="確認すべき主要なアクティビティ"><a href="#確認すべき主要なアクティビティ" class="headerlink" title="確認すべき主要なアクティビティ"></a><font color="HotPink">確認すべき主要なアクティビティ</font></h3><table><thead><tr><th>アクティビティ（フレンドリ名）</th><th>操作名</th><th>概要</th></tr></thead><tbody><tr><td>Power BI レポートの作成</td><td>CreateReport</td><td>ワークスペースへのレポート発行</td></tr><tr><td>要求された Power BI セマンティック モデルの更新</td><td>RefreshDataset</td><td>セマンティック モデルの手動更新</td></tr><tr><td>共有 Power BI レポート</td><td>ShareReport</td><td>レポートの共有</td></tr><tr><td>Power BI アプリの作成</td><td>CreateApp</td><td>アプリの発行</td></tr><tr><td>Power BI レポートの表示</td><td>ViewReport</td><td>レポートの閲覧（※下記注記参照）</td></tr></tbody></table><div class="alert is-info"><p class="alert-title">Note</p><p><code>ViewReport</code>（レポートの閲覧）は、Pro 容量ワークスペースで閲覧のみを行っているユーザーの利用実績を把握するために有効です。Premium 容量や Fabric 容量（F64 以上）のワークスペースでは閲覧に有償ライセンスが不要なため、お客様の環境に応じて監査対象に含めるかどうかをご判断ください。なお、<code>ViewReport</code> は記録件数が多くなる傾向がありますので、集計時にはユーザー単位での重複排除をご検討ください。</p></div><h3 id="手順-Microsoft-Purview-ポータルでの検索"><a href="#手順-Microsoft-Purview-ポータルでの検索" class="headerlink" title="手順: Microsoft Purview ポータルでの検索"></a><font color="HotPink">手順: Microsoft Purview ポータルでの検索</font></h3><ol><li><p><a href="https://purview.microsoft.com/">Microsoft Purview ポータル</a> にアクセスし、管理者アカウントでサインインします。</p></li><li><p><strong>[監査ソリューション]</strong> カードを選択します。</p></li><li><p>検索条件を以下のように設定します。</p><ul><li><strong>日付範囲</strong>: 棚卸対象の期間</li><li><strong>アクティビティ</strong>: 前述の主要なアクティビティ表を参考に、確認したいアクティビティを選択（例: 「Power BI レポートの作成」（CreateReport）など）</li></ul></li></ol><p>  <img src="1.png" alt="監査ログの検索条件設定画面"></p><ol start="4"><li><p><strong>[検索]</strong> をクリックすると、該当する操作の一覧が出力されます。</p></li><li><p>検索結果を CSV でエクスポートし、ログに記録されているユーザーを確認します。</p></li></ol><h3 id="マイ-ワークスペースの操作を除外する"><a href="#マイ-ワークスペースの操作を除外する" class="headerlink" title="マイ ワークスペースの操作を除外する"></a><font color="HotPink">マイ ワークスペースの操作を除外する</font></h3><p>監査ログには、マイ ワークスペースでの操作も含まれます。有償ライセンスが不要なマイ ワークスペースの操作を除外するには、エクスポートした CSV の <strong>AuditData</strong> カラムに含まれる <strong>WorkSpaceName</strong> の値を確認してください。</p><ul><li><code>WorkSpaceName</code> が <code>PersonalWorkspace-xxxx</code> の形式 → <strong>マイ ワークスペース</strong>での操作（除外対象）</li><li>それ以外 → <strong>共有ワークスペース</strong>での操作（有償ライセンスが必要な操作）</li></ul><p>AuditData カラムは JSON 形式の文字列となっているため、データの抽出にはひと手間必要です。弊社ブログにて AuditData カラムからの詳細情報の抽出方法をご紹介しておりますので、あわせてご参照ください。</p><blockquote><p>参考: <a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/">監査ログのAuditDataカラムからデータを抽出する方法 | Japan CSS Support Power BI Blog</a></p></blockquote><h3 id="PowerShell-を使って取得する方法"><a href="#PowerShell-を使って取得する方法" class="headerlink" title="PowerShell を使って取得する方法"></a><font color="HotPink">PowerShell を使って取得する方法</font></h3><p>PowerShell の <code>Get-PowerBIActivityEvent</code> コマンドレットでも同等のアクティビティを取得可能です。このコマンドレットで取得できるデータは Microsoft Purview の統合監査ログに由来する同一のものですが、Power BI REST API を経由してアクセスするため、取得可能な期間は<strong>最大 4 週間</strong>となります。棚卸の対象期間がこれを超える場合は、前述の Microsoft Purview の監査ログをご利用ください。</p><p>具体的な利用手順やスクリプト例については、以下の弊社ブログおよび公式ドキュメントをご参照ください。</p><blockquote><p>参考:</p><ul><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_activity_log_usage_metrics/">Power BI のユーザーアクティビティ追跡方法の比較 | Japan CSS Support Power BI Blog</a></li><li><a href="https://learn.microsoft.com/ja-jp/powershell/module/microsoftpowerbimgmt.admin/get-powerbiactivityevent">Get-PowerBIActivityEvent | Microsoft Learn</a></li><li><a href="https://learn.microsoft.com/ja-jp/power-bi/guidance/admin-activity-log">Access the Power BI activity log | Microsoft Learn</a></li></ul></blockquote><hr><h2 id="有償ライセンス棚卸の全体フロー（参考例）"><a href="#有償ライセンス棚卸の全体フロー（参考例）" class="headerlink" title="有償ライセンス棚卸の全体フロー（参考例）"></a><font color="DodgerBlue">有償ライセンス棚卸の全体フロー（参考例）</font></h2><p>以下は、有償ライセンスの棚卸を行う際の運用フローの一例としてご紹介いたします。お客様の環境やポリシーに合わせて適宜ご調整ください。</p><h3 id="Step-1-ライセンスの割り当て状況を確認する"><a href="#Step-1-ライセンスの割り当て状況を確認する" class="headerlink" title="Step 1: ライセンスの割り当て状況を確認する"></a><font color="HotPink">Step 1: ライセンスの割り当て状況を確認する</font></h3><p>Microsoft 365 管理センターの <strong>[課金] &gt; [ライセンス]</strong> から、Power BI Pro および Premium Per User ライセンスが割り当てられているユーザーの一覧を取得します。</p><blockquote><p>参考: <a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/">ライセンスとワークスペースの運用・棚卸方法 | Japan CSS Support Power BI Blog</a></p></blockquote><h3 id="Step-2-監査ログで利用実績を確認する"><a href="#Step-2-監査ログで利用実績を確認する" class="headerlink" title="Step 2: 監査ログで利用実績を確認する"></a><font color="HotPink">Step 2: 監査ログで利用実績を確認する</font></h3><p>前述の方法で、お客様の環境に応じたアクティビティの監査ログを取得し、マイ ワークスペースの操作を除外します。</p><h3 id="Step-3-突合せを行う"><a href="#Step-3-突合せを行う" class="headerlink" title="Step 3: 突合せを行う"></a><font color="HotPink">Step 3: 突合せを行う</font></h3><p>Step 1 のライセンス割り当て一覧と Step 2 の利用実績を突合せし、以下のカテゴリに分類します。</p><table><thead><tr><th>カテゴリ</th><th>説明</th><th>対応</th></tr></thead><tbody><tr><td><strong>利用あり</strong></td><td>共有ワークスペースで操作を行っている</td><td>ライセンス継続</td></tr><tr><td><strong>利用なし</strong></td><td>監査ログに該当操作が存在しない</td><td>ライセンスの剥奪を検討（※下記注記参照）</td></tr><tr><td><strong>マイ ワークスペースのみ</strong></td><td>マイ ワークスペースでのみ操作を行っている</td><td>Fabric (Free) への切り替えを検討</td></tr></tbody></table><div class="alert is-warning"><p class="alert-title">警告</p><p>監査ログの保持期間は限られているため（既定では最大 180 日）、保持期間外の操作は確認できません。棚卸の対象期間と監査ログの保持期間にご留意ください。</p></div><div class="alert is-important"><p class="alert-title">重要</p><p>「利用なし」に分類されたユーザーの中には、Pro 容量ワークスペースでレポートの閲覧のみを行っているユーザーが含まれている可能性があります。<code>ViewReport</code> アクティビティも監査対象に含めていない場合は、ライセンスを剥奪する前に対象ユーザーへ利用状況を確認されることをお勧めいたします。</p></div><hr><h2 id="参考情報"><a href="#参考情報" class="headerlink" title="参考情報"></a><font color="DodgerBlue">参考情報</font></h2><ul><li><a href="https://learn.microsoft.com/ja-jp/fabric/admin/operation-list">操作一覧 - Microsoft Fabric | Microsoft Learn</a></li><li><a href="https://learn.microsoft.com/ja-jp/fabric/enterprise/powerbi/service-admin-auditing">Track user activities in Power BI | Microsoft Learn</a></li><li><a href="https://learn.microsoft.com/ja-jp/power-bi/enterprise/service-admin-licensing-organization">組織向けの Power BI ライセンス ガイド | Microsoft Learn</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_tanaoroshi/">ライセンスとワークスペースの運用・棚卸方法 | Japan CSS Support Power BI Blog</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_Extracting_Data%20from_AuditLogs/">監査ログのAuditDataカラムからデータを抽出する方法 | Japan CSS Support Power BI Blog</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_track_activity_log/">ユーザーの操作におけるPower BIのアクティビティログ | Japan CSS Support Power BI Blog</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_activity_log_usage_metrics/">Power BI のユーザーアクティビティ追跡方法の比較 | Japan CSS Support Power BI Blog</a></li></ul><p>以上、本ブログが少しでも皆様のお役に立てれば幸いです。</p><hr><h2 id="アンケートご協力のお願い"><a href="#アンケートご協力のお願い" class="headerlink" title="アンケートご協力のお願い"></a><font color="DodgerBlue">アンケートご協力のお願い</font></h2><p>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。</p><p>※ 所要時間は 1 分程度となります。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</a></p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]>
+    </content>
+    <id>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_proppu_license_audit/</id>
+    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_proppu_license_audit/"/>
+    <published>2026-04-29T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。</p>
+<p>Power BI の有償ライセンス（Pro &#x2F; Premium Per User）の棚卸のため、「ライセンスを割り当てたユーザーが、実際に有償ライセンス固有の機能を利用しているかどうかを確認]]>
+    </summary>
+    <title>監査ログを活用した Power BI 有償ライセンスの利用状況確認方法</title>
+    <updated>2026-04-30T02:42:32.108Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Japan Power BI Team</name>
@@ -29,7 +58,7 @@
 <p>今後も新しい記事が作成され次第、随時ブログを更新してまいりますので、皆様のお役に立てるよう努めます。引き続きご支援のほど、よろしくお願いいたします。</p>]]>
     </summary>
     <title>Power BI ブログ更新情報</title>
-    <updated>2026-03-31T13:33:26.263Z</updated>
+    <updated>2026-04-30T02:42:31.489Z</updated>
   </entry>
   <entry>
     <author>
@@ -58,7 +87,7 @@
 <p>本ブログでは、セマンティック モデルの更新エラーが発生した際にまず確認いただきたいこと、暫定的な対処方法、ゲートウェイ利用時の切り分け手順、およびサポートへお問い合わせいただく際にご提供いただきたい情報についてご紹介いたします。</p>]]>
     </summary>
     <title>セマンティック モデルの更新エラーが発生した際に確認すべきこと</title>
-    <updated>2026-03-31T13:33:26.890Z</updated>
+    <updated>2026-04-30T02:42:32.134Z</updated>
   </entry>
   <entry>
     <author>
@@ -81,7 +110,7 @@
  </br>]]>
     </summary>
     <title>Power BI の新しいレポートフォーマット PBIR について</title>
-    <updated>2026-03-31T13:33:26.671Z</updated>
+    <updated>2026-04-30T02:42:31.905Z</updated>
   </entry>
   <entry>
     <author>
@@ -105,7 +134,7 @@
 <p>本記事では、 Power BI における 各Copilot 機能の種類や位置づけを整理し、利用にあたって必要となるライセンスや前提条件についてまとめました。<br>Power BIでCopilotの導入を検討している方や、どの機能が自社環境で利用可能なのかを整理したい方の参考になれば幸いです。</p>]]>
     </summary>
     <title>Power BI の Copilot 機能</title>
-    <updated>2026-03-31T13:33:26.345Z</updated>
+    <updated>2026-04-30T02:42:31.572Z</updated>
   </entry>
   <entry>
     <author>
@@ -126,7 +155,7 @@
 <p>本ブログでは、こうした背景を踏まえ、Power BI &#x2F; Microsoft Fabric における代表的な管理者ロールそれぞれの管理対象を整理してご紹介いたします。 </p>]]>
     </summary>
     <title>Power BI の管理者ロールについて</title>
-    <updated>2026-03-31T13:33:26.254Z</updated>
+    <updated>2026-04-30T02:42:31.479Z</updated>
   </entry>
   <entry>
     <author>
@@ -148,7 +177,7 @@
 <p>Microsoft Fabric で新しく利用できるようになった認証方式として、ワークスペース ID があります。ワークスペース ID は、Microsoft Fabric 内のワークスペースに関連付けられたサービス プリンシパルで、信頼されたワークスペース アクセスを通じてファイアウォールが有効な Azure Data Lake Storage Gen2 (以降 ADLS Gen2) アカウントへの接続が可能です。今回は、ワークスペース ID を利用した信頼されたワークスペース アクセスで ADLS Gen2 に接続する方法をご紹介します。</p>]]>
     </summary>
     <title>ワークスペース ID と信頼されたワークスペース アクセス</title>
-    <updated>2026-03-31T13:33:26.125Z</updated>
+    <updated>2026-04-30T02:42:31.344Z</updated>
   </entry>
   <entry>
     <author>
@@ -173,7 +202,7 @@
 <p>本ブログでは、「共有可能なクラウド接続と個人用クラウド接続」の違いや使用例についてご紹介します。</p>]]>
     </summary>
     <title>共有可能なクラウド接続と個人用クラウド接続</title>
-    <updated>2026-03-31T13:33:26.967Z</updated>
+    <updated>2026-04-30T02:42:32.215Z</updated>
   </entry>
   <entry>
     <author>
@@ -195,7 +224,7 @@
 <p>Update: 2025&#x2F;11&#x2F;28<br>アンケートフォームのリンクが切れていたため、新しく作り直しました。</p>]]>
     </summary>
     <title>【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</title>
-    <updated>2026-03-31T13:33:26.265Z</updated>
+    <updated>2026-04-30T02:42:31.490Z</updated>
   </entry>
   <entry>
     <author>
@@ -216,7 +245,7 @@
 <p>本ブログでは、セキュリティリスクを防ぐために特に重要な設定を、シナリオ別に紹介します。</p>]]>
     </summary>
     <title>Power BI 利用時に考慮すべき主要なセキュリティ設定</title>
-    <updated>2026-03-31T13:33:26.884Z</updated>
+    <updated>2026-04-30T02:42:32.128Z</updated>
   </entry>
   <entry>
     <author>
@@ -239,7 +268,7 @@
 <p>本記事では、Power BIでCopilot を安心してご利用いただくために、データの処理の流れと、管理者がCopilotの利用を制限する方法について説明し、最後によくある質問をまとめました。 </p>]]>
     </summary>
     <title>Copilotのセキュリティと使用制限方法</title>
-    <updated>2026-03-31T13:33:26.351Z</updated>
+    <updated>2026-04-30T02:42:31.579Z</updated>
   </entry>
   <entry>
     <author>
@@ -262,7 +291,7 @@
       <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。<br>こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>]]>
     </summary>
     <title>URL フィルターの使い方</title>
-    <updated>2026-03-31T13:33:27.007Z</updated>
+    <updated>2026-04-30T02:42:32.255Z</updated>
   </entry>
   <entry>
     <author>
@@ -282,7 +311,7 @@
 <p>2025 年 3 月版以降の Power BI Desktop &#x2F; Power BI Report Server 向けの Power BI Desktop では CPU で AVX  (Advanced Vector Extensions)  命令がサポートされている必要があります。サポートされていない CPU では予期しない動作となる場合がございますので、この変更についてご案内いたします。</p>]]>
     </summary>
     <title>2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります</title>
-    <updated>2026-03-31T13:33:25.932Z</updated>
+    <updated>2026-04-30T02:42:31.135Z</updated>
   </entry>
   <entry>
     <author>
@@ -305,7 +334,7 @@
 <p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p>]]>
     </summary>
     <title>Cognitive service と Azure ML の廃止</title>
-    <updated>2026-03-31T13:33:25.983Z</updated>
+    <updated>2026-04-30T02:42:31.187Z</updated>
   </entry>
   <entry>
     <author>
@@ -327,7 +356,7 @@
 <p>本記事では、Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介します。</p>]]>
     </summary>
     <title>アプリ・レポートを閲覧できないときの対処法</title>
-    <updated>2026-03-31T13:33:26.268Z</updated>
+    <updated>2026-04-30T02:42:31.493Z</updated>
   </entry>
   <entry>
     <author>
@@ -349,7 +378,7 @@
  </br>]]>
     </summary>
     <title>ホーム テナント リージョンの変更についてのご案内</title>
-    <updated>2026-03-31T13:33:26.876Z</updated>
+    <updated>2026-04-30T02:42:32.121Z</updated>
   </entry>
   <entry>
     <author>
@@ -371,7 +400,7 @@
 <p>Power BI &#x2F; Mircrosoft Fabric で利用できる ETL ツールであるデータ フローは、現在データフロー Gen1、データフロー Gen2の2つを利用することができます。通常、スケジュールで更新を行うことが多いですが、今回はそれぞれのデータフローの更新方法について説明します。</p>]]>
     </summary>
     <title>データフローの更新方法</title>
-    <updated>2026-03-31T13:33:26.368Z</updated>
+    <updated>2026-04-30T02:42:31.595Z</updated>
   </entry>
   <entry>
     <author>
@@ -391,7 +420,7 @@
       <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI データマートが 2025 年 10 月 1 日に廃止され、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。機能廃止により、保存されたデ]]>
     </summary>
     <title>Power BI データマートの廃止と Fabric Data Warehouse への移行について</title>
-    <updated>2026-03-31T13:33:26.382Z</updated>
+    <updated>2026-04-30T02:42:31.610Z</updated>
   </entry>
   <entry>
     <author>
@@ -415,7 +444,7 @@
 <p>Power BI では、大規模データをより効率的に更新するために 、「増分更新」機能が用意されています。この機能を活用することで、すべてのデータを毎回再読み込みする必要がなくなり、直近で変更があったデータのみに対象を絞って更新することが可能になります。<br>一方で、Power BI サービスにレポートを発行し、セマンティックモデルの初回更新を実行する際には、設定された保持期間全体のデータが一括で取得されるため、処理時間が長くなり、タイムアウトが発生することがあります。本記事では、こうした初回更新時のエラーを回避する手順を紹介します。</p>]]>
     </summary>
     <title>Power BI の増分更新における初回更新のタイムアウトを回避する方法</title>
-    <updated>2026-03-31T13:33:26.499Z</updated>
+    <updated>2026-04-30T02:42:31.728Z</updated>
   </entry>
   <entry>
     <author>
@@ -436,27 +465,6 @@
 <p>本ブログでは、Snowflake の単一要素パスワード認証の廃止に伴う Power BI としての対応方法や、Microsoft アカウントによる接続方法についてご紹介します。</p>]]>
     </summary>
     <title>Snowflake 単一要素パスワード認証廃止に伴う Power BI としての対応と Power BI からの接続方法について</title>
-    <updated>2026-03-31T13:33:26.970Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Japan Power BI Team</name>
-    </author>
-    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
-    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
-    <category term="Microsoft Fabric" scheme="https://jpbap-sqlbi.github.io/blog/tags/Microsoft-Fabric/"/>
-    <category term="テナント設定" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%83%86%E3%83%8A%E3%83%B3%E3%83%88%E8%A8%AD%E5%AE%9A/"/>
-    <category term="エクスポート" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88/"/>
-    <content>
-      <![CDATA[<p>こんにちは、Power BI サポート チーム 金沢です。<br>Power BI サービスでは、レポートを Excel、PDF、PowerPoint スライド形式等でエクスポートすることができます。しかしながら、セキュリティ上の理由で、特定のユーザーだけにエクスポートを許可したい場合や、すべてのユーザーにエクスポートができないように制御したい場合があるかと思います。この記事では、エクスポートの形式毎に制御する方法をご案内いたします。</p><span id="more"></span><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><hr><h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><hr><ul><li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li><li><a href="#1-%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E7%A8%AE%E9%A1%9E">1.エクスポートの種類</a></li><li><a href="#2-%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88">2. レポートのエクスポート</a></li><li><a href="#3-%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88">3.ビジュアルのエクスポート</a></li></ul><hr><h2 id="1-エクスポートの種類"><a href="#1-エクスポートの種類" class="headerlink" title="1. エクスポートの種類"></a>1. エクスポートの種類</h2><hr><p>Power BIサービスでは、様々なファイル形式でエクスポートが可能であり、これまでに以下の記事でエクスポート可能なファイル形式について紹介してきました。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_export/">エクスポート可能なファイルの種類について | Japan CSS Support Power BI Blog</a></p></div><p>Power BIサービスからpbixファイルをエクスポートする場合、レポート全体をエクスポートする方法と各ビジュアルをエクスポートする方法の2種類があります。<br>これらのエクスポート方法で、エクスポートできるファイル形式と制御可否を比較した表は以下の通りです。</p><table><thead><tr><th></th><th>レポートのエクスポート</th><th>ビジュアルのエクスポート</th></tr></thead><tbody><tr><td>エクスポートできるファイル形式</td><td>・.xlsx (Excel)<br>・.pptx (PowerPoint)<br>・.pdf (PDF)</td><td>・.xlsx (Excel)<br>・.csv (CSV)<br>・キャプション付き画像</td></tr><tr><td>テナント管理者が制御できるか</td><td>すべてのファイル形式で可能</td><td>すべてのファイル形式で可能</td></tr><tr><td>ワークスペースで共同作成者以上のロールを持つユーザーが制御できるか</td><td>すべてのファイル形式で不可能</td><td>すべてのファイル形式で可能</td></tr></tbody></table><p>テナント管理者が各機能を制御する場合は、[設定]&gt;[管理ポータル]&gt;[テナント設定]の各項目を設定します。<br>ここで、各機能を無効化する以外にも、特定のセキュリティグループのみ許可、あるいは許可しないように設定することが可能です。<br>たとえば、以下のように設定することで、[Excel にエクスポート]の機能を、指定したセキュリティグループのみに許可することができます。</p><div align="center"><img src="許可方法.png">図1. 特定のセキュリティグループに[ Excel にエクスポート]を許可する設定</div><p>次の章では、これらのエクスポート方法における、各ファイル形式での制御方法をご紹介します。</p><hr><h2 id="2-レポートのエクスポート"><a href="#2-レポートのエクスポート" class="headerlink" title="2. レポートのエクスポート"></a>2. レポートのエクスポート</h2><hr><h3 id="2-1-xlsx-Excel"><a href="#2-1-xlsx-Excel" class="headerlink" title="2-1.  .xlsx (Excel)"></a>2-1.  .xlsx (Excel)</h3><p>[エクスポート] タブから [ Excel で分析] を選択する場合は、セマンティック モデルへライブ接続をする  Excel  ファイルが作成されます。ピボットテーブル等の機能を使用してセマンティック モデルを Excel で分析することができます。<br>[ Excel で分析]は、そのレポートのセマンティック モデル全体を含むExcel ブックが作成される機能で、ピボットテーブル等の機能を使用してセマンティック モデルをExcelで分析することができます。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-analyze-in-excel">更新可能な Power BI データを使用して  Excel  ブックを作成する - Power BI | Microsoft Learn</a></p></div><p>テナント管理者がこの機能を制御する場合は、[テナント設定]の [ユーザーはライブ接続を利用して Excel で Power BI セマンティック モデルを操作できる]を設定します。</p><p>[ Excel で分析]を利用できないユーザーは、以下のように[ Excel で分析]が表示されなくなります。</p><div align="center"><img src="Excelで分析.png">図2. [ Excel で分析]を制御されたときの画面表示</div><h3 id="2-2-pptx-PowerPoint"><a href="#2-2-pptx-PowerPoint" class="headerlink" title="2-2.  .pptx (PowerPoint)"></a>2-2.  .pptx (PowerPoint)</h3><p>PowerPointへレポートをエクスポートする機能には、 PowerPoint 上でPower BI レポートの各ページを PowerPoint のスライドとして出力する方法と、 PowerPoint  にライブ形式で Power BI データを埋め込む方法の 2 種類があります。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報1：<a href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/end-user-powerpoint">レポート全体を PowerPoint にエクスポートする - Power BI | Microsoft Learn</a></p><p>参考情報2：<a href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-about">PowerPoint での Power BI を使ったストーリーテリングについて - Power BI | Microsoft Learn</a></p></div><p>テナント管理者がPower BI レポートの各ページをスライド化する方法を制御する場合は、[テナント設定]の[PowerPoint プレゼンテーションまたは PDF ドキュメントとしてレポートをエクスポート]を設定します。<br>また、 PowerPoint 上にライブ型のPower BI データを埋め込むことを制御する場合は、[テナント設定]の[PowerPoint の Power BI アドインを有効にする]を設定します。</p><p>上記2つの設定を制限されたユーザーは、以下のように PowerPoint の選択肢が表示されなくなります。<br>（PDFでのエクスポートについても、同様の制御が適用されます）</p><div align="center"><img src="Power Pointへエクスポート.png">図3. PowerPointへのエクスポートが制御されたときの画面表示</div><h3 id="2-3-pdf-PDF"><a href="#2-3-pdf-PDF" class="headerlink" title="2-3.  .pdf (PDF)"></a>2-3.  .pdf (PDF)</h3><p>Power BI レポートの各ページが、1つのPDFファイルの中にページごとに出力されます。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/collaborate-share/end-user-pdf?tabs=powerbi-service">レポートを PDF にエクスポートする - Power BI | Microsoft Learn</a></p></div><p>テナント管理者がPDFへのエクスポートを制御する場合は、[テナント設定]の[PowerPoint プレゼンテーションまたは PDF ドキュメントとしてレポートをエクスポート]を設定します。<br>なお、この設定は「2-2. .pptx (PowerPoint)」と同じ設定であり、設定内容は PowerPoint のエクスポートにも適用されます。</p><p>[PowerPoint プレゼンテーションまたは PDF ドキュメントとしてレポートをエクスポート]を制限されたユーザーは、以下のようにPDFへエクスポートする選択肢が表示されなくなります。</p><div align="center"><img src="PDFへエクスポート.png">図4. PDFへのエクスポートが制御された画面表示</div><hr><h2 id="3-ビジュアルのエクスポート"><a href="#3-ビジュアルのエクスポート" class="headerlink" title="3. ビジュアルのエクスポート"></a>3. ビジュアルのエクスポート</h2><hr><h3 id="3-1-xlsx-Excel"><a href="#3-1-xlsx-Excel" class="headerlink" title="3-1.  .xlsx (Excel)"></a>3-1.  .xlsx (Excel)</h3><p>[データのエクスポート]では、ビジュアルに表示されているデータや、ビジュアルの作成に使用されているデータなどを.xlsx形式でエクスポートすることができます。<br>[データのエクスポート]で.xlsxファイルをエクスポートする場合は、[現在レイアウトのデータ]、[概要データ]、[基になるデータ]の3種類のエクスポート方法があり、それぞれの詳細な違いについては以下の公開情報に記載があります。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-export-data?tabs=powerbi-service">Power BI ビジュアルからデータをエクスポートする - Power BI | Microsoft Learn</a></p></div><p>ワークスペースで共同作成者以上のロールのユーザーは許可するエクスポート方法を選択することができます。<br>ワークスペースにて設定したいレポートの[…]&gt;[設定]&gt;[データのエクスポート]にて[集計されたデータと現在のレイアウトを使ったデータ]、[集計データ、現在のレイアウトのデータ、基になるデータ]、[なし]の中から選択します。<br>たとえば、[集計されたデータと現在のレイアウトを使ったデータ] を選ぶと、ユーザーは[集計されたデータ]と[現在のレイアウトのデータ]をエクスポートすることができますが、[基になるデータ]はエクスポートできません。</p><p>上記のように、ワークスペースで共同作成者以上のロールのユーザーが[基になるデータ]を制御した場合、ユーザーは以下のように[基になるデータ]を選択できなくなります。</p><div align="center"><img src="基になるデータの制御.png">図5. [データのエクスポート]で[集計されたデータと現在のレイアウトを使ったデータ]を選択した場合のエクスポート画面表示</div><p>また、ワークスペースで共同作成者以上のロールのユーザーは、ビジュアル上で[データのエクスポート]を含むアイコンを非表示にすることで、ビジュアル単位でエクスポートの可否を制御できます。</p><p>レポートを編集モードにして、対象のビジュアルを選択し、[視覚化]&gt;[ビジュアルの書式設定]&gt;[全般]&gt;[ヘッダーアイコン]トグルをオフにすると、レポートへマウスをかざしても以下のヘッダー アイコンが表示されず、エクスポートができなくなります。</p><div align="center"><img src="アイコン非表示.png">図6. ヘッダー アイコン</div><p>続いて、テナント管理者が[データのエクスポート]を制御する場合は、[テナント設定]の[ Excel エクスポート]を変更します。</p><p>[ Excel にエクスポート]を制限されたユーザーは、以下のように[エクスポート]のボタンが選択できないようになります。</p><div align="center"><img src="データのエクスポート（Excel）.png">図7. [ Excelエクスポート]が制御された画面表示</div><h3 id="3-2-csv-CSV"><a href="#3-2-csv-CSV" class="headerlink" title="3-2.  .csv (CSV)"></a>3-2.  .csv (CSV)</h3><p>[データのエクスポート]では、.xlsx形式だけでなく、.csv形式でエクスポートすることもできます。<br>[データのエクスポート]で.csvをエクスポートする場合は、 [概要データ]にてエクスポートできます。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-export-data?tabs=powerbi-service">Power BI ビジュアルからデータをエクスポートする - Power BI | Microsoft Learn</a></p></div><p>ワークスペースで共同作成者以上のロールのユーザーが.csvへのエクスポートを制御する場合は、ワークスペースにて設定したいレポートの[…]&gt;[設定]&gt;[データのエクスポート]で [なし]を選択します。<br>（[なし]を設定した場合、.xlsx形式へのエクスポートも制限されます）<br>ワークスペースで共同作成者以上のロールのユーザーが[なし]を選択した場合、ユーザーはビジュアル上で[データのエクスポート]を選択できなくなります。</p><div align="center"><img src="csvへエクスポート.png">図8. [データのエクスポート]で[なし]を選択した場合の画面表示</div><p>続いて、テナント管理者が.csvへのエクスポートを制御する場合は、[テナント設定]の[.csv にエクスポート]を変更します。</p><p>[.csv にエクスポート]を制限されたユーザーは、以下のように[エクスポート]のボタンが選択できないようになります。</p><div align="center"><img src="csvテナント設定.png">図9. [.csv にエクスポート]が制御された画面表示</div><h3 id="3-3-キャプション付き画像"><a href="#3-3-キャプション付き画像" class="headerlink" title="3-3.  キャプション付き画像"></a>3-3.  キャプション付き画像</h3><p>リンクを含むキャプションとキャプチャを取得する、キャプション付き画像というビジュアルのエクスポート方法があります。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報：<a href="https://learn.microsoft.com/ja-jp/power-bi/visuals/power-bi-visualization-copy-paste?tabs=service,report">PPower BI で視覚化をコピーして貼り付けます。 - Power BI | Microsoft Learn</a></p></div><p>ワークスペースで共同作成者以上のロールのユーザーが、キャプション付き画像の取得を制限する場合は、レポートを編集モードにして、対象のビジュアルを選択し、[視覚化]&gt;[ビジュアルの書式設定]&gt;[全般]&gt;[ヘッダーアイコン]&gt;[コピーアイコン]のトグルをオフにします。</p><p>ワークスペースで共同作成者以上のロールのユーザーが[コピーアイコン]をオフにした場合、ユーザーには[キャプション付きの画像としてコピー]のアイコンが表示されなくなります。</p><div align="center"><img src="キャプション付き画像制限.png">図10. [キャプション付きの画像としてコピー] が制御された画面表示</div><p>続いて、テナント管理者がキャプション付き画像の取得を制御する場合は、[テナント設定]の[ビジュアルのコピーと貼り付け]を変更します。<br>[ビジュアルのコピーと貼り付け]でキャプション付き画像を制限されたユーザーは、図10と同様に、[キャプション付きの画像としてコピー]のアイコンが非表示になります。</p><hr><h2 id="4-最後に"><a href="#4-最後に" class="headerlink" title="4. 最後に"></a>4. 最後に</h2><hr><p>Power BI はレポートを共有するための製品であることから、画面のスクリーンショットを撮るなど、内容を保存する行為はシステム側で制御できません。したがって、共有されたユーザーがレポート情報をキャプチャし、他者に展開することを完全に防ぐことはできません。<br>このため、レポートを共有するユーザーが適切にデータを扱うように情報リテラシーを高め、レポートへ適切な権限を付与することが重要となります。</p><p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p><hr><p>※本情報の内容（添付文書、リンク先などを含む）は作成日時点でのものであり、予告なく変更される場合があります。</p><p><strong>アンケートご協力のお願い</strong><br>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 </p><p>※　所要時間は1分程度となります。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</a></p>]]>
-    </content>
-    <id>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_exportcontrol/</id>
-    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_exportcontrol/"/>
-    <published>2025-05-30T15:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>こんにちは、Power BI サポート チーム 金沢です。<br>Power BI サービスでは、レポートを Excel、PDF、PowerPoint スライド形式等でエクスポートすることができます。しかしながら、セキュリティ上の理由で、特定のユーザーだけにエクスポートを許可したい場合や、すべてのユーザーにエクスポートができないように制御したい場合があるかと思います。この記事では、エクスポートの形式毎に制御する方法をご案内いたします。</p>]]>
-    </summary>
-    <title>Power BIレポートにおけるデータエクスポートの制御</title>
-    <updated>2026-03-31T13:33:26.427Z</updated>
+    <updated>2026-04-30T02:42:32.217Z</updated>
   </entry>
 </feed>
