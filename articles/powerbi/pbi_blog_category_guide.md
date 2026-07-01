@@ -49,6 +49,23 @@ tags:
 
 ## ブログ更新情報
 
+### 2026年6月の記事
+
+#### 新規記事
+[データフロー Gen1 の廃止について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_gen1_legacy_migration/)
+
+#### 更新した記事
+今月の更新した記事はございません。
+
+### 2026年5月の記事
+
+#### 新規記事
+[Power BI でカスタム ビジュアルの利用を制御する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_custom_visual_admin_control/)
+
+#### 更新した記事
+今月の更新した記事はございません。
+
+
 ### 2026年4月の記事
 
 #### 新規記事
@@ -213,6 +230,7 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [ブックマークとボタンで動的にレポート画面を切り替える方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_button_bookmark/)
 [URL フィルターの使い方](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_url_filter/)
 [Power BIレポートにおけるデータエクスポートの制御](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_exportcontrol/)
+[Power BI でカスタム ビジュアルの利用を制御する方法](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_custom_visual_admin_control/)
 
 ## Power Query
 [pbix ファイルのデータソースのファイル格納場所が変更される場合の対処策](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_changing_datasource_file_place/)
@@ -354,6 +372,8 @@ Azure マップのテナント設定や利用要件に変更点がありまし�
 [「Power BI Windows アプリ」のサポート終了](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_windows_app_reach_retirement/)
 [TLS1.0/1.1のサポート終了](https://jpbap-sqlbi.github.io/blog/powerbi/tls/)
 [セマンティック モデルの更新エラーが発生した際に確認すべきこと](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_semantic_model_refresh_error/)
+[データフロー Gen1 の廃止について](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_gen1_legacy_migration/)
+
 
 ## その他
 [Power BI を学習するために役に立つコンテンツのご紹介](https://jpbap-sqlbi.github.io/blog/powerbi/pbi_useful_learning_link/)
