@@ -10,7 +10,29 @@
   <rights>All rights reserved 2026, Japan Power BI Team</rights>
   <subtitle>日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</subtitle>
   <title>Japan CSS Support Power BI Blog</title>
-  <updated>2026-07-01T08:27:32.469Z</updated>
+  <updated>2026-08-01T00:35:19.372Z</updated>
+  <entry>
+    <author>
+      <name>Japan Power BI Team</name>
+    </author>
+    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
+    <category term="Microsoft Fabric" scheme="https://jpbap-sqlbi.github.io/blog/tags/Microsoft-Fabric/"/>
+    <category term="Severity" scheme="https://jpbap-sqlbi.github.io/blog/tags/Severity/"/>
+    <category term="緊急度A" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E7%B7%8A%E6%80%A5%E5%BA%A6A/"/>
+    <category term="お問い合わせ" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B/"/>
+    <content>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。</p><p>Power BI &#x2F; Microsoft Fabric のお問い合わせでは、「緊急度Aで起票したほうがよいか」「通常対応でよいか」で迷われるケースが多くございます。本記事では、実際の傾向をもとに、判断の目安と起票時のポイントをわかりやすくご紹介いたします。</p><blockquote><p><strong>この記事の対象：</strong> Power BI &#x2F; Fabric のケースを起票される、管理者・利用担当者の方</p></blockquote><p>この記事を読むと、次の3点がわかります。</p><ul><li>緊急度Aにするべきか、通常対応が適切かを判断する目安</li><li>緊急対応のまま進むケースと、通常対応へ切り替わるケースの違い</li><li>初動を早めるために、起票時に添えるべき情報</li></ul><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><hr><h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a><font color="DodgerBlue">目次</font></h2><ul><li><a href="#1-%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB--%E3%81%93%E3%81%AE%E8%A8%98%E4%BA%8B%E3%81%AE%E7%9B%AE%E7%9A%84">1. はじめに ― この記事の目的</a></li><li><a href="#2-%E7%B7%8A%E6%80%A5%E5%BA%A6a%E7%B7%8A%E6%80%A5%E5%AF%BE%E5%BF%9C%E3%81%A8%E3%81%AF">2. 「緊急度A（緊急対応）」とは</a></li><li><a href="#3-%E3%81%A9%E3%82%93%E3%81%AA%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%8C%E7%B7%8A%E6%80%A5%E5%BA%A6a%E3%81%A7%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E3%81%8B">3. どんなケースが緊急度Aで寄せられるか</a></li><li><a href="#4-%E7%B7%8A%E6%80%A5%E5%AF%BE%E5%BF%9C%E3%81%A8%E3%81%97%E3%81%A6%E6%9C%80%E5%BE%8C%E3%81%BE%E3%81%A7%E9%80%B2%E3%82%80%E3%82%B1%E3%83%BC%E3%82%B9">4. 緊急対応として最後まで進むケース</a></li><li><a href="#5-%E9%80%9A%E5%B8%B8%E5%AF%BE%E5%BF%9C%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B%E7%B7%8A%E6%80%A5%E5%BA%A6%E3%81%8C%E4%B8%8B%E3%81%8C%E3%82%8B%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%A8%E3%81%9D%E3%81%AE%E7%90%86%E7%94%B1">5. 通常対応に切り替わる（緊急度が下がる）ケースとその理由</a></li><li><a href="#6-%E6%9C%80%E5%88%9D%E3%81%8B%E3%82%89%E9%80%9A%E5%B8%B8%E5%AF%BE%E5%BF%9C%E3%81%A7%E5%8F%97%E3%81%91%E4%BB%98%E3%81%91%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F">6. 最初から通常対応で受け付けるご質問</a></li><li><a href="#7-%E7%B7%8A%E6%80%A5%E5%BA%A6%E3%81%AE%E7%9B%AE%E5%AE%89%E3%81%A8%E6%97%A9%E3%81%8F%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E8%B5%B7%E7%A5%A8%E3%81%AE%E3%82%B3%E3%83%84">7. 緊急度の目安と、早く解決するための起票のコツ</a></li><li><a href="#8-%E3%81%BE%E3%81%A8%E3%82%81">8. まとめ</a></li></ul><h2 id="1-はじめに-―-この記事の目的"><a href="#1-はじめに-―-この記事の目的" class="headerlink" title="1. はじめに ― この記事の目的"></a><font color="DodgerBlue">1. はじめに ― この記事の目的</font></h2><p>Power BI &#x2F; Microsoft Fabric について、<strong>緊急度A（緊急）</strong> でお問い合わせいただくケースは日々数多く寄せられます。この記事は、これまでに寄せられたお問い合わせの傾向をもとに、「どんなご相談が緊急度Aで寄せられているか」「そのうち実際に緊急対応として進むのはどんなケースか」「なぜ通常対応に切り替わることがあるのか」を、お問い合わせいただく皆さまにお伝えするものです。</p><p>ねらいは、<strong>ご状況に合った緊急度を選び、最短で解決につなげること</strong>、そして <strong>起票時に添えると初動が早くなる情報を把握すること</strong> の2点です。結果として、やり取りの行き違いや確認の往復が減り、よりスムーズな対応につながります。  </p><h2 id="2-「緊急度A（緊急対応）」とは"><a href="#2-「緊急度A（緊急対応）」とは" class="headerlink" title="2. 「緊急度A（緊急対応）」とは"></a><font color="DodgerBlue">2. 「緊急度A（緊急対応）」とは</font></h2><p>サポートの緊急度にはいくつかの段階があり、<strong>緊急度A</strong> は「業務に重大な影響が出ており、迅速な対応を要する」状態に選ぶ <strong>緊急対応</strong> の区分です。緊急度Aで起票されると、担当エンジニアが優先的に着手し、まずお電話やTeams会議などで状況を確認します。</p><p>一方で <strong>緊急度B・C（通常対応）</strong> は、営業時間内で、お客様の状況やご要望に沿った、より丁寧できめ細かな支援を行う区分です。「緊急ではないが相談したい」という内容は、通常対応のほうが、かえって相談内容に合った支援を受けやすいことも多くあります（具体的な対応時間や範囲は、ご契約内容・サポート窓口のご案内によります）。</p><div class="alert is-warning"><p class="alert-title">警告</p><p>24時間対応としてのご案内は、原則 <strong>緊急度A（重大な影響）</strong> で起票され、かつ初動ヒアリングで条件を満たす場合に限られます。</p><p>また、緊急対応の目的はまず暫定復旧（業務再開）であり、復旧後の原因調査は通常対応として進行いたします。</p><p><strong>24時間対応の主な条件</strong></p><ul><li>お問い合わせご担当者様と24時間お電話で連絡できること</li><li>業務に重大な影響が発生しており、まずは暫定対処を目的とすること</li></ul><p><strong>ご注意事項</strong></p><ul><li>上記条件を満たさない場合は、緊急度を見直し通常対応としてご案内いたします。</li><li>日本では、<strong>緊急度B（中程度の影響）の24時間対応は行っておりません</strong>。</li></ul></blockquote><h3 id="緊急度Aに該当する状態"><a href="#緊急度Aに該当する状態" class="headerlink" title="緊急度Aに該当する状態"></a><font color="HotPink">緊急度Aに該当する状態</font></h3><p>緊急度Aは、<strong>事業に多大な影響を及ぼす「危機的な状況」</strong> に限られます。次のいずれかにあてはまり、かつ <strong>回避策がなく、いま現に業務が止まっている</strong> ことが目安です。判断に迷う場合は、まず状況を具体的にお書き添えください（こちらで適切な緊急度をご提案します）。</p><ul><li><strong>重要な業務システムの停止：</strong> 基幹業務で使うレポート／ダッシュボードが、<strong>テナント全体または多数の利用者</strong>にわたって完全に利用できず、業務そのものが遂行できない。</li><li><strong>重要な業務システムの著しい劣化：</strong> 事業に相当の損失が生じるレベルで、<strong>断続的に業務プロセス全体が停止</strong>している。</li></ul><blockquote><p><strong>こんな場合は緊急度Aに“該当しません”（通常対応が適切です）</strong></p><ul><li>影響が <strong>一部のレポート／一部の利用者</strong> にとどまっている</li><li><strong>一時的に発生したが、現在は復旧</strong>している</li><li><strong>別の方法・回避策で業務を続けられる</strong></li><li><strong>開発・検証中</strong>で、本番運用には影響していない</li><li>プロジェクトの締切に間に合わせたいので、対応を加速してほしい</li><li>すでに復旧している問題の原因を、時間外・休日も継続して調べてほしい</li><li>今は使えているが、将来的に問題が起きないか不安</li></ul><p>これらは「業務システムの停止・劣化」にはあたらないため、<strong>通常対応（緊急度B・C）</strong> でのご案内となります。</p></div><blockquote><p><strong>覚えておきたいこと</strong></p><p>起票時の緊急度は、最初のご連絡で状況をうかがったうえで <strong>実際の影響度に合わせて見直されることがあります</strong>。「業務が止まっている」ような緊急のケースは緊急対応のまま進み、そうでないケースは通常対応に切り替わります（次章以降でくわしく説明します）。</p></blockquote><h2 id="3-どんなケースが緊急度Aで寄せられるか"><a href="#3-どんなケースが緊急度Aで寄せられるか" class="headerlink" title="3. どんなケースが緊急度Aで寄せられるか"></a><font color="DodgerBlue">3. どんなケースが緊急度Aで寄せられるか</font></h2><p>お問い合わせを内容で大きく分類すると、全体に占める割合は次のような傾向でした（記載内容のキーワードによる概算で、複数の要素にまたがるものは主な内容に寄せています。割合は大まかな目安です）。</p><table><thead><tr><th>ご相談の分野</th><th align="center">割合（概算）</th><th>主な内容</th></tr></thead><tbody><tr><td>セマンティックモデル／データフローの更新失敗</td><td align="center">2割強</td><td>更新が失敗・終わらない、タイムアウト、増分更新エラー など</td></tr><tr><td>アクセス／認証／権限／共有／RLS</td><td align="center">2割前後</td><td>ログイン・閲覧不可、資格情報エラー、ゲスト共有、行レベルセキュリティ、秘密度ラベル</td></tr><tr><td>表示不可・遅延・接続・デプロイ・その他</td><td align="center">2割弱</td><td>レポート表示の遅延・障害、各種データソース接続、配置パイプライン ほか</td></tr><tr><td>レポート／ビジュアル／DAX の作り方・仕様</td><td align="center">1割強</td><td>スライサー・マップ・カードの挙動、DAX、エクスポート制限などの「ご質問」</td></tr><tr><td>ゲートウェイ（オンプレミス データ ゲートウェイ）</td><td align="center">1割前後</td><td>オフライン・到達不可、インストール／構成エラー、バージョン非対応</td></tr><tr><td>容量超過・スロットリング</td><td align="center">1割弱</td><td>容量制限エラー、CU 100%超過、全レポートが開けない・更新できない</td></tr><tr><td>ライセンス／プラン／容量契約／請求</td><td align="center">1割弱</td><td>Pro &#x2F; PPU &#x2F; Premium &#x2F; Fabric の選定、試用版、請求・解約に関するご相談</td></tr></tbody></table><p><strong>ポイント：</strong> 「更新の失敗」「アクセス・権限」「作り方のご質問」の3分野が全体の多くを占めます。一方で、「容量超過・スロットリング」やゲートウェイの障害は件数としては中位でも、業務停止に直結するため緊急性が高いグループです。</p><h2 id="4-緊急対応として最後まで進むケース"><a href="#4-緊急対応として最後まで進むケース" class="headerlink" title="4. 緊急対応として最後まで進むケース"></a><font color="DodgerBlue">4. 緊急対応として最後まで進むケース</font></h2><p>最後まで緊急対応として進むのは、<strong>実害が「今」発生していて続いており、待てない</strong> ケースです。代表的なパターンは次のとおりです。</p><ul><li><strong>容量超過・スロットリングによる全面停止：</strong> テナント全体や容量内の全レポートが「容量制限に達したため、モデルを読み込めません」等で閲覧・更新できず、業務が止まっている。</li><li><strong>ゲートウェイの全停止・到達不可：</strong> オンプレミス データ ゲートウェイがオフライン／到達不可となり、関連する全データの更新が止まる。</li><li><strong>大規模なユーザー影響：</strong> 数百〜数千人規模、または全社に提供しているサービスで、レポートの表示・更新が一斉にできなくなる。</li></ul><h3 id="お問い合わせ後の流れ（緊急対応の場合）"><a href="#お問い合わせ後の流れ（緊急対応の場合）" class="headerlink" title="お問い合わせ後の流れ（緊急対応の場合）"></a><font color="HotPink">お問い合わせ後の流れ（緊急対応の場合）</font></h3><ol><li><strong>状況の確認：</strong> お電話やTeams会議で、発生状況・影響範囲をすぐに確認します。 <!-- screenshot: 影響範囲と発生時刻を確認するヒアリング項目 --></li><li><strong>原因の切り分け：</strong> 事象によって方法は異なりますが、例えば、容量の消費状況やゲートウェイの状態などを確認し、負荷の高い処理などの原因を特定します。 <!-- screenshot: 容量メトリクスまたはゲートウェイ状態の確認画面 --></li><li><strong>専門領域との連携：</strong> 必要に応じて関連する専門チームと連携し、調査・対処を行います。 <!-- screenshot: 調査連携の進行状況を共有する画面 --></li><li><strong>暫定復旧と恒久対応：</strong> まずは業務を再開できる暫定策（負荷の高い処理の停止、自動スケーリングなど）をご案内し、恒久的な原因調査を続けます。 <!-- screenshot: 暫定復旧後の動作確認画面 --></li></ol><blockquote><p><strong>つまり、緊急対応のまま進むのは…</strong></p><p>「今まさに止まっている」「多くの人が困っている」「待てない」という <strong>実害・継続・緊急性</strong> が揃っているケースです。</p></blockquote><blockquote><p><strong>緊急対応中のお願い</strong></p><p>緊急対応の目的は、<strong>業務を再開できる状態までの復旧・問題回避</strong> です。対応中は、担当エンジニアと <strong>電話・Teams等で連絡が取れる体制の維持</strong> をお願いします。ご連絡が取れない場合は、通常対応に切り替わることがあります。</p></blockquote><h2 id="5-通常対応に切り替わる（緊急度が下がる）ケースとその理由"><a href="#5-通常対応に切り替わる（緊急度が下がる）ケースとその理由" class="headerlink" title="5. 通常対応に切り替わる（緊急度が下がる）ケースとその理由"></a><font color="DodgerBlue">5. 通常対応に切り替わる（緊急度が下がる）ケースとその理由</font></h2><p>緊急度Aで起票されても、最初のご連絡で <strong>「業務は続けられている」「今すぐでなくてよい」</strong> と分かった時点で、通常対応に切り替わります。これは対応を後回しにするためではなく、状況に合った進め方に切り替えるためです。よくあるのは次のパターンです。</p><ul><li><strong>暫定策で業務が回復し、原因調査だけが残る：</strong> 例）多数の更新失敗のうち大半は手動更新で復旧し、残った少数のみを通常対応で調査。</li><li><strong>時間の経過で自然に回復する性質：</strong> 例）スロットリングは負荷が平準化されて時間とともに解消するため、その旨をご説明のうえ通常対応へ。</li><li><strong>原因となった処理が既に止まっている：</strong> 例）容量超過の主因となった処理がすでに終了している場合、手順のご案内に切り替え。</li><li><strong>「念のため／翌日への不安」で緊急度Aにしていた：</strong> 例）今は使えているが翌日の更新に影響しないか心配、という予防的な起票。実際の影響と締切を確認して通常対応へ。</li></ul><blockquote><p><strong>緊急度が下がっても、調査は続きます</strong></p><p>緊急対応は「業務を再開できる状態までの復旧・問題回避」が目的です。業務が回復した時点で緊急対応は完了し、<strong>復旧済みの問題の原因調査は通常対応で承ります</strong>。</p><p>緊急度が下がるのは「もう緊急ではない」という意味で、<strong>放置されるわけではありません</strong>。「何が解決済みで、何を引き続き調べるか」をお伝えし、以後の調査方針の認識合わせをさせていただきます。</p></blockquote><h2 id="6-最初から通常対応で受け付けるご質問"><a href="#6-最初から通常対応で受け付けるご質問" class="headerlink" title="6. 最初から通常対応で受け付けるご質問"></a><font color="DodgerBlue">6. 最初から通常対応で受け付けるご質問</font></h2><p>次のようなお問い合わせは、緊急度Aで起票されても、最初のご連絡で「業務が止まっているわけではない」と確認され、<strong>最初から通常対応として</strong> 順にご回答します。</p><ul><li><strong>操作方法・仕様（作り方）のご質問：</strong> DAXの書き方、スライサー・マップ・カードの挙動、増分更新の設定手順、エクスポートの行数制限など。</li><li><strong>ライセンス／プラン選定・契約・請求のご相談：</strong> Pro &#x2F; PPU &#x2F; Premium &#x2F; Fabric の違いや選び方、試用版、容量ユニット（CU）の意味、請求・解約など。</li><li><strong>セキュリティ・ガバナンス設定のご相談：</strong> 情報漏えい対策（DLP）、組織外への共有方法、行レベルセキュリティ（RLS）の設計など。</li><li><strong>新規導入・初期構築時のエラー：</strong> まだ本番運用に入っておらず、これからの構築時に出た設定エラー（例：新しいゲートウェイの構築エラー）。実害が発生していないため通常対応。</li></ul><blockquote><p><strong>お急ぎの事情がある場合は</strong></p><p>これらは緊急の障害ではないため、通常対応として順にご回答します。導入や提案の締切など <strong>お急ぎの背景がある場合は、その理由と期限を書き添えてください</strong>。対応の順番を調整しやすくなります。</p></blockquote><h2 id="7-緊急度の目安と、早く解決するための起票のコツ"><a href="#7-緊急度の目安と、早く解決するための起票のコツ" class="headerlink" title="7. 緊急度の目安と、早く解決するための起票のコツ"></a><font color="DodgerBlue">7. 緊急度の目安と、早く解決するための起票のコツ</font></h2><h3 id="緊急度の目安"><a href="#緊急度の目安" class="headerlink" title="緊急度の目安"></a><font color="HotPink">緊急度の目安</font></h3><table><thead><tr><th>緊急度A（緊急）がふさわしい</th><th>通常対応で十分なことが多い</th></tr></thead><tbody><tr><td><strong>本番運用が止まっている</strong></td><td><strong>操作方法・仕様・作り方のご質問</strong></td></tr><tr><td>多数の利用者・全社サービスに影響している</td><td>ライセンス／プラン・請求のご相談</td></tr><tr><td>復旧の締切が直近に迫っている</td><td>新規構築中の設定エラー（本番未稼働）</td></tr><tr><td></td><td>「今は使えているが将来が不安」というご相談</td></tr></tbody></table><h3 id="起票時に添えていただくと、早く解決します"><a href="#起票時に添えていただくと、早く解決します" class="headerlink" title="起票時に添えていただくと、早く解決します"></a><font color="HotPink">起票時に添えていただくと、早く解決します</font></h3><p>以下がそろっていると、初動の切り分けがスムーズになり、解決までの時間が短くなります。</p><ul><li><strong>事象：</strong> 何が、いつから、どの操作で起きているか</li><li><strong>発生開始日時／復旧した時刻：</strong> 断続的に起きる場合はその旨も</li><li><strong>影響範囲：</strong> 影響人数、全社か一部か、対象のワークスペース／レポート名</li><li><strong>業務への影響と締切：</strong> 止まっている業務、復旧が必要な期限</li><li><strong>エラーメッセージの全文：</strong> アクティビティID・要求ID・相関ID も併記</li><li><strong>環境：</strong> ライセンス種別（Free &#x2F; Pro &#x2F; PPU &#x2F; Premium &#x2F; Fabric）、容量SKU、リージョン、ゲートウェイの有無</li><li><strong>直近の変更点：</strong> 更新・設定変更・PC入れ替え・Windows Update など</li><li><strong>ご希望の連絡手段：</strong> 電話の可否、Teams会議の可否</li></ul><h2 id="8-まとめ"><a href="#8-まとめ" class="headerlink" title="8. まとめ"></a><font color="DodgerBlue">8. まとめ</font></h2><p>緊急度Aで寄せられるケースは、更新の失敗・アクセスや権限・作り方のご質問・ゲートウェイ・容量超過・ライセンスなど多岐にわたります。このうち最後まで緊急対応として進むのは、<strong>実害が続いていて待てない障害</strong>（容量超過での全面停止、ゲートウェイの全停止、大規模なユーザー影響）です。</p><p>一方で、暫定策で業務が回復したケースや自然に回復する性質のもの、そして操作方法・ライセンス・新規構築のご相談は、状況をうかがったうえで <strong>通常対応に切り替わります</strong>。緊急度が下がっても調査は続きますので、ご安心ください。</p><p>お問い合わせの際に「<strong>実害・影響範囲・締切・エラーの詳細・環境</strong>」を添えていただくことが、いちばんの近道です。適切な緊急度と十分な情報が、最短の解決につながります。</p><p>緊急度は「<strong>現在の実害の大きさと緊急性</strong>」で選ぶのが基本です。今まさに止まっている障害は緊急度A、じっくり相談したい内容は通常対応（緊急度B・C）と使い分けることで、必要な支援により早くたどり着けます。</p><h3 id="関連参考情報"><a href="#関連参考情報" class="headerlink" title="関連参考情報"></a><font color="HotPink">関連参考情報</font></h3><ul><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/creating_sr/">Power BI サポートチームへのお問い合わせ時に気をつけるポイント | Japan CSS Support Power BI Blog</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary/">Power BI のお問い合わせについて | Japan CSS Support Power BI Blog</a></li><li><a href="https://jpbap-sqlbi.github.io/blog/powerbi/support_boundary2/">Power BI の開発支援・コンサルティングを含む内容に関するお問い合わせについて | Japan CSS Support Power BI Blog</a></li></ul><hr><p>以上、本ブログが少しでも皆様のお役に立てれば幸いです。</p><p><em>本記事はこれまでのお問い合わせ傾向をもとに作成したナレッジです。事例はパターンのみを一般化しています。</em></p>]]>
+    </content>
+    <id>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_critsit/</id>
+    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_critsit/"/>
+    <published>2026-07-30T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。</p>
+<p>Power BI &#x2F; Microsoft Fabric のお問い合わせでは、「緊急度Aで起票したほうがよいか」「通常対応でよいか」で迷われるケースが多くございます。本記事では、実際の傾向をも]]>
+    </summary>
+    <title>緊急度 A で寄せられるケースと、緊急対応・通常対応の判断ポイント</title>
+    <updated>2026-08-01T00:35:19.372Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Japan Power BI Team</name>
@@ -37,7 +59,7 @@
 <p>本ブログでは、アナウンスの要点やデータフロー Gen1 のサポートについてご案内いたします。 </p>]]>
     </summary>
     <title>データフロー Gen1 の廃止について</title>
-    <updated>2026-07-01T08:27:32.469Z</updated>
+    <updated>2026-08-01T00:35:19.387Z</updated>
   </entry>
   <entry>
     <author>
@@ -62,7 +84,7 @@
 <p>本記事では、Power BI Service と Power BI Desktop でカスタム ビジュアルの利用を制御する方法、および管理ポータルの [組織の視覚化] から、特定のカスタム ビジュアルを組織内のユーザーに利用可能にする方法についてご紹介します。</p>]]>
     </summary>
     <title>Power BI でカスタム ビジュアルの利用を制御する方法</title>
-    <updated>2026-07-01T08:27:32.454Z</updated>
+    <updated>2026-08-01T00:35:19.372Z</updated>
   </entry>
   <entry>
     <author>
@@ -82,7 +104,7 @@
 <p>今後も新しい記事が作成され次第、随時ブログを更新してまいりますので、皆様のお役に立てるよう努めます。引き続きご支援のほど、よろしくお願いいたします。</p>]]>
     </summary>
     <title>Power BI ブログ更新情報</title>
-    <updated>2026-07-01T08:27:32.355Z</updated>
+    <updated>2026-08-01T00:35:19.272Z</updated>
   </entry>
   <entry>
     <author>
@@ -112,7 +134,7 @@
 <p>本ブログでは、監査ログを活用して有償ライセンスが必要な操作を行っているユーザーを特定する方法をご紹介いたします。未使用ライセンスの把握やコスト最適化にお役立てください。</p>]]>
     </summary>
     <title>監査ログを活用した Power BI 有償ライセンスの利用状況確認方法</title>
-    <updated>2026-07-01T08:27:32.969Z</updated>
+    <updated>2026-08-01T00:35:19.887Z</updated>
   </entry>
   <entry>
     <author>
@@ -141,7 +163,7 @@
 <p>本ブログでは、セマンティック モデルの更新エラーが発生した際にまず確認いただきたいこと、暫定的な対処方法、ゲートウェイ利用時の切り分け手順、およびサポートへお問い合わせいただく際にご提供いただきたい情報についてご紹介いたします。</p>]]>
     </summary>
     <title>セマンティック モデルの更新エラーが発生した際に確認すべきこと</title>
-    <updated>2026-07-01T08:27:32.996Z</updated>
+    <updated>2026-08-01T00:35:19.914Z</updated>
   </entry>
   <entry>
     <author>
@@ -164,7 +186,7 @@
  </br>]]>
     </summary>
     <title>Power BI の新しいレポートフォーマット PBIR について</title>
-    <updated>2026-07-01T08:27:32.775Z</updated>
+    <updated>2026-08-01T00:35:19.693Z</updated>
   </entry>
   <entry>
     <author>
@@ -188,7 +210,7 @@
 <p>本記事では、 Power BI における 各Copilot 機能の種類や位置づけを整理し、利用にあたって必要となるライセンスや前提条件についてまとめました。<br>Power BIでCopilotの導入を検討している方や、どの機能が自社環境で利用可能なのかを整理したい方の参考になれば幸いです。</p>]]>
     </summary>
     <title>Power BI の Copilot 機能</title>
-    <updated>2026-07-01T08:27:32.437Z</updated>
+    <updated>2026-08-01T00:35:19.354Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +231,7 @@
 <p>本ブログでは、こうした背景を踏まえ、Power BI &#x2F; Microsoft Fabric における代表的な管理者ロールそれぞれの管理対象を整理してご紹介いたします。 </p>]]>
     </summary>
     <title>Power BI の管理者ロールについて</title>
-    <updated>2026-07-01T08:27:32.346Z</updated>
+    <updated>2026-08-01T00:35:19.262Z</updated>
   </entry>
   <entry>
     <author>
@@ -231,7 +253,7 @@
 <p>Microsoft Fabric で新しく利用できるようになった認証方式として、ワークスペース ID があります。ワークスペース ID は、Microsoft Fabric 内のワークスペースに関連付けられたサービス プリンシパルで、信頼されたワークスペース アクセスを通じてファイアウォールが有効な Azure Data Lake Storage Gen2 (以降 ADLS Gen2) アカウントへの接続が可能です。今回は、ワークスペース ID を利用した信頼されたワークスペース アクセスで ADLS Gen2 に接続する方法をご紹介します。</p>]]>
     </summary>
     <title>ワークスペース ID と信頼されたワークスペース アクセス</title>
-    <updated>2026-07-01T08:27:32.215Z</updated>
+    <updated>2026-08-01T00:35:19.132Z</updated>
   </entry>
   <entry>
     <author>
@@ -256,7 +278,7 @@
 <p>本ブログでは、「共有可能なクラウド接続と個人用クラウド接続」の違いや使用例についてご紹介します。</p>]]>
     </summary>
     <title>共有可能なクラウド接続と個人用クラウド接続</title>
-    <updated>2026-07-01T08:27:33.075Z</updated>
+    <updated>2026-08-01T00:35:19.992Z</updated>
   </entry>
   <entry>
     <author>
@@ -278,7 +300,7 @@
 <p>Update: 2025&#x2F;11&#x2F;28<br>アンケートフォームのリンクが切れていたため、新しく作り直しました。</p>]]>
     </summary>
     <title>【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</title>
-    <updated>2026-07-01T08:27:32.357Z</updated>
+    <updated>2026-08-01T00:35:19.274Z</updated>
   </entry>
   <entry>
     <author>
@@ -299,7 +321,7 @@
 <p>本ブログでは、セキュリティリスクを防ぐために特に重要な設定を、シナリオ別に紹介します。</p>]]>
     </summary>
     <title>Power BI 利用時に考慮すべき主要なセキュリティ設定</title>
-    <updated>2026-07-01T08:27:32.990Z</updated>
+    <updated>2026-08-01T00:35:19.908Z</updated>
   </entry>
   <entry>
     <author>
@@ -322,7 +344,7 @@
 <p>本記事では、Power BIでCopilot を安心してご利用いただくために、データの処理の流れと、管理者がCopilotの利用を制限する方法について説明し、最後によくある質問をまとめました。 </p>]]>
     </summary>
     <title>Copilotのセキュリティと使用制限方法</title>
-    <updated>2026-07-01T08:27:32.444Z</updated>
+    <updated>2026-08-01T00:35:19.361Z</updated>
   </entry>
   <entry>
     <author>
@@ -345,30 +367,7 @@
       <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。<br>こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>]]>
     </summary>
     <title>URL フィルターの使い方</title>
-    <updated>2026-07-01T08:27:33.116Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Japan Power BI Team</name>
-    </author>
-    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
-    <category term="Power BI Desktop" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Desktop/"/>
-    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
-    <category term="Premium" scheme="https://jpbap-sqlbi.github.io/blog/tags/Premium/"/>
-    <category term="AI" scheme="https://jpbap-sqlbi.github.io/blog/tags/AI/"/>
-    <category term="アナウンス" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B9/"/>
-    <content>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの亀田です。</p><p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p><span id="more"></span><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、　　</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><h2 id="AI-機能の廃止について"><a href="#AI-機能の廃止について" class="headerlink" title="AI 機能の廃止について"></a>AI 機能の廃止について</h2><p>冒頭でご案内しました Power BI Blog <a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> で今回廃止の対象となった Cognitive service と Azure ML は Power BI Premium 容量や Power BI Premium Per User のライセンス保有ユーザーが利用できた Premium 機能の一つです。Power Query 内でユーザーが用意したデータを利用してキー フレーズ抽出や感情分析などを行うことができました。本変更は、拡張性や柔軟性向上を求めるユーザーからのフィードバックに基づき決定されました。</p><h2 id="影響を受ける機能"><a href="#影響を受ける機能" class="headerlink" title="影響を受ける機能"></a>影響を受ける機能</h2><p>影響を受ける機能は Cognitive service  および Azure ML です。</p><ul><li><p>Cognitive Services </p><ul><li>感情分析</li><li>キーフレーズ抽出</li><li>言語検出 </li><li>画像タグ付け</li></ul></li><li><p>Azure ML </p><ul><li>Power Query から Azure ML モデルへのアクセス</li></ul></li></ul><h2 id="スケジュール"><a href="#スケジュール" class="headerlink" title="スケジュール"></a>スケジュール</h2><p><strong>2025年8月11日</strong>: 新規モデルの作成停止</p><ul><li>Cognitive Servicesを使用した新しいモデルの作成ができなくなります。<br>利用しようとした場合にはエラーが発生します。<div align="center"><img src="Retirement-CognitiveServices-and-AzureML_03.png"></div>  </li><li>既存モデルの更新は 9 月 15 日 まで引き続き可能です。</li></ul><p><strong>2025年9月15日</strong>: 完全廃止</p><ul><li>Cognitive ServicesとAzure MLを使用するすべての機能が利用不可になり、既存モデルの更新が失敗するようになります。</li></ul><h2 id="必要な対応"><a href="#必要な対応" class="headerlink" title="必要な対応"></a>必要な対応</h2><p>セマンティック モデル内で Cognitive service  および Azure ML を利用している場合には 9 月 15 日以降セマンティック モデルの更新が失敗するようになりますので、セマンティック モデル内のクエリから利用しているステップを削除する必要があります。削除手順は以下の通りです。</p><ol><li>セマンティック モデルを Power BI Service からダウンロードし、Power BI Desktop で [データの変換] を選択し Power Query を開きます。</li></ol>  <div align="center">  <img src="Retirement-CognitiveServices-and-AzureML_01.png">  </div> 2. [適用したステップ] から Cognitive service  および Azure ML を利用しているステップを削除します。  <div align="center">  <img src="Retirement-CognitiveServices-and-AzureML_02.png">  </div> <p>データフローを利用している場合など、 Power BI Service 内で利用できる Power Query Online の場合でも同様の手順で Cognitive service  および Azure ML を含むステップを削除します。 </p><p>引き続き AI 機能を利用したい場合には、現時点でプレビュー機能ではございますが、 Microsoft Fabric で利用できる AI 機能がございますので、こちらのご利用をご検討ください。<br>参考# <a href="https://learn.microsoft.com/ja-jp/fabric/data-science/ai-services/ai-services-overview">Fabric の Azure AI サービスを使用する - Microsoft Fabric | Microsoft Learn</a><br>参考# <a href="https://learn.microsoft.com/ja-jp/fabric/data-science/automated-machine-learning-fabric">Fabric の AutoML の概念 (プレビュー) - Microsoft Fabric | Microsoft Learn</a></p><h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>今回は Cognitive service と Azure ML の廃止についてご案内いたしました。2019 年 6 月 10 日に本機能が GA されてからおおよそ 6 年間、ご利用いただいた皆さまには感謝申し上げます。引き続き Microsoft Fabric の AI 機能をご利用いただけますと幸いです。</p><p>以上、本ブログが少しでも皆さまのお役に立てますと幸いでございます。</p>]]>
-    </content>
-    <id>https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/</id>
-    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/"/>
-    <published>2025-08-30T15:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの亀田です。</p>
-<p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p>]]>
-    </summary>
-    <title>Cognitive service と Azure ML の廃止</title>
-    <updated>2026-07-01T08:27:32.072Z</updated>
+    <updated>2026-08-01T00:35:20.033Z</updated>
   </entry>
   <entry>
     <author>
@@ -388,7 +387,30 @@
 <p>2025 年 3 月版以降の Power BI Desktop &#x2F; Power BI Report Server 向けの Power BI Desktop では CPU で AVX  (Advanced Vector Extensions)  命令がサポートされている必要があります。サポートされていない CPU では予期しない動作となる場合がございますので、この変更についてご案内いたします。</p>]]>
     </summary>
     <title>2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります</title>
-    <updated>2026-07-01T08:27:32.021Z</updated>
+    <updated>2026-08-01T00:35:18.937Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Japan Power BI Team</name>
+    </author>
+    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
+    <category term="Power BI Desktop" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Desktop/"/>
+    <category term="アナウンス" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B9/"/>
+    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
+    <category term="Premium" scheme="https://jpbap-sqlbi.github.io/blog/tags/Premium/"/>
+    <category term="AI" scheme="https://jpbap-sqlbi.github.io/blog/tags/AI/"/>
+    <content>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの亀田です。</p><p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p><span id="more"></span><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、　　</p><p>本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><h2 id="AI-機能の廃止について"><a href="#AI-機能の廃止について" class="headerlink" title="AI 機能の廃止について"></a>AI 機能の廃止について</h2><p>冒頭でご案内しました Power BI Blog <a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> で今回廃止の対象となった Cognitive service と Azure ML は Power BI Premium 容量や Power BI Premium Per User のライセンス保有ユーザーが利用できた Premium 機能の一つです。Power Query 内でユーザーが用意したデータを利用してキー フレーズ抽出や感情分析などを行うことができました。本変更は、拡張性や柔軟性向上を求めるユーザーからのフィードバックに基づき決定されました。</p><h2 id="影響を受ける機能"><a href="#影響を受ける機能" class="headerlink" title="影響を受ける機能"></a>影響を受ける機能</h2><p>影響を受ける機能は Cognitive service  および Azure ML です。</p><ul><li><p>Cognitive Services </p><ul><li>感情分析</li><li>キーフレーズ抽出</li><li>言語検出 </li><li>画像タグ付け</li></ul></li><li><p>Azure ML </p><ul><li>Power Query から Azure ML モデルへのアクセス</li></ul></li></ul><h2 id="スケジュール"><a href="#スケジュール" class="headerlink" title="スケジュール"></a>スケジュール</h2><p><strong>2025年8月11日</strong>: 新規モデルの作成停止</p><ul><li>Cognitive Servicesを使用した新しいモデルの作成ができなくなります。<br>利用しようとした場合にはエラーが発生します。<div align="center"><img src="Retirement-CognitiveServices-and-AzureML_03.png"></div>  </li><li>既存モデルの更新は 9 月 15 日 まで引き続き可能です。</li></ul><p><strong>2025年9月15日</strong>: 完全廃止</p><ul><li>Cognitive ServicesとAzure MLを使用するすべての機能が利用不可になり、既存モデルの更新が失敗するようになります。</li></ul><h2 id="必要な対応"><a href="#必要な対応" class="headerlink" title="必要な対応"></a>必要な対応</h2><p>セマンティック モデル内で Cognitive service  および Azure ML を利用している場合には 9 月 15 日以降セマンティック モデルの更新が失敗するようになりますので、セマンティック モデル内のクエリから利用しているステップを削除する必要があります。削除手順は以下の通りです。</p><ol><li>セマンティック モデルを Power BI Service からダウンロードし、Power BI Desktop で [データの変換] を選択し Power Query を開きます。</li></ol>  <div align="center">  <img src="Retirement-CognitiveServices-and-AzureML_01.png">  </div> 2. [適用したステップ] から Cognitive service  および Azure ML を利用しているステップを削除します。  <div align="center">  <img src="Retirement-CognitiveServices-and-AzureML_02.png">  </div> <p>データフローを利用している場合など、 Power BI Service 内で利用できる Power Query Online の場合でも同様の手順で Cognitive service  および Azure ML を含むステップを削除します。 </p><p>引き続き AI 機能を利用したい場合には、現時点でプレビュー機能ではございますが、 Microsoft Fabric で利用できる AI 機能がございますので、こちらのご利用をご検討ください。<br>参考# <a href="https://learn.microsoft.com/ja-jp/fabric/data-science/ai-services/ai-services-overview">Fabric の Azure AI サービスを使用する - Microsoft Fabric | Microsoft Learn</a><br>参考# <a href="https://learn.microsoft.com/ja-jp/fabric/data-science/automated-machine-learning-fabric">Fabric の AutoML の概念 (プレビュー) - Microsoft Fabric | Microsoft Learn</a></p><h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>今回は Cognitive service と Azure ML の廃止についてご案内いたしました。2019 年 6 月 10 日に本機能が GA されてからおおよそ 6 年間、ご利用いただいた皆さまには感謝申し上げます。引き続き Microsoft Fabric の AI 機能をご利用いただけますと幸いです。</p><p>以上、本ブログが少しでも皆さまのお役に立てますと幸いでございます。</p>]]>
+    </content>
+    <id>https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/</id>
+    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/Retirement-CognitiveServices-and-AzureML/"/>
+    <published>2025-08-30T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>こんにちは、Power BI サポート チームの亀田です。</p>
+<p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p>]]>
+    </summary>
+    <title>Cognitive service と Azure ML の廃止</title>
+    <updated>2026-08-01T00:35:18.988Z</updated>
   </entry>
   <entry>
     <author>
@@ -410,7 +432,7 @@
 <p>本記事では、Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介します。</p>]]>
     </summary>
     <title>アプリ・レポートを閲覧できないときの対処法</title>
-    <updated>2026-07-01T08:27:32.360Z</updated>
+    <updated>2026-08-01T00:35:19.277Z</updated>
   </entry>
   <entry>
     <author>
@@ -432,7 +454,7 @@
  </br>]]>
     </summary>
     <title>ホーム テナント リージョンの変更についてのご案内</title>
-    <updated>2026-07-01T08:27:32.983Z</updated>
+    <updated>2026-08-01T00:35:19.900Z</updated>
   </entry>
   <entry>
     <author>
@@ -454,26 +476,6 @@
 <p>Power BI &#x2F; Mircrosoft Fabric で利用できる ETL ツールであるデータ フローは、現在データフロー Gen1、データフロー Gen2の2つを利用することができます。通常、スケジュールで更新を行うことが多いですが、今回はそれぞれのデータフローの更新方法について説明します。</p>]]>
     </summary>
     <title>データフローの更新方法</title>
-    <updated>2026-07-01T08:27:32.470Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Japan Power BI Team</name>
-    </author>
-    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
-    <category term="Power BI Service" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Service/"/>
-    <category term="データマート" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%BC%E3%83%88/"/>
-    <category term="Datamart" scheme="https://jpbap-sqlbi.github.io/blog/tags/Datamart/"/>
-    <content>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI データマートが 2025 年 10 月 1 日に廃止され、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。機能廃止により、保存されたデータやレポートが失われる可能性があるため 、ご利用中のお客様は、移行計画を立てることが重要です。本記事では Microsoft 公式ドキュメントに基づき、その背景と影響、移行手順、およびよくある質問（FAQ）について解説します。 </p><blockquote><p>[!TIP]<br>公式ブログ：<a href="https://powerbi.microsoft.com/ja-jp/blog/unify-datamart-with-fabric-data-warehouse/">Power BI Blog – Unify Datamart with Fabric Data Warehouse!</a></p></br></blockquote><h3 id="データマート廃止の背景"><a href="#データマート廃止の背景" class="headerlink" title="データマート廃止の背景"></a>データマート廃止の背景</h3><p>Power BI データマートは 2022 年 5 月に Power BI Premium のパブリック プレビューとして登場し、セルフサービス型のデータ分析とモデリングの新たな選択肢として活用されてきました。<br><a href="https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-overview">datamarts の概要 - Power BI | Microsoft Learn</a><br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_dataflow_dataset/">Power BI データフローとデータセット及びデータマートの紹介と比較 | Japan CSS Support Power BI Blog</a></p><p>その後、Microsoft Fabric の登場により、より高度なエンタープライズ機能とスケーラビリティを備えた Fabric DW が 2024 年に一般提供（GA）されました。<br><a href="https://learn.microsoft.com/ja-jp/fabric/data-warehouse/data-warehousing">Microsoft Fabric のデータ ウェアハウスとは？ - Microsoft Fabric | Microsoft Learn</a></p><p>Fabric DW は OneLake と Delta Parquet を基盤とし、フル T-SQL 対応、Git 連携、列レベル セキュリティ、Copilot 支援など、より包括的で拡張性の高いデータ基盤を提供します。このような進化に伴い、Power BI データマートは 2025 年 10 月 1 日をもってサービスを終了し、Fabric DW へと統合されることになりました。これにより、今後は Fabric を中心としたより強力なデータ活用が可能になります。<br></br></p><h3 id="移行スケジュールと影響"><a href="#移行スケジュールと影響" class="headerlink" title="移行スケジュールと影響"></a>移行スケジュールと影響</h3><p>2025 年 6 月 1 日以降、Power BI ポータルで新しくデータマートを作成することができなくなり、代わりに Fabric DW 作成への案内が表示されます。<br>2025 年 10 月 1 日午前 0 時（UTC）以降、既存のデータマートは廃止となり、ワークスペースから削除されます。<br><strong>重要</strong>：2025 年 10 月 1 日以降、データマートに保存されているデータや関連レポートへアクセスできなくなるため、事前に移行作業を行う必要があります。<br></br></p><h3 id="現状の確認と影響の洗い出し"><a href="#現状の確認と影響の洗い出し" class="headerlink" title="現状の確認と影響の洗い出し"></a>現状の確認と影響の洗い出し</h3><p>以下の方法を用いることで、テナント内のデータマートの現状を把握し、影響範囲を明確化できます。</p><p>■ Power BI 管理者向け REST API<br>Power BI 管理者向けの REST API を使用することで、テナント内のデータマート一覧を取得できます。<br>「Items - List Items」エンドポイントで type&#x3D;Datamart を指定することで、データマートの作成者や最終更新日などの情報を確認できます。<br>詳細は、以下の公式ドキュメントをご参照ください。<br><a href="https://learn.microsoft.com/ja-jp/rest/api/power-bi/admin">Admin - REST API (Power BI Power BI REST APIs) | Microsoft Learn</a></p><p>■ 管理ポータルの[ワークスペース管理]<br>Power BI サービスの管理ポータルでは、各ワークスペースにおけるデータマートの作成状況や構成を確認できます。<br>詳細は、以下の公式ドキュメントをご参照ください。<br><a href="https://learn.microsoft.com/ja-jp/power-bi/transform-model/datamarts/datamarts-administration">Admin - REST API (Power BI Power BI REST APIs) | Microsoft Learn</a></p><div align="left"><img src="1.png"></div><p>■ Microsoft Purview Hub によるガバナンス管理<br>Purview Hub を使用することで、データ資産の分類、アクセス状況、依存関係などを可視化できます。データマートを含むデータ資産の利用状況をガバナンスの観点から把握するのに有効です。<br>詳細は、以下の公式ドキュメントをご参照ください。<br><a href="https://learn.microsoft.com/ja-jp/fabric/governance/use-microsoft-purview-hub?tabs=overview">Microsoft Fabric の Microsoft Purview ハブ - Microsoft Fabric | Microsoft Learn</a></p><div align="left"><img src="2.png"></div><p>■ Fabric 管理ポータルの使用状況レポート<br>Fabric 管理者は、管理ポータルの「機能の使用状況と導入」レポートを通じて、データマートを含む各種機能の利用状況を確認できます。<br>詳細は、以下の公式ドキュメントをご参照ください。<br><a href="https://learn.microsoft.com/ja-jp/fabric/admin/feature-usage-adoption">機能の使用状況と導入レポート - Microsoft Fabric | Microsoft Learn</a><br></br></p><h3 id="ウェアハウスに移行する手順"><a href="#ウェアハウスに移行する手順" class="headerlink" title="ウェアハウスに移行する手順"></a>ウェアハウスに移行する手順</h3><p>既存のデータマートを Fabric DW にアップグレードするには、次の 2 つの方法があります：<br><strong>重要</strong>：Fabric DWを作成するには、P SKU または F SKU の容量が必要です。</p><ol><li><p>Microsoft Learn のガイドに従って、データマートを手動で移行できます。詳細は以下の公式ドキュメントをご参照ください。<br><a href="https://learn.microsoft.com/ja-jp/fabric/data-warehouse/datamart-upgrade-to-warehouse#manual-upgrade-steps">Power BI Datamart をウェアハウスにアップグレードする方法 - Microsoft Fabric | Microsoft Learn</a></p></li><li><p>fabric-toolbox にて提供されているツールを活用すると、スキーマ作成とデータ移行が段階的に実施可能です。<br><a href="https://github.com/microsoft/fabric-toolbox/tree/main/accelerators/power-bi-to-fabric-data-warehouse-modernization">fabric-toolbox · GitHub</a></p></li></ol><p><strong>注意</strong>：弊サポートチームでは、本ツールを使用したデータマートから Fabric への全体的な移行プロセスに対する包括的な支援やコンサルティングは行っておりません。スクリプト内の個別の Power BI コマンドや API を単体で実行した際にエラーが発生した場合には、コマンドや API 単位でのトラブルシューティング支援は可能です。<br></br></p><h3 id="よくある質問（FAQ）"><a href="#よくある質問（FAQ）" class="headerlink" title="よくある質問（FAQ）"></a>よくある質問（FAQ）</h3><p><strong>Q1. データマートが廃止されたら、保存されているデータはどうなりますか？</strong><br>A. 2025 年 10 月 1 日以降、データマート内のデータは完全に削除され、アクセスできなくなります。<br><strong>Q2. Fabric DW のサポート体制は？</strong><br>A. Fabric DW は Power BI のサポート範囲外となり、 Fabric DW の専任サポート チームが対応します。</p><p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p><hr><p><strong>アンケートご協力のお願い</strong><br>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 </p><p>※　所要時間は1分程度となります。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</a></p>]]>
-    </content>
-    <id>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/</id>
-    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_datamart_retirement/"/>
-    <published>2025-07-30T15:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI データマートが 2025 年 10 月 1 日に廃止され、Microsoft Fabric Data Warehouse（以下、Fabric DW）へ統合されます。機能廃止により、保存されたデ]]>
-    </summary>
-    <title>Power BI データマートの廃止と Fabric Data Warehouse への移行について</title>
-    <updated>2026-07-01T08:27:32.483Z</updated>
+    <updated>2026-08-01T00:35:19.388Z</updated>
   </entry>
 </feed>
