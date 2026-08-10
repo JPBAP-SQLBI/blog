@@ -30,10 +30,10 @@ tags:
 ---
 ## 目次
 ---
-* [Power BI / Fabric Dataflow Gen1 の今後について](#power-bi--fabric-dataflow-gen1-の今後について)
-* [Dataflow Gen2 の主な強化ポイント](#dataflow-gen2-の主な強化ポイント)
-* [Gen1 から Gen2 への移行方法](#gen1-から-gen2-への移行方法)
-* [Dataflow Gen1 のサポートとお問い合わせについて](#dataflow-gen1-のサポートとお問い合わせについて)
+* [Power BI / Fabric Dataflow Gen1 の今後について](#Power-BI-Fabric-Dataflow-Gen1-の今後について)
+* [Dataflow Gen2 の主な強化ポイント](#Dataflow-Gen2-の主な強化ポイント)
+* [Gen1 から Gen2 への移行方法](#Gen1-から-Gen2-への移行方法)
+* [Dataflow Gen1 のサポートとお問い合わせについて](#データフロー-Gen1-のサポートとお問い合わせについて)
 * [おわりに](#おわりに)
 
 
