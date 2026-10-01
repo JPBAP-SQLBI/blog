@@ -10,7 +10,34 @@
   <rights>All rights reserved 2026, Japan Power BI Team</rights>
   <subtitle>日本マイクロソフトPower BIサポートチームのブログです。チームの担当製品である Power BI の情報を中心にお届けします。</subtitle>
   <title>Japan CSS Support Power BI Blog</title>
-  <updated>2026-09-06T20:57:56.323Z</updated>
+  <updated>2026-10-01T01:11:53.211Z</updated>
+  <entry>
+    <author>
+      <name>Japan Power BI Team</name>
+    </author>
+    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
+    <category term="Microsoft Fabric" scheme="https://jpbap-sqlbi.github.io/blog/tags/Microsoft-Fabric/"/>
+    <category term="Fabric IQ" scheme="https://jpbap-sqlbi.github.io/blog/tags/Fabric-IQ/"/>
+    <category term="MCP" scheme="https://jpbap-sqlbi.github.io/blog/tags/MCP/"/>
+    <category term="Model Context Protocol" scheme="https://jpbap-sqlbi.github.io/blog/tags/Model-Context-Protocol/"/>
+    <category term="Power BI Agentic" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-Agentic/"/>
+    <category term="AI エージェント" scheme="https://jpbap-sqlbi.github.io/blog/tags/AI-%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/"/>
+    <content>
+      <![CDATA[<p><a id="introduction"></a></p><h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、Power BI サポート チームの中川です。</p><p>Power BI では、GitHub Copilot などの AI エージェントからセマンティック モデルを操作したり、データに関する質問を行ったりするための MCP サーバーが公開されています。また、AI エージェントによるモデルやレポートの作成を支援するスキルとツールをまとめた、Power BI Agentic も紹介されています。</p><p>一方で、関連するドキュメントには MCP サーバー、スキル、プラグイン、Desktop Bridge といった用語が登場するため、それぞれが何を担当し、何を導入すればよいのかを整理しにくい場合があります。</p><p>本ブログでは、Power BI に関連する各種 MCP サーバーをはじめ、スキルやツールの役割と導入方法についてご紹介いたします。</p><span id="more"></span><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p><p>また、パブリックプレビュー中の機能が含まれており、ご案内した内容が今後変更される可能性が十分にございますことをご了承いただきますようお願いいたします。</p></div><hr><h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><ul><li><a href="#mcp-servers">Power BI の MCP サーバーについて</a></li><li><a href="#agentic">Power BI Agentic とは</a></li><li><a href="#installation">Power BI MCP・プラグインの導入方法</a></li><li><a href="#desktop-tools">Power BI Desktop Bridge</a></li><li><a href="#file-formats">PBIX・PBIP の使い分け</a></li><li><a href="#conclusion">おわりに</a></li></ul><hr><p><a id="mcp-servers"></a></p><h2 id="Power-BI-の-MCP-サーバーについて"><a href="#Power-BI-の-MCP-サーバーについて" class="headerlink" title="Power BI の MCP サーバーについて"></a>Power BI の MCP サーバーについて</h2><p>Power BI の MCP サーバーは、AI エージェントが Power BI に対して操作を行うためのツールを提供します。AI エージェントは、これらのツールを呼び出すことで、モデルの構造を取得・変更したり、DAX クエリを実行して結果を受け取ったりできます。</p><p>なお、本記事では、Power BI Authoring MCP server を <strong>Authoring MCP</strong>、Power BI Consumption MCP server を <strong>Consumption MCP</strong>、Fabric IQ MCP server を <strong>Fabric IQ MCP</strong> と表記します。</p><p>各 MCP サーバーの主な機能や提供状態を、以下の表にまとめます。</p><table><thead><tr><th>項目</th><th>Authoring MCP</th><th>Consumption MCP</th><th>Fabric IQ MCP</th></tr></thead><tbody><tr><td>主な機能</td><td>モデルの作成・変更、DAX クエリの実行</td><td>メタデータの取得、DAX クエリの生成、DAX クエリの実行</td><td>レポート・モデルの検索、メタデータの取得、値の検索、DAX クエリの実行</td></tr><tr><td>サーバーが動作する場所</td><td>Microsoft がホストする環境、または利用者のコンピューター</td><td>Microsoft がホストするリモートのエンドポイント</td><td>リモートのエンドポイント</td></tr><tr><td>提供状態</td><td>プレビュー</td><td>プレビュー</td><td>一般提供（GA）</td></tr><tr><td>位置付け</td><td>モデルの作成・変更用</td><td>ワークスペース上のセマンティック モデルのデータへの問い合わせ用</td><td>ワークスペース上のセマンティック モデルのデータへの問い合わせ用（推奨）</td></tr></tbody></table><div class="alert is-success"><p class="alert-title">ヒント</p><p>以前 Remote MCP サーバーとして公開されていたものは、現在のドキュメントでは Consumption MCP として案内されています。また、Local MCP は、Authoring MCP の Local 方式にあたります。</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/mcp-servers-overview">MCP サーバーの概要 - Power BI | Microsoft Learn</a></p><p>参考情報:<a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/remote-mcp-server-get-started">Power BI 従量制 MCP サーバーのセットアップ - Power BI | Microsoft Learn</a></p></div><h3 id="Power-BI-Authoring-MCP"><a href="#Power-BI-Authoring-MCP" class="headerlink" title="Power BI Authoring MCP"></a>Power BI Authoring MCP</h3><p>Power BI Authoring（作成用）MCP サーバーは、セマンティック モデルの作成・変更や確認に関するツールを提供する MCP サーバーです。主に以下のような操作ができます。</p><ul><li>テーブル、列、メジャー、リレーションシップなどの確認・作成・変更</li><li>複数のモデル オブジェクトの名前変更や翻訳などの一括操作</li><li>TMDL や PBIP のモデル定義を扱う作業</li><li>DAX クエリの実行による、メジャーの計算結果や計算ロジックの確認</li></ul><p>たとえば、メジャーを追加した後、そのメジャーを使う DAX クエリを実行して計算結果を確認するなど、モデルの変更とその結果の検証を AI エージェントにて実行できます。</p><h4 id="Hosted-と-Local-の使い分け"><a href="#Hosted-と-Local-の使い分け" class="headerlink" title="Hosted と Local の使い分け"></a>Hosted と Local の使い分け</h4><p>Authoring MCP サーバーには、Microsoft がホストする <strong>Hosted</strong> と、利用者のコンピューターで動作する <strong>Local</strong> の2つの方式があります。</p><table><thead><tr><th>比較項目</th><th>Hosted</th><th>Local</th></tr></thead><tbody><tr><td>サーバーの稼働場所</td><td>Microsoft がホストする環境</td><td>利用者のコンピューター</td></tr><tr><td>ワークスペース上のセマンティック モデル</td><td>対応</td><td>対応</td></tr><tr><td>Power BI Desktop で開いているモデル</td><td>非対応</td><td>対応</td></tr><tr><td>ディスク上の PBIP・TMDL のモデル定義</td><td>非対応</td><td>対応</td></tr><tr><td>サーバーの導入・更新</td><td>利用者によるインストールは不要。更新は Microsoft が管理</td><td>拡張機能やパッケージを利用者が導入・更新</td></tr></tbody></table><p>ワークスペース上のセマンティック モデルは、どちらの方式でも操作できますが、インストールが不要で Microsoft によって管理されている Hosted が推奨されています。一方、Power BI Desktop で開いているモデルや、ローカルの PBIP・TMDL を扱う場合は Local を利用します。</p><div class="alert is-info"><p class="alert-title">Note</p><p>Authoring MCP サーバーが扱うのは、モデリングに関する操作です。レポートのページやビジュアル、モデル ビューの図のレイアウトは変更できません。</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/power-bi-authoring-mcp">Power BI 作成用 MCP サーバー - Power BI | Microsoft Learn</a></p><p>参考情報:<a href="https://github.com/microsoft/powerbi-modeling-mcp">GitHub - microsoft&#x2F;powerbi-modeling-mcp</a></p></div><h3 id="Power-BI-Consumption-MCP"><a href="#Power-BI-Consumption-MCP" class="headerlink" title="Power BI Consumption MCP"></a>Power BI Consumption MCP</h3><p>Power BI Consumption MCP サーバーは、AI エージェントがワークスペース上のセマンティック モデルに問い合わせるための MCP サーバーです。</p><p>Consumption MCP サーバーでは、以下のツールが提供されています。</p><table><thead><tr><th>ツール</th><th>内容</th></tr></thead><tbody><tr><td>クエリ実行ツール<br>（Execute Query tool）</td><td>セマンティック モデルに対して DAX クエリを実行し、結果を AI エージェントに返す</td></tr><tr><td>セマンティック モデル スキーマの取得ツール<br>（Get Semantic Model Schema tool）</td><td>テーブル、列、メジャー、リレーションシップなど、セマンティック モデルの構造を取得する</td></tr><tr><td>レポート メタデータの取得ツール<br>（Get Report Metadata tool）</td><td>既存レポートのページ、ビジュアル、フィルターなどのメタデータを取得する</td></tr><tr><td>クエリ生成ツール<br>（Generate Query tool）</td><td>Power BI の Copilot を使って、自然言語の質問から DAX クエリを生成する</td></tr></tbody></table><p>たとえば、対象のセマンティック モデルを指定し、売上が多い上位 10 製品を調べるよう AI エージェントに指示できます。</p><p>なお、日本語ドキュメントの「従量課金」という表記については、既存のデータを利用する用途を示す名称であり、呼び出しごとの課金方式を表すものではありません。</p><p>また、データへの問い合わせに利用する MCP サーバーについては、次の　Fabric IQ MCP が推奨されています。</p><blockquote><p>セマンティック モデルを使用する場合は、<a href="https://learn.microsoft.com/ja-jp/fabric/iq/connectors/fabric-iq-mcp">Fabric IQ MCP サーバー</a>を使用することが推奨されています。 Fabric IQ は、ビジネス データとコンテキストを、Power BIセマンティック モデルとレポートから AI クライアントに取り込むための主要な MCP サーバーです。</p><p>参考情報:<a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/remote-mcp-server-get-started">Power BI 従量制 MCP サーバーのセットアップ - Power BI | Microsoft Learn</a></p></blockquote><h3 id="Fabric-IQ-MCP"><a href="#Fabric-IQ-MCP" class="headerlink" title="Fabric IQ MCP"></a>Fabric IQ MCP</h3><p>Fabric IQ MCP は、AI エージェントが Power BI の既存レポートやセマンティック モデルを探し、そのデータに問い合わせるためのリモート MCP サーバーです。読み取り専用のツールを提供しており、モデルやレポートの作成・変更は行いません。</p><p>Fabric IQ MCP サーバーでは、以下のツールが提供されています。</p><table><thead><tr><th>ツール</th><th>内容</th></tr></thead><tbody><tr><td><code>DiscoverArtifacts</code></td><td>名前で Power BI のレポートやセマンティック モデルを検索する</td></tr><tr><td><code>ResolveFabricItem</code></td><td>対応するアイテムの URL から、ほかのツールで使用する対象を特定する</td></tr><tr><td><code>GetReportMetadata</code></td><td>レポートのメタデータを取得する</td></tr><tr><td><code>GetSemanticModelSchema</code></td><td>セマンティック モデルのスキーマ情報を取得する</td></tr><tr><td><code>ValueSearch</code></td><td>セマンティック モデル内の特定の格納値を検索する</td></tr><tr><td><code>ExecuteQuery</code></td><td>セマンティック モデルに対して DAX クエリを実行する</td></tr></tbody></table><p>たとえば、売上レポートを名前で探し、そのデータから直近の四半期の地域別売上を調べるよう AI エージェントに指示できます。</p><blockquote><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/fabric/iq/connectors/fabric-iq-mcp">Fabric IQ MCPサーバーを始めましょう - Microsoft Fabric | Microsoft Learn</a></p></blockquote><div align="center"><img src="powerbi_mcp_servers.png" alt="Power BI の MCP サーバーの役割と接続先" width="1200" style="max-width: 100%; height: auto;"></div><hr><p><a id="agentic"></a></p><h2 id="Power-BI-Agentic-とは"><a href="#Power-BI-Agentic-とは" class="headerlink" title="Power BI Agentic とは"></a>Power BI Agentic とは</h2><p>Power BI Agentic は、AI エージェントによる Power BI のモデルやレポートの開発を支援する、スキルとツール群の呼び名です。スキルは作業の進め方を示し、ツールはモデルの変更などの操作を実行する手段を提供します。GitHub Copilot などの AI エージェントは、これらを組み合わせて開発を進めます。</p><h3 id="エージェント-プラグインとは"><a href="#エージェント-プラグインとは" class="headerlink" title="エージェント プラグインとは"></a>エージェント プラグインとは</h3><p>エージェント プラグインは、スキルや MCP サーバーの設定などをまとめて導入できる、AI エージェント向けの拡張パッケージです。</p><p>Power BI Agentic の利用を始めるには、<code>powerbi-authoring</code> プラグインの導入が推奨されています。このプラグインをインストールすると、モデル用・レポート用の2つのスキルと、Local の Authoring MCP サーバーの登録設定をまとめて追加できます。</p><h3 id="スキルとツールの役割"><a href="#スキルとツールの役割" class="headerlink" title="スキルとツールの役割"></a>スキルとツールの役割</h3><p>それぞれの役割は、以下のように整理できます。</p><table><thead><tr><th>構成要素</th><th>役割</th><th>例</th></tr></thead><tbody><tr><td>AI エージェント</td><td>利用者の指示を受け、スキルを参照し、ツールを呼び出して作業を進める</td><td>GitHub Copilot、Claude Code、Cursor など</td></tr><tr><td>スキル</td><td>AI エージェントが必要に応じて読み込む指示・スクリプト・参考資料を通じて、作業の進め方や判断基準を示す</td><td><code>semantic-model-authoring</code>、<code>powerbi-report-cli</code></td></tr><tr><td>ツール</td><td>モデルの確認・変更、DAX の実行、レポート定義の検証、Desktop の操作などを実行する</td><td>各 MCP サーバーが提供するツール（例: クエリ実行ツール、セマンティック モデル スキーマの取得ツール 等）</td></tr></tbody></table><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/agentic/power-bi-agentic-overview">Power BI Agentic の概要 - Power BI | Microsoft Learn</a></p><p>参考情報: <a href="/blog/references/authoring/">skills-for-fabric&#x2F;plugins&#x2F;powerbi-authoring&#x2F;skills&#x2F;powerbi-report-cli</a></p></div><h3 id="主なスキルと役割"><a href="#主なスキルと役割" class="headerlink" title="主なスキルと役割"></a>主なスキルと役割</h3><p>Power BI Agentic の主なスキルには、モデルの作成・変更を支援するものと、レポートの設計・作成・公開を支援するものがあります。</p><table><thead><tr><th>スキル</th><th>主な役割</th></tr></thead><tbody><tr><td><code>semantic-model-authoring</code></td><td>セマンティック モデルの作成・変更、DAX の記述・検証、モデルの配置や更新などの進め方を示す</td></tr><tr><td><code>powerbi-report-cli</code></td><td>レポートの要件整理・設計、PBIR 定義の編集・検証、Fabric への公開・管理の進め方を示す</td></tr></tbody></table><p><code>powerbi-report-cli</code> は、以前は個別に提供されていた4つのレポート用スキル（planning・design・authoring・management）を統合したものです。統合後は、各スキルが担っていた役割が、以下の4つの「モード」として用意されています。AI エージェントは、指示された内容に応じてモードを使い分けます。</p><div class="alert is-info"><p class="alert-title">Note</p><p>Microsoft Learn では、レポート用の機能が4つのスキルとして紹介されていますが、本記事では、GitHub の公開スキル定義に基づき、統合後の <code>powerbi-report-cli</code> と4つのモードを説明します。</p></div><table><thead><tr><th>モード</th><th>主な役割</th></tr></thead><tbody><tr><td><code>planning</code></td><td>新規レポートの要件や対象範囲を整理し、仕様をまとめる</td></tr><tr><td><code>design</code></td><td>グラフの種類、レイアウト、色、フォント、アクセシビリティなどの設計方針をまとめる</td></tr><tr><td><code>authoring</code></td><td>PBIR 定義のページ・ビジュアル・フィルターなどを作成・変更し、検証する</td></tr><tr><td><code>management</code></td><td>ワークスペース上のレポートや定義を取得・公開・更新・削除し、接続先モデルの変更などを扱う</td></tr></tbody></table><p>たとえば、新規レポートを要件整理から作成する場合、AI エージェントはスキルに記載された手順に沿って、次のように作業を進めます。</p><ol><li><strong>要件とモデルの確認</strong>: <code>planning</code> で、レポートの利用者・目的・対象範囲を整理します。モデルの構造の確認には、<code>semantic-model-authoring</code> を利用します。</li><li><strong>設計と仕様の承認</strong>: <code>design</code> でグラフやレイアウトを具体化し、仕様をまとめて利用者の承認を得ます。</li><li><strong>実装と検証</strong>: <code>authoring</code> でレポートを作成し、定義や Desktop での表示を確認します。必要なモデル変更は <code>semantic-model-authoring</code> が担当します。</li><li><strong>必要に応じた公開</strong>: 利用者が公開を指示・承認した場合に、<code>management</code> でワークスペースへレポートを公開します。</li></ol><p>たとえば、メジャーの追加にはモデル用スキルを、既存ページの色や配置の変更にはレポート用スキルの <code>authoring</code> モードを利用します。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報: <a href="/blog/powerbi-report-cli/SKILL/">skills-for-fabric&#x2F;plugins&#x2F;powerbi-authoring&#x2F;skills&#x2F;powerbi-report-cli</a></p><p>参考情報:<a href="/blog/a31549e4690e03b78c507c7a81cebdbe0caefc5b/CHANGELOG/">skills-for-fabric</a></p></div><hr><p><a id="installation"></a></p><h2 id="Power-BI-MCP・プラグインの導入方法"><a href="#Power-BI-MCP・プラグインの導入方法" class="headerlink" title="Power BI MCP・プラグインの導入方法"></a>Power BI MCP・プラグインの導入方法</h2><p>以下に、MCP サーバーとプラグインの導入手順を確認できる公開情報をまとめます。Authoring MCP、<code>powerbi-authoring</code> プラグイン、Consumption MCP の参照先には、Windows 上の VS Code と GitHub Copilot を使った手順が記載されています。Fabric IQ MCP の参照先には、GitHub Copilot CLI を使った接続・認証・確認の手順が記載されています。</p><p>導入手順や前提条件は、利用する MCP サーバーやクライアントに応じて、以下の公開情報をご参照ください。</p><table><thead><tr><th>導入対象</th><th>手順の参照先</th></tr></thead><tbody><tr><td>Authoring MCP サーバー（Hosted）</td><td><a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/power-bi-authoring-mcp#set-up-the-hosted-server">Power BI 作成用 MCP サーバー - Power BI | Microsoft Learn</a> 「ホストされるサーバーを設定する」</td></tr><tr><td>Authoring MCP サーバー（Local）</td><td><a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/power-bi-authoring-mcp#set-up-the-local-server">Power BI 作成用 MCP サーバー - Power BI | Microsoft Learn</a> 「ローカル サーバーを設定する」</td></tr><tr><td>Consumption MCP サーバー</td><td><a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/remote-mcp-server-get-started">Power BI 従量制 MCP サーバーのセットアップ - Power BI | Microsoft Learn</a></td></tr><tr><td>Fabric IQ MCP サーバー</td><td><a href="https://learn.microsoft.com/ja-jp/fabric/iq/connectors/fabric-iq-mcp">Fabric IQ MCPサーバーを始めましょう - Microsoft Fabric | Microsoft Learn</a>（GitHub Copilot CLI の手順）</td></tr><tr><td><code>powerbi-authoring</code> プラグイン</td><td><a href="https://learn.microsoft.com/ja-jp/power-bi/developer/agentic/power-bi-agentic-overview">Power BI Agentic の概要 - Power BI | Microsoft Learn</a></td></tr></tbody></table><div class="alert is-info"><p class="alert-title">Note</p><p>Authoring MCP サーバーでは、Hosted と Local の同時登録を避け、用途に応じてどちらか一方を利用することが推奨されています。両方を登録するとツールが重複し、AI エージェントがどちらを使うか判断しにくくなり、また、リクエストごとのトークン消費も増えるためです。</p><p>参考情報:<a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/power-bi-authoring-mcp#choose-hosted-or-local">Power BI 作成用 MCP サーバー - Power BI | Microsoft Learn</a></p></div><p>プラグインの導入については、VS Code ではエージェント カスタマイズ エディターの「プラグイン」で <code>powerbi-authoring</code> を検索できます。以下は、プラグインの検索画面です。</p><p><img src="powerbi-authoring-plugin-install.png" alt="エージェント カスタマイズ エディターで powerbi-authoring プラグインを検索してインストールする画面"></p><hr><p><a id="desktop-tools"></a></p><h2 id="Power-BI-Desktop-Bridge"><a href="#Power-BI-Desktop-Bridge" class="headerlink" title="Power BI Desktop Bridge"></a>Power BI Desktop Bridge</h2><p>Power BI Desktop Bridge は、外部ツールや AI エージェントから、同じコンピューター上で起動している Power BI Desktop を操作するための機能です。</p><p>効果的な活用例の1つが、AI エージェントによる PBIP のレポート編集後の表示確認です。AI エージェントは、<code>powerbi-report-cli</code> の <code>authoring</code> モードでグラフの追加や色・配置の変更を行います。その後、Desktop Bridge を使ってレポート定義を Desktop に読み込み直し、スクリーンショットで表示を確認します。</p><p>上記の例では、利用者は対象のレポートと変更したい内容をエージェントに指示します。再読み込みやスクリーンショット取得に必要なコマンドは、エージェントがスキルの手順に従って実行するため、利用者がこれらのコマンドを逐一入力する必要は基本的にありません。</p><p>こうした Desktop の操作には、<code>powerbi-desktop</code> CLI を使います。コマンドは AI エージェントから実行するほか、利用者が手動で実行することもできます。代表的なコマンドは、以下のとおりです。</p><table><thead><tr><th>コマンド</th><th>概要</th></tr></thead><tbody><tr><td><code>status</code></td><td>起動中の Desktop と、開いているファイルや Bridge の接続状態を確認する</td></tr><tr><td><code>open</code></td><td>指定した PBIX または PBIP ファイルを Desktop で開く</td></tr><tr><td><code>reload</code></td><td>外部で変更した PBIP のレポート定義を Desktop に読み込み直す</td></tr><tr><td><code>screenshot</code></td><td>指定したレポートページを PNG 画像として取得する</td></tr></tbody></table><p>Bridge を利用するには、Power BI Desktop 側で Bridge が有効になっている必要があります。Desktop 側の設定や CLI の導入手順、各コマンドの引数・オプションなどの詳細は、以下の公開情報をご参照ください。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/agentic/power-bi-desktop-bridge-overview">Power BI デスクトップ ブリッジとは (プレビュー) - Power BI | Microsoft Learn</a></p><p>参考情報:<a href="https://learn.microsoft.com/ja-jp/power-bi/developer/projects/projects-external-editing">Visual Studio Code Power BIデスクトップ プロジェクト ファイルを編集する - Power BI | Microsoft Learn</a></p><p>参考情報:<a href="https://code.visualstudio.com/docs/copilot/security">Secure AI-assisted development in VS Code</a></p></div><div align="center"><img src="powerbi_desktop_bridge.png" alt="Power BI Desktop Bridge を使ったレポート編集と表示確認の流れ" width="1200" style="max-width: 100%; height: auto;"></div><hr><p><a id="file-formats"></a></p><h2 id="PBIX・PBIP-の使い分け"><a href="#PBIX・PBIP-の使い分け" class="headerlink" title="PBIX・PBIP の使い分け"></a>PBIX・PBIP の使い分け</h2><p>Power BI Desktop の保存形式には、PBIX と Power BI Project（PBIP）があります。PBIX は、レポートやモデルを1つのファイルに保存する形式で、PBIP は、レポートやモデルの定義をフォルダー内のテキストファイルに保存する形式です。</p><p>Power BI Desktop のモデルやレポートを AI エージェントで扱う場合、必要な保存形式は作業内容によって異なります。以下に、PBIX のまま利用できる作業と、PBIP が必要な作業をまとめます。</p><table><thead><tr><th>行う作業</th><th>Desktop の保存形式</th></tr></thead><tbody><tr><td>Local の Authoring MCP サーバーで Desktop のモデルを確認・変更したり、DAX クエリを実行したりする</td><td>PBIX のままで利用可能。</td></tr><tr><td>Power BI Agentic のレポート用スキル <code>powerbi-report-cli</code> の <code>authoring</code> モードで、ローカルのレポートのページやビジュアルを作成・変更する</td><td>PBIP が必要。レポート定義は PBIR 形式。</td></tr><tr><td>テーブルやリレーションシップの定義を VS Code 等で編集し、Git で差分管理する（MCP は任意）</td><td>PBIP が必要。モデル定義は TMDL 形式。</td></tr></tbody></table><div class="alert is-info"><p class="alert-title">Note</p><p>ワークスペース上のセマンティック モデルに接続する場合は、Desktop の保存形式にかかわらず MCP で利用できます。（Authoring MCP サーバーの Hosted・Local、Consumption MCP サーバー、Fabric IQ MCP サーバー。）</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/mcp/mcp-servers-overview">MCP サーバーの概要 - Power BI | Microsoft Learn</a></p></div><h3 id="PBIX-のまま利用できる場合"><a href="#PBIX-のまま利用できる場合" class="headerlink" title="PBIX のまま利用できる場合"></a>PBIX のまま利用できる場合</h3><p>Local の Authoring MCP サーバーで Desktop に接続する場合、操作対象は Desktop に読み込まれたモデルです。そのため、PBIX のままモデルの確認・変更や DAX クエリの実行に利用できます。</p><p>たとえば、既存の PBIX を Desktop で開き、そのモデルに接続してメジャーを追加し、DAX クエリで計算結果を確認できます。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/agentic/semantic-model-authoring-skill-overview">Power BI セマンティック モデル作成スキル - Power BI | Microsoft Learn</a></p></div><h3 id="PBIP-にする必要がある場合"><a href="#PBIP-にする必要がある場合" class="headerlink" title="PBIP にする必要がある場合"></a>PBIP にする必要がある場合</h3><p>たとえば、Power BI Agentic のレポート用スキル <code>powerbi-report-cli</code> の <code>authoring</code> モードで、ローカルのレポートにページやグラフを追加したり、配置や色を変更したりする場合は、PBIP が必要です。</p><p>AI エージェントは、スキルの指示に従って、PBIP のフォルダー内にある <strong>PBIR 形式のレポート定義ファイル</strong>を編集します。</p><p>なお、PBIP は MCP を使わない場合にも活用できます。モデル定義（TMDL）の編集、レポート定義（PBIR）を使ったページの再利用、Git による差分・変更履歴の管理などが代表例です。</p><p>PBIP の保存方法や、このほかの活用例、外部編集に対応するファイル・操作の詳細は、以下の公開情報をご参照ください。</p><div class="alert is-info"><p class="alert-title">Note</p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/projects/projects-overview">Power BI Desktop プロジェクト (PBIP) - Power BI | Microsoft Learn</a></p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/projects/projects-report">Power BI Desktop プロジェクト レポート フォルダー - Power BI | Microsoft Learn</a></p><p>参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/developer/projects/projects-external-editing">Visual Studio Code Power BIデスクトップ プロジェクト ファイルを編集する - Power BI | Microsoft Learn</a></p></div><hr><p><a id="conclusion"></a></p><h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>本ブログでは、Power BI の MCP サーバーと Power BI Agentic の役割、および導入方法についてご紹介しました。</p><p>モデルの作成・変更には Authoring MCP を利用します。Consumption MCP では、ワークスペース上のセマンティック モデルに問い合わせることができます。現在、既存のレポートやモデルのデータについて質問する場合には、Fabric IQ MCP の利用が推奨されています。</p><p>モデルやレポートの開発には、Power BI Agentic のスキルとツールも活用できますので、利用したい作業に合わせて環境を準備し、Power BI と AI エージェントの連携をお試しください。</p><p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。</p><hr><p><strong>アンケートご協力のお願い</strong></p><p>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。</p><p>※ 所要時間は1分程度となります。</p><p><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート | Japan CSS Support Power BI Blog</a></p>]]>
+    </content>
+    <id>https://jpbap-sqlbi.github.io/blog/powerbi/powerbi_mcp_agentic/</id>
+    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/powerbi_mcp_agentic/"/>
+    <published>2026-10-01T01:11:58.887Z</published>
+    <summary>
+      <![CDATA[<p><a id="introduction"></a></p>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>こんにちは、Power BI サポート チームの中川です。</p>
+<p>Power BI では、GitHub Copilot などの AI エージェントからセマンティック モデルを操作したり、データに関する質問を行ったりするための MCP サーバーが公開されています。また、AI エージェントによるモデルやレポートの作成を支援するスキルとツールをまとめた、Power BI Agentic も紹介されています。</p>
+<p>一方で、関連するドキュメントには MCP サーバー、スキル、プラグイン、Desktop Bridge といった用語が登場するため、それぞれが何を担当し、何を導入すればよいのかを整理しにくい場合があります。</p>
+<p>本ブログでは、Power BI に関連する各種 MCP サーバーをはじめ、スキルやツールの役割と導入方法についてご紹介いたします。</p>]]>
+    </summary>
+    <title>Power BI MCP と Power BI Agentic の全体像</title>
+    <updated>2026-10-01T01:11:53.211Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Japan Power BI Team</name>
@@ -32,7 +59,7 @@
 <p>増分スキャン、Fabric Data Factory による定期実行、削除済みアイテムの反映などは、第 2 回の記事で説明します。</p>]]>
     </summary>
     <title>Scanner API と Microsoft Fabric を使用してテナントのメタデータを確認する ① フル スキャンと Power BI レポート</title>
-    <updated>2026-09-06T20:57:56.323Z</updated>
+    <updated>2026-10-01T01:11:52.926Z</updated>
   </entry>
   <entry>
     <author>
@@ -54,7 +81,7 @@
 <p>Power BI &#x2F; Microsoft Fabric のお問い合わせでは、「緊急度Aで起票したほうがよいか」「通常対応でよいか」で迷われるケースが多くございます。本記事では、実際の傾向をもとに、判断の目安と起票時のポイントをわかりやすくご紹介いたします。</p>]]>
     </summary>
     <title>緊急度 A で寄せられるケースと、緊急対応・通常対応の判断ポイント</title>
-    <updated>2026-09-06T20:57:55.776Z</updated>
+    <updated>2026-10-01T01:11:52.393Z</updated>
   </entry>
   <entry>
     <author>
@@ -82,7 +109,7 @@
 <p>本ブログでは、アナウンスの要点やデータフロー Gen1 のサポートについてご案内いたします。 </p>]]>
     </summary>
     <title>データフロー Gen1 の廃止について</title>
-    <updated>2026-09-06T20:57:55.791Z</updated>
+    <updated>2026-10-01T01:11:52.408Z</updated>
   </entry>
   <entry>
     <author>
@@ -107,7 +134,7 @@
 <p>本記事では、Power BI Service と Power BI Desktop でカスタム ビジュアルの利用を制御する方法、および管理ポータルの [組織の視覚化] から、特定のカスタム ビジュアルを組織内のユーザーに利用可能にする方法についてご紹介します。</p>]]>
     </summary>
     <title>Power BI でカスタム ビジュアルの利用を制御する方法</title>
-    <updated>2026-09-06T20:57:55.776Z</updated>
+    <updated>2026-10-01T01:11:52.393Z</updated>
   </entry>
   <entry>
     <author>
@@ -127,7 +154,7 @@
 <p>今後も新しい記事が作成され次第、随時ブログを更新してまいりますので、皆様のお役に立てるよう努めます。引き続きご支援のほど、よろしくお願いいたします。</p>]]>
     </summary>
     <title>Power BI ブログ更新情報</title>
-    <updated>2026-09-06T20:57:55.675Z</updated>
+    <updated>2026-10-01T01:11:52.294Z</updated>
   </entry>
   <entry>
     <author>
@@ -157,7 +184,7 @@
 <p>本ブログでは、監査ログを活用して有償ライセンスが必要な操作を行っているユーザーを特定する方法をご紹介いたします。未使用ライセンスの把握やコスト最適化にお役立てください。</p>]]>
     </summary>
     <title>監査ログを活用した Power BI 有償ライセンスの利用状況確認方法</title>
-    <updated>2026-09-06T20:57:56.303Z</updated>
+    <updated>2026-10-01T01:11:52.905Z</updated>
   </entry>
   <entry>
     <author>
@@ -186,7 +213,7 @@
 <p>本ブログでは、セマンティック モデルの更新エラーが発生した際にまず確認いただきたいこと、暫定的な対処方法、ゲートウェイ利用時の切り分け手順、およびサポートへお問い合わせいただく際にご提供いただきたい情報についてご紹介いたします。</p>]]>
     </summary>
     <title>セマンティック モデルの更新エラーが発生した際に確認すべきこと</title>
-    <updated>2026-09-06T20:57:56.339Z</updated>
+    <updated>2026-10-01T01:11:52.942Z</updated>
   </entry>
   <entry>
     <author>
@@ -209,7 +236,7 @@
  </br>]]>
     </summary>
     <title>Power BI の新しいレポートフォーマット PBIR について</title>
-    <updated>2026-09-06T20:57:56.103Z</updated>
+    <updated>2026-10-01T01:11:52.714Z</updated>
   </entry>
   <entry>
     <author>
@@ -233,7 +260,7 @@
 <p>本記事では、 Power BI における 各Copilot 機能の種類や位置づけを整理し、利用にあたって必要となるライセンスや前提条件についてまとめました。<br>Power BIでCopilotの導入を検討している方や、どの機能が自社環境で利用可能なのかを整理したい方の参考になれば幸いです。</p>]]>
     </summary>
     <title>Power BI の Copilot 機能</title>
-    <updated>2026-09-06T20:57:55.759Z</updated>
+    <updated>2026-10-01T01:11:52.375Z</updated>
   </entry>
   <entry>
     <author>
@@ -254,7 +281,7 @@
 <p>本ブログでは、こうした背景を踏まえ、Power BI &#x2F; Microsoft Fabric における代表的な管理者ロールそれぞれの管理対象を整理してご紹介いたします。 </p>]]>
     </summary>
     <title>Power BI の管理者ロールについて</title>
-    <updated>2026-09-06T20:57:55.665Z</updated>
+    <updated>2026-10-01T01:11:52.284Z</updated>
   </entry>
   <entry>
     <author>
@@ -276,7 +303,7 @@
 <p>Microsoft Fabric で新しく利用できるようになった認証方式として、ワークスペース ID があります。ワークスペース ID は、Microsoft Fabric 内のワークスペースに関連付けられたサービス プリンシパルで、信頼されたワークスペース アクセスを通じてファイアウォールが有効な Azure Data Lake Storage Gen2 (以降 ADLS Gen2) アカウントへの接続が可能です。今回は、ワークスペース ID を利用した信頼されたワークスペース アクセスで ADLS Gen2 に接続する方法をご紹介します。</p>]]>
     </summary>
     <title>ワークスペース ID と信頼されたワークスペース アクセス</title>
-    <updated>2026-09-06T20:57:55.532Z</updated>
+    <updated>2026-10-01T01:11:52.156Z</updated>
   </entry>
   <entry>
     <author>
@@ -301,7 +328,7 @@
 <p>本ブログでは、「共有可能なクラウド接続と個人用クラウド接続」の違いや使用例についてご紹介します。</p>]]>
     </summary>
     <title>共有可能なクラウド接続と個人用クラウド接続</title>
-    <updated>2026-09-06T20:57:56.421Z</updated>
+    <updated>2026-10-01T01:11:53.020Z</updated>
   </entry>
   <entry>
     <author>
@@ -323,7 +350,7 @@
 <p>Update: 2025&#x2F;11&#x2F;28<br>アンケートフォームのリンクが切れていたため、新しく作り直しました。</p>]]>
     </summary>
     <title>【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</title>
-    <updated>2026-09-06T20:57:55.677Z</updated>
+    <updated>2026-10-01T01:11:52.297Z</updated>
   </entry>
   <entry>
     <author>
@@ -344,7 +371,7 @@
 <p>本ブログでは、セキュリティリスクを防ぐために特に重要な設定を、シナリオ別に紹介します。</p>]]>
     </summary>
     <title>Power BI 利用時に考慮すべき主要なセキュリティ設定</title>
-    <updated>2026-09-06T20:57:56.333Z</updated>
+    <updated>2026-10-01T01:11:52.936Z</updated>
   </entry>
   <entry>
     <author>
@@ -367,7 +394,7 @@
 <p>本記事では、Power BIでCopilot を安心してご利用いただくために、データの処理の流れと、管理者がCopilotの利用を制限する方法について説明し、最後によくある質問をまとめました。 </p>]]>
     </summary>
     <title>Copilotのセキュリティと使用制限方法</title>
-    <updated>2026-09-06T20:57:55.765Z</updated>
+    <updated>2026-10-01T01:11:52.382Z</updated>
   </entry>
   <entry>
     <author>
@@ -390,7 +417,7 @@
       <![CDATA[<p>こんにちは、Power BI サポート チームの呂です。<br>Power BI でコンテンツを共有する際には、共有リンクや埋め込みで「開くときの初期表示」を制御したいことがあります。たとえば、営業チーム向けには担当エリアに絞り込んだ状態で開き、経営層向けには全体の KPI を表示させる、といった使い分けです。<br>こうした要件に応える機能の一つが URL フィルターです。この記事では、その基本的な構文と注意点、さらに実務で役立つ活用ポイントを解説します。</p>]]>
     </summary>
     <title>URL フィルターの使い方</title>
-    <updated>2026-09-06T20:57:56.461Z</updated>
+    <updated>2026-10-01T01:11:53.059Z</updated>
   </entry>
   <entry>
     <author>
@@ -410,7 +437,7 @@
 <p>2025 年 3 月版以降の Power BI Desktop &#x2F; Power BI Report Server 向けの Power BI Desktop では CPU で AVX  (Advanced Vector Extensions)  命令がサポートされている必要があります。サポートされていない CPU では予期しない動作となる場合がございますので、この変更についてご案内いたします。</p>]]>
     </summary>
     <title>2025 年 3 月版以降の Power BI Desktop では CPU で AVX 命令がサポートされている必要があります</title>
-    <updated>2026-09-06T20:57:55.329Z</updated>
+    <updated>2026-10-01T01:11:51.965Z</updated>
   </entry>
   <entry>
     <author>
@@ -433,7 +460,7 @@
 <p><a href="https://powerbi.microsoft.com/en-us/blog/cognitive-services-and-azure-ml-for-dataflows-will-be-fully-retired-by-september-15th-2025/">Cognitive services and Azure ML will be fully retired by September 15th, 2025 | Microsoft Power BI Blog | Microsoft Power BI</a> でアナウンスがされておりますとおり、Power BI の Premium 機能として提供されていた Cognitive service と Azure ML を利用する AI 機能が 2025 年 9 月 15 日以降利用できなくなります。機能の廃止に伴い、 2025 年 8 月 11 日よりこれらの AI 機能を利用した セマンティック モデルを新しく作成することはできません。今回はこれらの機能を利用しているユーザーが必要な対応についてご案内いたします。</p>]]>
     </summary>
     <title>Cognitive service と Azure ML の廃止</title>
-    <updated>2026-09-06T20:57:55.382Z</updated>
+    <updated>2026-10-01T01:11:52.014Z</updated>
   </entry>
   <entry>
     <author>
@@ -455,28 +482,6 @@
 <p>本記事では、Power BI サービスでレポートやアプリを共有されたユーザーが、そのコンテンツを表示できない場合に想定される原因と対処法をご紹介します。</p>]]>
     </summary>
     <title>アプリ・レポートを閲覧できないときの対処法</title>
-    <updated>2026-09-06T20:57:55.680Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Japan Power BI Team</name>
-    </author>
-    <category term="Power BI" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI/"/>
-    <category term="Power BI サービス" scheme="https://jpbap-sqlbi.github.io/blog/tags/Power-BI-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/"/>
-    <category term="リージョン変更" scheme="https://jpbap-sqlbi.github.io/blog/tags/%E3%83%AA%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%A4%89%E6%9B%B4/"/>
-    <content>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。  </p><p>Power BI をご利用中のお客様から、「ホーム テナントのリージョンを変更したい」 というご相談をいただくことがあります。<br>多くのケースでは現在のリージョンのままで問題なくご利用いただけますが、法令対応や組織戦略、サービス統合の要件等の特別な事情によってリージョン変更が避けられない場合もあります。<br>そこで今回は、公式ドキュメントに基づき、リージョン変更の手続きの流れや作業の概要を整理しました。<br>変更を検討されている方や、今後の判断材料を集めたい方はご参考にしていただければと思います。  </p><p>ご参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/support/service-admin-region-move">リージョン間の移動</a>  </p> </br><span id="more"></span><div class="alert is-important"><p class="alert-title">重要</p><p>本記事は弊社公式ドキュメントの公開情報を元に構成しておりますが、本記事編集時点と実際の機能に相違がある場合がございます。</p><p>最新情報につきましては、参考情報として記載しておりますドキュメントをご確認ください。</p></div><h2 id="Power-BI-のリージョンはどう決まる？"><a href="#Power-BI-のリージョンはどう決まる？" class="headerlink" title="Power BI のリージョンはどう決まる？"></a><font color="DodgerBlue">Power BI のリージョンはどう決まる？</font></h2><p>Power BI のテナントは、Microsoft 365（以前は Office 365 ）のテナントを作成した際に指定された国または地域に基づいて、自動的に最も近いデータセンターをホーム リージョンとして割り当てます。<br>このため、Microsoft 365 のテナントが日本のユーザー様の場合現在は日本に作成されますが、2016 年 12 月以前は東南アジア（シンガポール）に作成されていました。  </p><hr><h2 id="リージョン変更の概要"><a href="#リージョン変更の概要" class="headerlink" title="リージョン変更の概要"></a><font color="DodgerBlue">リージョン変更の概要</font></h2><p>Power BI テナントのリージョン変更は、ユーザー自身で行うことはできません。<br>変更を希望する場合、Microsoft サポートにリクエストを提出し、サポートチームと協力して進める必要があります。<br>変更プロセスでは、テナントのデータと構成が削除されるため、事前の準備とバックアップが不可欠です。  </p><hr><h2 id="変更の前提条件"><a href="#変更の前提条件" class="headerlink" title="変更の前提条件"></a><font color="DodgerBlue">変更の前提条件</font></h2><p>リージョン変更を実施するには、以下の条件を満たす必要があります。  </p><ul><li><p><strong>全体管理者ロールの割り当て</strong><br>変更をリクエストするユーザーには、Microsoft 365 または Microsoft Entra ID で全体管理者ロールが必要です。  </p></li><li><p><strong>書面による承認</strong><br>変更による組織への影響を認識し、同意したことを確認する書面による承認が必要です。（書面はサービスリクエスト起票後、サポートよりお渡しいたします。）  </p></li><li><p><strong>連絡先情報の提供</strong><br>変更期間中の営業時間外に連絡可能な担当者の情報を提供する必要があります。</p></li></ul><hr><h2 id="変更前の準備"><a href="#変更前の準備" class="headerlink" title="変更前の準備"></a><font color="DodgerBlue">変更前の準備</font></h2><p>変更プロセスでは、テナント内のすべてのデータと構成が削除されますので、事前のバックアップが重要となります。<br>また、変更のために削除・解除が必要なものもあります。<br>リージョン変更作業自体は Microsoft にて実施しますが、その前後の準備や再構成等は、すべてユーザー様の責任にて実施いただく必要があります。  </p><p>※完全な情報は公開情報 <a href="https://learn.microsoft.com/ja-jp/power-bi/support/service-admin-region-move#prerequisites">リージョン間の移動</a> を必ずご確認ください。  </p><h3 id="＜リージョン変更準備項目＞"><a href="#＜リージョン変更準備項目＞" class="headerlink" title="＜リージョン変更準備項目＞"></a><font color="HotPink">＜リージョン変更準備項目＞</font></h3><h4 id="1-削除・解除しておくもの"><a href="#1-削除・解除しておくもの" class="headerlink" title="(1) 削除・解除しておくもの"></a>(1) 削除・解除しておくもの</h4><ul><li>Microsoft Fabric 容量や Power BI Premium 容量を削除  </li><li>プライベートリンクを削除  </li><li>Azure Log Analytics 接続をデタッチ</li></ul><h4 id="2-失われるデータへの対応"><a href="#2-失われるデータへの対応" class="headerlink" title="(2) 失われるデータへの対応"></a>(2) 失われるデータへの対応</h4><ul><li>Power BI アクティビティログをダウンロード（または Office 365 監査ログを利用）  </li><li>系列ビューの閲覧数を保存  </li><li>データ保護メトリックを保存  </li><li>使用状況メトリック（プレビュー）を保存</li></ul><h4 id="3-バックアップ"><a href="#3-バックアップ" class="headerlink" title="(3) バックアップ"></a>(3) バックアップ</h4><ul><li>テナント全体のバックアップ取得  </li><li>スキャナー API で最大限のデータを取得  </li><li>Power BI レポートをダウンロード  </li><li>セマンティックモデルをバックアップ  </li><li>データフローを JSON エクスポート  </li><li>権限設定の記録  </li><li>スケジュール更新の設定を記録  </li><li>サブスクリプション内容を記録  </li><li>ゲートウェイの設定・データソース権限を記録  </li><li>PowerApps &#x2F; Flow &#x2F; Logic Apps 用ゲートウェイ設定を記録</li></ul><h4 id="4-再構築のための記録"><a href="#4-再構築のための記録" class="headerlink" title="(4) 再構築のための記録"></a>(4) 再構築のための記録</h4><ul><li>すべてのダッシュボードをスクリーンショット保存  </li><li>エクスポートできない項目はメモ&#x2F;スクリーンショット  </li><li>Fabric 成果物を Git にバックアップし、外部ストレージ（例: ADLS）に必要なデータをコピー</li></ul><hr><h2 id="変更の実施"><a href="#変更の実施" class="headerlink" title="変更の実施"></a><font color="DodgerBlue">変更の実施</font></h2><p>変更を実施するには、以下の手順を踏んでください。  </p><ol><li><p><strong>サポートへのリクエスト</strong><br><a href="https://learn.microsoft.com/ja-jp/power-bi/support/service-admin-region-move#request-a-region-move">リージョン間の移動</a> の公開情報をもとに、Power BI 管理ポータルから「新しいサポート リクエスト」を作成し、以下情報をそろえてリージョン変更を依頼します。  </p><ul><li>テナント オブジェクト ID  </li><li>現在のリージョン  </li><li>提案するリージョン  </li><li>変更希望日時（UTC 時間で 3 つのオプション）</li></ul></li><li><p><strong>サポートからの連絡</strong><br>起票後、サポートエンジニアよりお問合せ内容の確認および書面をお渡しのためのご連絡がありますので、ユーザー様にて書面に必要情報を記入後アップロードサイトにアップロードいただきます。  </p></li><li><p><strong>変更の実施</strong><br>Microsoft 側で変更を実施し、完了後、サポート窓口時間帯にサポートエンジニアよりご連絡があります。</p></li></ol><h3 id="＜変更後の確認と作業項目＞"><a href="#＜変更後の確認と作業項目＞" class="headerlink" title="＜変更後の確認と作業項目＞"></a><font color="HotPink">＜変更後の確認と作業項目＞</font></h3><h4 id="1-初期確認"><a href="#1-初期確認" class="headerlink" title="(1) 初期確認"></a>(1) 初期確認</h4><ul><li>サポートチームからリージョン変更完了の連絡を受ける  </li><li>基本動作の確認</li></ul><h4 id="2-テナント-基盤設定"><a href="#2-テナント-基盤設定" class="headerlink" title="(2) テナント &amp; 基盤設定"></a>(2) テナント &amp; 基盤設定</h4><ul><li>テナント設定を確認・更新  </li><li>ADLS アカウントを設定（データセットのバックアップ&#x2F;復元用）  </li><li>サービス プリンシパル名 (SPN) プロファイルを作成  </li><li>Microsoft Fabric 容量や Power BI Premium 容量を再構築</li></ul><h4 id="3-ワークスペース-ゲートウェイ"><a href="#3-ワークスペース-ゲートウェイ" class="headerlink" title="(3) ワークスペース &amp; ゲートウェイ"></a>(3) ワークスペース &amp; ゲートウェイ</h4><ul><li>ワークスペースを作成  </li><li>ゲートウェイを作成  </li><li>データソースを作成（資格情報を手動設定）  </li><li>共有クラウド接続 (SCC) を作成</li></ul><h4 id="4-データ復元-再構築"><a href="#4-データ復元-再構築" class="headerlink" title="(4) データ復元 &amp; 再構築"></a>(4) データ復元 &amp; 再構築</h4><ul><li>データフローをインポート&#x2F;作成  </li><li>セマンティックモデルを作成  </li><li>.pbix ファイルをアップロード  </li><li>インタラクティブレポートを作成</li></ul><h4 id="5-接続-外部連携"><a href="#5-接続-外部連携" class="headerlink" title="(5) 接続 &amp; 外部連携"></a>(5) 接続 &amp; 外部連携</h4><ul><li>必要に応じてデータフローストレージを設定  </li><li>必要に応じてログ分析を再接続する  </li><li>Azure Log Analytics を再接続  </li><li>Git を再接続  </li><li>ADLS ストレージを再アタッチ（テナントレベル推奨）</li></ul><h4 id="6-アクセス権-スケジュール"><a href="#6-アクセス権-スケジュール" class="headerlink" title="(6) アクセス権 &amp; スケジュール"></a>(6) アクセス権 &amp; スケジュール</h4><ul><li>管理者 &#x2F; 共同作成者を割り当て  </li><li>ワークスペース&#x2F;データセット&#x2F;レポートごとのアクセス許可を設定  </li><li>更新スケジュールを再設定</li></ul><hr><h2 id="よくある質問（Q-A）"><a href="#よくある質問（Q-A）" class="headerlink" title="よくある質問（Q&amp;A）"></a><font color="DodgerBlue">よくある質問（Q&amp;A）</font></h2><p><strong>Q1. Multi-Geo とリージョン変更の違いは？</strong><br>A. Multi-Geo は Fabric 容量&#x2F; Premium 容量ごとにデータ保存先を分散できる機能です。<br>一方、リージョン変更はテナント全体のホームリージョンを別の場所に移す手続きです。  </p><p><strong>Q2. 変更中は Power BI が使えなくなりますか？</strong><br>A. 変更作業中は、ユーザーは Power BI にアクセスできず、“フクロウ エラーのメッセージ” が表示されます。  </p><p><strong>Q3. 変更にかかる時間はどのくらいですか？</strong><br>A. 最大 3 時間のダウン タイムが必要です。<br>リクエスト起票後から、変更実施までには確認や調整にお時間を要することをご理解くださいますようお願いいたします。  </p><hr><h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a><font color="DodgerBlue">まとめ</font></h2><p>Power BI テナントのリージョン変更は、Microsoft サポートと協力して進める必要があります。<br>余裕を持ったスケジュールと事前の準備、バックアップが不可欠であり、ユーザー様側での変更後の再構成作業も重要です。  </p><p>以上、本ブログが少しでも皆様のお役に立てますと幸いでございます。  </p><hr><p>その他ご参考情報：  </p><ul><li><a href="https://learn.microsoft.com/ja-jp/fabric/admin/find-fabric-home-region#how-the-data-region-is-selected">Fabric のホーム リージョンを見つける</a>  </li><li><a href="https://learn.microsoft.com/ja-jp/fabric/admin/service-admin-premium-multi-geo?source=recommendations&tabs=power-bi-premium">Fabric の Multi-Geo サポートを構成する</a></li></ul><hr><p><strong>アンケートご協力のお願い</strong><br>Japan CSS Support Power BI Blog では、作成する記事やブログの品質向上を目的に、匿名回答でのアンケートを実施しております。<br>ユーザー様のご意見・ご要望を参考に今後もお役に立てるブログを目指してまいりますので、ぜひご協力いただけますと幸いでございます。 </p><p>※　所要時間は1分程度となります。<br><a href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_blogsurvey2022/">【ご協力のお願い】Microsoft Japan CSS Power BI Blog ご利用に関するアンケート</a></p>]]>
-    </content>
-    <id>https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/</id>
-    <link href="https://jpbap-sqlbi.github.io/blog/powerbi/pbi_region_move/"/>
-    <published>2025-08-28T15:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>こんにちは、Power BI サポート チームの山崎です。  </p>
-<p>Power BI をご利用中のお客様から、「ホーム テナントのリージョンを変更したい」 というご相談をいただくことがあります。<br>多くのケースでは現在のリージョンのままで問題なくご利用いただけますが、法令対応や組織戦略、サービス統合の要件等の特別な事情によってリージョン変更が避けられない場合もあります。<br>そこで今回は、公式ドキュメントに基づき、リージョン変更の手続きの流れや作業の概要を整理しました。<br>変更を検討されている方や、今後の判断材料を集めたい方はご参考にしていただければと思います。  </p>
-<p>ご参考情報: <a href="https://learn.microsoft.com/ja-jp/power-bi/support/service-admin-region-move">リージョン間の移動</a>  </p>
- </br>]]>
-    </summary>
-    <title>ホーム テナント リージョンの変更についてのご案内</title>
-    <updated>2026-09-06T20:57:56.316Z</updated>
+    <updated>2026-10-01T01:11:52.299Z</updated>
   </entry>
 </feed>
