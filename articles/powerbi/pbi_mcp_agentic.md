@@ -1,5 +1,6 @@
 ---
 title: Power BI MCP と Power BI Agentic の全体像
+date: 2026-09-30 00:00:00
 tags:
   - Power BI
   - Microsoft Fabric
